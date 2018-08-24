@@ -457,4 +457,10 @@ namespace OsWrapper
     return ((xQueueReceive(handle, pItem, timeOut) == pdTRUE) ? true : false);
   }
 
+
+  void wMailBoxCreate(tMailBoxHandle &queue)
+  {
+    vQueueDelete(queue);
+  }
+
 }

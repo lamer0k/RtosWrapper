@@ -21,6 +21,7 @@ namespace OsWrapper
 {
   extern bool wMailBoxPut(tMailBoxHandle &, const void* );
   extern tMailBoxHandle wMailBoxCreate(tU16,tU16, tU8 *, tMailBoxContext &);
+  extern void wMailBoxCreate(tMailBoxHandle &);
   extern bool wMailBoxGet(tMailBoxHandle &, void *, tTime);
 
   template<typename T, int size>
@@ -34,7 +35,7 @@ namespace OsWrapper
 
       ~MailBox()
       {
-
+        wMailBoxCreate(handle);
       }
 
       bool Put(const T &item)
