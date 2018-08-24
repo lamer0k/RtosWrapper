@@ -32,6 +32,11 @@ namespace OsWrapper
         handle = wMailBoxCreate(buffer.size(), sizeof(T), buffer.data(), context);
       }
 
+      ~MailBox()
+      {
+
+      }
+
       bool Put(const T &item)
       {
         return wMailBoxPut(handle, &item);
