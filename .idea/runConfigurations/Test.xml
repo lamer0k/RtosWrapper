@@ -1,0 +1,5 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="Test" type="CLion_Remote" factoryName="GDB Remote Debug" singleton="true" remoteCommand="tcp:127.0.0.1:3333" symbolFile="$PROJECT_DIR$/cmake-build-debug/untitled.out" sysroot="">
+    <method v="2" />
+  </configuration>
+</component>
