@@ -458,7 +458,7 @@ namespace OsWrapper
   }
 
 
-  void wMailBoxCreate(tMailBoxHandle &queue)
+  void wMailBoxDelete(tMailBoxHandle &queue)
   {
     vQueueDelete(queue);
   }
