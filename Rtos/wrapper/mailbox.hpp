@@ -30,7 +30,7 @@ namespace OsWrapper
     public:
       MailBox()
       {
-        handle = wMailBoxCreate(buffer.size(), sizeof(T), buffer.data(), context);
+        handle = wMailBoxCreate(size, sizeof(T), buffer.data(), context);
       }
 
       ~MailBox()
