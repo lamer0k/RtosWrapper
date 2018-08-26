@@ -29,7 +29,6 @@ namespace OsWrapper
   class Rtos
   {
     public:
-
       static void CreateThread(Thread &thread ,
                                tStack * pStack = nullptr,
                                const char * pName = nullptr,

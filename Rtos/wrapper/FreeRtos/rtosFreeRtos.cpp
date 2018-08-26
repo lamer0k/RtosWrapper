@@ -367,10 +367,7 @@ namespace OsWrapper
   ****************************************************************************/
   void wUnLockMutex(tMutexHandle const &handle)
   {
-    BaseType_t xHigherPriorityTaskWoken = pdFALSE;
-    xSemaphoreGiveFromISR(handle, &xHigherPriorityTaskWoken);
-
-    portYIELD_FROM_ISR(xHigherPriorityTaskWoken);
+    xSemaphoreGiveFromISR(handle, nullptr);
   }
 
   /****************************************************************************
@@ -417,11 +414,11 @@ namespace OsWrapper
   * Parameters: [in] handle - Refence to a mailbox
   *             [in] item -   Refernce to the message to store.
   *
-  * Returns: Current system time in ticks
+  * Returns: true if the item was successfully posted, otherwise false
   ****************************************************************************/
   bool wMailBoxPut(tMailBoxHandle &handle, const void * pItem)
   {
-    return ((xQueueSendFromISR(handle, pItem, nullptr) == pdTRUE) ? true : false);
+    return (xQueueSendFromISR(handle, pItem, nullptr) == pdTRUE);
   }
 
   /****************************************************************************
@@ -429,16 +426,25 @@ namespace OsWrapper
   * Description:
   *
   * Assumptions: No
-  * Parameters: [in] length -
-  *             [in] itemSize -
-  *             [in] pBuffer -
-  *             [in] context -
+  * Parameters: [in] length - The maximum number of items the mailbox can hold at
+  *             any one time
+  *             [in] itemSize - Size of an item in bytes
+  *             [in] pBuffer - Pointer to a memory area used as buffer. The buffer
+  *             must be big enough to hold the given number of messages of the
+  *             specified size: length * itemSize bytes
+  *             [in] context - Must point to a variable, which will be used to
+  *             hold the mailbox's data structure.
   *
-  * Returns: Current system time in ticks
+  * Returns: If the mailbox is created successfully then a handle to the created
+  * mailbox is returned, otherwise nullptr is returned.
   ****************************************************************************/
   tMailBoxHandle wMailBoxCreate(tU16 length, tU16 itemSize, tU8 *pBuffer, tMailBoxContext & context)
   {
+#if (configSUPPORT_STATIC_ALLOCATION == 1)
     return xQueueCreateStatic(length, itemSize, pBuffer, &context);
+#else
+    return xQueueCreate(length, itemSize);
+#endif
   }
 
   /****************************************************************************
@@ -446,18 +452,29 @@ namespace OsWrapper
   * Description:
   *
   * Assumptions: No
-  * Parameters: [in] handle - Refence to a mailbox
-  *             [in] item -   Refernce to the message to store.
-  *             [in] tTime -
+  * Parameters: [in] handle - Reference to a mailbox
+  *             [in] item -   Reference to the message to store.
+  *             [in] tTime -  The maximum amount of time the task should block
+  *             waiting for an item to receive should the mailbox be empty at
+  *             the time of the call
   *
-  * Returns: Current system time in ticks
+  * Returns:  if an item was successfully received from the mailbox, otherwise
+  * false
   ****************************************************************************/
   bool wMailBoxGet(tMailBoxHandle & handle, void * pItem, tTime timeOut)
   {
-    return ((xQueueReceive(handle, pItem, timeOut) == pdTRUE) ? true : false);
+    return (xQueueReceive(handle, pItem, timeOut) == pdTRUE);
   }
 
-
+  /****************************************************************************
+  * Function Name: wMailBoxDelete()
+  * Description: Deletes a specified mailbox
+  *
+  * Assumptions: No
+  * Parameters: [in] queue - Reference to the mailbox
+  *
+  * Returns: Current system time in ticks
+  ****************************************************************************/
   void wMailBoxDelete(tMailBoxHandle &queue)
   {
     vQueueDelete(queue);
