@@ -12,8 +12,8 @@
 *
 *******************************************************************************/
 
-#ifndef __CRITICALSECTION_HPP
-#define __CRITICALSECTION_HPP
+#ifndef CRITICALSECTION_HPP
+#define CRITICALSECTION_HPP
 
 #include "rtos.hpp"
 
@@ -33,4 +33,4 @@ namespace OsWrapper
       } 
   } ;
 } ;
-#endif // __CRITICALSECTION_HPP
+#endif // CRITICALSECTION_HPP

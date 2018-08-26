@@ -6,8 +6,8 @@
 * Author        : Sergey Kolody
 *******************************************************************************/
 
-#ifndef __RTOSDEFS_H
-#define __RTOSDEFS_H 
+#ifndef RTOSDEFS_H
+#define RTOSDEFS_H
 
 //For EmbOs types and methods definition (OS_TASK)
 #include "../../FreeRtos/include/FreeRtos.h"
@@ -37,7 +37,6 @@ namespace OsWrapper
       priorityMax = 255
   } ;
 
-
   using tTaskContext = StaticTask_t;
   using tTaskHandle = TaskHandle_t;
   using tStack = StackType_t ;
@@ -61,4 +60,4 @@ namespace OsWrapper
   } ;  
 }
 
-#endif // __RTOSDEFS_H
+#endif // RTOSDEFS_H

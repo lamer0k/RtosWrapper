@@ -48,7 +48,6 @@ namespace OsWrapper
         return wMailBoxGet(handle, &item, timeOut);
       }
 
-
     private:
       tMailBoxHandle handle;
       tMailBoxContext context;
