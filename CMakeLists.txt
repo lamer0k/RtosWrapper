@@ -75,22 +75,25 @@ set(SOURCE_DIR AHardware CMSIS Common Rtos Rtos/FreeRtos Rtos/wrapper Rtos/wrapp
 #        )
 #target_include_directories(untitled "${CMAKE_CURRENT_SOURCE_DIR}/Application")
 
-set(SOURCES main.cpp
-        startupF411RE.cpp
-        Rtos/wrapper/rtos.cpp
-        Rtos/wrapper/FreeRtos/rtosFreeRtos.cpp
-        MyTasks/Led1Task.cpp
-        MyTasks/mytask.cpp
-        AHardware/userbutton.cpp
+set(SOURCES
         rtos/FreeRtos/croutine.c
         rtos/FreeRtos/event_groups.c
+        AHardware/IrqController/irqcontroller.cpp
+        MyTasks/Led1Task.cpp
         rtos/FreeRtos/list.c
+        main.cpp
+        MyTasks/mytask.cpp
+        rtos/FreeRtos/portable/IAR/ARM_CM4F/port.c
         rtos/FreeRtos/queue.c
+        Rtos/wrapper/rtos.cpp
+        Rtos/wrapper/FreeRtos/rtosFreeRtos.cpp
+        startupF411RE.cpp
         rtos/FreeRtos/tasks.c
         rtos/FreeRtos/timers.c
-        rtos/FreeRtos/portable/IAR/ARM_CM4F/port.c
+        AHardware/userbutton.cpp
         #rtos/FreeRtos/portable/MemMang/heap_1.c
-        Rtos/wrapper/mutex.hpp AHardware/GpioPort/gpioport.hpp AHardware/GpioPort/gpioports.hpp AHardware/IrqController/irqcontroller.hpp AHardware/IrqController/irqcontroller.cpp)
+
+        )
 
 add_executable(untitled ${SOURCE_DIR} ${SOURCES})
 

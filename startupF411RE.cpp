@@ -159,10 +159,8 @@ extern "C" const tIntVectItem __vector_table[] =
   DummyModule::handler		//SPI 5 global interrupt
 };
 
-__weak void DummyModule::handler()   { for(;;) {} } ;
-//__weak void OsWrapper::Rtos::HandleSvcInterrupt()   { for(;;) {} };
-//__weak void OsWrapper::Rtos::HandleSvInterrupt()   { for(;;) {} };
-//__weak void OsWrapper::Rtos::HandleSysTickInterrupt()   { for(;;) {} };
+void DummyModule::handler()   { for(;;) {} } ;
+
 
 extern "C" void __cmain( void );
 extern "C" __weak void __iar_init_core( void );

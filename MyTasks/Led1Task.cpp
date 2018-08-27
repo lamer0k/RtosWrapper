@@ -16,11 +16,6 @@ void Led1Task::Execute()
       GPIOC->ODR ^= (1 << 5) ;
       SleepUntil(5000ms);
       event.Signal() ;
-
- //     int p = 10;
-   //   queue.Put(p);
-//      p = 11;
-  //    queue.Put(p);
      }
   } ;
 
