@@ -10,15 +10,15 @@
 *******************************************************************************/
 
 
-#include "../thread.hpp"
-#include "../mutex.hpp"
-#include "../mailbox.hpp"
-#include "../rtos.hpp"
-#include "../../../Common/susudefs.hpp"
-#include "rtosdefs.hpp"
-#include "../event.hpp"
+#include "../thread.hpp"  // for Thread
+#include "../mutex.hpp" // for Mutex
+#include "../mailbox.hpp" //for MailBox
+#include "../rtos.hpp" // For Rtos::Run
+#include "../../../Common/susudefs.hpp" // for tU16
+#include "rtosdefs.hpp" // for OsWrapper types such as tTime, tMutexHandle...
+#include "../event.hpp" //for Event
 
-#include <limits>
+#include <limits> // for std::numeric_limits<uint32_t>::max()
 
 namespace OsWrapper
 {
@@ -31,7 +31,7 @@ namespace OsWrapper
    * paramete to task.
    * Some RTOS does not use pStack pointer so it should be set to nullptr
    *
-   * Parameters: [in] thread - refernce on Thread object
+   * Parameters: [in] thread - reference on Thread object
    *             [in] pName - name of task
    *             [in] prior - task priority
    *             [in] stackDepth - size of Stack

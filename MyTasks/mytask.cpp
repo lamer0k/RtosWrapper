@@ -6,12 +6,14 @@
 * Author        : Sergey Kolody
 *******************************************************************************/
 #include "mytask.hpp"
-#include "../main.hpp"
 #include "../Rtos/wrapper/thread.hpp"
 #include "../CMSIS/stm32f411xe.h"
 #include "../Rtos/wrapper/mailbox.hpp"
+#include "../Rtos/wrapper/event.hpp"
 
 extern OsWrapper::MailBox<int, 10> queue;
+extern OsWrapper::Event event;
+
 void MyTask::Execute()
 { 
   while(true) 

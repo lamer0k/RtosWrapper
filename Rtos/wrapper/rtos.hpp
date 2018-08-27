@@ -17,7 +17,6 @@
 
 namespace OsWrapper
 {
-
   extern void wCreateThread(Thread &, const char *, ThreadPriority, const tU16, tStack *) ;
   extern void wStart() ;
   extern void wHandleSvcInterrupt() ;

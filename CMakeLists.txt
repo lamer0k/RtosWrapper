@@ -90,7 +90,7 @@ set(SOURCES main.cpp
         rtos/FreeRtos/timers.c
         rtos/FreeRtos/portable/IAR/ARM_CM4F/port.c
         #rtos/FreeRtos/portable/MemMang/heap_1.c
-        Rtos/wrapper/mutex.hpp)
+        Rtos/wrapper/mutex.hpp AHardware/GpioPort/gpioport.hpp)
 
 add_executable(untitled ${SOURCE_DIR} ${SOURCES})
 

@@ -1,11 +1,12 @@
 #include "led1task.hpp"
 #include "mytask.hpp"
 #include "../Rtos/wrapper/mailbox.hpp"
-#include "../main.hpp"
+#include "../Rtos/wrapper/event.hpp"
 #include "../Rtos/wrapper/FreeRtos/rtosdefs.hpp"
 #include "../CMSIS/stm32f411xe.h"
 
 extern OsWrapper::MailBox<int, 10> queue;
+extern OsWrapper::Event event;
 
 void Led1Task::Execute()
 { 

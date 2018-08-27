@@ -1,7 +1,8 @@
 #ifndef UTILS_H
 #define UTILS_H
 #include <cassert> 
-namespace utils {
+namespace utils
+{
 
   template<typename T, typename T1>
   inline void setBit(T &value, T1 bit) {
@@ -25,6 +26,12 @@ namespace utils {
   inline bool checkBit(const T &value, T1 bit) {
     assert((sizeof(T) * 8U) > bit);
     return !((value & (static_cast<T>(1) << static_cast<T>(bit))) == static_cast<T>(0U));
+  };
+
+  template<typename T, typename T1>
+  inline void setBitValue(T &value, T1 bit) {
+    assert((sizeof(T) * 8U) > bit);
+    value = static_cast<T>(static_cast<T>(1) << static_cast<T>(bit));
   };
 };
 
