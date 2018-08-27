@@ -15,7 +15,7 @@
 
 #pragma language = extended
 #pragma segment = "CSTACK"
-
+#include "AHardware/IrqController/irqcontroller.hpp"
 
 extern "C" void __iar_program_start( void );
 
@@ -29,20 +29,17 @@ namespace OsWrapper
       static void HandleSysTickInterrupt();
   } ;
 }
+
 class DummyModule {
   public:
     static void handler();
 };
 
-class Button
-{
-  public:
-    static void HandleInterrupt();
-} ;
-
-typedef void( *intfunc )( void );
+using tIntFunct = void(*)();
+//typedef void( *intfunc )( void );
 //cstat !MISRAC++2008-9-5-1
-typedef union { intfunc __fun; void * __ptr; } intvec_elem;
+using tIntVectItem = union {tIntFunct __fun; void * __ptr;};
+//typedef union { tIntFunct __fun; void * __ptr; } intvec_elem;
 
 // The vector table is normally located at address 0.
 // When debugging in RAM, it can be located in RAM, aligned to at least 2^6.
@@ -54,7 +51,7 @@ typedef union { intfunc __fun; void * __ptr; } intvec_elem;
 
 #pragma location = ".intvec"
 //cstat !MISRAC++2008-0-1-4_b !MISRAC++2008-9-5-1
-extern "C" const intvec_elem __vector_table[] =
+extern "C" const tIntVectItem __vector_table[] =
 {
   { .__ptr = __sfe( "CSTACK" ) },
   __iar_program_start,
@@ -114,7 +111,7 @@ extern "C" const intvec_elem __vector_table[] =
   DummyModule::handler,         //USART1
   DummyModule::handler,         //USART2
   0,
-  Button::HandleInterrupt,         //EXTI Line 15..10
+  IrqController::HandleIrqExtiLine15_10,         //EXTI Line 15..10
   DummyModule::handler,         //EXTI Line 17 interrupt / RTC Alarms (A and B) through EXTI line interrupt
   DummyModule::handler,         //EXTI Line 18 interrupt / USB On-The-Go  FS Wakeup through EXTI line interrupt
   0,				//TIM6
@@ -163,7 +160,6 @@ extern "C" const intvec_elem __vector_table[] =
 };
 
 __weak void DummyModule::handler()   { for(;;) {} } ;
-__weak void Button::HandleInterrupt() { for(;;) {} } ;
 //__weak void OsWrapper::Rtos::HandleSvcInterrupt()   { for(;;) {} };
 //__weak void OsWrapper::Rtos::HandleSvInterrupt()   { for(;;) {} };
 //__weak void OsWrapper::Rtos::HandleSysTickInterrupt()   { for(;;) {} };
@@ -179,3 +175,4 @@ void __iar_program_start( void )
   __iar_init_vfp();
   __cmain();
 }
+

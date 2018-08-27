@@ -271,9 +271,10 @@ namespace OsWrapper
   void wSignalEvent(tEventHandle const &eventHandle, const tEventBits mask)
   {
     BaseType_t xHigherPriorityTaskWoken = pdFALSE;
-    xEventGroupSetBitsFromISR(eventHandle, mask, &xHigherPriorityTaskWoken);
-
-    portYIELD_FROM_ISR(xHigherPriorityTaskWoken);
+    if (xEventGroupSetBitsFromISR(eventHandle, mask, &xHigherPriorityTaskWoken) != pdFAIL)
+    {
+      portYIELD_FROM_ISR(xHigherPriorityTaskWoken);
+    }
 
   }
 

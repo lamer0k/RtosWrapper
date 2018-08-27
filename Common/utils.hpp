@@ -33,6 +33,18 @@ namespace utils
     assert((sizeof(T) * 8U) > bit);
     value = static_cast<T>(static_cast<T>(1) << static_cast<T>(bit));
   };
+
+  template<typename T, typename T1>
+  inline void setBitsAt(T &value, T1 bits, T position) {
+    assert((sizeof(T) * 8U) > position);
+    value |= (static_cast<T>(static_cast<T>(bits) << static_cast<T>(position)));
+  };
+
+  template<typename T, typename T1>
+  inline void clearBitsAt(T &value, T1 bits, T position) {
+    assert((sizeof(T) * 8U) > position);
+    value ^=~(static_cast<T>(static_cast<T>(bits) << static_cast<T>(position)));
+  };
 };
 
 constexpr unsigned long long operator "" sec(unsigned long long sec) {

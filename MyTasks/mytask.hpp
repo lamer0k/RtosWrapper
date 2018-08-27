@@ -3,7 +3,7 @@
 
 
 #include "../Rtos/wrapper/thread.hpp"
-#include "../AHardware/button.hpp"
+#include "../AHardware/userbutton.hpp"
 #include "../CMSIS/stm32f411xe.h"
 #include<array>
 
@@ -15,8 +15,6 @@ public:
   virtual void Execute() override;
   using tMyTaskStack = std::array<OsWrapper::tStack, static_cast<tU16>(OsWrapper::StackDepth::minimal)> ;
   inline static tMyTaskStack Stack;
-private:
-  Button button{*GPIOC, 13U} ;  
 } ;
 
 extern MyTask myTask;

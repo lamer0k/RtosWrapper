@@ -6,9 +6,8 @@
 
 extern OsWrapper::Event event;
 
-void Button::HandleInterrupt()
+void UserButton::HandleInterrupt()
 {
   const OsWrapper::InterruptEntry ie;
-  EXTI->PR = EXTI_PR_PR13 ;
   event.Signal();
 }

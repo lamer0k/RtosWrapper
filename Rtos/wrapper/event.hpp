@@ -30,7 +30,7 @@ namespace OsWrapper
   extern void wSignalEvent(tEventHandle const &, const tEventBits) ;
   extern tEventBits wWaitEvent(tEventHandle const &, const tEventBits, const tTime, OsWrapper::EventMode) ;
   
-  constexpr tEventBits defaultMask = {0b01010101} ;
+  constexpr tEventBits defaultMask = {0b11111111} ;
   
   class Event
   {

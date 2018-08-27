@@ -22,12 +22,12 @@ void MyTask::Execute()
     if (event.Wait() != 0)
     {
       GPIOC->ODR ^= (1 << 9);
-      SleepUntil(500ms);
-      int p = 0;
-      queue.Get(p, 1000ms);
-      p = p +10;
-      queue.Get(p, 1000ms);
-      p = p +10;
+     // Sleep(500ms);
+     // int p = 0;
+     // queue.Get(p, 1000ms);
+     // p = p +10;
+     // queue.Get(p, 1000ms);
+     // p = p +10;
     }
   }
 } ;
