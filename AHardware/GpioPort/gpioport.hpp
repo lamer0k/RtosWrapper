@@ -17,7 +17,7 @@ class GpioPort
       Input = 1,
       Output = 0,
     };
-    GpioPort(T &portName): port{portName} {};
+    GpioPort(T const &portName): port{portName} {};
     void SetMode(PortMode mode)
     {
       constexpr tU32 outputBits = 1;

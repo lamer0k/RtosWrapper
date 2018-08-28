@@ -6,7 +6,7 @@
 
 constexpr tU32 buttonPin = 13U;
 
-class UserButton : public GpioPortC<buttonPin>
+class UserButton : public GpioPortC<buttonPin>, public Singleton<UserButton>
 {
   public:
     inline bool IsPressed()

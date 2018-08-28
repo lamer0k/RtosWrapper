@@ -1,5 +1,5 @@
 /******************************************************************************
- *  FILENAME: startup_stm32l1xx_md.cpp
+ *  FILENAME: startupF411RE.cpp
  *  
  * DESCRIPTION: Файл с векторами прерывания для Cortex-M. для С++.
  * Поскольку почему-то в Cortex-M все обработчики должны по имени точно 
@@ -9,37 +9,26 @@
  * Внимание!!!!!! Имена классов точно должны совпадать с именами у вас в проекте
  * Можно изменить и сократить количество классов, если есть желание, например
  *
- * Copyright (c) 2015 by South Ural State Universaty 
+ * Copyright (c) 2018 by South Ural State University
  * Author: Сергей Колодий
  ******************************************************************************/
 
 #pragma language = extended
 #pragma segment = "CSTACK"
 #include "AHardware/IrqController/irqcontroller.hpp"
+#include "Rtos/wrapper/rtos.hpp"
 
 extern "C" void __iar_program_start( void );
 
-namespace OsWrapper
+class DummyModule
 {
-  class Rtos 
-  {
-    public:  
-      static void HandleSvcInterrupt();
-      static void HandleSvInterrupt();
-      static void HandleSysTickInterrupt();
-  } ;
-}
-
-class DummyModule {
   public:
     static void handler();
 };
 
 using tIntFunct = void(*)();
-//typedef void( *intfunc )( void );
 //cstat !MISRAC++2008-9-5-1
 using tIntVectItem = union {tIntFunct __fun; void * __ptr;};
-//typedef union { tIntFunct __fun; void * __ptr; } intvec_elem;
 
 // The vector table is normally located at address 0.
 // When debugging in RAM, it can be located in RAM, aligned to at least 2^6.
@@ -160,7 +149,6 @@ extern "C" const tIntVectItem __vector_table[] =
 };
 
 void DummyModule::handler()   { for(;;) {} } ;
-
 
 extern "C" void __cmain( void );
 extern "C" __weak void __iar_init_core( void );
