@@ -40,7 +40,7 @@ class GpioPort
     }
     void Clear()
     {
-      utils::setBitValue(port.BSRR, pin << 16);
+      utils::setBitValue(port.BSRR, pin + 16U);
     }
     void Toggle()
     {
