@@ -25,26 +25,26 @@ class GpioPort
       switch (mode)
       {
         case PortMode::Output:
-          utils::setBitsAt(port->MODER, outputBits, pin * 2);
+          utils::setBitsAt(port.MODER, outputBits, pin * 2);
           break;
 
         case PortMode::Input:
         default:
-          utils::clearBitsAt(port->MODER, inputBits, pin * 2);
+          utils::clearBitsAt(port.MODER, inputBits, pin * 2);
           break;
       }
     }
     void Set()
     {
-      utils::setBitValue(port->BSRR, pin);
+      utils::setBitValue(port.BSRR, pin);
     }
     void Clear()
     {
-      utils::setBitValue(port->BSRR, pin << 16);
+      utils::setBitValue(port.BSRR, pin << 16);
     }
     void Toggle()
     {
-      utils::toggleBit(port->ODR, pin);
+      utils::toggleBit(port.ODR, pin);
     }
 
   protected:
