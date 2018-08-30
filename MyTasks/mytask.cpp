@@ -10,6 +10,7 @@
 #include "../CMSIS/stm32f411xe.h"
 #include "../Rtos/wrapper/mailbox.hpp"
 #include "../Rtos/wrapper/event.hpp"
+#include "../Application/leds.hpp"
 
 extern OsWrapper::MailBox<int, 10> queue;
 extern OsWrapper::Event event;
@@ -21,7 +22,7 @@ void MyTask::Execute()
     using OsWrapper::operator""ms ;
     if (event.Wait() != 0)
     {
-      GPIOC->ODR ^= (1 << 9);
+      Led2::GetInstance().Toggle();
     }
   }
 } ;

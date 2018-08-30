@@ -22,7 +22,7 @@ extern "C" {
   RCC->AHB1ENR |= (RCC_AHB1ENR_GPIOCEN | RCC_AHB1ENR_GPIOAEN);
   RCC->APB2ENR |= RCC_APB2ENR_SYSCFGEN ;
   //LED1 on PortA.5, set PortA.5 as output
-  GPIOC->MODER |= GPIO_MODER_MODE5_0;
+  GPIOA->MODER |= GPIO_MODER_MODE5_0;
   /* LED2 on PortC.9, LED3 on PortC.8, LED4 on PortC.5 so set PortC.5,8,9 as output */
   GPIOC->MODER |= (GPIO_MODER_MODE9_0 | GPIO_MODER_MODE5_0 | GPIO_MODER_MODE8_0);
   
@@ -47,7 +47,6 @@ OsWrapper::MailBox<int, 10> queue;
 int main()
 {
   using namespace OsWrapper ;
-
   Rtos::CreateThread(myTask, MyTask::Stack.data(), "myTask",ThreadPriority::lowest,MyTask::Stack.size()) ;
   Rtos::CreateThread(led1Task, Led1Task::Stack.data(), "Led1Task") ;
   Rtos::Start();
