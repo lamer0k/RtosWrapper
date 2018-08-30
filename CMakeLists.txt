@@ -90,7 +90,7 @@ set(SOURCES
         startupF411RE.cpp
         rtos/FreeRtos/tasks.c
         rtos/FreeRtos/timers.c
-        AHardware/userbutton.cpp
+        Application/userbutton.cpp
         #rtos/FreeRtos/portable/MemMang/heap_1.c
 
         )

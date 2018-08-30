@@ -2,54 +2,55 @@
 // Created by Sergey on 27.08.2018.
 //
 
-#ifndef UNTITLED_GPIOPORT_HPP
-#define UNTITLED_GPIOPORT_HPP
+#ifndef GPIOPORT_HPP
+#define GPIOPORT_HPP
 #include "../../Common/susudefs.hpp"
 #include "../../Common/utils.hpp"
+#include "iport.hpp"
 #include "../../CMSIS/stm32f411xe.h"
 
-template<typename T, tU32 pin>
-class GpioPort
+constexpr tU32 outputBits = 1;
+constexpr tU32 inputBits = 3;
+ 
+template<tU32 pin>
+class GpioPort : public IPort
 {
-  public:
-    enum class PortMode : tU32
-    {
-      Input = 1,
-      Output = 0,
-    };
-    GpioPort(T const &portName): port{portName} {};
-    void SetMode(PortMode mode)
-    {
-      constexpr tU32 outputBits = 1;
-      constexpr tU32 inputBits = 3;
+  public:       
+    explicit GpioPort(GPIO_TypeDef &portName): port{portName} {};
+    virtual void SetMode(PortMode mode) override
+    {      
       switch (mode)
       {
         case PortMode::Output:
-          utils::setBitsAt(port.MODER, outputBits, pin * 2);
+          //using namespace utils;
+          //port.MODER |= (inputBits << (pin * 2));
+          utils::setBitsAt(port.MODER,inputBits,pin * 2);
           break;
-
         case PortMode::Input:
         default:
-          utils::clearBitsAt(port.MODER, inputBits, pin * 2);
+          port.MODER ^=~ (inputBits << (pin * 2));
           break;
       }
     }
-    void Set()
+    virtual void Set() override
     {
       utils::setBitValue(port.BSRR, pin);
     }
-    void Clear()
+    inline virtual void Clear() override
     {
       utils::setBitValue(port.BSRR, pin + 16U);
     }
-    void Toggle()
+    virtual void Toggle() override
     {
       utils::toggleBit(port.ODR, pin);
     }
-
+    virtual bool GetState() const override
+    {
+      return !utils::checkBit(port.IDR, pin);
+    }
   protected:
-    T &port;
+    GPIO_TypeDef &port;
 };
 
 
-#endif //UNTITLED_GPIOPORT_HPP
+#endif //GPIOPORT_HPP

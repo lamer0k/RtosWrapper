@@ -2,7 +2,7 @@
 // Created by Sergey on 27.08.2018.
 //
 #include "irqcontroller.hpp"
-#include "../userbutton.hpp"
+#include "../../Application/userbutton.hpp"
 
 void IrqController::HandleIrqExtiLine15_10()
 {

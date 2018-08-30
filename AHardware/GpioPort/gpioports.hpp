@@ -2,37 +2,42 @@
 // Created by Sergey on 27.08.2018.
 //
 
-#ifndef UNTITLED_GPIOPORTA_HPP
-#define UNTITLED_GPIOPORTA_HPP
+#ifndef UNTITLED_GPIOPORTS_HPP
+#define UNTITLED_GPIOPORTS_HPP
 #include "gpioport.hpp"
+#include "../../Common/singleton.hpp"
 #include "../../CMSIS/stm32f411xe.h"
 
 template<tU32 pin>
-class GpioPortA: public GpioPort<GPIO_TypeDef, pin>
+class GpioPortA: public GpioPort<pin>, public Singleton<GpioPortA<pin>>
 {
-  public:
-    explicit GpioPortA(): GpioPort<GPIO_TypeDef, pin>(*GPIOA) {};
+  friend class Singleton<GpioPortA>;  
+  private:
+    GpioPortA(): GpioPort<pin>(*GPIOA) {};
 };
 
 template<tU32 pin>
-class GpioPortB: public GpioPort<GPIO_TypeDef, pin>
+class GpioPortB: public GpioPort<pin>, public Singleton<GpioPortB<pin>>
 {
-  public:
-    explicit GpioPortB(): GpioPort<GPIO_TypeDef, pin>(*GPIOB) {};
+  friend class Singleton<GpioPortB>;    
+  private:
+    GpioPortB(): GpioPort<pin>(*GPIOB) {};
 };
 
 template<tU32 pin>
-class GpioPortC: public GpioPort<GPIO_TypeDef, pin>
+class GpioPortC: public GpioPort<pin>, public Singleton<GpioPortC<pin>>
 {
-  public:
-    explicit GpioPortC(): GpioPort<GPIO_TypeDef, pin>(*GPIOC) {};
+  friend class Singleton<GpioPortC>;    
+  private:
+    GpioPortC(): GpioPort<pin>(*GPIOC) {};
 };
 
 template<tU32 pin>
-class GpioPortD: public GpioPort<GPIO_TypeDef, pin>
+class GpioPortD: public GpioPort<pin>, public Singleton<GpioPortD<pin>>
 {
-  public:
-    explicit GpioPortD(): GpioPort<GPIO_TypeDef, pin>(*GPIOD) {};
+  friend class Singleton<GpioPortD>;    
+  private:
+    GpioPortD(): GpioPort<pin>(*GPIOD) {};
 };
 
-#endif //UNTITLED_GPIOPORTA_HPP
+#endif //UNTITLED_GPIOPORTS_HPP

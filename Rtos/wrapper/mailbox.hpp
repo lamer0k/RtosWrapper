@@ -6,7 +6,7 @@
 * deposit something (called a message) and retrieve it later. Mailboxes usually
 * work as FIFO: first in, first out. So a message that is deposited first will
 * usually be retrieved first. “Message” might sound abstract, but very simply it
-* means “itemof data”. It will become clearer in the typical applications
+* means “item of data”. It will become clearer in the typical applications
 * explained in the following section.
 *******************************************************************************/
 

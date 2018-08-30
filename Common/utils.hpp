@@ -34,13 +34,13 @@ namespace utils
     value = static_cast<T>(static_cast<T>(1) << static_cast<T>(bit));
   };
 
-  template<typename T, typename T1>
-  inline void setBitsAt(T &value, T1 bits, T position) {
+  template<typename T, typename T1, typename T2>
+  inline void setBitsAt(T &value, T1 bits, T2 position) {
     assert((sizeof(T) * 8U) > position);
     value |= (static_cast<T>(static_cast<T>(bits) << static_cast<T>(position)));
   };
 
-  template<typename T, typename T1>
+  template<typename T, typename T1, typename T2>
   inline void clearBitsAt(T &value, T1 bits, T position) {
     assert((sizeof(T) * 8U) > position);
     value ^=~(static_cast<T>(static_cast<T>(bits) << static_cast<T>(position)));
