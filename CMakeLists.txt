@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.12)
 
-project(untitled)
+project(untitled CXX C ASM)
 
 set(CMAKE_CXX_STANDARD 14)
 set(CMAKE_CXX_COMPILER "D:/Program Files (x86)/IAR Systems/Embedded Workbench 8.1/arm/bin/iccarm.exe")
@@ -17,21 +17,21 @@ set(CMAKE_CXX11_COMPILE_FEATURES "cxx_std_11")
 set(CMAKE_CXX14_COMPILE_FEATURES "cxx_std_14")
 set(CMAKE_CXX17_COMPILE_FEATURES "")
 set(CMAKE_CXX20_COMPILE_FEATURES "")
+set(CMAKE_ASM_FLAGS "-s+ -w+ -r --cpu Cortex-M4 --fpu VFPv4_sp -I${CMAKE_SOURCE_DIR}/Rtos/FreeRtos/")
+
+#set(CMAKE_LIB_DIR "")
 
 set(CMAKE_EXECUTABLE_SUFFIX ".out")
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --no_clustering --no_scheduling --debug --endian=little --cpu=Cortex-M4 -e --fpu=VFPv4_sp --no_exceptions --no_rtti --no_static_destruction -I C:/Users/Sergey/CLionProjects/untitled/CMSIS/ -I C:/Users/Sergey/CLionProjects/untitled/Rtos/wrapper")
-set(CMAKE_CXX_FLAGS  "${CMAKE_CXX_FLAGS} -I C:/Users/Sergey/CLionProjects/untitled/Rtos/wrapper/FreeRtos -I C:/Users/Sergey/CLionProjects/untitled/Rtos/FreeRtos/include")
-set(CMAKE_CXX_FLAGS  "${CMAKE_CXX_FLAGS} -I C:/Users/Sergey/CLionProjects/untitled/Rtos/FreeRtos -I C:/Users/Sergey/CLionProjects/untitled/Rtos/FreeRtos/portable/MemMang")
-set(CMAKE_CXX_FLAGS  "${CMAKE_CXX_FLAGS} -I C:/Users/Sergey/CLionProjects/untitled/Rtos/FreeRtos/portable/Common -I C:/Users/Sergey/CLionProjects/untitled/Rtos/FreeRtos/portable/IAR/ARM_CM4F")
-set(CMAKE_CXX_FLAGS  "${CMAKE_CXX_FLAGS} -I C:/Users/Sergey/CLionProjects/untitled/Rtos/wrapper -I C:/Users/Sergey/CLionProjects/untitled/MyTasks")
-set(CMAKE_CXX_FLAGS  "${CMAKE_CXX_FLAGS} -I C:/Users/Sergey/CLionProjects/untitled/Rtos -I C:/Users/Sergey/CLionProjects/untitled/AHardware")
-set(CMAKE_CXX_FLAGS  "${CMAKE_CXX_FLAGS} -I C:/Users/Sergey/CLionProjects/untitled/Common -I C:/Users/Sergey/CLionProjects/untitled")
-set(EXTERNAL_OBJECTS "${EXETRNAL_OBJECTS} CMakeFiles/untitled.dir/Rtos/FreeRtos/portable/IAR/ARM_CM4F/portasm.o")
-set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} portasm.o --redirect _Printf=_PrintfFullNoMb  --redirect _Scanf=_ScanfFullNoMb  --config C:/Users/Sergey/CLionProjects/untitled/stm32f411xE.icf --semihosting --entry __iar_program_start --vfe --text_out locale")
-
-
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --no_clustering --no_scheduling --debug --endian=little --cpu=Cortex-M4 -e --fpu=VFPv4_sp --c++ --no_exceptions --no_rtti -I ${CMAKE_SOURCE_DIR}/CMSIS/ -I ${CMAKE_SOURCE_DIR}/Rtos/wrapper")
+set(CMAKE_CXX_FLAGS  "${CMAKE_CXX_FLAGS} -I ${CMAKE_SOURCE_DIR}/Rtos/wrapper/FreeRtos -I ${CMAKE_SOURCE_DIR}/Rtos/FreeRtos/include")
+set(CMAKE_CXX_FLAGS  "${CMAKE_CXX_FLAGS} -I ${CMAKE_SOURCE_DIR}/Rtos/FreeRtos -I ${CMAKE_SOURCE_DIR}/Rtos/FreeRtos/portable/MemMang")
+set(CMAKE_CXX_FLAGS  "${CMAKE_CXX_FLAGS} -I ${CMAKE_SOURCE_DIR}/Rtos/FreeRtos/portable/Common -I ${CMAKE_SOURCE_DIR}/Rtos/FreeRtos/portable/IAR/ARM_CM4F")
+set(CMAKE_CXX_FLAGS  "${CMAKE_CXX_FLAGS} -I ${CMAKE_SOURCE_DIR}/Rtos/wrapper -I ${CMAKE_SOURCE_DIR}/MyTasks")
+set(CMAKE_CXX_FLAGS  "${CMAKE_CXX_FLAGS} -I ${CMAKE_SOURCE_DIR}/Rtos -I ${CMAKE_SOURCE_DIR}/AHardware")
+set(CMAKE_CXX_FLAGS  "${CMAKE_CXX_FLAGS} -I ${CMAKE_SOURCE_DIR}/Common -I ${CMAKE_SOURCE_DIR}")
+set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} --redirect _Printf=_PrintfFullNoMb  --redirect _Scanf=_ScanfFullNoMb  --config ${CMAKE_SOURCE_DIR}/stm32f411xE.icf --entry __iar_program_start --vfe --text_out locale")
 set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --no_clustering --no_scheduling --debug --endian=little --cpu=Cortex-M4 -e --fpu=VFPv4_sp")
-set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -I C:/Users/Sergey/CLionProjects/untitled/Rtos/FreeRtos/include -I C:/Users/Sergey/CLionProjects/untitled/Rtos/FreeRtos/portable/IAR/ARM_CM4F -I C:/Users/Sergey/CLionProjects/untitled/Rtos/FreeRtos")
+set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -I ${CMAKE_SOURCE_DIR}/Rtos/FreeRtos/include -I ${CMAKE_SOURCE_DIR}/Rtos/FreeRtos/portable/IAR/ARM_CM4F -I ${CMAKE_SOURCE_DIR}/Rtos/FreeRtos")
 
 
 set(CMAKE_IAR_LINKARM "D:/Program Files (x86)/IAR Systems/Embedded Workbench 8.1/arm/bin/ilinkarm.exe")
@@ -43,9 +43,13 @@ set(CMAKE_STLINK_UTILITY "E:/Projects/Clion/tools/Stm32FlashLoader/ST-LINK Utili
 set(CMAKE_OPENOCD_UTILITY "E:/Projects/Clion/tools/OpenOCD/OpenOCD-20180728/bin/openocd.exe")
 set(CMAKE_OPENOCD_CONFIG "E:/Projects/Clion/tools/OpenOCD/OpenOCD-20180728/share/openocd/scripts")
 
+
 set(CMAKE_BINARY_FILE "${CMAKE_PROJECT_NAME}")
 
-
+add_custom_command(OUTPUT portasm.o
+                    PRE_BUILD
+                   COMMAND ${CMAKE_ASM_COMPILER} -f rtos/FreeRtos/portable/IAR/ARM_CM4F/portasm.s -o  ${CMAKE_CXX_COMPILE_OBJECT}
+                   )
 add_custom_target(${CMAKE_PROJECT_NAME}_srec
         COMMAND ${CMAKE_IAR_ELFTOOL} --srec ${CMAKE_BINARY_FILE}.out ${CMAKE_BINARY_FILE}.srec
         )
@@ -57,16 +61,16 @@ add_dependencies(${CMAKE_PROJECT_NAME}_srec ${CMAKE_PROJECT_NAME})
 
 
 add_custom_target(flash
-        COMMAND ${CMAKE_OPENOCD_UTILITY} -s {CMAKE_OPENOCD_CONFIG}  -f board/st_nucleo_f4.cfg -c "init" -c "reset_config none separate"  -c "reset init" -c "flash write_image erase ${CMAKE_BINARY_FILE}.srec" -c "reset halt"
+        COMMAND ${CMAKE_OPENOCD_UTILITY} -s {CMAKE_OPENOCD_CONFIG}  -f  board/st_nucleo_f4.cfg -c "init" -c "reset_config none separate"  -c "reset init" -c "flash write_image erase ${CMAKE_BINARY_FILE}.out" -c "reset halt"
         )
 
 add_dependencies(flash ${CMAKE_PROJECT_NAME})
-add_dependencies(flash ${CMAKE_PROJECT_NAME}_srec)
+#add_dependencies(flash ${CMAKE_PROJECT_NAME}_srec)
 
 
 set(SOURCE_DIR AHardware CMSIS Common Rtos Rtos/FreeRtos Rtos/wrapper Rtos/wrapper/FreeRtos Rtos/FreeRtos/include Rtos/FreeRtos/portable/Common Rtos/FreeRtos/portable/IAR/ARM_CM4F Rtos/FreeRtos/portable/MemMang MyTasks )
 
-#include_directories( BEFORE ${CMAKE_SOURCE_DIR}/CMSIS ${CMAKE_SOURCE_DIR}/AHardware ${CMAKE_SOURCE_DIR}/AHardware/Buttons ${CMAKE_SOURCE_DIR}//AHardware/Gpio)
+include_directories( ${CMAKE_SOURCE_DIR}/CMSIS ${CMAKE_SOURCE_DIR}/AHardware ${CMAKE_SOURCE_DIR}/AHardware/Buttons ${CMAKE_SOURCE_DIR}//AHardware/Gpio)
 
 #file(GLOB SOURCES
 #        *.h
@@ -76,20 +80,21 @@ set(SOURCE_DIR AHardware CMSIS Common Rtos Rtos/FreeRtos Rtos/wrapper Rtos/wrapp
 #target_include_directories(untitled "${CMAKE_CURRENT_SOURCE_DIR}/Application")
 
 set(SOURCES
-        rtos/FreeRtos/croutine.c
-        rtos/FreeRtos/event_groups.c
+        rtos/FreeRtos/portable/IAR/ARM_CM4F/portasm.s
         AHardware/IrqController/irqcontroller.cpp
+        rtos/FreeRtos/event_groups.c
+        rtos/FreeRtos/croutine.c
         MyTasks/Led1Task.cpp
         rtos/FreeRtos/list.c
-        main.cpp
-        MyTasks/mytask.cpp
         rtos/FreeRtos/portable/IAR/ARM_CM4F/port.c
-        rtos/FreeRtos/queue.c
         Rtos/wrapper/rtos.cpp
-        Rtos/wrapper/FreeRtos/rtosFreeRtos.cpp
+        rtos/FreeRtos/queue.c
+        main.cpp
         startupF411RE.cpp
-        rtos/FreeRtos/tasks.c
+        MyTasks/mytask.cpp
         rtos/FreeRtos/timers.c
+        Rtos/wrapper/FreeRtos/rtosFreeRtos.cpp
+        rtos/FreeRtos/tasks.c
         Application/userbutton.cpp
         #rtos/FreeRtos/portable/MemMang/heap_1.c
 
