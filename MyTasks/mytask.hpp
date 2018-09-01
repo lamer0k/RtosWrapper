@@ -1,5 +1,5 @@
-#ifndef __MYTASK_HPP
-#define __MYTASK_HPP  
+#ifndef MYTASK_HPP
+#define MYTASK_HPP
 
 
 #include "../Rtos/wrapper/thread.hpp"
@@ -21,4 +21,4 @@ extern MyTask myTask;
 
 
 
-#endif //__MYTASK_HPP
+#endif //MYTASK_HPP

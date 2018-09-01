@@ -294,7 +294,7 @@ namespace OsWrapper
   * Returns: Set bits
   ****************************************************************************/
   tEventBits wWaitEvent(tEventHandle const &eventHandle, const tEventBits mask,
-                        const tTime timeOut, OsWrapper::EventMode mode)
+                        tTime timeOut, OsWrapper::EventMode mode)
   {
     BaseType_t xWaitForAllBits = pdFALSE;
     if (mode == OsWrapper::EventMode::waitAnyBits)

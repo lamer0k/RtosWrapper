@@ -22,13 +22,11 @@ class GpioPort : public IPort
       switch (mode)
       {
         case PortMode::Output:
-          //using namespace utils;
-          //port.MODER |= (inputBits << (pin * 2));
           utils::setBitsAt(port.MODER,inputBits,pin * 2);
           break;
         case PortMode::Input:
         default:
-          port.MODER ^=~ (inputBits << (pin * 2));
+          utils::clearBitsAt(port.MODER, inputBits, pin * 2);
           break;
       }
     }

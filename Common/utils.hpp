@@ -41,7 +41,7 @@ namespace utils
   };
 
   template<typename T, typename T1, typename T2>
-  inline void clearBitsAt(T &value, T1 bits, T position) {
+  inline void clearBitsAt(T &value, T1 bits, T2 position) {
     assert((sizeof(T) * 8U) > position);
     value ^=~(static_cast<T>(static_cast<T>(bits) << static_cast<T>(position)));
   };

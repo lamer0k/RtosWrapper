@@ -3,11 +3,11 @@
 *
 * Details   	: Common definitions for SUSU
 *
-* Author        : Skolody
+* Author        : Sergey Kolody
 *******************************************************************************/
 
-#ifndef __SUSUDEFS_H
-#define __SUSUDEFS_H
+#ifndef SUSUDEFS_H
+#define SUSUDEFS_H
 
 using tU8 = unsigned char ;
 using tU16 = unsigned short ;
@@ -20,4 +20,4 @@ using tS32 = signed long ;
 using tF32 = float ;
 using tBoolean = bool ;
 
-#endif //__SUSUDEFS_H
+#endif //SUSUDEFS_H

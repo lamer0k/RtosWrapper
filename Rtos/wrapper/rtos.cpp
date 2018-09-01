@@ -17,7 +17,7 @@ namespace OsWrapper
  * function should call appropriate RTOS API function to create a task. 
  *
  * Assumptions: RTOS API create task function should get a parameter to pass the
- * paramete to task.      
+ * parameter to task.
  * Some RTOS does not use pStack pointer so it should be set to nullptr
  *
  * Parameters: [in] pThread - pointer on Thread object
@@ -64,7 +64,7 @@ namespace OsWrapper
 /*****************************************************************************
  * Function Name: wHandleSvInterrupt()
  * Description: Handle of PendSV Interrupt. The function should be called from 
- *  Pendable request for system service interrupt (PendSV vector)
+ * Pendable request for system service interrupt (PendSV vector)
  *
  * Assumptions: No
  * Parameters: No

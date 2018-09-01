@@ -12,9 +12,6 @@ constexpr tU32 led4Pin = 5U;
 class Led 
 {
   public:
-    Led(IPort & portName): port{portName} 
-    {
-    };
     inline void SwitchOn()
     {
       port.Set();
@@ -26,7 +23,11 @@ class Led
     inline void Toggle()
     {
       port.Toggle();
-    };  
+    };
+  protected:
+    Led(IPort & portName): port{portName}
+    {
+    };
   private:
    IPort &port;
 };

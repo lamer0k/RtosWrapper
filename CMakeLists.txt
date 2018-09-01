@@ -2,9 +2,11 @@ cmake_minimum_required(VERSION 3.12)
 
 project(untitled CXX C ASM)
 
+set(IAR_PATH "D:/Program Files (x86)/IAR Systems/Embedded Workbench 8.1")
 set(CMAKE_CXX_STANDARD 14)
-set(CMAKE_CXX_COMPILER "D:/Program Files (x86)/IAR Systems/Embedded Workbench 8.1/arm/bin/iccarm.exe")
-set(CMAKE_ASM_COMPILER "D:/Program Files (x86)/IAR Systems/Embedded Workbench 8.1/arm/bin/iasmarm.exe")
+set(CMAKE_CXX_COMPILER "${IAR_PATH}/arm/bin/iccarm.exe")
+set(CMAKE_C_COMPILER   "${IAR_PATH}/arm/bin/iccarm.exe")
+set(CMAKE_ASM_COMPILER "${IAR_PATH}/arm/bin/iasmarm.exe")
 set(CMAKE_CXX_COMPILER_ARG1 "--c++")
 set(CMAKE_CXX_COMPILER_ID "IAR")
 set(CMAKE_CXX_COMPILER_VERSION "8.30.1")
@@ -19,8 +21,6 @@ set(CMAKE_CXX17_COMPILE_FEATURES "")
 set(CMAKE_CXX20_COMPILE_FEATURES "")
 set(CMAKE_ASM_FLAGS "-s+ -w+ -r --cpu Cortex-M4 --fpu VFPv4_sp -I${CMAKE_SOURCE_DIR}/Rtos/FreeRtos/")
 
-#set(CMAKE_LIB_DIR "")
-
 set(CMAKE_EXECUTABLE_SUFFIX ".out")
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --no_clustering --no_scheduling --debug --endian=little --cpu=Cortex-M4 -e --fpu=VFPv4_sp --c++ --no_exceptions --no_rtti -I ${CMAKE_SOURCE_DIR}/CMSIS/ -I ${CMAKE_SOURCE_DIR}/Rtos/wrapper")
 set(CMAKE_CXX_FLAGS  "${CMAKE_CXX_FLAGS} -I ${CMAKE_SOURCE_DIR}/Rtos/wrapper/FreeRtos -I ${CMAKE_SOURCE_DIR}/Rtos/FreeRtos/include")
@@ -34,11 +34,11 @@ set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} --no_cse --no_unroll --no_inline --no_code_m
 set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -I ${CMAKE_SOURCE_DIR}/Rtos/FreeRtos/include -I ${CMAKE_SOURCE_DIR}/Rtos/FreeRtos/portable/IAR/ARM_CM4F -I ${CMAKE_SOURCE_DIR}/Rtos/FreeRtos")
 
 
-set(CMAKE_IAR_LINKARM "D:/Program Files (x86)/IAR Systems/Embedded Workbench 8.1/arm/bin/ilinkarm.exe")
-set(CMAKE_IAR_ARCHIVE "D:/Program Files (x86)/IAR Systems/Embedded Workbench 8.1/arm/bin/iarchive.exe")
-set(CMAKE_IAR_ELFTOOL "D:/Program Files (x86)/IAR Systems/Embedded Workbench 8.1/arm/bin/ielftool.exe")
-set(CMAKE_IAR_ELFDUMP "D:/Program Files (x86)/IAR Systems/Embedded Workbench 8.1/arm/bin/ielfdumparm.exe")
-set(CMAKE_IAR_OBJMANIP "D:/Program Files (x86)/IAR Systems/Embedded Workbench 8.1/arm/bin/iobjmanip.exe")
+set(CMAKE_IAR_LINKARM "${IAR_PATH}/arm/bin/ilinkarm.exe")
+set(CMAKE_IAR_ARCHIVE "${IAR_PATH}/arm/bin/iarchive.exe")
+set(CMAKE_IAR_ELFTOOL "${IAR_PATH}/arm/bin/ielftool.exe")
+set(CMAKE_IAR_ELFDUMP "${IAR_PATH}/arm/bin/ielfdumparm.exe")
+set(CMAKE_IAR_OBJMANIP "${IAR_PATH}/arm/bin/iobjmanip.exe")
 set(CMAKE_STLINK_UTILITY "E:/Projects/Clion/tools/Stm32FlashLoader/ST-LINK Utility/ST-LINK_CLI.exe")
 set(CMAKE_OPENOCD_UTILITY "E:/Projects/Clion/tools/OpenOCD/OpenOCD-20180728/bin/openocd.exe")
 set(CMAKE_OPENOCD_CONFIG "E:/Projects/Clion/tools/OpenOCD/OpenOCD-20180728/share/openocd/scripts")
@@ -66,7 +66,7 @@ add_dependencies(flash ${CMAKE_PROJECT_NAME})
 set(SOURCE_DIR AHardware CMSIS Common Rtos Rtos/FreeRtos Rtos/wrapper Rtos/wrapper/FreeRtos Rtos/FreeRtos/include Rtos/FreeRtos/portable/Common Rtos/FreeRtos/portable/IAR/ARM_CM4F Rtos/FreeRtos/portable/MemMang MyTasks )
 
 include_directories( ${CMAKE_SOURCE_DIR}/CMSIS ${CMAKE_SOURCE_DIR}/AHardware ${CMAKE_SOURCE_DIR}/AHardware/Buttons ${CMAKE_SOURCE_DIR}/AHardware/Gpio ${CMAKE_SOURCE_DIR}/Rtos/FreeRtos ${CMAKE_SOURCE_DIR}/MyTasks)
-
+#include_directories("D:/Program Files (x86)/IAR Systems/Embedded Workbench 8.1/arm/inc/cpp")
 set(SOURCES
         rtos/FreeRtos/portable/IAR/ARM_CM4F/portasm.s
         AHardware/IrqController/irqcontroller.cpp
@@ -85,7 +85,6 @@ set(SOURCES
         rtos/FreeRtos/tasks.c
         Application/userbutton.cpp
         #rtos/FreeRtos/portable/MemMang/heap_1.c
-
         )
 
 add_executable(untitled ${SOURCE_DIR} ${SOURCES})

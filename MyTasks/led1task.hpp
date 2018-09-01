@@ -4,7 +4,7 @@
 #include "../Application/userbutton.hpp"
 //For OsWrapper::Thread
 #include "../Rtos/wrapper/thread.hpp"
-#include<array>
+#include <array>
 
 class Led1Task : public OsWrapper::Thread
 {

@@ -27,8 +27,8 @@ namespace OsWrapper
   constexpr tTime waitForEver = 0;
   extern tEventHandle wCreateEvent(tEvent &) ;
   extern void wDeleteEvent(tEventHandle &) ;
-  extern void wSignalEvent(tEventHandle const &, const tEventBits) ;
-  extern tEventBits wWaitEvent(tEventHandle const &, const tEventBits, const tTime, OsWrapper::EventMode) ;
+  extern void wSignalEvent(tEventHandle const &, tEventBits) ;
+  extern tEventBits wWaitEvent(tEventHandle const &, const tEventBits, tTime, OsWrapper::EventMode) ;
   
   constexpr tEventBits defaultMask = {0b11111111} ;
   

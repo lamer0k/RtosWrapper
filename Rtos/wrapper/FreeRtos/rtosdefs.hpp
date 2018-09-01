@@ -41,7 +41,7 @@ namespace OsWrapper
   using tTaskHandle = TaskHandle_t;
   using tStack = StackType_t ;
 
-  using tTaskEventMask = uint32_t;
+  using tTaskEventMask = tU32;
   using tTime = TickType_t ;
 
   using tEventHandle = EventGroupHandle_t;

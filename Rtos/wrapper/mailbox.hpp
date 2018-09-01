@@ -20,11 +20,11 @@
 namespace OsWrapper
 {
   extern bool wMailBoxPut(tMailBoxHandle &, const void* );
-  extern tMailBoxHandle wMailBoxCreate(tU16,tU16, tU8 *, tMailBoxContext &);
+  extern tMailBoxHandle wMailBoxCreate(tU16, tU16, tU8 *, tMailBoxContext &);
   extern void wMailBoxDelete(tMailBoxHandle &);
   extern bool wMailBoxGet(tMailBoxHandle &, void *, tTime);
 
-  template<typename T, int size>
+  template<typename T, tU16 size>
   class MailBox
   {
     public:

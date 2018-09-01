@@ -1,7 +1,7 @@
 /*******************************************************************************
 * Filename  	: thread.hpp
 *
-* Details   	: Base class for any Taskis which contains the pure virtual
+* Details   	: Base class for any Tasks which contains the pure virtual
 * method Execute().  Any active classes which will have a method for running as
 * a task of RTOS should inherit the Thread and override the Execute() method.
 * For example:
@@ -30,7 +30,6 @@ namespace OsWrapper
   extern void wSignal(tTaskHandle const &, const tTaskEventMask) ;
   extern tTaskEventMask wWaitForSignal(const tTaskEventMask, tTime) ;
   constexpr tTaskEventMask defaultTaskMaskBits = 0b010101010 ;
-
 
   enum class StackDepth: tU16
   {
