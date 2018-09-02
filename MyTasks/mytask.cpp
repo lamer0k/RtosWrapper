@@ -10,7 +10,8 @@
 #include "../CMSIS/stm32f411xe.h"
 #include "../Rtos/wrapper/mailbox.hpp"
 #include "../Rtos/wrapper/event.hpp"
-#include "../Application/leds.hpp"
+#include "../Application/ledscontroller.hpp"
+#include "../Application/userbutton.hpp"
 
 extern OsWrapper::MailBox<int, 10> queue;
 extern OsWrapper::Event event;
@@ -20,9 +21,10 @@ void MyTask::Execute()
   while(true) 
   {
     using OsWrapper::operator""ms ;
-    if (event.Wait() != 0)
+    if (UserButton::GetInstance().IsPressed())
     {
-      Led2::GetInstance().Toggle();
+      event.Signal();
     }
+    Sleep(300ms);
   }
 } ;

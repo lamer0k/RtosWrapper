@@ -39,7 +39,7 @@ extern "C" {
 }
 
 using OsWrapper::operator""ms ;
-OsWrapper::Event event{10000ms, 1};
+OsWrapper::Event event{500ms, 1};
 
 MyTask myTask;
 Led1Task led1Task;

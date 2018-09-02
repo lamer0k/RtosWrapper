@@ -54,9 +54,9 @@ namespace OsWrapper
   using tMutex = StaticSemaphore_t;
   using tMutexHandle = SemaphoreHandle_t;
 
-  constexpr unsigned long long operator "" ms(unsigned long long ms) 
+  constexpr tTime operator "" ms(unsigned long long ms)
   {
-    return ms / portTICK_PERIOD_MS ;
+    return static_cast<tTime>(ms / portTICK_PERIOD_MS) ;
   } ;  
 }
 

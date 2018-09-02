@@ -8,6 +8,6 @@ extern OsWrapper::Event event;
 
 void UserButton::HandleInterrupt()
 {
-  const OsWrapper::InterruptEntry ie;
-  event.Signal();
+  //const OsWrapper::InterruptEntry ie;
+ // event.Signal();
 }
