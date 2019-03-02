@@ -85,7 +85,7 @@ set(SOURCES
         rtos/FreeRtos/tasks.c
         Application/userbutton.cpp
         #rtos/FreeRtos/portable/MemMang/heap_1.c
-        )
+        Application/Diagnostic/Action.hpp Application/Diagnostic/Exh001Action.hpp Application/Diagnostic/Exh002Action.hpp Application/Diagnostic/GlobalStatus.hpp)
 
 add_executable(untitled ${SOURCE_DIR} ${SOURCES})
 
