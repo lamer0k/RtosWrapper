@@ -57,10 +57,10 @@ extern "C" const tIntVectItem __vector_table[] =
   0,
   0,
   OsWrapper::Rtos::HandleSvcInterrupt,
-  xPortPendSVHandler,//OsWrapper::Rtos::HandleSvInterrupt,
+  DummyModule::handler,
   0,
-  OsWrapper::Rtos::HandleSvInterrupt,          
-  OsWrapper::Rtos::HandleSysTickInterrupt,         
+  xPortPendSVHandler,
+  OsWrapper::Rtos::HandleSysTickInterrupt,
   //External Interrupts
   DummyModule::handler,         //Window Watchdog
   DummyModule::handler,         //PVD through EXTI Line detect/EXTI16

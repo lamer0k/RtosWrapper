@@ -11,7 +11,7 @@ set(CMAKE_CXX_COMPILER_ARG1 "--c++")
 set(CMAKE_CXX_COMPILER_ID "IAR")
 set(CMAKE_CXX_COMPILER_VERSION "8.30.1")
 set(CMAKE_CXX_COMPILER_VERSION_INTERNAL "9")
-set(CMAKE_CXX_COMPILER_WRAPPER "")
+set(CMAKE_CXX_COMPILER_WRAPPER "vompwrapper.sh")
 set(CMAKE_CXX_STANDARD_COMPUTED_DEFAULT "14")
 set(CMAKE_CXX_COMPILE_FEATURES "cxx_std_98;cxx_std_11;cxx_std_14")
 set(CMAKE_CXX98_COMPILE_FEATURES "cxx_std_98")
@@ -20,6 +20,7 @@ set(CMAKE_CXX14_COMPILE_FEATURES "cxx_std_14")
 set(CMAKE_CXX17_COMPILE_FEATURES "")
 set(CMAKE_CXX20_COMPILE_FEATURES "")
 set(CMAKE_ASM_FLAGS "-s+ -w+ -r --cpu Cortex-M4 --fpu VFPv4_sp -I${CMAKE_SOURCE_DIR}/Rtos/FreeRtos/")
+set(CMAKE_CXX_COMPILER_EXTERNAL_TOOLCHAIN "D:/Program Files (x86)/IAR Systems/Embedded Workbench 8.1/arm/inc/cpp")
 
 set(CMAKE_EXECUTABLE_SUFFIX ".out")
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --no_clustering --no_scheduling --debug --endian=little --cpu=Cortex-M4 -e --fpu=VFPv4_sp --c++ --no_exceptions --no_rtti -I ${CMAKE_SOURCE_DIR}/CMSIS/ -I ${CMAKE_SOURCE_DIR}/Rtos/wrapper")
@@ -66,7 +67,7 @@ add_dependencies(flash ${CMAKE_PROJECT_NAME})
 set(SOURCE_DIR AHardware CMSIS Common Rtos Rtos/FreeRtos Rtos/wrapper Rtos/wrapper/FreeRtos Rtos/FreeRtos/include Rtos/FreeRtos/portable/Common Rtos/FreeRtos/portable/IAR/ARM_CM4F Rtos/FreeRtos/portable/MemMang MyTasks )
 
 include_directories( ${CMAKE_SOURCE_DIR}/CMSIS ${CMAKE_SOURCE_DIR}/AHardware ${CMAKE_SOURCE_DIR}/AHardware/Buttons ${CMAKE_SOURCE_DIR}/AHardware/Gpio ${CMAKE_SOURCE_DIR}/Rtos/FreeRtos ${CMAKE_SOURCE_DIR}/MyTasks)
-#include_directories("D:/Program Files (x86)/IAR Systems/Embedded Workbench 8.1/arm/inc/cpp")
+include_directories($CMAKE_CXX_COMPILER_EXTERNAL_TOOLCHAIN)
 set(SOURCES
         rtos/FreeRtos/portable/IAR/ARM_CM4F/portasm.s
         AHardware/IrqController/irqcontroller.cpp

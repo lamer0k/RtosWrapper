@@ -89,20 +89,6 @@ namespace OsWrapper
   }
 
   /*****************************************************************************
-   * Function Name: wHandleSvInterrupt()
-   * Description: Handle of SV Interrupt. The function should call appropriate
-   * RTOS function to handle the interrupt
-   *
-   * Assumptions: No
-   * Parameters: No
-   * Returns: No
-   ****************************************************************************/
-  void wHandleSvInterrupt()
-  {
-    xPortPendSVHandler();
-  }
-
-  /*****************************************************************************
    * Function Name: wHandleSysTickInterrupt()
    * Description: Handle of System Timer Interrupt. The function should call
    *  appropriate RTOS function to handle the interrupt
