@@ -5,9 +5,9 @@
 #include "MyTasks/mytask.hpp"
 #include "MyTasks/led1task.hpp"
 #include "Application/Diagnostic/GlobalStatus.hpp"
+#include <iostream>
 
-
-uint32_t SystemCoreClock = 16'000'000U;
+std::uint32_t SystemCoreClock = 16'000'000U;
 
 
 extern "C" {
@@ -45,7 +45,7 @@ OsWrapper::Event event{500ms, 1};
 MyTask myTask;
 Led1Task led1Task;
 OsWrapper::MailBox<int, 10> queue;
-GlobalStatus status;
+//GlobalStatus status;
 
 
 int main()
