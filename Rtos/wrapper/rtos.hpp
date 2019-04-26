@@ -35,7 +35,6 @@ namespace OsWrapper
                                const tU16 stackDepth = static_cast<tU16>(StackDepth::minimal)) ;
       static void Start() ;
       static void HandleSvcInterrupt() ;
-      static void HandleSvInterrupt() ;
       static void HandleSysTickInterrupt() ;
 
       friend void wCreateThread(Thread &, const char *, ThreadPriority, const tU16, tStack *);

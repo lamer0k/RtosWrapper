@@ -62,20 +62,6 @@ namespace OsWrapper
   }
 
 /*****************************************************************************
- * Function Name: wHandleSvInterrupt()
- * Description: Handle of PendSV Interrupt. The function should be called from 
- * Pendable request for system service interrupt (PendSV vector)
- *
- * Assumptions: No
- * Parameters: No
- * Returns: No
- ****************************************************************************/ 
-  void Rtos::HandleSvInterrupt() 
-  {
-    wHandleSvInterrupt() ;
-  }   
-
-/*****************************************************************************
  * Function Name: HandleSysTickInterrupt()
  * Description: Handle of Systick Interrupt. The function should be called from 
  *  System tick timer interrupt (Systick vector)

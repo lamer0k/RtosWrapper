@@ -1,0 +1,387 @@
+The system is: Windows - 10.0.15063 - AMD64
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+Compiler: D:/Program Files (x86)/IAR Systems/Embedded Workbench 8.1/arm/bin/iccarm.exe 
+Build flags: 
+Id flags: --c++ 
+
+The output was:
+0
+
+   IAR ANSI C/C++ Compiler V8.30.1.114/W32 for ARM
+   Copyright 1999-2018 IAR Systems AB.
+   PC-locked license - IAR Embedded Workbench for ARM
+ 
+  64 bytes of CODE  memory
+ 176 bytes of CONST memory
+  16 bytes of DATA  memory
+
+Errors: none
+Warnings: none
+
+
+Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CMakeCXXCompilerId.o"
+
+The CXX compiler identification is IAR, found in "C:/Users/Sergey/CLionProjects/untitled/cmake-build-debug/CMakeFiles/3.13.2/CompilerIdCXX/CMakeCXXCompilerId.o"
+
+Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+Compiler: D:/Program Files (x86)/IAR Systems/Embedded Workbench 8.1/arm/bin/iccarm.exe 
+Build flags: 
+Id flags:  
+
+The output was:
+0
+
+   IAR ANSI C/C++ Compiler V8.30.1.114/W32 for ARM
+   Copyright 1999-2018 IAR Systems AB.
+   PC-locked license - IAR Embedded Workbench for ARM
+ 
+  76 bytes of CODE  memory
+ 176 bytes of CONST memory
+  16 bytes of DATA  memory
+
+Errors: none
+Warnings: none
+
+
+Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CMakeCCompilerId.o"
+
+The C compiler identification is IAR, found in "C:/Users/Sergey/CLionProjects/untitled/cmake-build-debug/CMakeFiles/3.13.2/CompilerIdC/CMakeCCompilerId.o"
+
+Determining if the CXX compiler works passed with the following output:
+Change Dir: C:/Users/Sergey/CLionProjects/untitled/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command:"E:/Program Files (x86)/Microsoft Visual Studio 14.0/VC/bin/nmake.exe" "/nologo" "cmTC_66bd5\fast"
+	"E:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\nmake.exe" -f CMakeFiles\cmTC_66bd5.dir\build.make /nologo -L                  CMakeFiles\cmTC_66bd5.dir\build
+Building CXX object CMakeFiles/cmTC_66bd5.dir/testCXXCompiler.cxx.obj
+	D:\PROGRA~2\IARSYS~1\EMBEDD~1.1\arm\bin\iccarm.exe --c++  C:\Users\Sergey\CLionProjects\untitled\cmake-build-debug\CMakeFiles\CMakeTmp\testCXXCompiler.cxx   -e -o CMakeFiles\cmTC_66bd5.dir\testCXXCompiler.cxx.obj
+
+   IAR ANSI C/C++ Compiler V8.30.1.114/W32 for ARM
+   Copyright 1999-2018 IAR Systems AB.
+   PC-locked license - IAR Embedded Workbench for ARM
+ 
+ 4 bytes of CODE memory
+
+Errors: none
+Warnings: none
+Linking CXX executable cmTC_66bd5.exe
+	"D:/Program Files (x86)/IAR Systems/Embedded Workbench 8.1/arm/bin/ilinkarm.exe" "CMakeFiles\cmTC_66bd5.dir\testCXXCompiler.cxx.obj"      -o cmTC_66bd5.exe
+
+   IAR ELF Linker V8.30.1.114/W32 for ARM
+   Copyright 2007-2018 IAR Systems AB.
+
+     144 bytes of readonly  code memory
+  16 384 bytes of readwrite data memory
+
+Errors: none
+Warnings: none
+
+Link time:   0.06 (CPU)   0.06 (elapsed)
+
+
+Detecting CXX compiler ABI info compiled with the following output:
+Change Dir: C:/Users/Sergey/CLionProjects/untitled/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command:"E:/Program Files (x86)/Microsoft Visual Studio 14.0/VC/bin/nmake.exe" "/nologo" "cmTC_9db48\fast"
+	"E:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\nmake.exe" -f CMakeFiles\cmTC_9db48.dir\build.make /nologo -L                  CMakeFiles\cmTC_9db48.dir\build
+Building CXX object CMakeFiles/cmTC_9db48.dir/CMakeCXXCompilerABI.cpp.obj
+	D:\PROGRA~2\IARSYS~1\EMBEDD~1.1\arm\bin\iccarm.exe --c++  "D:\Program Files\JetBrains\CLion 2018.3.2\bin\cmake\win\share\cmake-3.13\Modules\CMakeCXXCompilerABI.cpp"   -e -o CMakeFiles\cmTC_9db48.dir\CMakeCXXCompilerABI.cpp.obj
+
+   IAR ANSI C/C++ Compiler V8.30.1.114/W32 for ARM
+   Copyright 1999-2018 IAR Systems AB.
+   PC-locked license - IAR Embedded Workbench for ARM
+ 
+ 16 bytes of CODE  memory
+ 24 bytes of CONST memory
+
+Errors: none
+Warnings: none
+Linking CXX executable cmTC_9db48.exe
+	"D:/Program Files (x86)/IAR Systems/Embedded Workbench 8.1/arm/bin/ilinkarm.exe" "CMakeFiles\cmTC_9db48.dir\CMakeCXXCompilerABI.cpp.obj"      -o cmTC_9db48.exe
+
+   IAR ELF Linker V8.30.1.114/W32 for ARM
+   Copyright 2007-2018 IAR Systems AB.
+
+     156 bytes of readonly  code memory
+      24 bytes of readonly  data memory
+  16 384 bytes of readwrite data memory
+
+Errors: none
+Warnings: none
+
+Link time:   0.06 (CPU)   0.05 (elapsed)
+
+
+
+
+Detecting CXX [] compiler features compiled with the following output:
+Change Dir: C:/Users/Sergey/CLionProjects/untitled/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command:"E:/Program Files (x86)/Microsoft Visual Studio 14.0/VC/bin/nmake.exe" "/nologo" "cmTC_58942\fast"
+	"E:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\nmake.exe" -f CMakeFiles\cmTC_58942.dir\build.make /nologo -L                  CMakeFiles\cmTC_58942.dir\build
+Building CXX object CMakeFiles/cmTC_58942.dir/feature_tests.cxx.obj
+	D:\PROGRA~2\IARSYS~1\EMBEDD~1.1\arm\bin\iccarm.exe --c++  C:\Users\Sergey\CLionProjects\untitled\cmake-build-debug\CMakeFiles\feature_tests.cxx   -e -o CMakeFiles\cmTC_58942.dir\feature_tests.cxx.obj
+
+   IAR ANSI C/C++ Compiler V8.30.1.114/W32 for ARM
+   Copyright 1999-2018 IAR Systems AB.
+   PC-locked license - IAR Embedded Workbench for ARM
+ 
+ 12 bytes of CODE  memory
+  2 bytes of CONST memory
+
+Errors: none
+Warnings: none
+Linking CXX executable cmTC_58942.exe
+	"D:/Program Files (x86)/IAR Systems/Embedded Workbench 8.1/arm/bin/ilinkarm.exe" "CMakeFiles\cmTC_58942.dir\feature_tests.cxx.obj"      -o cmTC_58942.exe
+
+   IAR ELF Linker V8.30.1.114/W32 for ARM
+   Copyright 2007-2018 IAR Systems AB.
+
+     150 bytes of readonly  code memory
+       2 bytes of readonly  data memory
+  16 384 bytes of readwrite data memory
+
+Errors: none
+Warnings: none
+
+Link time:   0.06 (CPU)   0.05 (elapsed)
+
+
+
+
+Detecting CXX [] compiler features compiled with the following output:
+Change Dir: C:/Users/Sergey/CLionProjects/untitled/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command:"E:/Program Files (x86)/Microsoft Visual Studio 14.0/VC/bin/nmake.exe" "/nologo" "cmTC_92f42\fast"
+	"E:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\nmake.exe" -f CMakeFiles\cmTC_92f42.dir\build.make /nologo -L                  CMakeFiles\cmTC_92f42.dir\build
+Building CXX object CMakeFiles/cmTC_92f42.dir/feature_tests.cxx.obj
+	D:\PROGRA~2\IARSYS~1\EMBEDD~1.1\arm\bin\iccarm.exe --c++  C:\Users\Sergey\CLionProjects\untitled\cmake-build-debug\CMakeFiles\feature_tests.cxx   -e -o CMakeFiles\cmTC_92f42.dir\feature_tests.cxx.obj
+
+   IAR ANSI C/C++ Compiler V8.30.1.114/W32 for ARM
+   Copyright 1999-2018 IAR Systems AB.
+   PC-locked license - IAR Embedded Workbench for ARM
+ 
+ 12 bytes of CODE  memory
+  2 bytes of CONST memory
+
+Errors: none
+Warnings: none
+Linking CXX executable cmTC_92f42.exe
+	"D:/Program Files (x86)/IAR Systems/Embedded Workbench 8.1/arm/bin/ilinkarm.exe" "CMakeFiles\cmTC_92f42.dir\feature_tests.cxx.obj"      -o cmTC_92f42.exe
+
+   IAR ELF Linker V8.30.1.114/W32 for ARM
+   Copyright 2007-2018 IAR Systems AB.
+
+     150 bytes of readonly  code memory
+       2 bytes of readonly  data memory
+  16 384 bytes of readwrite data memory
+
+Errors: none
+Warnings: none
+
+Link time:   0.06 (CPU)   0.06 (elapsed)
+
+
+
+
+Detecting CXX [] compiler features compiled with the following output:
+Change Dir: C:/Users/Sergey/CLionProjects/untitled/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command:"E:/Program Files (x86)/Microsoft Visual Studio 14.0/VC/bin/nmake.exe" "/nologo" "cmTC_c4b81\fast"
+	"E:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\nmake.exe" -f CMakeFiles\cmTC_c4b81.dir\build.make /nologo -L                  CMakeFiles\cmTC_c4b81.dir\build
+Building CXX object CMakeFiles/cmTC_c4b81.dir/feature_tests.cxx.obj
+	D:\PROGRA~2\IARSYS~1\EMBEDD~1.1\arm\bin\iccarm.exe --c++  C:\Users\Sergey\CLionProjects\untitled\cmake-build-debug\CMakeFiles\feature_tests.cxx   -e -o CMakeFiles\cmTC_c4b81.dir\feature_tests.cxx.obj
+
+   IAR ANSI C/C++ Compiler V8.30.1.114/W32 for ARM
+   Copyright 1999-2018 IAR Systems AB.
+   PC-locked license - IAR Embedded Workbench for ARM
+ 
+ 12 bytes of CODE  memory
+  2 bytes of CONST memory
+
+Errors: none
+Warnings: none
+Linking CXX executable cmTC_c4b81.exe
+	"D:/Program Files (x86)/IAR Systems/Embedded Workbench 8.1/arm/bin/ilinkarm.exe" "CMakeFiles\cmTC_c4b81.dir\feature_tests.cxx.obj"      -o cmTC_c4b81.exe
+
+   IAR ELF Linker V8.30.1.114/W32 for ARM
+   Copyright 2007-2018 IAR Systems AB.
+
+     150 bytes of readonly  code memory
+       2 bytes of readonly  data memory
+  16 384 bytes of readwrite data memory
+
+Errors: none
+Warnings: none
+
+Link time:   0.06 (CPU)   0.05 (elapsed)
+
+
+Determining if the C compiler works passed with the following output:
+Change Dir: C:/Users/Sergey/CLionProjects/untitled/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command:"E:/Program Files (x86)/Microsoft Visual Studio 14.0/VC/bin/nmake.exe" "/nologo" "cmTC_9ecda\fast"
+	"E:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\nmake.exe" -f CMakeFiles\cmTC_9ecda.dir\build.make /nologo -L                  CMakeFiles\cmTC_9ecda.dir\build
+Building C object CMakeFiles/cmTC_9ecda.dir/testCCompiler.c.obj
+	D:\PROGRA~2\IARSYS~1\EMBEDD~1.1\arm\bin\iccarm.exe   C:\Users\Sergey\CLionProjects\untitled\cmake-build-debug\CMakeFiles\CMakeTmp\testCCompiler.c   -e -o CMakeFiles\cmTC_9ecda.dir\testCCompiler.c.obj
+
+   IAR ANSI C/C++ Compiler V8.30.1.114/W32 for ARM
+   Copyright 1999-2018 IAR Systems AB.
+   PC-locked license - IAR Embedded Workbench for ARM
+ 
+ 4 bytes of CODE memory
+
+Errors: none
+Warnings: none
+Linking C executable cmTC_9ecda.exe
+	"D:/Program Files (x86)/IAR Systems/Embedded Workbench 8.1/arm/bin/ilinkarm.exe" "CMakeFiles\cmTC_9ecda.dir\testCCompiler.c.obj"      -o cmTC_9ecda.exe
+
+   IAR ELF Linker V8.30.1.114/W32 for ARM
+   Copyright 2007-2018 IAR Systems AB.
+
+     144 bytes of readonly  code memory
+  16 384 bytes of readwrite data memory
+
+Errors: none
+Warnings: none
+
+Link time:   0.05 (CPU)   0.05 (elapsed)
+
+
+Detecting C compiler ABI info compiled with the following output:
+Change Dir: C:/Users/Sergey/CLionProjects/untitled/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command:"E:/Program Files (x86)/Microsoft Visual Studio 14.0/VC/bin/nmake.exe" "/nologo" "cmTC_9ff5d\fast"
+	"E:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\nmake.exe" -f CMakeFiles\cmTC_9ff5d.dir\build.make /nologo -L                  CMakeFiles\cmTC_9ff5d.dir\build
+Building C object CMakeFiles/cmTC_9ff5d.dir/CMakeCCompilerABI.c.obj
+	D:\PROGRA~2\IARSYS~1\EMBEDD~1.1\arm\bin\iccarm.exe   "D:\Program Files\JetBrains\CLion 2018.3.2\bin\cmake\win\share\cmake-3.13\Modules\CMakeCCompilerABI.c"   -e -o CMakeFiles\cmTC_9ff5d.dir\CMakeCCompilerABI.c.obj
+
+   IAR ANSI C/C++ Compiler V8.30.1.114/W32 for ARM
+   Copyright 1999-2018 IAR Systems AB.
+   PC-locked license - IAR Embedded Workbench for ARM
+ 
+ 16 bytes of CODE  memory
+ 24 bytes of CONST memory
+
+Errors: none
+Warnings: none
+Linking C executable cmTC_9ff5d.exe
+	"D:/Program Files (x86)/IAR Systems/Embedded Workbench 8.1/arm/bin/ilinkarm.exe" "CMakeFiles\cmTC_9ff5d.dir\CMakeCCompilerABI.c.obj"      -o cmTC_9ff5d.exe
+
+   IAR ELF Linker V8.30.1.114/W32 for ARM
+   Copyright 2007-2018 IAR Systems AB.
+
+     156 bytes of readonly  code memory
+      24 bytes of readonly  data memory
+  16 384 bytes of readwrite data memory
+
+Errors: none
+Warnings: none
+
+Link time:   0.05 (CPU)   0.05 (elapsed)
+
+
+
+
+Detecting C [] compiler features compiled with the following output:
+Change Dir: C:/Users/Sergey/CLionProjects/untitled/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command:"E:/Program Files (x86)/Microsoft Visual Studio 14.0/VC/bin/nmake.exe" "/nologo" "cmTC_ce8af\fast"
+	"E:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\nmake.exe" -f CMakeFiles\cmTC_ce8af.dir\build.make /nologo -L                  CMakeFiles\cmTC_ce8af.dir\build
+Building C object CMakeFiles/cmTC_ce8af.dir/feature_tests.c.obj
+	D:\PROGRA~2\IARSYS~1\EMBEDD~1.1\arm\bin\iccarm.exe   C:\Users\Sergey\CLionProjects\untitled\cmake-build-debug\CMakeFiles\feature_tests.c   -e -o CMakeFiles\cmTC_ce8af.dir\feature_tests.c.obj
+
+   IAR ANSI C/C++ Compiler V8.30.1.114/W32 for ARM
+   Copyright 1999-2018 IAR Systems AB.
+   PC-locked license - IAR Embedded Workbench for ARM
+ 
+ 12 bytes of CODE  memory
+  2 bytes of CONST memory
+
+Errors: none
+Warnings: none
+Linking C executable cmTC_ce8af.exe
+	"D:/Program Files (x86)/IAR Systems/Embedded Workbench 8.1/arm/bin/ilinkarm.exe" "CMakeFiles\cmTC_ce8af.dir\feature_tests.c.obj"      -o cmTC_ce8af.exe
+
+   IAR ELF Linker V8.30.1.114/W32 for ARM
+   Copyright 2007-2018 IAR Systems AB.
+
+     150 bytes of readonly  code memory
+       2 bytes of readonly  data memory
+  16 384 bytes of readwrite data memory
+
+Errors: none
+Warnings: none
+
+Link time:   0.06 (CPU)   0.05 (elapsed)
+
+
+
+
+Detecting C [] compiler features compiled with the following output:
+Change Dir: C:/Users/Sergey/CLionProjects/untitled/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command:"E:/Program Files (x86)/Microsoft Visual Studio 14.0/VC/bin/nmake.exe" "/nologo" "cmTC_cd42d\fast"
+	"E:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\nmake.exe" -f CMakeFiles\cmTC_cd42d.dir\build.make /nologo -L                  CMakeFiles\cmTC_cd42d.dir\build
+Building C object CMakeFiles/cmTC_cd42d.dir/feature_tests.c.obj
+	D:\PROGRA~2\IARSYS~1\EMBEDD~1.1\arm\bin\iccarm.exe   C:\Users\Sergey\CLionProjects\untitled\cmake-build-debug\CMakeFiles\feature_tests.c   -e -o CMakeFiles\cmTC_cd42d.dir\feature_tests.c.obj
+
+   IAR ANSI C/C++ Compiler V8.30.1.114/W32 for ARM
+   Copyright 1999-2018 IAR Systems AB.
+   PC-locked license - IAR Embedded Workbench for ARM
+ 
+ 12 bytes of CODE  memory
+  2 bytes of CONST memory
+
+Errors: none
+Warnings: none
+Linking C executable cmTC_cd42d.exe
+	"D:/Program Files (x86)/IAR Systems/Embedded Workbench 8.1/arm/bin/ilinkarm.exe" "CMakeFiles\cmTC_cd42d.dir\feature_tests.c.obj"      -o cmTC_cd42d.exe
+
+   IAR ELF Linker V8.30.1.114/W32 for ARM
+   Copyright 2007-2018 IAR Systems AB.
+
+     150 bytes of readonly  code memory
+       2 bytes of readonly  data memory
+  16 384 bytes of readwrite data memory
+
+Errors: none
+Warnings: none
+
+Link time:   0.05 (CPU)   0.05 (elapsed)
+
+
+
+
+Detecting C [--c89] compiler features compiled with the following output:
+Change Dir: C:/Users/Sergey/CLionProjects/untitled/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command:"E:/Program Files (x86)/Microsoft Visual Studio 14.0/VC/bin/nmake.exe" "/nologo" "cmTC_174f4\fast"
+	"E:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\nmake.exe" -f CMakeFiles\cmTC_174f4.dir\build.make /nologo -L                  CMakeFiles\cmTC_174f4.dir\build
+Building C object CMakeFiles/cmTC_174f4.dir/feature_tests.c.obj
+	D:\PROGRA~2\IARSYS~1\EMBEDD~1.1\arm\bin\iccarm.exe   C:\Users\Sergey\CLionProjects\untitled\cmake-build-debug\CMakeFiles\feature_tests.c   --c89 -e -o CMakeFiles\cmTC_174f4.dir\feature_tests.c.obj
+
+   IAR ANSI C/C++ Compiler V8.30.1.114/W32 for ARM
+   Copyright 1999-2018 IAR Systems AB.
+   PC-locked license - IAR Embedded Workbench for ARM
+ 
+ 12 bytes of CODE  memory
+  2 bytes of CONST memory
+
+Errors: none
+Warnings: none
+Linking C executable cmTC_174f4.exe
+	"D:/Program Files (x86)/IAR Systems/Embedded Workbench 8.1/arm/bin/ilinkarm.exe" "CMakeFiles\cmTC_174f4.dir\feature_tests.c.obj"      -o cmTC_174f4.exe
+
+   IAR ELF Linker V8.30.1.114/W32 for ARM
+   Copyright 2007-2018 IAR Systems AB.
+
+     150 bytes of readonly  code memory
+       2 bytes of readonly  data memory
+  16 384 bytes of readwrite data memory
+
+Errors: none
+Warnings: none
+
+Link time:   0.06 (CPU)   0.05 (elapsed)
+
+

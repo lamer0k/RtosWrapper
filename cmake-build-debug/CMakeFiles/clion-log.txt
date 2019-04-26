@@ -1,0 +1,25 @@
+"D:\Program Files\JetBrains\CLion 2018.3.2\bin\cmake\win\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug "-DCMAKE_MAKE_PROGRAM=E:/Program Files (x86)/Microsoft Visual Studio 14.0/VC/bin/nmake.exe" "-DCMAKE_C_COMPILER=D:/Program Files (x86)/IAR Systems/Embedded Workbench 8.1/arm/bin/iccarm.exe" "-DCMAKE_CXX_COMPILER=D:/Program Files (x86)/IAR Systems/Embedded Workbench 8.1/arm/bin/iccarm.exe" -DCMAKE_TOOLCHAIN_FILE=IAR.cmake -G "CodeBlocks - NMake Makefiles" C:\Users\Sergey\CLionProjects\untitled
+-- The ASM compiler identification is unknown
+-- Found assembler: D:/Program Files (x86)/IAR Systems/Embedded Workbench 8.1/arm/bin/iccarm.exe
+-- Warning: Did not find file Compiler/-ASM
+-- Configuring done
+-- Generating done
+-- Build files have been written to: C:/Users/Sergey/CLionProjects/untitled/cmake-build-debug
+
+Cannot get compiler information:
+	Compiler exited with error code 2: D:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\bin\iccarm.exe -xc -IC:\\Users\\Sergey\\CLionProjects\\untitled\\CMSIS -IC:\\Users\\Sergey\\CLionProjects\\untitled\\AHardware -IC:\\Users\\Sergey\\CLionProjects\\untitled\\AHardware\\Buttons -IC:\\Users\\Sergey\\CLionProjects\\untitled\\AHardware\\Gpio -IC:\\Users\\Sergey\\CLionProjects\\untitled\\Rtos\\FreeRtos -IC:\\Users\\Sergey\\CLionProjects\\untitled\\MyTasks --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --no_clustering --no_scheduling --debug --endian=little --cpu=Cortex-M4 -e --fpu=VFPv4_sp -I C:/Users/Sergey/CLionProjects/untitled/Rtos/FreeRtos/include -I C:/Users/Sergey/CLionProjects/untitled/Rtos/FreeRtos/portable/IAR/ARM_CM4F -I C:/Users/Sergey/CLionProjects/untitled/Rtos/FreeRtos -r -e -fpch-preprocess -v -dD -E
+	Fatal error[Su011]: More than one source file specified:
+	            @C:\Users\Sergey\AppData\Local\Temp\response-file87080974178698060
+	                      56.txt
+	            C:\Users\Sergey\AppData\Local\Temp\compiler-file2772170755753526592
+	Fatal error detected, aborting.
+	
+	
+	Compiler exited with error code 2: D:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\bin\iccarm.exe -xc++ -IC:\\Users\\Sergey\\CLionProjects\\untitled\\CMSIS -IC:\\Users\\Sergey\\CLionProjects\\untitled\\AHardware -IC:\\Users\\Sergey\\CLionProjects\\untitled\\AHardware\\Buttons -IC:\\Users\\Sergey\\CLionProjects\\untitled\\AHardware\\Gpio -IC:\\Users\\Sergey\\CLionProjects\\untitled\\Rtos\\FreeRtos -IC:\\Users\\Sergey\\CLionProjects\\untitled\\MyTasks --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --no_clustering --no_scheduling --debug --endian=little --cpu=Cortex-M4 -e --fpu=VFPv4_sp --c++ --no_exceptions --no_rtti -I C:/Users/Sergey/CLionProjects/untitled/CMSIS/ -I C:/Users/Sergey/CLionProjects/untitled/Rtos/wrapper -I C:/Users/Sergey/CLionProjects/untitled/Rtos/wrapper/FreeRtos -I C:/Users/Sergey/CLionProjects/untitled/Rtos/FreeRtos/include -I C:/Users/Sergey/CLionProjects/untitled/Rtos/FreeRtos -I C:/Users/Sergey/CLionProjects/untitled/Rtos/FreeRtos/portable/MemMang -I C:/Users/Sergey/CLionProjects/untitled/Rtos/FreeRtos/portable/Common -I C:/Users/Sergey/CLionProjects/untitled/Rtos/FreeRtos/portable/IAR/ARM_CM4F -I C:/Users/Sergey/CLionProjects/untitled/Rtos/wrapper -I C:/Users/Sergey/CLionProjects/untitled/MyTasks -I C:/Users/Sergey/CLionProjects/untitled/Rtos -I C:/Users/Sergey/CLionProjects/untitled/AHardware -I C:/Users/Sergey/CLionProjects/untitled/Common -I C:/Users/Sergey/CLionProjects/untitled -r -e -fpch-preprocess -v -dD -E
+	Fatal error[Su011]: More than one source file specified:
+	            @C:\Users\Sergey\AppData\Local\Temp\response-file54319251426607413
+	                      66.txt
+	            C:\Users\Sergey\AppData\Local\Temp\compiler-file4706802141789466209
+	Fatal error detected, aborting.
+	
+	

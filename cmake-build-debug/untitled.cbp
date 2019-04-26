@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="untitled"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;CMake Files\cmake-build-debug\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="C:/Users/Sergey/CLionProjects/untitled/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="E:/Program Files (x86)/Microsoft Visual Studio 14.0/VC/bin/nmake.exe /NOLOGO /f C:\Users\Sergey\CLionProjects\untitled\cmake-build-debug\Makefile VERBOSE=1 all"/>
+					<CompileFile command="E:/Program Files (x86)/Microsoft Visual Studio 14.0/VC/bin/nmake.exe /NOLOGO /f C:\Users\Sergey\CLionProjects\untitled\cmake-build-debug\Makefile VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="E:/Program Files (x86)/Microsoft Visual Studio 14.0/VC/bin/nmake.exe /NOLOGO /f C:\Users\Sergey\CLionProjects\untitled\cmake-build-debug\Makefile VERBOSE=1 clean"/>
+					<DistClean command="E:/Program Files (x86)/Microsoft Visual Studio 14.0/VC/bin/nmake.exe /NOLOGO /f C:\Users\Sergey\CLionProjects\untitled\cmake-build-debug\Makefile VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="untitled_srec">
+				<Option working_dir="C:/Users/Sergey/CLionProjects/untitled/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="E:/Program Files (x86)/Microsoft Visual Studio 14.0/VC/bin/nmake.exe /NOLOGO /f C:\Users\Sergey\CLionProjects\untitled\cmake-build-debug\Makefile VERBOSE=1 untitled_srec"/>
+					<CompileFile command="E:/Program Files (x86)/Microsoft Visual Studio 14.0/VC/bin/nmake.exe /NOLOGO /f C:\Users\Sergey\CLionProjects\untitled\cmake-build-debug\Makefile VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="E:/Program Files (x86)/Microsoft Visual Studio 14.0/VC/bin/nmake.exe /NOLOGO /f C:\Users\Sergey\CLionProjects\untitled\cmake-build-debug\Makefile VERBOSE=1 clean"/>
+					<DistClean command="E:/Program Files (x86)/Microsoft Visual Studio 14.0/VC/bin/nmake.exe /NOLOGO /f C:\Users\Sergey\CLionProjects\untitled\cmake-build-debug\Makefile VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="flash">
+				<Option working_dir="C:/Users/Sergey/CLionProjects/untitled/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="E:/Program Files (x86)/Microsoft Visual Studio 14.0/VC/bin/nmake.exe /NOLOGO /f C:\Users\Sergey\CLionProjects\untitled\cmake-build-debug\Makefile VERBOSE=1 flash"/>
+					<CompileFile command="E:/Program Files (x86)/Microsoft Visual Studio 14.0/VC/bin/nmake.exe /NOLOGO /f C:\Users\Sergey\CLionProjects\untitled\cmake-build-debug\Makefile VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="E:/Program Files (x86)/Microsoft Visual Studio 14.0/VC/bin/nmake.exe /NOLOGO /f C:\Users\Sergey\CLionProjects\untitled\cmake-build-debug\Makefile VERBOSE=1 clean"/>
+					<DistClean command="E:/Program Files (x86)/Microsoft Visual Studio 14.0/VC/bin/nmake.exe /NOLOGO /f C:\Users\Sergey\CLionProjects\untitled\cmake-build-debug\Makefile VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="C:/Users/Sergey/CLionProjects/untitled/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="E:/Program Files (x86)/Microsoft Visual Studio 14.0/VC/bin/nmake.exe /NOLOGO /f C:\Users\Sergey\CLionProjects\untitled\cmake-build-debug\Makefile VERBOSE=1 edit_cache"/>
+					<CompileFile command="E:/Program Files (x86)/Microsoft Visual Studio 14.0/VC/bin/nmake.exe /NOLOGO /f C:\Users\Sergey\CLionProjects\untitled\cmake-build-debug\Makefile VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="E:/Program Files (x86)/Microsoft Visual Studio 14.0/VC/bin/nmake.exe /NOLOGO /f C:\Users\Sergey\CLionProjects\untitled\cmake-build-debug\Makefile VERBOSE=1 clean"/>
+					<DistClean command="E:/Program Files (x86)/Microsoft Visual Studio 14.0/VC/bin/nmake.exe /NOLOGO /f C:\Users\Sergey\CLionProjects\untitled\cmake-build-debug\Makefile VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="untitled">
+				<Option output="C:/Users/Sergey/CLionProjects/untitled/cmake-build-debug/untitled.out" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/Sergey/CLionProjects/untitled/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="C:/Users/Sergey/CLionProjects/untitled/CMSIS"/>
+					<Add directory="C:/Users/Sergey/CLionProjects/untitled/AHardware"/>
+					<Add directory="C:/Users/Sergey/CLionProjects/untitled/AHardware/Buttons"/>
+					<Add directory="C:/Users/Sergey/CLionProjects/untitled/AHardware/Gpio"/>
+					<Add directory="C:/Users/Sergey/CLionProjects/untitled/Rtos/FreeRtos"/>
+					<Add directory="C:/Users/Sergey/CLionProjects/untitled/MyTasks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="E:/Program Files (x86)/Microsoft Visual Studio 14.0/VC/bin/nmake.exe /NOLOGO /f C:\Users\Sergey\CLionProjects\untitled\cmake-build-debug\Makefile VERBOSE=1 untitled"/>
+					<CompileFile command="E:/Program Files (x86)/Microsoft Visual Studio 14.0/VC/bin/nmake.exe /NOLOGO /f C:\Users\Sergey\CLionProjects\untitled\cmake-build-debug\Makefile VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="E:/Program Files (x86)/Microsoft Visual Studio 14.0/VC/bin/nmake.exe /NOLOGO /f C:\Users\Sergey\CLionProjects\untitled\cmake-build-debug\Makefile VERBOSE=1 clean"/>
+					<DistClean command="E:/Program Files (x86)/Microsoft Visual Studio 14.0/VC/bin/nmake.exe /NOLOGO /f C:\Users\Sergey\CLionProjects\untitled\cmake-build-debug\Makefile VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="untitled/fast">
+				<Option output="C:/Users/Sergey/CLionProjects/untitled/cmake-build-debug/untitled.out" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/Sergey/CLionProjects/untitled/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="C:/Users/Sergey/CLionProjects/untitled/CMSIS"/>
+					<Add directory="C:/Users/Sergey/CLionProjects/untitled/AHardware"/>
+					<Add directory="C:/Users/Sergey/CLionProjects/untitled/AHardware/Buttons"/>
+					<Add directory="C:/Users/Sergey/CLionProjects/untitled/AHardware/Gpio"/>
+					<Add directory="C:/Users/Sergey/CLionProjects/untitled/Rtos/FreeRtos"/>
+					<Add directory="C:/Users/Sergey/CLionProjects/untitled/MyTasks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="E:/Program Files (x86)/Microsoft Visual Studio 14.0/VC/bin/nmake.exe /NOLOGO /f C:\Users\Sergey\CLionProjects\untitled\cmake-build-debug\Makefile VERBOSE=1 untitled/fast"/>
+					<CompileFile command="E:/Program Files (x86)/Microsoft Visual Studio 14.0/VC/bin/nmake.exe /NOLOGO /f C:\Users\Sergey\CLionProjects\untitled\cmake-build-debug\Makefile VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="E:/Program Files (x86)/Microsoft Visual Studio 14.0/VC/bin/nmake.exe /NOLOGO /f C:\Users\Sergey\CLionProjects\untitled\cmake-build-debug\Makefile VERBOSE=1 clean"/>
+					<DistClean command="E:/Program Files (x86)/Microsoft Visual Studio 14.0/VC/bin/nmake.exe /NOLOGO /f C:\Users\Sergey\CLionProjects\untitled\cmake-build-debug\Makefile VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="C:/Users/Sergey/CLionProjects/untitled/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="E:/Program Files (x86)/Microsoft Visual Studio 14.0/VC/bin/nmake.exe /NOLOGO /f C:\Users\Sergey\CLionProjects\untitled\cmake-build-debug\Makefile VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="E:/Program Files (x86)/Microsoft Visual Studio 14.0/VC/bin/nmake.exe /NOLOGO /f C:\Users\Sergey\CLionProjects\untitled\cmake-build-debug\Makefile VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="E:/Program Files (x86)/Microsoft Visual Studio 14.0/VC/bin/nmake.exe /NOLOGO /f C:\Users\Sergey\CLionProjects\untitled\cmake-build-debug\Makefile VERBOSE=1 clean"/>
+					<DistClean command="E:/Program Files (x86)/Microsoft Visual Studio 14.0/VC/bin/nmake.exe /NOLOGO /f C:\Users\Sergey\CLionProjects\untitled\cmake-build-debug\Makefile VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="C:/Users/Sergey/CLionProjects/untitled/AHardware">
+			<Option target="untitled"/>
+		</Unit>
+		<Unit filename="C:/Users/Sergey/CLionProjects/untitled/AHardware/IrqController/irqcontroller.cpp">
+			<Option target="untitled"/>
+		</Unit>
+		<Unit filename="C:/Users/Sergey/CLionProjects/untitled/AHardware/IrqController/irqcontroller.hpp">
+			<Option target="untitled"/>
+		</Unit>
+		<Unit filename="C:/Users/Sergey/CLionProjects/untitled/Application/Diagnostic/Action.hpp">
+			<Option target="untitled"/>
+		</Unit>
+		<Unit filename="C:/Users/Sergey/CLionProjects/untitled/Application/Diagnostic/Exh001Action.hpp">
+			<Option target="untitled"/>
+		</Unit>
+		<Unit filename="C:/Users/Sergey/CLionProjects/untitled/Application/Diagnostic/Exh002Action.hpp">
+			<Option target="untitled"/>
+		</Unit>
+		<Unit filename="C:/Users/Sergey/CLionProjects/untitled/Application/Diagnostic/GlobalStatus.hpp">
+			<Option target="untitled"/>
+		</Unit>
+		<Unit filename="C:/Users/Sergey/CLionProjects/untitled/Application/userbutton.cpp">
+			<Option target="untitled"/>
+		</Unit>
+		<Unit filename="C:/Users/Sergey/CLionProjects/untitled/Application/userbutton.hpp">
+			<Option target="untitled"/>
+		</Unit>
+		<Unit filename="C:/Users/Sergey/CLionProjects/untitled/CMSIS">
+			<Option target="untitled"/>
+		</Unit>
+		<Unit filename="C:/Users/Sergey/CLionProjects/untitled/Common">
+			<Option target="untitled"/>
+		</Unit>
+		<Unit filename="C:/Users/Sergey/CLionProjects/untitled/MyTasks">
+			<Option target="untitled"/>
+		</Unit>
+		<Unit filename="C:/Users/Sergey/CLionProjects/untitled/MyTasks/Led1Task.cpp">
+			<Option target="untitled"/>
+		</Unit>
+		<Unit filename="C:/Users/Sergey/CLionProjects/untitled/MyTasks/Led1Task.hpp">
+			<Option target="untitled"/>
+		</Unit>
+		<Unit filename="C:/Users/Sergey/CLionProjects/untitled/MyTasks/mytask.cpp">
+			<Option target="untitled"/>
+		</Unit>
+		<Unit filename="C:/Users/Sergey/CLionProjects/untitled/MyTasks/mytask.hpp">
+			<Option target="untitled"/>
+		</Unit>
+		<Unit filename="C:/Users/Sergey/CLionProjects/untitled/Rtos">
+			<Option target="untitled"/>
+		</Unit>
+		<Unit filename="C:/Users/Sergey/CLionProjects/untitled/Rtos/FreeRtos">
+			<Option target="untitled"/>
+		</Unit>
+		<Unit filename="C:/Users/Sergey/CLionProjects/untitled/Rtos/FreeRtos/croutine.c">
+			<Option target="untitled"/>
+		</Unit>
+		<Unit filename="C:/Users/Sergey/CLionProjects/untitled/Rtos/FreeRtos/event_groups.c">
+			<Option target="untitled"/>
+		</Unit>
+		<Unit filename="C:/Users/Sergey/CLionProjects/untitled/Rtos/FreeRtos/include">
+			<Option target="untitled"/>
+		</Unit>
+		<Unit filename="C:/Users/Sergey/CLionProjects/untitled/Rtos/FreeRtos/list.c">
+			<Option target="untitled"/>
+		</Unit>
+		<Unit filename="C:/Users/Sergey/CLionProjects/untitled/Rtos/FreeRtos/portable/Common">
+			<Option target="untitled"/>
+		</Unit>
+		<Unit filename="C:/Users/Sergey/CLionProjects/untitled/Rtos/FreeRtos/portable/IAR/ARM_CM4F">
+			<Option target="untitled"/>
+		</Unit>
+		<Unit filename="C:/Users/Sergey/CLionProjects/untitled/Rtos/FreeRtos/portable/IAR/ARM_CM4F/port.c">
+			<Option target="untitled"/>
+		</Unit>
+		<Unit filename="C:/Users/Sergey/CLionProjects/untitled/Rtos/FreeRtos/portable/IAR/ARM_CM4F/portasm.s">
+			<Option target="untitled"/>
+		</Unit>
+		<Unit filename="C:/Users/Sergey/CLionProjects/untitled/Rtos/FreeRtos/portable/MemMang">
+			<Option target="untitled"/>
+		</Unit>
+		<Unit filename="C:/Users/Sergey/CLionProjects/untitled/Rtos/FreeRtos/queue.c">
+			<Option target="untitled"/>
+		</Unit>
+		<Unit filename="C:/Users/Sergey/CLionProjects/untitled/Rtos/FreeRtos/tasks.c">
+			<Option target="untitled"/>
+		</Unit>
+		<Unit filename="C:/Users/Sergey/CLionProjects/untitled/Rtos/FreeRtos/timers.c">
+			<Option target="untitled"/>
+		</Unit>
+		<Unit filename="C:/Users/Sergey/CLionProjects/untitled/Rtos/wrapper">
+			<Option target="untitled"/>
+		</Unit>
+		<Unit filename="C:/Users/Sergey/CLionProjects/untitled/Rtos/wrapper/FreeRtos">
+			<Option target="untitled"/>
+		</Unit>
+		<Unit filename="C:/Users/Sergey/CLionProjects/untitled/Rtos/wrapper/FreeRtos/rtosFreeRtos.cpp">
+			<Option target="untitled"/>
+		</Unit>
+		<Unit filename="C:/Users/Sergey/CLionProjects/untitled/Rtos/wrapper/rtos.cpp">
+			<Option target="untitled"/>
+		</Unit>
+		<Unit filename="C:/Users/Sergey/CLionProjects/untitled/Rtos/wrapper/rtos.hpp">
+			<Option target="untitled"/>
+		</Unit>
+		<Unit filename="C:/Users/Sergey/CLionProjects/untitled/main.cpp">
+			<Option target="untitled"/>
+		</Unit>
+		<Unit filename="C:/Users/Sergey/CLionProjects/untitled/startupF411RE.cpp">
+			<Option target="untitled"/>
+		</Unit>
+		<Unit filename="C:/Users/Sergey/CLionProjects/untitled/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="C:/Users/Sergey/CLionProjects/untitled/cmake-build-debug/IAR.cmake">
+			<Option virtualFolder="CMake Files\cmake-build-debug\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

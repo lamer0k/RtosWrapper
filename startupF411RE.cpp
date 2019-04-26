@@ -19,6 +19,8 @@
 #include "Rtos/wrapper/rtos.hpp"
 
 extern "C" void __iar_program_start( void );
+extern "C" void xPortPendSVHandler(void);
+
 
 class DummyModule
 {
@@ -54,11 +56,11 @@ extern "C" const tIntVectItem __vector_table[] =
   0,
   0,
   0,
-  OsWrapper::Rtos::HandleSvcInterrupt,             
+  OsWrapper::Rtos::HandleSvcInterrupt,
   DummyModule::handler,
   0,
-  OsWrapper::Rtos::HandleSvInterrupt,          
-  OsWrapper::Rtos::HandleSysTickInterrupt,         
+  xPortPendSVHandler,
+  OsWrapper::Rtos::HandleSysTickInterrupt,
   //External Interrupts
   DummyModule::handler,         //Window Watchdog
   DummyModule::handler,         //PVD through EXTI Line detect/EXTI16

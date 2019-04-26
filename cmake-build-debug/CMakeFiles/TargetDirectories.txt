@@ -1,0 +1,5 @@
+C:/Users/Sergey/CLionProjects/untitled/cmake-build-debug/CMakeFiles/untitled_srec.dir
+C:/Users/Sergey/CLionProjects/untitled/cmake-build-debug/CMakeFiles/flash.dir
+C:/Users/Sergey/CLionProjects/untitled/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/Sergey/CLionProjects/untitled/cmake-build-debug/CMakeFiles/untitled.dir
+C:/Users/Sergey/CLionProjects/untitled/cmake-build-debug/CMakeFiles/rebuild_cache.dir
