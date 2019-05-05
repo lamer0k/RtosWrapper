@@ -11,15 +11,14 @@ namespace OsWrapper
 {
   extern tMutexHandle wCreateMutex(tMutex &);
   extern void wDeleteMutex(tMutexHandle &);
-  extern bool wLockMutex(tMutexHandle &, tTime);
-  extern void wUnLockMutex(tMutexHandle &);
+  extern bool wLockMutex(tMutexHandle const &, tTime);
+  extern void wUnLockMutex(tMutexHandle const &);
 
   class Mutex
   {
     public:
-      Mutex()
+      Mutex(): handle(wCreateMutex(mutex))
       {
-        handle = wCreateMutex(mutex);
       }
 
       ~Mutex()
