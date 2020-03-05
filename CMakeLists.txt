@@ -2,6 +2,7 @@ cmake_minimum_required(VERSION 3.12)
 
 project(untitled CXX C ASM)
 
+set(CMAKE_SOURCE_DIR "C:/GitHub/RtosWrapper")
 set(IAR_PATH "C:/Program Files (x86)/IAR Systems/Embedded Workbench 8.3")
 set(CMAKE_CXX_STANDARD 14)
 set(CMAKE_CXX_COMPILER "${IAR_PATH}/arm/bin/iccarm.exe")
@@ -64,9 +65,23 @@ add_dependencies(flash ${CMAKE_PROJECT_NAME})
 #add_dependencies(flash ${CMAKE_PROJECT_NAME}_srec)
 
 
+
 set(SOURCE_DIR AHardware CMSIS Common Rtos Rtos/FreeRtos Rtos/wrapper Rtos/wrapper/FreeRtos Rtos/FreeRtos/include Rtos/FreeRtos/portable/Common Rtos/FreeRtos/portable/IAR/ARM_CM4F Rtos/FreeRtos/portable/MemMang MyTasks )
 
-include_directories( ${CMAKE_SOURCE_DIR}/CMSIS ${CMAKE_SOURCE_DIR}/AHardware ${CMAKE_SOURCE_DIR}/AHardware/Buttons ${CMAKE_SOURCE_DIR}/AHardware/Gpio ${CMAKE_SOURCE_DIR}/Rtos/FreeRtos ${CMAKE_SOURCE_DIR}/MyTasks)
+include_directories(
+        ${CMAKE_SOURCE_DIR}/CMSIS
+        ${CMAKE_SOURCE_DIR}/AHardware
+        ${CMAKE_SOURCE_DIR}/AHardware/Buttons
+        ${CMAKE_SOURCE_DIR}/AHardware/Gpio
+        ${CMAKE_SOURCE_DIR}/Rtos/FreeRtos
+        ${CMAKE_SOURCE_DIR}/MyTasks
+        ${CMAKE_SOURCE_DIR}/Rtos/FreeRtos/include
+        ${CMAKE_SOURCE_DIR}/Common
+        ${CMAKE_SOURCE_DIR}/Rtos/FreeRtos/portable/IAR/ARM_CM4F
+        ${CMAKE_SOURCE_DIR}/Rtos/FreeRtos/portable/Common
+        ${CMAKE_SOURCE_DIR}/Rtos/wrapper/FreeRtos
+        ${CMAKE_SOURCE_DIR}/Rtos/wrapper
+)
 include_directories($CMAKE_CXX_COMPILER_EXTERNAL_TOOLCHAIN)
 set(SOURCES
         rtos/FreeRtos/portable/IAR/ARM_CM4F/portasm.s
@@ -88,7 +103,27 @@ set(SOURCES
         #rtos/FreeRtos/portable/MemMang/heap_1.c
         Application/Diagnostic/Action.hpp Application/Diagnostic/Exh001Action.hpp Application/Diagnostic/Exh002Action.hpp Application/Diagnostic/GlobalStatus.hpp)
 
-add_executable(untitled ${SOURCE_DIR} ${SOURCES})
+add_executable(untitled
+        ${CMAKE_SOURCE_DIR}/rtos/FreeRtos/portable/IAR/ARM_CM4F/portasm.s
+        ${CMAKE_SOURCE_DIR}/AHardware/IrqController/irqcontroller.cpp
+        ${CMAKE_SOURCE_DIR}/rtos/FreeRtos/event_groups.c
+        ${CMAKE_SOURCE_DIR}/rtos/FreeRtos/croutine.c
+        ${CMAKE_SOURCE_DIR}/MyTasks/Led1Task.cpp
+        ${CMAKE_SOURCE_DIR}/rtos/FreeRtos/list.c
+        ${CMAKE_SOURCE_DIR}/rtos/FreeRtos/portable/IAR/ARM_CM4F/port.c
+        ${CMAKE_SOURCE_DIR}/Rtos/wrapper/rtos.cpp
+        ${CMAKE_SOURCE_DIR}/rtos/FreeRtos/queue.c
+        ${CMAKE_SOURCE_DIR}/main.cpp
+        ${CMAKE_SOURCE_DIR}/startupF411RE.cpp
+        ${CMAKE_SOURCE_DIR}/MyTasks/mytask.cpp
+        ${CMAKE_SOURCE_DIR}/rtos/FreeRtos/timers.c
+        ${CMAKE_SOURCE_DIR}/Rtos/wrapper/FreeRtos/rtosFreeRtos.cpp
+        ${CMAKE_SOURCE_DIR}/rtos/FreeRtos/tasks.c
+        ${CMAKE_SOURCE_DIR}/Application/userbutton.cpp
+        #rtos/FreeRtos/portable/MemMang/heap_1.c
+        ${CMAKE_SOURCE_DIR}/Application/Diagnostic/Action.hpp
+        Application/Diagnostic/Exh001Action.hpp Application/Diagnostic/Exh002Action.hpp Application/Diagnostic/GlobalStatus.hpp
+        )
 
 
 

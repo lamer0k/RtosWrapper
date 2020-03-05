@@ -14,14 +14,57 @@
   </component>
   <component name="CMakeSettings" AUTO_RELOAD="true">
     <configurations>
-      <configuration PROFILE_NAME="Default-IAR" TOOLCHAIN_NAME="IAR" />
+      <configuration PROFILE_NAME="MinSizeRel-Cygwin" CONFIG_NAME="MinSizeRel" TOOLCHAIN_NAME="Cygwin" />
       <configuration PROFILE_NAME="Debug-MinGW" CONFIG_NAME="Debug" TOOLCHAIN_NAME="MinGW" />
       <configuration PROFILE_NAME="Release-IAR" CONFIG_NAME="Release" TOOLCHAIN_NAME="IAR" />
+      <configuration PROFILE_NAME="Default-Cygwin IAR" TOOLCHAIN_NAME="Cygwin IAR" />
     </configurations>
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5335a5d7-2ea1-4d0d-bfd4-dd1a3e5c554b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeRuleHashes.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Progress/count.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-environment.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/cmake.check_cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/flash.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/flash.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/flash.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/flash.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled.dir/ASM.includecache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled.dir/C.includecache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled.dir/CXX.includecache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled.dir/Rtos/FreeRtos/portable/IAR/ARM_CM4F/portasm.s.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled.dir/depend.internal" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled.dir/depend.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled.dir/flags.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled_srec.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled_srec.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled_srec.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled_srec.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/IAR-ASM.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/IAR-C.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/IAR-CXX.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/IAR-DetermineCompiler.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/IAR-FindBinUtils.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/IAR.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cmake_install.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/untitled.cbp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/untitled.srec" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,50 +74,7 @@
   <component name="ClangdSettings">
     <option name="formatViaClangd" value="false" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Default-IAR" />
-  <component name="FavoritesManager">
-    <favorites_list name="untitled" />
-  </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>Приве</find>
-      <find>target</find>
-      <find>portasm</find>
-      <find>CMAKE_EXE_LINKER_FLAGS</find>
-      <find>EXTERNAL_OBJECT</find>
-      <find>xSemaphoreCreateMutexStatic</find>
-      <find>S</find>
-      <find>xTaskCreateStatic</find>
-      <find>xQueueCreateMutexStatic</find>
-      <find>Dyna</find>
-      <find>static</find>
-      <find>onfigSUPPORT_STATIC_ALLOCATIO</find>
-      <find>vApplicationGetTimerTaskMemory</find>
-      <find>configUSE_TIMERS</find>
-      <find>vApplicationGetIdleTaskMemory</find>
-      <find>STATIC</find>
-      <find>INCLUDE_xTimerPendFunctionCall</find>
-      <find>xTimerPendFunctionCallFromISR</find>
-      <find>configSUPPORT_STATIC_ALLOCATION</find>
-      <find>pvPortMalloc</find>
-      <find>idle</find>
-      <find>tU</find>
-      <find>PortC.9</find>
-      <find>BSRR</find>
-      <find>GPIO</find>
-      <find>event</find>
-      <find>dlib</find>
-      <find>bPowerAdvisoryAlarm</find>
-      <find>setPowerAdvisoryAlarm</find>
-      <find>bFieldDeviceMalfunction</find>
-    </findStrings>
-    <dirStrings>
-      <dir>C:\Users\Sergey\CLionProjects\untitled</dir>
-      <dir>D:\Program Files\JetBrains</dir>
-      <dir>C:\Users\Sergey\CLionProjects\</dir>
-      <dir>D:\Program Files\JetBrains\CLion 2018.2</dir>
-    </dirStrings>
-  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Default-Cygwin IAR" />
   <component name="Git.Settings">
     <option name="PREVIOUS_COMMIT_AUTHORS">
       <list>
@@ -102,14 +102,20 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="cf.first.check.clang-format" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="settings.editor.selected.configurable" value="CMakeSettings" />
+    <property name="settings.editor.selected.configurable" value="CPPToolchains" />
     <property name="settings.editor.splitter.proportion" value="0.11433172" />
   </component>
   <component name="ReadonlyStatusHandler">
@@ -194,6 +200,9 @@
       <workItem from="1539363769871" duration="929000" />
       <workItem from="1545487396127" duration="8597000" />
       <workItem from="1583426221610" duration="1660000" />
+      <workItem from="1583428099606" duration="357000" />
+      <workItem from="1583428508719" duration="2000" />
+      <workItem from="1583431216090" duration="1591000" />
     </task>
     <task id="LOCAL-00001" summary="update file">
       <created>1535140998866</created>
@@ -387,22 +396,30 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="679" y="261" key="#flash/0.0.1920.1080@0.0.1920.1080" timestamp="1583426338755" />
-    <state x="585" y="134" key="CommitChangelistDialog2" timestamp="1583426840952">
+    <state x="669" y="269" key="#untitled_srec" timestamp="1583430820003">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="585" y="134" key="CommitChangelistDialog2/0.0.1920.1080@0.0.1920.1080" timestamp="1583426840952" />
-    <state x="740" y="294" key="FileChooserDialogImpl" timestamp="1583426376527">
+    <state x="669" y="269" key="#untitled_srec/0.0.1920.1080@0.0.1920.1080" timestamp="1583430820003" />
+    <state x="585" y="134" key="CommitChangelistDialog2" timestamp="1583427935228">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="740" y="294" key="FileChooserDialogImpl/0.0.1920.1080@0.0.1920.1080" timestamp="1583426376527" />
-    <state x="461" y="182" key="SettingsEditor" timestamp="1583426530873">
+    <state x="585" y="134" key="CommitChangelistDialog2/0.0.1920.1080@0.0.1920.1080" timestamp="1583427935228" />
+    <state x="427" y="307" key="FileChooserDialogImpl" timestamp="1583431434554">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="461" y="182" key="SettingsEditor/0.0.1920.1080@0.0.1920.1080" timestamp="1583426530873" />
-    <state x="552" y="273" key="Vcs.Push.Dialog.v2" timestamp="1583427899834">
+    <state x="427" y="307" key="FileChooserDialogImpl/0.0.1920.1080@0.0.1920.1080" timestamp="1583431434554" />
+    <state x="461" y="182" key="SettingsEditor" timestamp="1583431976361">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="552" y="273" key="Vcs.Push.Dialog.v2/0.0.1920.1080@0.0.1920.1080" timestamp="1583427899834" />
+    <state x="461" y="182" key="SettingsEditor/0.0.1920.1080@0.0.1920.1080" timestamp="1583431976361" />
+    <state x="552" y="273" key="Vcs.Push.Dialog.v2" timestamp="1583427952275">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="552" y="273" key="Vcs.Push.Dialog.v2/0.0.1920.1080@0.0.1920.1080" timestamp="1583427952275" />
+    <state x="656" y="364" key="com.intellij.ide.util.TipDialog" timestamp="1583431230210">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="656" y="364" key="com.intellij.ide.util.TipDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1583431230210" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
