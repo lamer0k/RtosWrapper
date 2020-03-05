@@ -6,8 +6,9 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_ASM
-  "C:/Users/Sergey/CLionProjects/untitled/Rtos/FreeRtos/portable/IAR/ARM_CM4F/portasm.s" "C:/Users/Sergey/CLionProjects/untitled/cmake-build-debug/CMakeFiles/untitled.dir/Rtos/FreeRtos/portable/IAR/ARM_CM4F/portasm.s.obj"
+  "C:/GitHub/RtosWrapper/Rtos/FreeRtos/portable/IAR/ARM_CM4F/portasm.s" "C:/GitHub/RtosWrapper/cmake-build-debug/CMakeFiles/untitled.dir/Rtos/FreeRtos/portable/IAR/ARM_CM4F/portasm.s.obj"
   )
+set(CMAKE_ASM_COMPILER_ID "GNU")
 
 # The include file search paths:
 set(CMAKE_ASM_TARGET_INCLUDE_PATH
@@ -17,17 +18,18 @@ set(CMAKE_ASM_TARGET_INCLUDE_PATH
   "../AHardware/Gpio"
   "../Rtos/FreeRtos"
   "../MyTasks"
+  "../$CMAKE_CXX_COMPILER_EXTERNAL_TOOLCHAIN"
   )
 set(CMAKE_DEPENDS_CHECK_C
-  "C:/Users/Sergey/CLionProjects/untitled/Rtos/FreeRtos/croutine.c" "C:/Users/Sergey/CLionProjects/untitled/cmake-build-debug/CMakeFiles/untitled.dir/Rtos/FreeRtos/croutine.c.obj"
-  "C:/Users/Sergey/CLionProjects/untitled/Rtos/FreeRtos/event_groups.c" "C:/Users/Sergey/CLionProjects/untitled/cmake-build-debug/CMakeFiles/untitled.dir/Rtos/FreeRtos/event_groups.c.obj"
-  "C:/Users/Sergey/CLionProjects/untitled/Rtos/FreeRtos/list.c" "C:/Users/Sergey/CLionProjects/untitled/cmake-build-debug/CMakeFiles/untitled.dir/Rtos/FreeRtos/list.c.obj"
-  "C:/Users/Sergey/CLionProjects/untitled/Rtos/FreeRtos/portable/IAR/ARM_CM4F/port.c" "C:/Users/Sergey/CLionProjects/untitled/cmake-build-debug/CMakeFiles/untitled.dir/Rtos/FreeRtos/portable/IAR/ARM_CM4F/port.c.obj"
-  "C:/Users/Sergey/CLionProjects/untitled/Rtos/FreeRtos/queue.c" "C:/Users/Sergey/CLionProjects/untitled/cmake-build-debug/CMakeFiles/untitled.dir/Rtos/FreeRtos/queue.c.obj"
-  "C:/Users/Sergey/CLionProjects/untitled/Rtos/FreeRtos/tasks.c" "C:/Users/Sergey/CLionProjects/untitled/cmake-build-debug/CMakeFiles/untitled.dir/Rtos/FreeRtos/tasks.c.obj"
-  "C:/Users/Sergey/CLionProjects/untitled/Rtos/FreeRtos/timers.c" "C:/Users/Sergey/CLionProjects/untitled/cmake-build-debug/CMakeFiles/untitled.dir/Rtos/FreeRtos/timers.c.obj"
+  "C:/GitHub/RtosWrapper/Rtos/FreeRtos/croutine.c" "C:/GitHub/RtosWrapper/cmake-build-debug/CMakeFiles/untitled.dir/Rtos/FreeRtos/croutine.c.obj"
+  "C:/GitHub/RtosWrapper/Rtos/FreeRtos/event_groups.c" "C:/GitHub/RtosWrapper/cmake-build-debug/CMakeFiles/untitled.dir/Rtos/FreeRtos/event_groups.c.obj"
+  "C:/GitHub/RtosWrapper/Rtos/FreeRtos/list.c" "C:/GitHub/RtosWrapper/cmake-build-debug/CMakeFiles/untitled.dir/Rtos/FreeRtos/list.c.obj"
+  "C:/GitHub/RtosWrapper/Rtos/FreeRtos/portable/IAR/ARM_CM4F/port.c" "C:/GitHub/RtosWrapper/cmake-build-debug/CMakeFiles/untitled.dir/Rtos/FreeRtos/portable/IAR/ARM_CM4F/port.c.obj"
+  "C:/GitHub/RtosWrapper/Rtos/FreeRtos/queue.c" "C:/GitHub/RtosWrapper/cmake-build-debug/CMakeFiles/untitled.dir/Rtos/FreeRtos/queue.c.obj"
+  "C:/GitHub/RtosWrapper/Rtos/FreeRtos/tasks.c" "C:/GitHub/RtosWrapper/cmake-build-debug/CMakeFiles/untitled.dir/Rtos/FreeRtos/tasks.c.obj"
+  "C:/GitHub/RtosWrapper/Rtos/FreeRtos/timers.c" "C:/GitHub/RtosWrapper/cmake-build-debug/CMakeFiles/untitled.dir/Rtos/FreeRtos/timers.c.obj"
   )
-set(CMAKE_C_COMPILER_ID "IAR")
+set(CMAKE_C_COMPILER_ID "GNU")
 
 # The include file search paths:
 set(CMAKE_C_TARGET_INCLUDE_PATH
@@ -37,16 +39,17 @@ set(CMAKE_C_TARGET_INCLUDE_PATH
   "../AHardware/Gpio"
   "../Rtos/FreeRtos"
   "../MyTasks"
+  "../$CMAKE_CXX_COMPILER_EXTERNAL_TOOLCHAIN"
   )
 set(CMAKE_DEPENDS_CHECK_CXX
-  "C:/Users/Sergey/CLionProjects/untitled/AHardware/IrqController/irqcontroller.cpp" "C:/Users/Sergey/CLionProjects/untitled/cmake-build-debug/CMakeFiles/untitled.dir/AHardware/IrqController/irqcontroller.cpp.obj"
-  "C:/Users/Sergey/CLionProjects/untitled/Application/userbutton.cpp" "C:/Users/Sergey/CLionProjects/untitled/cmake-build-debug/CMakeFiles/untitled.dir/Application/userbutton.cpp.obj"
-  "C:/Users/Sergey/CLionProjects/untitled/MyTasks/Led1Task.cpp" "C:/Users/Sergey/CLionProjects/untitled/cmake-build-debug/CMakeFiles/untitled.dir/MyTasks/Led1Task.cpp.obj"
-  "C:/Users/Sergey/CLionProjects/untitled/MyTasks/mytask.cpp" "C:/Users/Sergey/CLionProjects/untitled/cmake-build-debug/CMakeFiles/untitled.dir/MyTasks/mytask.cpp.obj"
-  "C:/Users/Sergey/CLionProjects/untitled/Rtos/wrapper/FreeRtos/rtosFreeRtos.cpp" "C:/Users/Sergey/CLionProjects/untitled/cmake-build-debug/CMakeFiles/untitled.dir/Rtos/wrapper/FreeRtos/rtosFreeRtos.cpp.obj"
-  "C:/Users/Sergey/CLionProjects/untitled/Rtos/wrapper/rtos.cpp" "C:/Users/Sergey/CLionProjects/untitled/cmake-build-debug/CMakeFiles/untitled.dir/Rtos/wrapper/rtos.cpp.obj"
-  "C:/Users/Sergey/CLionProjects/untitled/main.cpp" "C:/Users/Sergey/CLionProjects/untitled/cmake-build-debug/CMakeFiles/untitled.dir/main.cpp.obj"
-  "C:/Users/Sergey/CLionProjects/untitled/startupF411RE.cpp" "C:/Users/Sergey/CLionProjects/untitled/cmake-build-debug/CMakeFiles/untitled.dir/startupF411RE.cpp.obj"
+  "C:/GitHub/RtosWrapper/AHardware/IrqController/irqcontroller.cpp" "C:/GitHub/RtosWrapper/cmake-build-debug/CMakeFiles/untitled.dir/AHardware/IrqController/irqcontroller.cpp.obj"
+  "C:/GitHub/RtosWrapper/Application/userbutton.cpp" "C:/GitHub/RtosWrapper/cmake-build-debug/CMakeFiles/untitled.dir/Application/userbutton.cpp.obj"
+  "C:/GitHub/RtosWrapper/MyTasks/Led1Task.cpp" "C:/GitHub/RtosWrapper/cmake-build-debug/CMakeFiles/untitled.dir/MyTasks/Led1Task.cpp.obj"
+  "C:/GitHub/RtosWrapper/MyTasks/mytask.cpp" "C:/GitHub/RtosWrapper/cmake-build-debug/CMakeFiles/untitled.dir/MyTasks/mytask.cpp.obj"
+  "C:/GitHub/RtosWrapper/Rtos/wrapper/FreeRtos/rtosFreeRtos.cpp" "C:/GitHub/RtosWrapper/cmake-build-debug/CMakeFiles/untitled.dir/Rtos/wrapper/FreeRtos/rtosFreeRtos.cpp.obj"
+  "C:/GitHub/RtosWrapper/Rtos/wrapper/rtos.cpp" "C:/GitHub/RtosWrapper/cmake-build-debug/CMakeFiles/untitled.dir/Rtos/wrapper/rtos.cpp.obj"
+  "C:/GitHub/RtosWrapper/main.cpp" "C:/GitHub/RtosWrapper/cmake-build-debug/CMakeFiles/untitled.dir/main.cpp.obj"
+  "C:/GitHub/RtosWrapper/startupF411RE.cpp" "C:/GitHub/RtosWrapper/cmake-build-debug/CMakeFiles/untitled.dir/startupF411RE.cpp.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "IAR")
 
@@ -58,6 +61,7 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "../AHardware/Gpio"
   "../Rtos/FreeRtos"
   "../MyTasks"
+  "../$CMAKE_CXX_COMPILER_EXTERNAL_TOOLCHAIN"
   )
 
 # Targets to which this target links.

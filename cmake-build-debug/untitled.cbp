@@ -8,213 +8,227 @@
 		<Option virtualFolders="CMake Files\;CMake Files\cmake-build-debug\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="C:/Users/Sergey/CLionProjects/untitled/cmake-build-debug"/>
+				<Option working_dir="C:/GitHub/RtosWrapper/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="E:/Program Files (x86)/Microsoft Visual Studio 14.0/VC/bin/nmake.exe /NOLOGO /f C:\Users\Sergey\CLionProjects\untitled\cmake-build-debug\Makefile VERBOSE=1 all"/>
-					<CompileFile command="E:/Program Files (x86)/Microsoft Visual Studio 14.0/VC/bin/nmake.exe /NOLOGO /f C:\Users\Sergey\CLionProjects\untitled\cmake-build-debug\Makefile VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="E:/Program Files (x86)/Microsoft Visual Studio 14.0/VC/bin/nmake.exe /NOLOGO /f C:\Users\Sergey\CLionProjects\untitled\cmake-build-debug\Makefile VERBOSE=1 clean"/>
-					<DistClean command="E:/Program Files (x86)/Microsoft Visual Studio 14.0/VC/bin/nmake.exe /NOLOGO /f C:\Users\Sergey\CLionProjects\untitled\cmake-build-debug\Makefile VERBOSE=1 clean"/>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/GitHub/RtosWrapper/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/GitHub/RtosWrapper/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/GitHub/RtosWrapper/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/GitHub/RtosWrapper/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="untitled_srec">
-				<Option working_dir="C:/Users/Sergey/CLionProjects/untitled/cmake-build-debug"/>
+				<Option working_dir="C:/GitHub/RtosWrapper/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="E:/Program Files (x86)/Microsoft Visual Studio 14.0/VC/bin/nmake.exe /NOLOGO /f C:\Users\Sergey\CLionProjects\untitled\cmake-build-debug\Makefile VERBOSE=1 untitled_srec"/>
-					<CompileFile command="E:/Program Files (x86)/Microsoft Visual Studio 14.0/VC/bin/nmake.exe /NOLOGO /f C:\Users\Sergey\CLionProjects\untitled\cmake-build-debug\Makefile VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="E:/Program Files (x86)/Microsoft Visual Studio 14.0/VC/bin/nmake.exe /NOLOGO /f C:\Users\Sergey\CLionProjects\untitled\cmake-build-debug\Makefile VERBOSE=1 clean"/>
-					<DistClean command="E:/Program Files (x86)/Microsoft Visual Studio 14.0/VC/bin/nmake.exe /NOLOGO /f C:\Users\Sergey\CLionProjects\untitled\cmake-build-debug\Makefile VERBOSE=1 clean"/>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/GitHub/RtosWrapper/cmake-build-debug/Makefile&quot;  VERBOSE=1 untitled_srec"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/GitHub/RtosWrapper/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/GitHub/RtosWrapper/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/GitHub/RtosWrapper/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="flash">
-				<Option working_dir="C:/Users/Sergey/CLionProjects/untitled/cmake-build-debug"/>
+				<Option working_dir="C:/GitHub/RtosWrapper/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="E:/Program Files (x86)/Microsoft Visual Studio 14.0/VC/bin/nmake.exe /NOLOGO /f C:\Users\Sergey\CLionProjects\untitled\cmake-build-debug\Makefile VERBOSE=1 flash"/>
-					<CompileFile command="E:/Program Files (x86)/Microsoft Visual Studio 14.0/VC/bin/nmake.exe /NOLOGO /f C:\Users\Sergey\CLionProjects\untitled\cmake-build-debug\Makefile VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="E:/Program Files (x86)/Microsoft Visual Studio 14.0/VC/bin/nmake.exe /NOLOGO /f C:\Users\Sergey\CLionProjects\untitled\cmake-build-debug\Makefile VERBOSE=1 clean"/>
-					<DistClean command="E:/Program Files (x86)/Microsoft Visual Studio 14.0/VC/bin/nmake.exe /NOLOGO /f C:\Users\Sergey\CLionProjects\untitled\cmake-build-debug\Makefile VERBOSE=1 clean"/>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/GitHub/RtosWrapper/cmake-build-debug/Makefile&quot;  VERBOSE=1 flash"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/GitHub/RtosWrapper/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/GitHub/RtosWrapper/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/GitHub/RtosWrapper/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="C:/Users/Sergey/CLionProjects/untitled/cmake-build-debug"/>
+				<Option working_dir="C:/GitHub/RtosWrapper/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="E:/Program Files (x86)/Microsoft Visual Studio 14.0/VC/bin/nmake.exe /NOLOGO /f C:\Users\Sergey\CLionProjects\untitled\cmake-build-debug\Makefile VERBOSE=1 edit_cache"/>
-					<CompileFile command="E:/Program Files (x86)/Microsoft Visual Studio 14.0/VC/bin/nmake.exe /NOLOGO /f C:\Users\Sergey\CLionProjects\untitled\cmake-build-debug\Makefile VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="E:/Program Files (x86)/Microsoft Visual Studio 14.0/VC/bin/nmake.exe /NOLOGO /f C:\Users\Sergey\CLionProjects\untitled\cmake-build-debug\Makefile VERBOSE=1 clean"/>
-					<DistClean command="E:/Program Files (x86)/Microsoft Visual Studio 14.0/VC/bin/nmake.exe /NOLOGO /f C:\Users\Sergey\CLionProjects\untitled\cmake-build-debug\Makefile VERBOSE=1 clean"/>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/GitHub/RtosWrapper/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/GitHub/RtosWrapper/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/GitHub/RtosWrapper/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/GitHub/RtosWrapper/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="untitled">
-				<Option output="C:/Users/Sergey/CLionProjects/untitled/cmake-build-debug/untitled.out" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="C:/Users/Sergey/CLionProjects/untitled/cmake-build-debug"/>
+				<Option output="C:/GitHub/RtosWrapper/cmake-build-debug/untitled.out" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/GitHub/RtosWrapper/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="C:/Users/Sergey/CLionProjects/untitled/CMSIS"/>
-					<Add directory="C:/Users/Sergey/CLionProjects/untitled/AHardware"/>
-					<Add directory="C:/Users/Sergey/CLionProjects/untitled/AHardware/Buttons"/>
-					<Add directory="C:/Users/Sergey/CLionProjects/untitled/AHardware/Gpio"/>
-					<Add directory="C:/Users/Sergey/CLionProjects/untitled/Rtos/FreeRtos"/>
-					<Add directory="C:/Users/Sergey/CLionProjects/untitled/MyTasks"/>
+					<Add directory="C:/GitHub/RtosWrapper/CMSIS"/>
+					<Add directory="C:/GitHub/RtosWrapper/AHardware"/>
+					<Add directory="C:/GitHub/RtosWrapper/AHardware/Buttons"/>
+					<Add directory="C:/GitHub/RtosWrapper/AHardware/Gpio"/>
+					<Add directory="C:/GitHub/RtosWrapper/Rtos/FreeRtos"/>
+					<Add directory="C:/GitHub/RtosWrapper/MyTasks"/>
+					<Add directory="C:/GitHub/RtosWrapper/$CMAKE_CXX_COMPILER_EXTERNAL_TOOLCHAIN"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/8.2.0/include/c++"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/8.2.0/include/c++/mingw32"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/8.2.0/include/c++/backward"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/8.2.0/include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/8.2.0/../../../../include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/8.2.0/include-fixed"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="E:/Program Files (x86)/Microsoft Visual Studio 14.0/VC/bin/nmake.exe /NOLOGO /f C:\Users\Sergey\CLionProjects\untitled\cmake-build-debug\Makefile VERBOSE=1 untitled"/>
-					<CompileFile command="E:/Program Files (x86)/Microsoft Visual Studio 14.0/VC/bin/nmake.exe /NOLOGO /f C:\Users\Sergey\CLionProjects\untitled\cmake-build-debug\Makefile VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="E:/Program Files (x86)/Microsoft Visual Studio 14.0/VC/bin/nmake.exe /NOLOGO /f C:\Users\Sergey\CLionProjects\untitled\cmake-build-debug\Makefile VERBOSE=1 clean"/>
-					<DistClean command="E:/Program Files (x86)/Microsoft Visual Studio 14.0/VC/bin/nmake.exe /NOLOGO /f C:\Users\Sergey\CLionProjects\untitled\cmake-build-debug\Makefile VERBOSE=1 clean"/>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/GitHub/RtosWrapper/cmake-build-debug/Makefile&quot;  VERBOSE=1 untitled"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/GitHub/RtosWrapper/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/GitHub/RtosWrapper/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/GitHub/RtosWrapper/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="untitled/fast">
-				<Option output="C:/Users/Sergey/CLionProjects/untitled/cmake-build-debug/untitled.out" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="C:/Users/Sergey/CLionProjects/untitled/cmake-build-debug"/>
+				<Option output="C:/GitHub/RtosWrapper/cmake-build-debug/untitled.out" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/GitHub/RtosWrapper/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="C:/Users/Sergey/CLionProjects/untitled/CMSIS"/>
-					<Add directory="C:/Users/Sergey/CLionProjects/untitled/AHardware"/>
-					<Add directory="C:/Users/Sergey/CLionProjects/untitled/AHardware/Buttons"/>
-					<Add directory="C:/Users/Sergey/CLionProjects/untitled/AHardware/Gpio"/>
-					<Add directory="C:/Users/Sergey/CLionProjects/untitled/Rtos/FreeRtos"/>
-					<Add directory="C:/Users/Sergey/CLionProjects/untitled/MyTasks"/>
+					<Add directory="C:/GitHub/RtosWrapper/CMSIS"/>
+					<Add directory="C:/GitHub/RtosWrapper/AHardware"/>
+					<Add directory="C:/GitHub/RtosWrapper/AHardware/Buttons"/>
+					<Add directory="C:/GitHub/RtosWrapper/AHardware/Gpio"/>
+					<Add directory="C:/GitHub/RtosWrapper/Rtos/FreeRtos"/>
+					<Add directory="C:/GitHub/RtosWrapper/MyTasks"/>
+					<Add directory="C:/GitHub/RtosWrapper/$CMAKE_CXX_COMPILER_EXTERNAL_TOOLCHAIN"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/8.2.0/include/c++"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/8.2.0/include/c++/mingw32"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/8.2.0/include/c++/backward"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/8.2.0/include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/8.2.0/../../../../include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/8.2.0/include-fixed"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="E:/Program Files (x86)/Microsoft Visual Studio 14.0/VC/bin/nmake.exe /NOLOGO /f C:\Users\Sergey\CLionProjects\untitled\cmake-build-debug\Makefile VERBOSE=1 untitled/fast"/>
-					<CompileFile command="E:/Program Files (x86)/Microsoft Visual Studio 14.0/VC/bin/nmake.exe /NOLOGO /f C:\Users\Sergey\CLionProjects\untitled\cmake-build-debug\Makefile VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="E:/Program Files (x86)/Microsoft Visual Studio 14.0/VC/bin/nmake.exe /NOLOGO /f C:\Users\Sergey\CLionProjects\untitled\cmake-build-debug\Makefile VERBOSE=1 clean"/>
-					<DistClean command="E:/Program Files (x86)/Microsoft Visual Studio 14.0/VC/bin/nmake.exe /NOLOGO /f C:\Users\Sergey\CLionProjects\untitled\cmake-build-debug\Makefile VERBOSE=1 clean"/>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/GitHub/RtosWrapper/cmake-build-debug/Makefile&quot;  VERBOSE=1 untitled/fast"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/GitHub/RtosWrapper/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/GitHub/RtosWrapper/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/GitHub/RtosWrapper/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="C:/Users/Sergey/CLionProjects/untitled/cmake-build-debug"/>
+				<Option working_dir="C:/GitHub/RtosWrapper/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="E:/Program Files (x86)/Microsoft Visual Studio 14.0/VC/bin/nmake.exe /NOLOGO /f C:\Users\Sergey\CLionProjects\untitled\cmake-build-debug\Makefile VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="E:/Program Files (x86)/Microsoft Visual Studio 14.0/VC/bin/nmake.exe /NOLOGO /f C:\Users\Sergey\CLionProjects\untitled\cmake-build-debug\Makefile VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="E:/Program Files (x86)/Microsoft Visual Studio 14.0/VC/bin/nmake.exe /NOLOGO /f C:\Users\Sergey\CLionProjects\untitled\cmake-build-debug\Makefile VERBOSE=1 clean"/>
-					<DistClean command="E:/Program Files (x86)/Microsoft Visual Studio 14.0/VC/bin/nmake.exe /NOLOGO /f C:\Users\Sergey\CLionProjects\untitled\cmake-build-debug\Makefile VERBOSE=1 clean"/>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/GitHub/RtosWrapper/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/GitHub/RtosWrapper/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/GitHub/RtosWrapper/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/GitHub/RtosWrapper/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="C:/Users/Sergey/CLionProjects/untitled/AHardware">
+		<Unit filename="C:/GitHub/RtosWrapper/AHardware">
 			<Option target="untitled"/>
 		</Unit>
-		<Unit filename="C:/Users/Sergey/CLionProjects/untitled/AHardware/IrqController/irqcontroller.cpp">
+		<Unit filename="C:/GitHub/RtosWrapper/AHardware/IrqController/irqcontroller.cpp">
 			<Option target="untitled"/>
 		</Unit>
-		<Unit filename="C:/Users/Sergey/CLionProjects/untitled/AHardware/IrqController/irqcontroller.hpp">
+		<Unit filename="C:/GitHub/RtosWrapper/AHardware/IrqController/irqcontroller.hpp">
 			<Option target="untitled"/>
 		</Unit>
-		<Unit filename="C:/Users/Sergey/CLionProjects/untitled/Application/Diagnostic/Action.hpp">
+		<Unit filename="C:/GitHub/RtosWrapper/Application/Diagnostic/Action.hpp">
 			<Option target="untitled"/>
 		</Unit>
-		<Unit filename="C:/Users/Sergey/CLionProjects/untitled/Application/Diagnostic/Exh001Action.hpp">
+		<Unit filename="C:/GitHub/RtosWrapper/Application/Diagnostic/Exh001Action.hpp">
 			<Option target="untitled"/>
 		</Unit>
-		<Unit filename="C:/Users/Sergey/CLionProjects/untitled/Application/Diagnostic/Exh002Action.hpp">
+		<Unit filename="C:/GitHub/RtosWrapper/Application/Diagnostic/Exh002Action.hpp">
 			<Option target="untitled"/>
 		</Unit>
-		<Unit filename="C:/Users/Sergey/CLionProjects/untitled/Application/Diagnostic/GlobalStatus.hpp">
+		<Unit filename="C:/GitHub/RtosWrapper/Application/Diagnostic/GlobalStatus.hpp">
 			<Option target="untitled"/>
 		</Unit>
-		<Unit filename="C:/Users/Sergey/CLionProjects/untitled/Application/userbutton.cpp">
+		<Unit filename="C:/GitHub/RtosWrapper/Application/userbutton.cpp">
 			<Option target="untitled"/>
 		</Unit>
-		<Unit filename="C:/Users/Sergey/CLionProjects/untitled/Application/userbutton.hpp">
+		<Unit filename="C:/GitHub/RtosWrapper/Application/userbutton.hpp">
 			<Option target="untitled"/>
 		</Unit>
-		<Unit filename="C:/Users/Sergey/CLionProjects/untitled/CMSIS">
+		<Unit filename="C:/GitHub/RtosWrapper/CMSIS">
 			<Option target="untitled"/>
 		</Unit>
-		<Unit filename="C:/Users/Sergey/CLionProjects/untitled/Common">
+		<Unit filename="C:/GitHub/RtosWrapper/Common">
 			<Option target="untitled"/>
 		</Unit>
-		<Unit filename="C:/Users/Sergey/CLionProjects/untitled/MyTasks">
+		<Unit filename="C:/GitHub/RtosWrapper/MyTasks">
 			<Option target="untitled"/>
 		</Unit>
-		<Unit filename="C:/Users/Sergey/CLionProjects/untitled/MyTasks/Led1Task.cpp">
+		<Unit filename="C:/GitHub/RtosWrapper/MyTasks/Led1Task.cpp">
 			<Option target="untitled"/>
 		</Unit>
-		<Unit filename="C:/Users/Sergey/CLionProjects/untitled/MyTasks/Led1Task.hpp">
+		<Unit filename="C:/GitHub/RtosWrapper/MyTasks/Led1Task.hpp">
 			<Option target="untitled"/>
 		</Unit>
-		<Unit filename="C:/Users/Sergey/CLionProjects/untitled/MyTasks/mytask.cpp">
+		<Unit filename="C:/GitHub/RtosWrapper/MyTasks/mytask.cpp">
 			<Option target="untitled"/>
 		</Unit>
-		<Unit filename="C:/Users/Sergey/CLionProjects/untitled/MyTasks/mytask.hpp">
+		<Unit filename="C:/GitHub/RtosWrapper/MyTasks/mytask.hpp">
 			<Option target="untitled"/>
 		</Unit>
-		<Unit filename="C:/Users/Sergey/CLionProjects/untitled/Rtos">
+		<Unit filename="C:/GitHub/RtosWrapper/Rtos">
 			<Option target="untitled"/>
 		</Unit>
-		<Unit filename="C:/Users/Sergey/CLionProjects/untitled/Rtos/FreeRtos">
+		<Unit filename="C:/GitHub/RtosWrapper/Rtos/FreeRtos">
 			<Option target="untitled"/>
 		</Unit>
-		<Unit filename="C:/Users/Sergey/CLionProjects/untitled/Rtos/FreeRtos/croutine.c">
+		<Unit filename="C:/GitHub/RtosWrapper/Rtos/FreeRtos/croutine.c">
 			<Option target="untitled"/>
 		</Unit>
-		<Unit filename="C:/Users/Sergey/CLionProjects/untitled/Rtos/FreeRtos/event_groups.c">
+		<Unit filename="C:/GitHub/RtosWrapper/Rtos/FreeRtos/event_groups.c">
 			<Option target="untitled"/>
 		</Unit>
-		<Unit filename="C:/Users/Sergey/CLionProjects/untitled/Rtos/FreeRtos/include">
+		<Unit filename="C:/GitHub/RtosWrapper/Rtos/FreeRtos/include">
 			<Option target="untitled"/>
 		</Unit>
-		<Unit filename="C:/Users/Sergey/CLionProjects/untitled/Rtos/FreeRtos/list.c">
+		<Unit filename="C:/GitHub/RtosWrapper/Rtos/FreeRtos/list.c">
 			<Option target="untitled"/>
 		</Unit>
-		<Unit filename="C:/Users/Sergey/CLionProjects/untitled/Rtos/FreeRtos/portable/Common">
+		<Unit filename="C:/GitHub/RtosWrapper/Rtos/FreeRtos/portable/Common">
 			<Option target="untitled"/>
 		</Unit>
-		<Unit filename="C:/Users/Sergey/CLionProjects/untitled/Rtos/FreeRtos/portable/IAR/ARM_CM4F">
+		<Unit filename="C:/GitHub/RtosWrapper/Rtos/FreeRtos/portable/IAR/ARM_CM4F">
 			<Option target="untitled"/>
 		</Unit>
-		<Unit filename="C:/Users/Sergey/CLionProjects/untitled/Rtos/FreeRtos/portable/IAR/ARM_CM4F/port.c">
+		<Unit filename="C:/GitHub/RtosWrapper/Rtos/FreeRtos/portable/IAR/ARM_CM4F/port.c">
 			<Option target="untitled"/>
 		</Unit>
-		<Unit filename="C:/Users/Sergey/CLionProjects/untitled/Rtos/FreeRtos/portable/IAR/ARM_CM4F/portasm.s">
+		<Unit filename="C:/GitHub/RtosWrapper/Rtos/FreeRtos/portable/IAR/ARM_CM4F/portasm.s">
 			<Option target="untitled"/>
 		</Unit>
-		<Unit filename="C:/Users/Sergey/CLionProjects/untitled/Rtos/FreeRtos/portable/MemMang">
+		<Unit filename="C:/GitHub/RtosWrapper/Rtos/FreeRtos/portable/MemMang">
 			<Option target="untitled"/>
 		</Unit>
-		<Unit filename="C:/Users/Sergey/CLionProjects/untitled/Rtos/FreeRtos/queue.c">
+		<Unit filename="C:/GitHub/RtosWrapper/Rtos/FreeRtos/queue.c">
 			<Option target="untitled"/>
 		</Unit>
-		<Unit filename="C:/Users/Sergey/CLionProjects/untitled/Rtos/FreeRtos/tasks.c">
+		<Unit filename="C:/GitHub/RtosWrapper/Rtos/FreeRtos/tasks.c">
 			<Option target="untitled"/>
 		</Unit>
-		<Unit filename="C:/Users/Sergey/CLionProjects/untitled/Rtos/FreeRtos/timers.c">
+		<Unit filename="C:/GitHub/RtosWrapper/Rtos/FreeRtos/timers.c">
 			<Option target="untitled"/>
 		</Unit>
-		<Unit filename="C:/Users/Sergey/CLionProjects/untitled/Rtos/wrapper">
+		<Unit filename="C:/GitHub/RtosWrapper/Rtos/wrapper">
 			<Option target="untitled"/>
 		</Unit>
-		<Unit filename="C:/Users/Sergey/CLionProjects/untitled/Rtos/wrapper/FreeRtos">
+		<Unit filename="C:/GitHub/RtosWrapper/Rtos/wrapper/FreeRtos">
 			<Option target="untitled"/>
 		</Unit>
-		<Unit filename="C:/Users/Sergey/CLionProjects/untitled/Rtos/wrapper/FreeRtos/rtosFreeRtos.cpp">
+		<Unit filename="C:/GitHub/RtosWrapper/Rtos/wrapper/FreeRtos/rtosFreeRtos.cpp">
 			<Option target="untitled"/>
 		</Unit>
-		<Unit filename="C:/Users/Sergey/CLionProjects/untitled/Rtos/wrapper/rtos.cpp">
+		<Unit filename="C:/GitHub/RtosWrapper/Rtos/wrapper/rtos.cpp">
 			<Option target="untitled"/>
 		</Unit>
-		<Unit filename="C:/Users/Sergey/CLionProjects/untitled/Rtos/wrapper/rtos.hpp">
+		<Unit filename="C:/GitHub/RtosWrapper/Rtos/wrapper/rtos.hpp">
 			<Option target="untitled"/>
 		</Unit>
-		<Unit filename="C:/Users/Sergey/CLionProjects/untitled/main.cpp">
+		<Unit filename="C:/GitHub/RtosWrapper/main.cpp">
 			<Option target="untitled"/>
 		</Unit>
-		<Unit filename="C:/Users/Sergey/CLionProjects/untitled/startupF411RE.cpp">
+		<Unit filename="C:/GitHub/RtosWrapper/startupF411RE.cpp">
 			<Option target="untitled"/>
 		</Unit>
-		<Unit filename="C:/Users/Sergey/CLionProjects/untitled/CMakeLists.txt">
+		<Unit filename="C:/GitHub/RtosWrapper/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
-		<Unit filename="C:/Users/Sergey/CLionProjects/untitled/cmake-build-debug/IAR.cmake">
+		<Unit filename="C:/GitHub/RtosWrapper/cmake-build-debug/IAR.cmake">
 			<Option virtualFolder="CMake Files\cmake-build-debug\"/>
 		</Unit>
 	</Project>

@@ -4,7 +4,7 @@
 #include "CMSIS/stm32f411xe.h"
 #include "MyTasks/mytask.hpp"
 #include "MyTasks/led1task.hpp"
-#include "Application/Diagnostic/GlobalStatus.hpp"
+//#include "Application/Diagnostic/GlobalStatus.hpp"
 #include <iostream>
 
 std::uint32_t SystemCoreClock = 16'000'000U;

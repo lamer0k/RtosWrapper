@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.12)
 
 project(untitled CXX C ASM)
 
-set(IAR_PATH "D:/Program Files (x86)/IAR Systems/Embedded Workbench 8.1")
+set(IAR_PATH "C:/Program Files (x86)/IAR Systems/Embedded Workbench 8.3")
 set(CMAKE_CXX_STANDARD 14)
 set(CMAKE_CXX_COMPILER "${IAR_PATH}/arm/bin/iccarm.exe")
 set(CMAKE_C_COMPILER   "${IAR_PATH}/arm/bin/iccarm.exe")

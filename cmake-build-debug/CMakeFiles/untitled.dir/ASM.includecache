@@ -6,3 +6,11 @@
 
 #IncludeRegexTransform: 
 
+../Rtos/FreeRtos/FreeRTOSConfig.h
+stdint.h
+-
+
+C:/GitHub/RtosWrapper/Rtos/FreeRtos/portable/IAR/ARM_CM4F/portasm.s
+FreeRTOSConfig.h
+C:/GitHub/RtosWrapper/Rtos/FreeRtos/portable/IAR/ARM_CM4F/FreeRTOSConfig.h
+

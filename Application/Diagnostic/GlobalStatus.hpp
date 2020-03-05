@@ -12,7 +12,7 @@
 #include "Action.hpp"
 #include "Exh001Action.hpp"
 #include "Exh002Action.hpp"
-using tComprehensiveStatus = long long unsigned int ;
+using tComprehensiveStatus = std::uint64_t ;
 
 struct ActionSubscriber
 {
@@ -44,7 +44,7 @@ class GlobalStatus
 
   private:
     tComprehensiveStatus comprehensiveStatus;
-    using tActionArray = std::array<ActionSubscriber, 2U>;
+    //using tActionArray = std::array<ActionSubscriber, 2U>;
     ActionSubscriber actions[] =
     {
       {
