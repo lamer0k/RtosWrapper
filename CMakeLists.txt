@@ -82,6 +82,13 @@ include_directories(
         ${CMAKE_SOURCE_DIR}/Rtos/FreeRtos/portable/Common
         ${CMAKE_SOURCE_DIR}/Rtos/wrapper/FreeRtos
         ${CMAKE_SOURCE_DIR}/Rtos/wrapper
+        ${CMAKE_SOURCE_DIR}/../CortexLib/AbstractHardware/Registers
+        ${CMAKE_SOURCE_DIR}/../CortexLib/AbstractHardware/Registers/STM32F411/
+        ${CMAKE_SOURCE_DIR}/../CortexLib/AbstractHardware/Registers/STM32F411/FieldValues
+        ${CMAKE_SOURCE_DIR}/../CortexLib/AbstractHardware/Pin
+        ${CMAKE_SOURCE_DIR}/../CortexLib/AbstractHardware/Port
+        ${CMAKE_SOURCE_DIR}/../CortexLib/AbstractHardware/Atomic
+        #${CMAKE_SOURCE_DIR}/../CortexLib/AbstractHardware/Atomic
 )
 include_directories($CMAKE_CXX_COMPILER_EXTERNAL_TOOLCHAIN)
 set(SOURCES
@@ -98,7 +105,6 @@ set(SOURCES
         MyTasks/mytask.cpp
         rtos/FreeRtos/timers.c
         rtos/FreeRtos/tasks.c
-        Application/userbutton.cpp
         #rtos/FreeRtos/portable/MemMang/heap_1.c
         Application/Diagnostic/Action.hpp Application/Diagnostic/Exh001Action.hpp Application/Diagnostic/Exh002Action.hpp Application/Diagnostic/GlobalStatus.hpp)
 
@@ -116,10 +122,9 @@ add_executable(untitled
         ${CMAKE_SOURCE_DIR}/MyTasks/mytask.cpp
         ${CMAKE_SOURCE_DIR}/rtos/FreeRtos/timers.c
         ${CMAKE_SOURCE_DIR}/rtos/FreeRtos/tasks.c
-        ${CMAKE_SOURCE_DIR}/Application/userbutton.cpp
         ${CMAKE_SOURCE_DIR}/Application/Diagnostic/Action.hpp
         Application/Diagnostic/Exh001Action.hpp Application/Diagnostic/Exh002Action.hpp Application/Diagnostic/GlobalStatus.hpp
-        Rtos/wrapper/FreeRtos/rtosFreeRtos.hpp Rtos/wrapper/eventmode.hpp)
+        Rtos/wrapper/FreeRtos/rtoswrapper.hpp Rtos/wrapper/eventmode.hpp)
 
 
 

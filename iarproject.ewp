@@ -363,6 +363,13 @@
                     <state>$PROJ_DIR$\AHardware</state>
                     <state>$PROJ_DIR$\AHardware\GpioPort</state>
                     <state>$PROJ_DIR$\AHardware\IrqController</state>
+                    <state>$PROJ_DIR$\..\CortexLib\AbstractHardware\Pin</state>
+                    <state>$PROJ_DIR$\..\CortexLib\AbstractHardware\Registers\STM32F411\FieldValues</state>
+                    <state>$PROJ_DIR$\..\CortexLib\AbstractHardware\Registers\STM32F411</state>
+                    <state>$PROJ_DIR$\..\CortexLib\AbstractHardware\Registers</state>
+                    <state>$PROJ_DIR$\..\CortexLib\AbstractHardware\Port</state>
+                    <state>$PROJ_DIR$\..\CortexLib\AbstractHardware\Atomic</state>
+                    <state>$PROJ_DIR$\..\CortexLib\Common</state>
                 </option>
                 <option>
                     <name>CCStdIncCheck</name>
@@ -2137,9 +2144,6 @@
     </group>
     <group>
         <name>Application</name>
-        <file>
-            <name>$PROJ_DIR$\Application\userbutton.cpp</name>
-        </file>
     </group>
     <group>
         <name>MyTasks</name>
@@ -2219,19 +2223,7 @@
             <name>wrapper</name>
             <group>
                 <name>FreeRtos</name>
-                <file>
-                    <name>$PROJ_DIR$\Rtos\wrapper\FreeRtos\rtosFreeRtos.cpp</name>
-                    <excluded>
-                        <configuration>Debug</configuration>
-                    </excluded>
-                </file>
             </group>
-            <file>
-                <name>$PROJ_DIR$\Rtos\wrapper\rtos.cpp</name>
-                <excluded>
-                    <configuration>Debug</configuration>
-                </excluded>
-            </file>
         </group>
     </group>
     <file>

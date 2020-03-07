@@ -2,8 +2,8 @@
 // Created by Serge on 07.03.2020.
 //
 
-#ifndef UNTITLED_RTOSFREERTOS_HPP
-#define UNTITLED_RTOSFREERTOS_HPP
+#ifndef UNTITLED_RTOSWRAPPER_HPP
+#define UNTITLED_RTOSWRAPPER_HPP
 
 /*******************************************************************************
 * Filename  	: rtosFreeRtos.cpp
@@ -48,11 +48,8 @@ namespace OsWrapper
      *             [in] pStack - pointer on task stack
      * Returns: No
      ****************************************************************************/
-    template<typename Rtos, auto &thread>
-    static void wCreateThread(const char *pName,
-                                                   ThreadPriority prior,
-                                                   const tU16 stackDepth,
-                                                   tStack *pStack)
+    template<typename Rtos, typename T>
+    static void wCreateThread(T &thread, const char *pName, ThreadPriority prior, const tU16 stackDepth, tStack *pStack)
     {
 #if (configSUPPORT_STATIC_ALLOCATION == 1)
       if (pStack != nullptr)
@@ -483,4 +480,4 @@ namespace OsWrapper
   } ;
 } 
 
-#endif //UNTITLED_RTOSFREERTOS_HPP
+#endif //UNTITLED_RTOSWRAPPER_HPP

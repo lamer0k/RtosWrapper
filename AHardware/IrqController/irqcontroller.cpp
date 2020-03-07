@@ -6,6 +6,6 @@
 
 void IrqController::HandleIrqExtiLine15_10()
 {
-  EXTI->PR = EXTI_PR_PR13 ;
-  UserButton::GetInstance().HandleInterrupt();
+  //EXTI->PR = EXTI_PR_PR13 ;
+  //UserButton::GetInstance().HandleInterrupt();
 }

@@ -1,33 +1,34 @@
 #ifndef __BUTTON_H
 #define __BUTTON_H
+
 #include "utils.hpp"
-#include "../AHardware/GpioPort/gpioports.hpp"
 #include "../Common/singleton.hpp"
-#include "../AHardware/GpioPort/iport.hpp"
 #include "../Common/susudefs.hpp"
+#include "gpiocregisters.hpp" // for GPIOC
+#include "pin.hpp" // For Pin
+#include "port.hpp" // For Port
 
-class Button
+
+template<typename Pin>
+class Button : public Singleton<Button<Pin>>
 {
-  public:
-    Button(IPort & portName) : port{portName} {};
-    inline bool IsPressed()const
-    {
-      return port.GetState();      
-    }    
-  private:
-    IPort &port;
+  friend class Singleton<Button<Pin>>;
+public:
+  __forceinline inline bool IsPressed() const
+  {
+    return (Pin::Get() == 1U);
+  }
+
+private:
+  Button()
+  {
+  };
 };
 
-constexpr tU32 buttonPin = 13U;
-class UserButton: public Button, public Singleton<UserButton> 
-{
-  friend class Singleton;
-  public:
-   void HandleInterrupt();
-  private:
-    UserButton(): Button {GpioPortC<buttonPin>::GetInstance()} 
-    {
-    };
-       
-};
+//Button configuration
+constexpr std::uint32_t buttonPin = 13U;
+using PinButton = Pin<Port<GPIOC>, buttonPin, PinReadable> ;
+
+using UserButton = Button<PinButton> ;
+
 #endif //__BUTTON_H

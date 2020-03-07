@@ -16,7 +16,7 @@
 #include "FreeRtos/rtosdefs.hpp"
 #include "../../Common/susudefs.hpp"
 #include <array>
-#include "rtosFreeRtos.hpp" // for RtosWrapper
+#include "rtoswrapper.hpp" // for RtosWrapper
 
 namespace OsWrapper
 {

@@ -15,7 +15,7 @@
 
 // For tEvent
 #include "FreeRtos/rtosdefs.hpp"
-#include "RtosFreeRtos.hpp" //for RtosWrapper
+#include "rtoswrapper.hpp" //for RtosWrapper
 #include "eventmode.hpp" // for
 
 namespace OsWrapper

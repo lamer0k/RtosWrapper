@@ -1,29 +1,46 @@
-#ifndef LED1_H
-#define LED1_H
+#ifndef LEDS_H
+#define LEDS_H
+
 #include "utils.hpp"
-#include "GpioPort/gpioports.hpp"
+#include "gpiocregisters.hpp" // for GPIOC
+#include "pin.hpp" // For Pin
 #include "../Common/singleton.hpp"
 
-class Led 
+struct ILed
 {
-  public:
-    Led(IPort & portName): port{portName} 
-    {
-    };
-    void SwitchOn()
-    {
-      port.Set();
-    };
-    void SwitchOff()
-    {
-      port.Clear();
-    };
-    void Toggle()
-    {
-      port.Toggle();
-    };  
-  private:
-   IPort &port;
+  virtual void SwitchOn() = 0;
+
+  virtual void SwitchOff() = 0;
+
+  virtual void Toggle() = 0;
+
 };
 
-#endif //LED1_H
+template<typename Pin>
+class Led : public ILed, public Singleton<Led<Pin>>
+{
+  friend class Singleton<Led<Pin>>;
+
+public:
+  __forceinline void SwitchOn() override
+  {
+    Pin::Set();
+  };
+
+  __forceinline void SwitchOff() override
+  {
+    Pin::Reset();
+  };
+
+  __forceinline void Toggle() override
+  {
+    Pin::Toggle();
+  };
+private:
+  Led()
+  {
+  }
+};
+
+
+#endif //LEDS_H

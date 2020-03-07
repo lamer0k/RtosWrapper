@@ -2382,9 +2382,6 @@
     </group>
     <group>
         <name>Application</name>
-        <file>
-            <name>$PROJ_DIR$\Application\userbutton.cpp</name>
-        </file>
     </group>
     <group>
         <name>MyTasks</name>
@@ -2455,13 +2452,7 @@
             <name>wrapper</name>
             <group>
                 <name>FreeRtos</name>
-                <file>
-                    <name>$PROJ_DIR$\Rtos\wrapper\FreeRtos\rtosFreeRtos.cpp</name>
-                </file>
             </group>
-            <file>
-                <name>$PROJ_DIR$\Rtos\wrapper\rtos.cpp</name>
-            </file>
         </group>
     </group>
     <file>

@@ -7,7 +7,6 @@
 *******************************************************************************/
 #include "mytask.hpp"
 #include "../Rtos/wrapper/thread.hpp"
-#include "../CMSIS/stm32f411xe.h"
 #include "../Rtos/wrapper/mailbox.hpp"
 #include "../Rtos/wrapper/event.hpp"
 #include "../Application/ledscontroller.hpp"

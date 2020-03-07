@@ -6,7 +6,7 @@
 #define MUTEX_HPP
 
 #include "FreeRtos/rtosdefs.hpp"
-#include "rtosFreeRtos.hpp" //for RtosWrapper
+#include "rtoswrapper.hpp" //for RtosWrapper
 
 namespace OsWrapper
 {

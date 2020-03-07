@@ -15,7 +15,7 @@
 #include "../../Common/susudefs.hpp"
 #include "rtosdefs.hpp"
 #include <cstddef>
-#include "rtosFreeRtos.hpp"
+#include "rtoswrapper.hpp"
 
 namespace OsWrapper
 {
@@ -39,10 +39,10 @@ namespace OsWrapper
 *             [in] pStack - pointer on task stack
 * Returns: true if task is created, false if not
 ****************************************************************************/
-     template<auto &thread>
-    __forceinline inline static void CreateThread(const char *pName, ThreadPriority prior = ThreadPriority::normal)
+     template<typename T >
+    __forceinline inline static void CreateThread(T& thread, const char *pName, ThreadPriority prior = ThreadPriority::normal)
     {
-      return RtosWrapper::wCreateThread<Rtos, thread>(pName, prior, thread.stackDepth, thread.stack.data());
+      return RtosWrapper::wCreateThread<Rtos>(thread, pName, prior, thread.stackDepth, thread.stack.data());
     }
 
 /***********************************************************************

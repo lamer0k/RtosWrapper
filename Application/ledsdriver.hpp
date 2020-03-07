@@ -11,8 +11,9 @@
 
 #include "leds.hpp"
 #include "../Common/singleton.hpp"
-#include "../AHardware/GpioPort/gpioports.hpp"
 #include <array>
+#include "gpioaregisters.hpp" // for GPIOA
+#include "gpiocregisters.hpp" // for GPIOC
 
 constexpr tU8 ledsCount = 4U;
 
@@ -37,21 +38,21 @@ class LedsDriver : public Singleton<LedsDriver>
     {
       for(auto it: leds)
       {
-        it.SwitchOn();
+        it->SwitchOn();
       }
     };
     inline void SwitchOffAll()
     {
       for(auto it: leds)
       {
-        it.SwitchOff();
+        it->SwitchOff();
       }
     };
     inline void ToggleAll()
     {
       for(auto it: leds)
       {
-        it.Toggle();
+        it->Toggle();
       }
     };
     
@@ -60,17 +61,34 @@ class LedsDriver : public Singleton<LedsDriver>
       return leds.size();
     };
     
-    inline Led & GetLed(LedNum num)
+    inline ILed& GetLed(LedNum num)
     {
-      return leds[static_cast<tU8>(num)];
+      return *leds[static_cast<tU8>(num)];
     }
     friend class Singleton<LedsDriver>;
   private:
     LedsDriver() = default;     
-    std::array<Led, ledsCount> leds {  Led(GpioPortA<led1Pin>::GetInstance()),
-                                       Led(GpioPortC<led2Pin>::GetInstance()),        
-                                       Led(GpioPortC<led3Pin>::GetInstance()),
-                                       Led(GpioPortC<led4Pin>::GetInstance())
+    std::array<ILed*, ledsCount> leds {
+      &Led<
+        Pin<Port<GPIOA>,
+            led1Pin,
+            PinWriteable>
+            >::GetInstance(),
+      &Led<
+          Pin<Port<GPIOC>,
+              led2Pin,
+              PinWriteable>
+              >::GetInstance(),
+       &Led<
+           Pin<Port<GPIOC>,
+               led3Pin,
+               PinWriteable>
+               >::GetInstance(),
+       &Led<
+           Pin<Port<GPIOC>,
+               led4Pin,
+               PinWriteable>
+               >::GetInstance()
                                     };
   
     

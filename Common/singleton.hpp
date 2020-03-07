@@ -9,12 +9,15 @@ public:
    Singleton& operator = (const Singleton&) = delete;
    static T& GetInstance()
    {
-     
-     static T instance;
+    // static T instance;
      return instance;
    }
   protected:
+   static T instance;
    Singleton() = default;
 };
+
+template<typename T>
+T Singleton<T>::instance;
 
 #endif

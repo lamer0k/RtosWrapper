@@ -22,7 +22,7 @@
 #include <array>
 #include "FreeRtos/rtosdefs.hpp"
 #include "../../Common/susudefs.hpp"
-#include "rtosFreeRtos.hpp"
+#include "rtoswrapper.hpp"
 
 namespace OsWrapper
 {
@@ -67,7 +67,6 @@ namespace OsWrapper
   private:
     tTaskContext context;  // инициализация проихсодит во время создания задачи при вызове CreatThread
     tTaskHandle handle =  nullptr; //инициализация проихсодит во время создания задачи при вызове CreatThread
-
 
     tTime lastWakeTime = 0ms;
   

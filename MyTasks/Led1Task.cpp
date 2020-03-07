@@ -3,7 +3,6 @@
 #include "../Rtos/wrapper/mailbox.hpp"
 #include "../Rtos/wrapper/event.hpp"
 #include "../Rtos/wrapper/FreeRtos/rtosdefs.hpp"
-#include "../CMSIS/stm32f411xe.h"
 #include "../Application/ledscontroller.hpp"
 
 extern OsWrapper::MailBox<int, 10> queue;
