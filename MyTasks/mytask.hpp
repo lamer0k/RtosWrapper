@@ -8,17 +8,12 @@
 #include<array>
 
 
-class MyTask : public OsWrapper::Thread
+class MyTask : public OsWrapper::Thread<static_cast<std::size_t>(OsWrapper::StackDepth::minimal)>
 {
 
 public:
   virtual void Execute() override;
-  using tMyTaskStack = std::array<OsWrapper::tStack, static_cast<tU16>(OsWrapper::StackDepth::minimal)> ;
-  inline static tMyTaskStack Stack;
+
 } ;
-
-extern MyTask myTask;
-
-
 
 #endif //MYTASK_HPP

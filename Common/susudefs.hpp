@@ -20,4 +20,7 @@ using tS32 = signed long ;
 using tF32 = float ;
 using tBoolean = bool ;
 
+//#define __forceinline  _Pragma("inline=forced")
+#define __forceinline
+
 #endif //SUSUDEFS_H

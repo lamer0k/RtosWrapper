@@ -6,34 +6,31 @@
 #define MUTEX_HPP
 
 #include "FreeRtos/rtosdefs.hpp"
+#include "rtosFreeRtos.hpp" //for RtosWrapper
 
 namespace OsWrapper
 {
-  extern tMutexHandle wCreateMutex(tMutex &);
-  extern void wDeleteMutex(tMutexHandle &);
-  extern bool wLockMutex(tMutexHandle const &, tTime);
-  extern void wUnLockMutex(tMutexHandle const &);
 
   class Mutex
   {
     public:
-      Mutex(): handle(wCreateMutex(mutex))
+      __forceinline Mutex(): handle(wCreateMutex(mutex))
       {
       }
 
-      ~Mutex()
+    __forceinline ~Mutex()
       {
-        wDeleteMutex(handle);
+        RtosWrapper::wDeleteMutex(handle);
       }
 
-      bool Lock(tTime timeOut = 1000ms)
+    __forceinline bool Lock(tTime timeOut = 1000ms)
       {
-        return wLockMutex(handle, timeOut) ;
+        return RtosWrapper::wLockMutex(handle, timeOut) ;
       }
 
-      void UnLock()
+    __forceinline void UnLock()
       {
-        wUnLockMutex(handle);
+        RtosWrapper::wUnLockMutex(handle);
       }
 
     private:

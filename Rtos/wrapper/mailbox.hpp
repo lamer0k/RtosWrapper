@@ -16,42 +16,39 @@
 #include "FreeRtos/rtosdefs.hpp"
 #include "../../Common/susudefs.hpp"
 #include <array>
+#include "rtosFreeRtos.hpp" // for RtosWrapper
 
 namespace OsWrapper
 {
-  extern bool wMailBoxPut(tMailBoxHandle &, const void* );
-  extern tMailBoxHandle wMailBoxCreate(tU16, tU16, tU8 *, tMailBoxContext &);
-  extern void wMailBoxDelete(tMailBoxHandle &);
-  extern bool wMailBoxGet(tMailBoxHandle &, void *, tTime);
 
-  template<typename T, tU16 size>
+  template<typename T, std::size_t size>
   class MailBox
   {
     public:
-      MailBox()
+    __forceinline MailBox()
       {
-        handle = wMailBoxCreate(size, sizeof(T), buffer.data(), context);
+        handle = RtosWrapper::wMailBoxCreate(size, sizeof(T), buffer.data(), context);
       }
 
-      ~MailBox()
+    __forceinline ~MailBox()
       {
-        wMailBoxDelete(handle);
+        RtosWrapper::wMailBoxDelete(handle);
       }
 
-      bool Put(const T &item)
+    __forceinline bool Put(const T &item)
       {
-        return wMailBoxPut(handle, &item);
+        return RtosWrapper::wMailBoxPut(handle, &item);
       }
 
-      bool Get(T &item, tTime timeOut)
+    __forceinline bool Get(T &item, tTime timeOut)
       {
-        return wMailBoxGet(handle, &item, timeOut);
+        return RtosWrapper::wMailBoxGet(handle, &item, timeOut);
       }
 
     private:
       tMailBoxHandle handle;
       tMailBoxContext context;
-      std::array<tU8, size * sizeof(T)> buffer;
+      std::array<std::uint8_t, size * sizeof(T)> buffer;
   };
 }
 #endif //MAILBOX_HPP

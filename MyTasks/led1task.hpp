@@ -6,11 +6,9 @@
 #include "../Rtos/wrapper/thread.hpp"
 #include <array>
 
-class Led1Task : public OsWrapper::Thread
+class Led1Task : public OsWrapper::Thread<static_cast<std::size_t>(OsWrapper::StackDepth::minimal)>
 {
- using tLedStack = std::array<OsWrapper::tStack, static_cast<tU16>(OsWrapper::StackDepth::minimal)> ;
 public:
   virtual void Execute() override;
-  inline static tLedStack Stack;
 } ;
 #endif //__LED1TASK_HPP

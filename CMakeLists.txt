@@ -4,9 +4,10 @@ project(untitled CXX C ASM)
 
 set(CMAKE_SOURCE_DIR "C:/GitHub/RtosWrapper")
 set(IAR_PATH "C:/Program Files (x86)/IAR Systems/Embedded Workbench 8.3")
-set(CMAKE_CXX_STANDARD 14)
-set(CMAKE_CXX_COMPILER "${IAR_PATH}/arm/bin/iccarm.exe")
-set(CMAKE_C_COMPILER   "${IAR_PATH}/arm/bin/iccarm.exe")
+set(CMAKE_CXX_STANDARD 17)
+
+#set(CMAKE_CXX_COMPILER "${IAR_PATH}/arm/bin/iccarm.exe")
+#set(CMAKE_C_COMPILER   "${IAR_PATH}/arm/bin/iccarm.exe")
 set(CMAKE_ASM_COMPILER "${IAR_PATH}/arm/bin/iasmarm.exe")
 set(CMAKE_CXX_COMPILER_ARG1 "--c++")
 set(CMAKE_CXX_COMPILER_ID "IAR")
@@ -91,13 +92,11 @@ set(SOURCES
         MyTasks/Led1Task.cpp
         rtos/FreeRtos/list.c
         rtos/FreeRtos/portable/IAR/ARM_CM4F/port.c
-        Rtos/wrapper/rtos.cpp
         rtos/FreeRtos/queue.c
         main.cpp
         startupF411RE.cpp
         MyTasks/mytask.cpp
         rtos/FreeRtos/timers.c
-        Rtos/wrapper/FreeRtos/rtosFreeRtos.cpp
         rtos/FreeRtos/tasks.c
         Application/userbutton.cpp
         #rtos/FreeRtos/portable/MemMang/heap_1.c
@@ -111,19 +110,16 @@ add_executable(untitled
         ${CMAKE_SOURCE_DIR}/MyTasks/Led1Task.cpp
         ${CMAKE_SOURCE_DIR}/rtos/FreeRtos/list.c
         ${CMAKE_SOURCE_DIR}/rtos/FreeRtos/portable/IAR/ARM_CM4F/port.c
-        ${CMAKE_SOURCE_DIR}/Rtos/wrapper/rtos.cpp
         ${CMAKE_SOURCE_DIR}/rtos/FreeRtos/queue.c
         ${CMAKE_SOURCE_DIR}/main.cpp
         ${CMAKE_SOURCE_DIR}/startupF411RE.cpp
         ${CMAKE_SOURCE_DIR}/MyTasks/mytask.cpp
         ${CMAKE_SOURCE_DIR}/rtos/FreeRtos/timers.c
-        ${CMAKE_SOURCE_DIR}/Rtos/wrapper/FreeRtos/rtosFreeRtos.cpp
         ${CMAKE_SOURCE_DIR}/rtos/FreeRtos/tasks.c
         ${CMAKE_SOURCE_DIR}/Application/userbutton.cpp
-        #rtos/FreeRtos/portable/MemMang/heap_1.c
         ${CMAKE_SOURCE_DIR}/Application/Diagnostic/Action.hpp
         Application/Diagnostic/Exh001Action.hpp Application/Diagnostic/Exh002Action.hpp Application/Diagnostic/GlobalStatus.hpp
-        )
+        Rtos/wrapper/FreeRtos/rtosFreeRtos.hpp Rtos/wrapper/eventmode.hpp)
 
 
 

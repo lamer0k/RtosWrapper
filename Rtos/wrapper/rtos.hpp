@@ -13,37 +13,89 @@
 
 #include "thread.hpp"        // for Thread
 #include "../../Common/susudefs.hpp"
-#include "FreeRtos/rtosdefs.hpp"
+#include "rtosdefs.hpp"
+#include <cstddef>
+#include "rtosFreeRtos.hpp"
 
 namespace OsWrapper
 {
-  extern void wCreateThread(Thread &, const char *, ThreadPriority, const tU16, tStack *) ;
-  extern void wStart() ;
-  extern void wHandleSvcInterrupt() ;
-  extern void wHandleSvInterrupt() ;
-  extern void wHandleSysTickInterrupt() ;
-  extern void wEnterCriticalSection();
-  extern void wLeaveCriticalSection();
-
   class Rtos
   {
-    public:
-      static void CreateThread(Thread &thread ,
-                               tStack * pStack = nullptr,
-                               const char * pName = nullptr,
-                               ThreadPriority prior = ThreadPriority::normal,
-                               const tU16 stackDepth = static_cast<tU16>(StackDepth::minimal)) ;
-      static void Start() ;
-      static void HandleSvcInterrupt() ;
-      static void HandleSysTickInterrupt() ;
+  public:
 
-      friend void wCreateThread(Thread &, const char *, ThreadPriority, const tU16, tStack *);
-    private:
-      //cstat !MISRAC++2008-7-1-2 To prevent reinterpret_cast in the CreateTask
-      static void Run(void *pContext )
-      {
-        static_cast<Thread*>(pContext)->Run() ;
-      }
-  } ;
-} ;
+    /*****************************************************************************
+* Function Name: wCreateThread
+* Description: Creates a new task and passes a parameter to the task. The
+* function should call appropriate RTOS API function to create a task.
+*
+* Assumptions: RTOS API create task function should get a parameter to pass the
+* parameter to task.
+* Some RTOS does not use pStack pointer so it should be set to nullptr
+*
+* Parameters: [in] pThread - pointer on Thread object
+*             [in] pName - name of task
+*             [in] prior - task priority
+*             [in] stackDepth - size of Stack
+*             [in] pStack - pointer on task stack
+* Returns: true if task is created, false if not
+****************************************************************************/
+     template<auto &thread>
+    __forceinline inline static void CreateThread(const char *pName, ThreadPriority prior = ThreadPriority::normal)
+    {
+      return RtosWrapper::wCreateThread<Rtos, thread>(pName, prior, thread.stackDepth, thread.stack.data());
+    }
+
+/***********************************************************************
+ * Function Name: wStart()
+ * Description: Starts the RTOS scheduler
+ *
+ * Assumptions: No
+ * Parameters: No
+ * Returns: No
+ ****************************************************************************/
+    __forceinline static inline void Start()
+    {
+      RtosWrapper::wStart();
+    }
+
+    /*****************************************************************************
+    * Function Name: wHandleSvcInterrupt()
+    * Description: Handle of SVCall Interrupt. The function should be called from
+    *  System Service interrupt (SVCall vector)
+    *
+    * Assumptions: No
+    * Parameters: No
+    * Returns: No
+    ****************************************************************************/
+    __forceinline static inline void HandleSvcInterrupt()
+    {
+      RtosWrapper::wHandleSvcInterrupt();
+    }
+
+/*****************************************************************************
+ * Function Name: HandleSysTickInterrupt()
+ * Description: Handle of Systick Interrupt. The function should be called from
+ *  System tick timer interrupt (Systick vector)
+ *
+ * Assumptions: No
+ * Parameters: No
+ * Returns: No
+ ****************************************************************************/
+    __forceinline static inline void HandleSysTickInterrupt()
+    {
+      RtosWrapper::wHandleSysTickInterrupt();
+    }
+
+    friend class RtosWrapper;    
+
+  private:
+    //cstat !MISRAC++2008-7-1-2 To prevent reinterpret_cast in the CreateTask
+    static void Run(void *pContext)
+    {
+      static_cast<IThread*>(pContext)->Run();
+    }
+  };
+
+
+};
 #endif // RTOS_HPP

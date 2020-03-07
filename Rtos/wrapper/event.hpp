@@ -15,64 +15,56 @@
 
 // For tEvent
 #include "FreeRtos/rtosdefs.hpp"
+#include "RtosFreeRtos.hpp" //for RtosWrapper
+#include "eventmode.hpp" // for
 
 namespace OsWrapper
 {
-  enum class EventMode
-  {
-    waitAnyBits = 0,    
-    waitAllBits = 1,    
-  } ;
 
   constexpr tTime waitForEver = 0;
-  extern tEventHandle wCreateEvent(tEvent &) ;
-  extern void wDeleteEvent(tEventHandle &) ;
-  extern void wSignalEvent(tEventHandle const &, tEventBits) ;
-  extern tEventBits wWaitEvent(tEventHandle const &, const tEventBits, tTime, OsWrapper::EventMode) ;
-  
-  constexpr tEventBits defaultMask = {0b11111111} ;
-  
+  constexpr tEventBits defaultMask = {0b11111111};
+
   class Event
   {
-    public:
-      explicit inline Event(tTime delay, tEventBits maskBits) : timeOut{delay}, 
-                                                       mask{maskBits} 
-      {
-        handle = wCreateEvent(event) ;
-      }
-      
-      inline ~Event()
-      {
-        wDeleteEvent(handle) ;
-      }
-      
-      inline void Signal()
-      {
-        wSignalEvent(handle, mask) ;
-      }
-	  
-      inline tEventBits Wait(const EventMode mode = EventMode::waitAnyBits,
-                             const tEventBits maskBits = defaultMask) const
-      {
-        return wWaitEvent(handle, maskBits, timeOut, mode);
-      }
-      
-      inline void SetTimeout(tTime delay)
-      {
-        timeOut = delay ;
-      }
-      
-      inline void SetMaskBits(tEventBits maskBits)
-      {
-        mask = maskBits ;
-      }
+  public:
+    explicit __forceinline Event(tTime delay, tEventBits maskBits) : timeOut{delay},
+                                                                     mask{maskBits}
+    {
+      handle = RtosWrapper::wCreateEvent(event);
+    }
 
-    private:
-      tEventHandle handle {0} ;
-      tEvent event;
-      tTime timeOut = 1000ms ;      
-      tEventBits mask {defaultMask} ;
-  } ;
-} ;
+    __forceinline ~Event()
+    {
+      RtosWrapper::wDeleteEvent(handle);
+    }
+
+    __forceinline void Signal()
+    {
+      RtosWrapper::wSignalEvent(handle, mask);
+    }
+
+    __forceinline tEventBits Wait(const EventMode mode = EventMode::waitAnyBits,
+                           const tEventBits maskBits = defaultMask) const
+    {
+      return RtosWrapper::wWaitEvent(handle, maskBits, timeOut, mode);
+    }
+
+    __forceinline void SetTimeout(tTime delay)
+    {
+      timeOut = delay;
+    }
+
+    __forceinline void SetMaskBits(tEventBits maskBits)
+    {
+      mask = maskBits;
+    }
+
+  private:
+    tEventHandle handle{0};
+    tEvent event;
+    tTime timeOut = 1000ms;
+    tEventBits mask{defaultMask};
+  };
+};
 
 #endif // EVENT_HPP

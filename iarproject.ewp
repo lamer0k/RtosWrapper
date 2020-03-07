@@ -2221,10 +2221,16 @@
                 <name>FreeRtos</name>
                 <file>
                     <name>$PROJ_DIR$\Rtos\wrapper\FreeRtos\rtosFreeRtos.cpp</name>
+                    <excluded>
+                        <configuration>Debug</configuration>
+                    </excluded>
                 </file>
             </group>
             <file>
                 <name>$PROJ_DIR$\Rtos\wrapper\rtos.cpp</name>
+                <excluded>
+                    <configuration>Debug</configuration>
+                </excluded>
             </file>
         </group>
     </group>
