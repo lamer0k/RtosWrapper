@@ -14,7 +14,7 @@ To use the wrapper, it needs to copy the next files:
  
  Example of creating a task:
  
- ````
+ ```cpp
 using namespace OsWrapper ;
 class MyTask : public Thread<static_cast<std::size_t>(StackDepth::minimal)>
 {
@@ -75,6 +75,6 @@ int main()
   return 0;
 }
 
-````
+```
  
  
