@@ -50,11 +50,10 @@ int __low_level_init(void)
 }
 }
 
-
 OsWrapper::Event event{500ms, 1};
 
 MyTask myTask(event, UserButton::GetInstance());
-Led1Task led1Task;
+Led1Task led1Task(event);
 //OsWrapper::MailBox<int, 10> queue;
 //GlobalStatus status;
 

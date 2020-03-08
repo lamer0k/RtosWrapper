@@ -5,8 +5,7 @@
 #include "rtosdefs.hpp"
 #include "ledscontroller.hpp"
 
-extern OsWrapper::MailBox<int, 10> queue;
-extern OsWrapper::Event event;
+//extern OsWrapper::MailBox<int, 10> queue;
 
 void Led1Task::Execute()
 { 

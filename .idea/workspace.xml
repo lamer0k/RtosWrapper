@@ -22,7 +22,10 @@
   <component name="ChangeListManager">
     <list default="true" id="5335a5d7-2ea1-4d0d-bfd4-dd1a3e5c554b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyTasks/Led1Task.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/MyTasks/Led1Task.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyTasks/led1task.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/MyTasks/led1task.hpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -163,7 +166,7 @@
       <workItem from="1583431216090" duration="1760000" />
       <workItem from="1583571094789" duration="15196000" />
       <workItem from="1583652013243" duration="1145000" />
-      <workItem from="1583669346535" duration="4635000" />
+      <workItem from="1583669346535" duration="5153000" />
     </task>
     <task id="LOCAL-00001" summary="update file">
       <created>1535140998866</created>
@@ -354,7 +357,14 @@
       <option name="project" value="LOCAL" />
       <updated>1583673850128</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="add README.md">
+      <created>1583674150316</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1583674150316</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TodoView">
@@ -376,7 +386,8 @@
     <MESSAGE value="CleanUp" />
     <MESSAGE value="Update cmake" />
     <MESSAGE value="Refactor the task creation. Now it is fully static." />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactor the task creation. Now it is fully static." />
+    <MESSAGE value="add README.md" />
+    <option name="LAST_COMMIT_MESSAGE" value="add README.md" />
   </component>
   <component name="WindowStateProjectService">
     <state x="414" y="195" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1583426468348">
@@ -399,10 +410,10 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="669" y="269" key="#untitled_srec/0.0.1920.1080@0.0.1920.1080" timestamp="1583430820003" />
-    <state x="585" y="134" key="CommitChangelistDialog2" timestamp="1583673849536">
+    <state x="585" y="134" key="CommitChangelistDialog2" timestamp="1583674149828">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="585" y="134" key="CommitChangelistDialog2/0.0.1920.1080@0.0.1920.1080" timestamp="1583673849536" />
+    <state x="585" y="134" key="CommitChangelistDialog2/0.0.1920.1080@0.0.1920.1080" timestamp="1583674149828" />
     <state x="427" y="307" key="FileChooserDialogImpl" timestamp="1583431434554">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
@@ -427,10 +438,10 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="461" y="182" key="SettingsEditor/0.0.1920.1080@0.0.1920.1080" timestamp="1583571285875" />
-    <state x="552" y="273" key="Vcs.Push.Dialog.v2" timestamp="1583673856054">
+    <state x="552" y="273" key="Vcs.Push.Dialog.v2" timestamp="1583674159551">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="552" y="273" key="Vcs.Push.Dialog.v2/0.0.1920.1080@0.0.1920.1080" timestamp="1583673856054" />
+    <state x="552" y="273" key="Vcs.Push.Dialog.v2/0.0.1920.1080@0.0.1920.1080" timestamp="1583674159551" />
     <state x="656" y="364" key="com.intellij.ide.util.TipDialog" timestamp="1583431230210">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
