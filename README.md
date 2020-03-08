@@ -42,7 +42,7 @@ private:
 and another task:
 
  ```cpp 
-class Led1Task : public Thread<static_cast<std::size_t>(StackDepth::minimal)>
+class Led1Task : public Thread<128U>
 {
 public:
   virtual void Execute() override
