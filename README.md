@@ -38,7 +38,10 @@ private:
   OsWrapper::Event& event;
   UserButton& button ;
 } ;
+```
+and another task:
 
+ ```cpp 
 class Led1Task : public Thread<static_cast<std::size_t>(StackDepth::minimal)>
 {
 public:
@@ -61,7 +64,10 @@ public:
 private: 
   OsWrapper::Event& event ;
 } ;
+```
+and used it
 
+```cpp
 MyTask myTask(event, UserButton::GetInstance());
 Led1Task led1Task(event);
 
@@ -74,7 +80,6 @@ int main()
 
   return 0;
 }
-
 ```
  
  
