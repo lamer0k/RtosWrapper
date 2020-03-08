@@ -20,12 +20,14 @@
 #define THREAD_HPP
 
 #include <array>
-#include "FreeRtos/rtosdefs.hpp"
+#include "rtosdefs.hpp"
+#include <chrono> // for 'ms' literal
 #include "../../Common/susudefs.hpp"
 #include "rtoswrapper.hpp"
 
 namespace OsWrapper
 {
+
   constexpr tTaskEventMask defaultTaskMaskBits = 0b010101010;
 
   enum class StackDepth : tU16
@@ -38,17 +40,18 @@ namespace OsWrapper
 
   class IThread
   {
+   
   public:
     virtual void Execute() = 0 ;
 
-    static void Sleep(const tTime timeOut = 1000ms)
-    {
-      RtosWrapper::wSleep(timeOut);
+    static void Sleep(const std::chrono::milliseconds timeOut = 1000ms)
+    {      
+      RtosWrapper::wSleep(std::chrono::duration_cast<TicksPerSecond>(timeOut).count());   
     };
 
-    void SleepUntil(const tTime timeOut = 1000ms)
-    {
-      RtosWrapper::wSleepUntil(lastWakeTime, timeOut);
+    void SleepUntil(const std::chrono::milliseconds timeOut = 1000ms)
+    {     
+      RtosWrapper::wSleepUntil(lastWakeTime, std::chrono::duration_cast<TicksPerSecond>(timeOut).count());
     };
 
     inline void Signal(const tTaskEventMask mask = defaultTaskMaskBits)
@@ -56,10 +59,10 @@ namespace OsWrapper
       RtosWrapper::wSignal(handle, mask);
     };
 
-    inline tTaskEventMask WaitForSignal(tTime timeOut = 1000ms,
+    inline tTaskEventMask WaitForSignal(std::chrono::milliseconds timeOut = 1000ms,
                                         const tTaskEventMask mask = defaultTaskMaskBits)
-    {
-      return RtosWrapper::wWaitForSignal(mask, timeOut);
+    {    
+      return RtosWrapper::wWaitForSignal(mask, std::chrono::duration_cast<TicksPerSecond>(timeOut).count());
     }
     friend class Rtos;  
     friend class RtosWrapper;
@@ -68,7 +71,7 @@ namespace OsWrapper
     tTaskContext context;  // инициализация проихсодит во время создания задачи при вызове CreatThread
     tTaskHandle handle =  nullptr; //инициализация проихсодит во время создания задачи при вызове CreatThread
 
-    tTime lastWakeTime = 0ms;
+    tTime lastWakeTime = 0U;
   
     void Run()
     {

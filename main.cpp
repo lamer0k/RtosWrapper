@@ -1,9 +1,9 @@
-#include "Rtos/wrapper/rtos.hpp"
-#include "Rtos/wrapper/mailbox.hpp"
-#include "Rtos/wrapper/event.hpp"
+#include "rtos.hpp"
+#include "mailbox.hpp"
+#include "event.hpp"
 
-#include "MyTasks/mytask.hpp"
-#include "MyTasks/led1task.hpp"
+#include "mytask.hpp"
+#include "led1task.hpp"
 #include "rccregisters.hpp"
 
 //#include "Application/Diagnostic/GlobalStatus.hpp"
@@ -23,7 +23,6 @@ int __low_level_init(void)
 
   }
   //Switch system clock on external oscillator
-  // RCC->CFGR |= RCC_CFGR_SW_HSI;
   RCC::CFGR::SW::Hsi::Set();
   while (!RCC::CFGR::SWS::Hsi::IsSet())
   {
@@ -47,24 +46,16 @@ int __low_level_init(void)
       GPIOC::MODER::MODER9::Output
   >::Set();
 
-
-  //Button on PortC.13 external interrupt
-  // EXTI->RTSR |= EXTI_RTSR_TR13;
-  // EXTI->IMR  |= EXTI_IMR_MR13;
-  // SYSCFG->EXTICR[3] |= SYSCFG_EXTICR4_EXTI13_PC ;
-
-  // NVIC_EnableIRQ(EXTI15_10_IRQn);
-
   return 1;
 }
 }
 
-using OsWrapper::operator ""ms;
+
 OsWrapper::Event event{500ms, 1};
 
-MyTask myTask;
+MyTask myTask(event, UserButton::GetInstance());
 Led1Task led1Task;
-OsWrapper::MailBox<int, 10> queue;
+//OsWrapper::MailBox<int, 10> queue;
 //GlobalStatus status;
 
 

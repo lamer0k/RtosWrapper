@@ -21,31 +21,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5335a5d7-2ea1-4d0d-bfd4-dd1a3e5c554b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AHardware/GpioPort/gpioport.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/AHardware/GpioPort/gpioports.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/AHardware/GpioPort/iport.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/AHardware/IrqController/irqcontroller.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/AHardware/IrqController/irqcontroller.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AHardware/IrqController/irqcontroller.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/AHardware/IrqController/irqcontroller.hpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Application/leds.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/Application/leds.hpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Application/ledsdriver.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/Application/ledsdriver.hpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Application/userbutton.cpp" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Application/userbutton.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/Application/userbutton.hpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Common/singleton.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/Common/singleton.hpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MyTasks/Led1Task.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/MyTasks/Led1Task.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MyTasks/mytask.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/MyTasks/mytask.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MyTasks/mytask.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/MyTasks/mytask.hpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Rtos/wrapper/FreeRtos/rtosFreeRtos.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/Rtos/wrapper/FreeRtos/rtoswrapper.hpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Rtos/FreeRtos/FreeRTOSConfig.h" beforeDir="false" afterPath="$PROJECT_DIR$/Rtos/FreeRtos/FreeRTOSConfig.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Rtos/wrapper/FreeRtos/rtosdefs.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/Rtos/wrapper/FreeRtos/rtosdefs.hpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Rtos/wrapper/event.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/Rtos/wrapper/event.hpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Rtos/wrapper/mailbox.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/Rtos/wrapper/mailbox.hpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Rtos/wrapper/mutex.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/Rtos/wrapper/mutex.hpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Rtos/wrapper/rtos.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/Rtos/wrapper/rtos.hpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Rtos/wrapper/thread.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/Rtos/wrapper/thread.hpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/iarproject.dep" beforeDir="false" afterPath="$PROJECT_DIR$/iarproject.dep" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/iarproject.ewp" beforeDir="false" afterPath="$PROJECT_DIR$/iarproject.ewp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/iarproject.ewt" beforeDir="false" afterPath="$PROJECT_DIR$/iarproject.ewt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/iarproject.ewd" beforeDir="false" afterPath="$PROJECT_DIR$/iarproject.ewd" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -185,7 +172,9 @@
       <workItem from="1583428099606" duration="357000" />
       <workItem from="1583428508719" duration="2000" />
       <workItem from="1583431216090" duration="1760000" />
-      <workItem from="1583571094789" duration="14946000" />
+      <workItem from="1583571094789" duration="15196000" />
+      <workItem from="1583652013243" duration="1145000" />
+      <workItem from="1583669346535" duration="4090000" />
     </task>
     <task id="LOCAL-00001" summary="update file">
       <created>1535140998866</created>
@@ -362,7 +351,14 @@
       <option name="project" value="LOCAL" />
       <updated>1583579371549</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="Refactor the task creation. Now it is fully static.">
+      <created>1583605339243</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1583605339243</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TodoView">
@@ -407,10 +403,10 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="669" y="269" key="#untitled_srec/0.0.1920.1080@0.0.1920.1080" timestamp="1583430820003" />
-    <state x="585" y="134" key="CommitChangelistDialog2" timestamp="1583579370643">
+    <state x="585" y="134" key="CommitChangelistDialog2" timestamp="1583605338402">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="585" y="134" key="CommitChangelistDialog2/0.0.1920.1080@0.0.1920.1080" timestamp="1583579370643" />
+    <state x="585" y="134" key="CommitChangelistDialog2/0.0.1920.1080@0.0.1920.1080" timestamp="1583605338402" />
     <state x="427" y="307" key="FileChooserDialogImpl" timestamp="1583431434554">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
@@ -435,10 +431,10 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="461" y="182" key="SettingsEditor/0.0.1920.1080@0.0.1920.1080" timestamp="1583571285875" />
-    <state x="552" y="273" key="Vcs.Push.Dialog.v2" timestamp="1583432832246">
+    <state x="552" y="273" key="Vcs.Push.Dialog.v2" timestamp="1583605373780">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="552" y="273" key="Vcs.Push.Dialog.v2/0.0.1920.1080@0.0.1920.1080" timestamp="1583432832246" />
+    <state x="552" y="273" key="Vcs.Push.Dialog.v2/0.0.1920.1080@0.0.1920.1080" timestamp="1583605373780" />
     <state x="656" y="364" key="com.intellij.ide.util.TipDialog" timestamp="1583431230210">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>

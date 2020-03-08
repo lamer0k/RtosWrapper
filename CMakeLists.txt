@@ -78,6 +78,7 @@ include_directories(
         ${CMAKE_SOURCE_DIR}/MyTasks
         ${CMAKE_SOURCE_DIR}/Rtos/FreeRtos/include
         ${CMAKE_SOURCE_DIR}/Common
+        ${CMAKE_SOURCE_DIR}/Application
         ${CMAKE_SOURCE_DIR}/Rtos/FreeRtos/portable/IAR/ARM_CM4F
         ${CMAKE_SOURCE_DIR}/Rtos/FreeRtos/portable/Common
         ${CMAKE_SOURCE_DIR}/Rtos/wrapper/FreeRtos

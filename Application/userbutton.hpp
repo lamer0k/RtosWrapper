@@ -16,7 +16,7 @@ class Button : public Singleton<Button<Pin>>
 public:
   __forceinline inline bool IsPressed() const
   {
-    return (Pin::Get() == 1U);
+    return (Pin::Get() != 1U);
   }
 
 private:

@@ -10,15 +10,18 @@
 #define RTOSDEFS_H
 
 //For EmbOs types and methods definition (OS_TASK)
-#include "../../FreeRtos/include/FreeRtos.h"
-#include "../../FreeRtos/include/task.h"
-#include "../../FreeRtos/include/semphr.h"
-#include "../../FreeRtos/include/queue.h"
-#include "../../FreeRtos/include/timers.h"
-#include "../../FreeRtos/include/event_groups.h"
-#include "../../FreeRtos/portable/IAR/ARM_CM4F/portmacro.h"
-#include "../../FreeRtos/FreeRTOSConfig.h"
+#include "FreeRtos.h"
+#include "task.h"
+#include "semphr.h"
+#include "queue.h"
+#include "timers.h"
+#include "event_groups.h"
+#include "portmacro.h"
+#include "FreeRTOSConfig.h"
 #include "../../../Common/susudefs.hpp"
+#include <chrono>
+
+using namespace std::chrono_literals;
 
 namespace OsWrapper
 {
@@ -54,10 +57,13 @@ namespace OsWrapper
   using tMutex = StaticSemaphore_t;
   using tMutexHandle = SemaphoreHandle_t;
 
-  constexpr tTime operator "" ms(unsigned long long ms)
-  {
-    return static_cast<tTime>(ms / portTICK_PERIOD_MS) ;
-  } ;  
+  using TicksPerSecond = std::chrono::duration<tTime , std::ratio<portTICK_PERIOD_MS,1000>> ;
+  //using TicksPerSecond = std::chrono::duration<tTime , std::ratio<portTICK_PERIOD_MS, 1000>> ;
+
+  //constexpr tTime operator "" ms(unsigned long long ms)
+  //{
+  //  return static_cast<tTime>(ms / portTICK_PERIOD_MS) ;
+  //} ;
 }
 
 #endif // RTOSDEFS_H

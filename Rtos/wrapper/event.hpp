@@ -14,9 +14,9 @@
 #define EVENT_HPP
 
 // For tEvent
-#include "FreeRtos/rtosdefs.hpp"
+#include "rtosdefs.hpp" //for tTime
 #include "rtoswrapper.hpp" //for RtosWrapper
-#include "eventmode.hpp" // for
+#include "eventmode.hpp" // for EventMode
 
 namespace OsWrapper
 {
@@ -27,8 +27,9 @@ namespace OsWrapper
   class Event
   {
   public:
-    explicit __forceinline Event(tTime delay, tEventBits maskBits) : timeOut{delay},
-                                                                     mask{maskBits}
+    explicit __forceinline Event(const std::chrono::milliseconds delay, const tEventBits maskBits) :
+        timeOut{(std::chrono::duration_cast<TicksPerSecond>(delay)).count()},
+        mask{maskBits}
     {
       handle = RtosWrapper::wCreateEvent(event);
     }
@@ -44,14 +45,14 @@ namespace OsWrapper
     }
 
     __forceinline tEventBits Wait(const EventMode mode = EventMode::waitAnyBits,
-                           const tEventBits maskBits = defaultMask) const
+                                  const tEventBits maskBits = defaultMask) const
     {
       return RtosWrapper::wWaitEvent(handle, maskBits, timeOut, mode);
     }
 
-    __forceinline void SetTimeout(tTime delay)
-    {
-      timeOut = delay;
+    __forceinline void SetTimeout(std::chrono::milliseconds delay)
+    {     
+      timeOut = (std::chrono::duration_cast<TicksPerSecond>(delay)).count();
     }
 
     __forceinline void SetMaskBits(tEventBits maskBits)
@@ -62,7 +63,7 @@ namespace OsWrapper
   private:
     tEventHandle handle{0};
     tEvent event;
-    tTime timeOut = 1000ms;
+    tTime timeOut = 1000;
     tEventBits mask{defaultMask};
   };
 };

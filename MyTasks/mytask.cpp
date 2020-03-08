@@ -6,21 +6,12 @@
 * Author        : Sergey Kolody
 *******************************************************************************/
 #include "mytask.hpp"
-#include "../Rtos/wrapper/thread.hpp"
-#include "../Rtos/wrapper/mailbox.hpp"
-#include "../Rtos/wrapper/event.hpp"
-#include "../Application/ledscontroller.hpp"
-#include "../Application/userbutton.hpp"
-
-extern OsWrapper::MailBox<int, 10> queue;
-extern OsWrapper::Event event;
 
 void MyTask::Execute()
 { 
   while(true) 
   {
-    using OsWrapper::operator""ms ;
-    if (UserButton::GetInstance().IsPressed())
+    if (button.IsPressed())
     {
       event.Signal();
     }
