@@ -68,6 +68,8 @@ private:
 and used it
 
 ```cpp
+OsWrapper::Event event{500ms, 1};
+
 MyTask myTask(event, UserButton::GetInstance());
 Led1Task led1Task(event);
 
