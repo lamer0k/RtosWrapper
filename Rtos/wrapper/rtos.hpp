@@ -38,8 +38,8 @@ namespace OsWrapper
 *             [in] pStack - pointer on task stack
 * Returns: true if task is created, false if not
 ****************************************************************************/
-     template<typename T >
-    __forceinline static void CreateThread(T& thread, const char *pName, ThreadPriority prior = ThreadPriority::normal)
+    __forceinline template<typename T >
+    static void CreateThread(T& thread, const char *pName, ThreadPriority prior = ThreadPriority::normal)
     {
       return RtosWrapper::wCreateThread<Rtos>(thread, pName, prior, thread.stackDepth, thread.stack.data());
     }

@@ -45,8 +45,8 @@ namespace OsWrapper
      *             [in] pStack - pointer on task stack
      * Returns: No
      ****************************************************************************/
-    template<typename Rtos, typename T>
-    __forceinline static void wCreateThread(T &thread, const char *pName, ThreadPriority prior, const std::uint16_t stackDepth, tStack *pStack)
+    __forceinline template<typename Rtos, typename T>
+    static void wCreateThread(T &thread, const char *pName, ThreadPriority prior, const std::uint16_t stackDepth, tStack *pStack)
     {
 #if (configSUPPORT_STATIC_ALLOCATION == 1)
       if (pStack != nullptr)

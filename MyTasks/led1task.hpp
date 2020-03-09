@@ -1,10 +1,10 @@
 #ifndef __LED1TASK_HPP
 #define __LED1TASK_HPP 
-// For Button
-#include "../Application/userbutton.hpp"
+
+#include "userbutton.hpp" // for Button
 #include "event.hpp" // for Event ;
-//For OsWrapper::Thread
-#include "../Rtos/wrapper/thread.hpp"
+#include "ledscontroller.hpp" // for LedsController
+#include "thread.hpp" //For OsWrapper::Thread
 #include <array>
 
 class Led1Task : public OsWrapper::Thread<static_cast<std::size_t>(OsWrapper::StackDepth::minimal)>
@@ -12,10 +12,11 @@ class Led1Task : public OsWrapper::Thread<static_cast<std::size_t>(OsWrapper::St
 public:
   virtual void Execute() override;
 
-  Led1Task(OsWrapper::Event& event) : event(event)
+  Led1Task(OsWrapper::Event& event, LedsController& controller) : event(event), ledsCntr(controller)
   {
   }
 private:
   OsWrapper::Event& event ;
+   LedsController& ledsCntr;
 } ;
 #endif //__LED1TASK_HPP

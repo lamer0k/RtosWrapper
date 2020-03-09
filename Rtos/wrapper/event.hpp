@@ -28,7 +28,7 @@ namespace OsWrapper
   class Event
   {
   public:
-    explicit __forceinline Event(const std::chrono::milliseconds delay, const tEventBits maskBits) :
+    __forceinline explicit Event(const std::chrono::milliseconds delay, const tEventBits maskBits) :
         timeOut{(std::chrono::duration_cast<TicksPerSecond>(delay)).count()},
         mask{maskBits}
     {

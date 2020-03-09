@@ -1,14 +1,14 @@
-#include "rtos.hpp"
-#include "mailbox.hpp"
-#include "event.hpp"
+#include "rtos.hpp"         // for Rtos
+#include "mailbox.hpp"      // for Mailbox
+#include "event.hpp"        // for Event
 
-#include "mytask.hpp"
-#include "led1task.hpp"
-#include "rccregisters.hpp"
+#include "mytask.hpp"       // for MyTask
+#include "led1task.hpp"     // for Led1Task
+#include "rccregisters.hpp" // for RCC
 
 //#include "Application/Diagnostic/GlobalStatus.hpp"
-#include <iostream>
-#include <gpioaregisters.hpp>
+#include <gpioaregisters.hpp>  // for GPIOA
+#include <gpiocregisters.hpp>  // for GPIOC
 
 std::uint32_t SystemCoreClock = 16'000'000U;
 
@@ -53,7 +53,7 @@ int __low_level_init(void)
 OsWrapper::Event event{500ms, 1};
 
 MyTask myTask(event, UserButton::GetInstance());
-Led1Task led1Task(event);
+Led1Task led1Task(event, LedsController::GetInstance());
 //OsWrapper::MailBox<int, 10> queue;
 //GlobalStatus status;
 
