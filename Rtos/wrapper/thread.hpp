@@ -22,7 +22,6 @@
 #include <array>
 #include "rtosdefs.hpp"
 #include <chrono> // for 'ms' literal
-#include "../../Common/susudefs.hpp"
 #include "rtoswrapper.hpp"
 
 namespace OsWrapper
@@ -30,7 +29,7 @@ namespace OsWrapper
 
   constexpr tTaskEventMask defaultTaskMaskBits = 0b010101010;
 
-  enum class StackDepth : tU16
+  enum class StackDepth : std::uint16_t
   {
     minimal = 128U,
     medium = 256U,
@@ -44,22 +43,22 @@ namespace OsWrapper
   public:
     virtual void Execute() = 0 ;
 
-    static void Sleep(const std::chrono::milliseconds timeOut = 1000ms)
+    __forceinline static void Sleep(const std::chrono::milliseconds timeOut = 1000ms)
     {      
       RtosWrapper::wSleep(std::chrono::duration_cast<TicksPerSecond>(timeOut).count());   
     };
 
-    void SleepUntil(const std::chrono::milliseconds timeOut = 1000ms)
+    __forceinline void SleepUntil(const std::chrono::milliseconds timeOut = 1000ms)
     {     
       RtosWrapper::wSleepUntil(lastWakeTime, std::chrono::duration_cast<TicksPerSecond>(timeOut).count());
     };
 
-    inline void Signal(const tTaskEventMask mask = defaultTaskMaskBits)
+    __forceinline void Signal(const tTaskEventMask mask = defaultTaskMaskBits)
     {
       RtosWrapper::wSignal(handle, mask);
     };
 
-    inline tTaskEventMask WaitForSignal(std::chrono::milliseconds timeOut = 1000ms,
+    __forceinline tTaskEventMask WaitForSignal(std::chrono::milliseconds timeOut = 1000ms,
                                         const tTaskEventMask mask = defaultTaskMaskBits)
     {    
       return RtosWrapper::wWaitForSignal(mask, std::chrono::duration_cast<TicksPerSecond>(timeOut).count());
@@ -72,8 +71,8 @@ namespace OsWrapper
     tTaskHandle handle =  nullptr; //инициализация проихсодит во время создания задачи при вызове CreatThread
 
     tTime lastWakeTime = 0U;
-  
-    void Run()
+
+    __forceinline void Run()
     {
       lastWakeTime = RtosWrapper::wGetTicks();
       Execute();
@@ -84,7 +83,6 @@ namespace OsWrapper
   class Thread: public IThread
   {  
     friend class Rtos;  
-  //  friend class RtosWrapper;
 
     static constexpr std::size_t stackDepth = stackSize;
     std::array <tStack, stackSize> stack;

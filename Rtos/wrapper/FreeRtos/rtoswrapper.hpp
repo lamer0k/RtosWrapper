@@ -17,13 +17,10 @@
 *******************************************************************************/
 
 
-//#include "../thread.hpp"  // for Thread
-//#include "../mutex.hpp" // for Mutex
-//#include "../mailbox.hpp" //for MailBox
-//#include "../rtos.hpp" // For Rtos::Run
-#include "../../../Common/susudefs.hpp" // for tU16
+
+#include "susudefs.hpp" // for __forceinline (#define __forceinline  _Pragma("inline=forced"))
 #include "rtosdefs.hpp" // for OsWrapper types such as tTime, tMutexHandle...
-#include "../eventmode.hpp" //for EventMode
+#include "eventmode.hpp" //for EventMode
 
 #include <limits> // for std::numeric_limits<uint32_t>::max()
 
@@ -49,7 +46,7 @@ namespace OsWrapper
      * Returns: No
      ****************************************************************************/
     template<typename Rtos, typename T>
-    static void wCreateThread(T &thread, const char *pName, ThreadPriority prior, const tU16 stackDepth, tStack *pStack)
+    __forceinline static void wCreateThread(T &thread, const char *pName, ThreadPriority prior, const std::uint16_t stackDepth, tStack *pStack)
     {
 #if (configSUPPORT_STATIC_ALLOCATION == 1)
       if (pStack != nullptr)
@@ -434,8 +431,8 @@ namespace OsWrapper
     * Returns: If the mailbox is created successfully then a handle to the created
     * mailbox is returned, otherwise nullptr is returned.
     ****************************************************************************/
-    __forceinline static tMailBoxHandle wMailBoxCreate(tU16 length, tU16 itemSize,
-        tU8 *pBuffer, tMailBoxContext &context)
+    __forceinline static tMailBoxHandle wMailBoxCreate(std::uint16_t length, std::uint16_t itemSize,
+        std::uint8_t *pBuffer, tMailBoxContext &context)
     {
 #if (configSUPPORT_STATIC_ALLOCATION == 1)
       return xQueueCreateStatic(length, itemSize, pBuffer, &context);

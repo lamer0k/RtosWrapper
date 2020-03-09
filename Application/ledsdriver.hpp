@@ -9,18 +9,18 @@
 #ifndef LEDDRIVER_H
 #define LEDDRIVER_H
 
-#include "leds.hpp"
-#include "../Common/singleton.hpp"
-#include <array>
+#include "leds.hpp" // For Led
+#include "singleton.hpp" // for Singleton
+#include <array>  // for std::array
 #include "gpioaregisters.hpp" // for GPIOA
 #include "gpiocregisters.hpp" // for GPIOC
 
-constexpr tU8 ledsCount = 4U;
+constexpr std::size_t ledsCount = 4U;
 
-constexpr tU32 led1Pin = 5U;
-constexpr tU32 led2Pin = 9U;
-constexpr tU32 led3Pin = 8U;
-constexpr tU32 led4Pin = 5U;
+constexpr std::uint32_t led1Pin = 5U;
+constexpr std::uint32_t led2Pin = 9U;
+constexpr std::uint32_t led3Pin = 8U;
+constexpr std::uint32_t led4Pin = 5U;
 
 enum class LedNum
 {
@@ -38,53 +38,53 @@ class LedsDriver : public Singleton<LedsDriver>
     {
       for(auto it: leds)
       {
-        it->SwitchOn();
+        it.get().SwitchOn();
       }
     };
     inline void SwitchOffAll()
     {
       for(auto it: leds)
       {
-        it->SwitchOff();
+        it.get().SwitchOff();
       }
     };
     inline void ToggleAll()
     {
       for(auto it: leds)
       {
-        it->Toggle();
+        it.get().Toggle();
       }
     };
     
-    inline tU8 GetLedsCount()
+    std::size_t GetLedsCount()
     {
       return leds.size();
     };
     
     inline ILed& GetLed(LedNum num)
     {
-      return *leds[static_cast<tU8>(num)];
+      return leds[static_cast<std::size_t>(num)];
     }
     friend class Singleton<LedsDriver>;
   private:
     LedsDriver() = default;     
-    std::array<ILed*, ledsCount> leds {
-      &Led<
+    std::array<std::reference_wrapper<ILed>, ledsCount> leds {
+      Led<
         Pin<Port<GPIOA>,
             led1Pin,
             PinWriteable>
             >::GetInstance(),
-      &Led<
+      Led<
           Pin<Port<GPIOC>,
               led2Pin,
               PinWriteable>
               >::GetInstance(),
-       &Led<
+       Led<
            Pin<Port<GPIOC>,
                led3Pin,
                PinWriteable>
                >::GetInstance(),
-       &Led<
+       Led<
            Pin<Port<GPIOC>,
                led4Pin,
                PinWriteable>

@@ -1,16 +1,16 @@
 #ifndef LEDSCONTROLLER_H
 #define LEDSCONTROLLER_H
-#include "utils.hpp"
-#include "ledsdriver.hpp"
-#include "ledsmodes.hpp"
-#include "../Common/singleton.hpp"
-#include <array>
-#include <functional>
+
+#include "ledsdriver.hpp" // for LedsDriver
+#include "ledsmodes.hpp"  // for LedsMode
+#include "singleton.hpp" // for Singleton
+#include <array>     // for std::array
+
 
 class LedsController : public Singleton<LedsController>
 {
   public:
-    inline void Update(tU8 value = 0)
+    inline void Update(std::uint8_t value = 0)
     {
       modes[currentMode].get().Do(value);
     }
@@ -27,7 +27,7 @@ class LedsController : public Singleton<LedsController>
     friend class Singleton<LedsController>;
   private:
     LedsController() = default;        
-    tU8 currentMode = 0U;
+    std::size_t currentMode = 0U;
     using tModesArray = std::array<std::reference_wrapper<LedsMode>, 6U>;    
     tModesArray modes = { 
                           LedsModeTree::GetInstance(),

@@ -370,6 +370,7 @@
                     <state>$PROJ_DIR$\..\CortexLib\AbstractHardware\Port</state>
                     <state>$PROJ_DIR$\..\CortexLib\AbstractHardware\Atomic</state>
                     <state>$PROJ_DIR$\..\CortexLib\Common</state>
+                    <state>$PROJ_DIR$\..\CortexLib\Common\Singleton</state>
                 </option>
                 <option>
                     <name>CCStdIncCheck</name>
@@ -679,7 +680,7 @@
                 </option>
                 <option>
                     <name>OOCOutputFile</name>
-                    <state></state>
+                    <state>iarproject.srec</state>
                 </option>
                 <option>
                     <name>OOCCommandLineProducer</name>

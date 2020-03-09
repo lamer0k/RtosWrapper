@@ -5,7 +5,7 @@
 class LedsMode 
 {
   public:
-    virtual void Do(tU8 value = 0U) 
+    virtual void Do(std::uint8_t value = 0U) 
     {
       LedsDriver::GetInstance().ToggleAll();       
     } 
@@ -16,7 +16,7 @@ class LedsMode
       currentLed = 0U;
     }
   protected:
-   tU8 currentLed = 0U; 
+    std::size_t currentLed = 0U; 
    LedsMode() = default;
 };
 

@@ -18,7 +18,6 @@
 #include "event_groups.h"
 #include "portmacro.h"
 #include "FreeRTOSConfig.h"
-#include "../../../Common/susudefs.hpp"
 #include <chrono>
 
 using namespace std::chrono_literals;
@@ -29,7 +28,7 @@ namespace OsWrapper
   extern "C" void xPortPendSVHandler(void);
   extern "C" void xPortSysTickHandler(void);
 
-  enum class ThreadPriority : tU16
+  enum class ThreadPriority : std::uint8_t
   {
       clear = 0,
       lowest = 10,
@@ -44,7 +43,7 @@ namespace OsWrapper
   using tTaskHandle = TaskHandle_t;
   using tStack = StackType_t ;
 
-  using tTaskEventMask = tU32;
+  using tTaskEventMask = std::uint32_t ;
   using tTime = TickType_t ;
 
   using tEventHandle = EventGroupHandle_t;

@@ -83,6 +83,8 @@ include_directories(
         ${CMAKE_SOURCE_DIR}/Rtos/FreeRtos/portable/Common
         ${CMAKE_SOURCE_DIR}/Rtos/wrapper/FreeRtos
         ${CMAKE_SOURCE_DIR}/Rtos/wrapper
+        ${CMAKE_SOURCE_DIR}/../CortexLib/Common
+        ${CMAKE_SOURCE_DIR}/../CortexLib/Singleton
         ${CMAKE_SOURCE_DIR}/../CortexLib/AbstractHardware/Registers
         ${CMAKE_SOURCE_DIR}/../CortexLib/AbstractHardware/Registers/STM32F411/
         ${CMAKE_SOURCE_DIR}/../CortexLib/AbstractHardware/Registers/STM32F411/FieldValues

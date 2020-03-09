@@ -8,7 +8,7 @@ class LedsModeTree : public LedsMode, public Singleton<LedsModeTree>
 {
   friend class Singleton<LedsModeTree>;
   public:
-    virtual void Do(tU8 value) override
+    virtual void Do(std::uint8_t value) override
     {
       LedsDriver & driver = LedsDriver::GetInstance();
       if (currentLed >= driver.GetLedsCount())
@@ -83,10 +83,10 @@ class LedsModeAdc : public LedsMode, public Singleton<LedsModeAdc>
 {
   friend class Singleton<LedsModeAdc>;
   public:
-    virtual void Do(tU8 value) override
+    virtual void Do(std::uint8_t value) override
     {
       LedsDriver & driver = LedsDriver::GetInstance(); 
-      for (tU32 i = 0U; i < driver.GetLedsCount(); i++)
+      for (std::size_t i = 0U; i < driver.GetLedsCount(); i++)
       {
         if (i < value)
         {

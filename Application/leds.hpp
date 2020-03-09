@@ -1,10 +1,9 @@
 #ifndef LEDS_H
 #define LEDS_H
 
-#include "utils.hpp"
 #include "gpiocregisters.hpp" // for GPIOC
 #include "pin.hpp" // For Pin
-#include "../Common/singleton.hpp"
+#include "singleton.hpp" // for Singleton
 
 struct ILed
 {

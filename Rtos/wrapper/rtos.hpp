@@ -12,7 +12,6 @@
 #define RTOS_HPP
 
 #include "thread.hpp"        // for Thread
-#include "../../Common/susudefs.hpp"
 #include "rtosdefs.hpp"
 #include <cstddef>
 #include "rtoswrapper.hpp"
@@ -40,7 +39,7 @@ namespace OsWrapper
 * Returns: true if task is created, false if not
 ****************************************************************************/
      template<typename T >
-    __forceinline inline static void CreateThread(T& thread, const char *pName, ThreadPriority prior = ThreadPriority::normal)
+    __forceinline static void CreateThread(T& thread, const char *pName, ThreadPriority prior = ThreadPriority::normal)
     {
       return RtosWrapper::wCreateThread<Rtos>(thread, pName, prior, thread.stackDepth, thread.stack.data());
     }
@@ -90,7 +89,7 @@ namespace OsWrapper
 
   private:
     //cstat !MISRAC++2008-7-1-2 To prevent reinterpret_cast in the CreateTask
-    static void Run(void *pContext)
+    __forceinline static void Run(void *pContext)
     {
       static_cast<IThread*>(pContext)->Run();
     }

@@ -17,6 +17,7 @@
 #include "rtosdefs.hpp" //for tTime
 #include "rtoswrapper.hpp" //for RtosWrapper
 #include "eventmode.hpp" // for EventMode
+#include "susudefs.hpp" // for __forceinline (#define __forceinline  _Pragma("inline=forced"))
 
 namespace OsWrapper
 {
