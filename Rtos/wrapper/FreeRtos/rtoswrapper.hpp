@@ -16,9 +16,6 @@
 * Author        : Sergey Kolody
 *******************************************************************************/
 
-
-
-#include "susudefs.hpp" // for __forceinline (#define __forceinline  _Pragma("inline=forced"))
 #include "rtosdefs.hpp" // for OsWrapper types such as tTime, tMutexHandle...
 #include "eventmode.hpp" //for EventMode
 

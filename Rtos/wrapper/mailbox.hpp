@@ -13,10 +13,9 @@
 #ifndef MAILBOX_HPP
 #define MAILBOX_HPP
 
-#include "FreeRtos/rtosdefs.hpp"
+#include "rtosdefs.hpp"
 #include <array>
 #include "rtoswrapper.hpp" // for RtosWrapper
-#include "susudefs.hpp" // for __forceinline
 
 namespace OsWrapper
 {

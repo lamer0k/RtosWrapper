@@ -236,23 +236,23 @@
                 </option>
                 <option>
                     <name>CCListCFile</name>
-                    <state>0</state>
+                    <state>1</state>
                 </option>
                 <option>
                     <name>CCListCMnemonics</name>
-                    <state>0</state>
+                    <state>1</state>
                 </option>
                 <option>
                     <name>CCListCMessages</name>
-                    <state>0</state>
+                    <state>1</state>
                 </option>
                 <option>
                     <name>CCListAssFile</name>
-                    <state>0</state>
+                    <state>1</state>
                 </option>
                 <option>
                     <name>CCListAssSource</name>
-                    <state>0</state>
+                    <state>1</state>
                 </option>
                 <option>
                     <name>CCEnableRemarks</name>
@@ -321,7 +321,7 @@
                 </option>
                 <option>
                     <name>CCCompilerRuntimeInfo</name>
-                    <state>0</state>
+                    <state>1</state>
                 </option>
                 <option>
                     <name>IFpuProcessor</name>
@@ -775,23 +775,23 @@
                 </option>
                 <option>
                     <name>IlinkLogFile</name>
-                    <state>0</state>
+                    <state>1</state>
                 </option>
                 <option>
                     <name>IlinkLogInitialization</name>
-                    <state>0</state>
+                    <state>1</state>
                 </option>
                 <option>
                     <name>IlinkLogModule</name>
-                    <state>0</state>
+                    <state>1</state>
                 </option>
                 <option>
                     <name>IlinkLogSection</name>
-                    <state>0</state>
+                    <state>1</state>
                 </option>
                 <option>
                     <name>IlinkLogVeneer</name>
-                    <state>0</state>
+                    <state>1</state>
                 </option>
                 <option>
                     <name>IlinkIcfOverride</name>
@@ -799,7 +799,7 @@
                 </option>
                 <option>
                     <name>IlinkIcfFile</name>
-                    <state>C:\GitHub\RtosWrapper\stm32f411xE.icf</state>
+                    <state>$PROJ_DIR$\stm32f411xE.icf</state>
                 </option>
                 <option>
                     <name>IlinkIcfFileSlave</name>
@@ -930,15 +930,15 @@
                 </option>
                 <option>
                     <name>IlinkLogAutoLibSelect</name>
-                    <state>0</state>
+                    <state>1</state>
                 </option>
                 <option>
                     <name>IlinkLogRedirSymbols</name>
-                    <state>0</state>
+                    <state>1</state>
                 </option>
                 <option>
                     <name>IlinkLogUnusedFragments</name>
-                    <state>0</state>
+                    <state>1</state>
                 </option>
                 <option>
                     <name>IlinkCrcReverseByteOrder</name>
@@ -1004,7 +1004,7 @@
                 </option>
                 <option>
                     <name>IlinkLogCallGraph</name>
-                    <state>0</state>
+                    <state>1</state>
                 </option>
                 <option>
                     <name>IlinkIcfFile_AltDefault</name>

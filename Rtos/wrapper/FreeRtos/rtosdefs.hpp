@@ -17,8 +17,9 @@
 #include "timers.h"
 #include "event_groups.h"
 #include "portmacro.h"
+#include "susudefs.hpp" // for __forceinline (#define __forceinline  _Pragma("inline=forced"))
 #include "FreeRTOSConfig.h"
-#include <chrono>
+#include <chrono> // for std::chrono::duration and "ms" literal
 
 using namespace std::chrono_literals;
 
@@ -57,12 +58,7 @@ namespace OsWrapper
   using tMutexHandle = SemaphoreHandle_t;
 
   using TicksPerSecond = std::chrono::duration<tTime , std::ratio<portTICK_PERIOD_MS,1000>> ;
-  //using TicksPerSecond = std::chrono::duration<tTime , std::ratio<portTICK_PERIOD_MS, 1000>> ;
 
-  //constexpr tTime operator "" ms(unsigned long long ms)
-  //{
-  //  return static_cast<tTime>(ms / portTICK_PERIOD_MS) ;
-  //} ;
 }
 
 #endif // RTOSDEFS_H
