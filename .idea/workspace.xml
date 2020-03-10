@@ -20,13 +20,7 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5335a5d7-2ea1-4d0d-bfd4-dd1a3e5c554b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.adoc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/iarproject.dep" beforeDir="false" afterPath="$PROJECT_DIR$/iarproject.dep" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
-    </list>
+    <list default="true" id="5335a5d7-2ea1-4d0d-bfd4-dd1a3e5c554b" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -1012,7 +1006,7 @@
       <workItem from="1583774014180" duration="19000" />
       <workItem from="1583774307308" duration="2767000" />
       <workItem from="1583777146371" duration="771000" />
-      <workItem from="1583820916614" duration="753000" />
+      <workItem from="1583820916614" duration="1086000" />
     </task>
     <task id="LOCAL-00001" summary="update file">
       <created>1535140998866</created>
@@ -1266,7 +1260,14 @@
       <option name="project" value="LOCAL" />
       <updated>1583772302720</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="Update README.adoc">
+      <created>1583821888201</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1583821888202</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="TodoView">
@@ -1291,7 +1292,8 @@
     <MESSAGE value="add README.md" />
     <MESSAGE value="Update all gain" />
     <MESSAGE value="Add singleton" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add singleton" />
+    <MESSAGE value="Update README.adoc" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update README.adoc" />
   </component>
   <component name="WindowStateProjectService">
     <state x="414" y="195" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1583777383402">

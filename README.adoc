@@ -45,27 +45,27 @@ and another task:
 
 [source,cpp]
 ----
-class Led1Task : public Thread<128U>
+class Led1Task : public OsWrapper::Thread<128U>
 {
 public:
- virtual void Execute() override
- {
- LedsController &amp; ledsCntr = LedsController::GetInstance();
- for(;;)
- {
- if (event.Wait() != 0)
- {
- ledsCntr.NextMode();
- }
- ledsCntr.Update();
- }
- }
+  virtual void Execute() override
+  {
+    for(;;)
+    {
+      if (event.Wait() != 0)
+      {
+        ledsCntr.NextMode();
+      }
+      ledsCntr.Update();
+    }
+  }
 
-Led1Task(OsWrapper::Event&amp; event) : event(event)
- {
- }
+  Led1Task(OsWrapper::Event& event, LedsController& controller) : event(event), ledsCntr(controller)
+  {
+  }
 private:
- OsWrapper::Event&amp; event ;
+  OsWrapper::Event& event ;
+  LedsController& ledsCntr;
 } ;
 
 ----
