@@ -1,0 +1,112 @@
+= RTOS wrapper for students
+
+This the example of RTOS wrapper for FreeRTOS for Stm32F411 microcontroller
+
+To use the wrapper, it needs to copy the next folder:
+
+– CMSIS 
+
+– Rtos
+
+also it needs to define __forceinline macros (`#define __forceinline  _Pragma(&quot;inline=forced&quot;)` for IAR) in Rtos\wrapper\FreeRtos\rtosdefs.hpp file
+ See more information on https://habr.com/ru/post/420467/
+
+Example of creating a task:
+
+[source,cpp]
+----
+using namespace OsWrapper ;
+class MyTask : public Thread<static_cast<std::size_t>(StackDepth::minimal)>
+{
+
+public:
+  virtual void Execute() override
+  {
+    while(true) 
+    {
+      if (button.IsPressed())
+      {
+        event.Signal();
+      }
+      Sleep(300ms);
+  }
+
+  MyTask(OsWrapper::Event& event, UserButton& button) : event(event), button(button)
+  {
+  }
+private:
+  OsWrapper::Event& event;
+  UserButton& button ;
+} ;
+----
+
+and another task:
+
+
+[source,cpp]
+----
+class Led1Task : public Thread<128U>
+{
+public:
+ virtual void Execute() override
+ {
+ LedsController &amp; ledsCntr = LedsController::GetInstance();
+ for(;;)
+ {
+ if (event.Wait() != 0)
+ {
+ ledsCntr.NextMode();
+ }
+ ledsCntr.Update();
+ }
+ }
+
+Led1Task(OsWrapper::Event&amp; event) : event(event)
+ {
+ }
+private:
+ OsWrapper::Event&amp; event ;
+} ;
+
+----
+
+and used it
+
+[source,cpp]
+----
+
+OsWrapper::Event event{500ms, 1};
+
+MyTask myTask(event, UserButton::GetInstance());
+Led1Task led1Task(event);
+
+int main()
+{
+ using namespace OsWrapper;
+ Rtos::CreateThread(myTask, "myTask", ThreadPriority::lowest);
+ Rtos::CreateThread(led1Task, "Led1Task");
+ Rtos::Start();
+
+return 0;
+}
+----
+
+== How to run the example
+
+It needs to copy CortexLib (https://github.com/lamer0k/CortexLib) to have the next folder structure:
+
+```
+ - CortexLib
+   -- AbstractHardware
+   -- Common
+ - RtosWrapper
+   -- AHardware
+   -- Application
+   -- CMSIS
+   -- Common
+   -- MyTasks
+   -- Rtos
+```
+
+Then it is possible to just open the RtosWrapper directory in the JetBrains Clion.
+Or if you use IAR 8.40.2 open the test.eww workspace or iarproject.ewp project.

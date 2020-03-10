@@ -126,7 +126,8 @@ add_executable(untitled
         ${CMAKE_SOURCE_DIR}/rtos/FreeRtos/tasks.c
         ${CMAKE_SOURCE_DIR}/Application/Diagnostic/Action.hpp
         Application/Diagnostic/Exh001Action.hpp Application/Diagnostic/Exh002Action.hpp Application/Diagnostic/GlobalStatus.hpp
-        Rtos/wrapper/FreeRtos/rtoswrapper.hpp Rtos/wrapper/eventmode.hpp)
+        Rtos/wrapper/FreeRtos/rtoswrapper.hpp Rtos/wrapper/eventmode.hpp Rtos/wrapper/FreeRtos/rtosdefs.hpp
+        )
 
 
 

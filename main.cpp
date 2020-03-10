@@ -61,7 +61,7 @@ Led1Task led1Task(event, LedsController::GetInstance());
 int main()
 {
   using namespace OsWrapper;
- // Rtos::CreateThread(myTask, "myTask", ThreadPriority::lowest);
+  Rtos::CreateThread(myTask, "myTask", ThreadPriority::lowest);
   Rtos::CreateThread(led1Task, "Led1Task");
   Rtos::Start();
 
