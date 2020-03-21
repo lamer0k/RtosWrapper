@@ -15,7 +15,6 @@
 
 #pragma language = extended
 #pragma segment = "CSTACK"
-#include "AHardware/IrqController/irqcontroller.hpp"
 #include "Rtos/wrapper/rtos.hpp"
 
 extern "C" void __iar_program_start( void );
@@ -102,7 +101,7 @@ extern "C" const tIntVectItem __vector_table[] =
   DummyModule::handler,         //USART1
   DummyModule::handler,         //USART2
   0,
-  IrqController::HandleIrqExtiLine15_10,         //EXTI Line 15..10
+  DummyModule::handler,         //EXTI Line 15..10
   DummyModule::handler,         //EXTI Line 17 interrupt / RTC Alarms (A and B) through EXTI line interrupt
   DummyModule::handler,         //EXTI Line 18 interrupt / USB On-The-Go  FS Wakeup through EXTI line interrupt
   0,				//TIM6

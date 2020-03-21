@@ -2373,24 +2373,9 @@
     </configuration>
     <group>
         <name>AHardware</name>
-        <group>
-            <name>IrqController</name>
-            <file>
-                <name>$PROJ_DIR$\AHardware\IrqController\irqcontroller.cpp</name>
-            </file>
-        </group>
     </group>
     <group>
         <name>Application</name>
-    </group>
-    <group>
-        <name>MyTasks</name>
-        <file>
-            <name>$PROJ_DIR$\MyTasks\Led1Task.cpp</name>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\MyTasks\mytask.cpp</name>
-        </file>
     </group>
     <group>
         <name>Rtos</name>

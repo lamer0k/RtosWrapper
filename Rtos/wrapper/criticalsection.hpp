@@ -15,7 +15,7 @@
 #ifndef CRITICALSECTION_HPP
 #define CRITICALSECTION_HPP
 
-#include "rtos.hpp"
+#include "rtoswrapper.hpp" // for RtosWrapper
 
 namespace OsWrapper
 {
@@ -24,12 +24,12 @@ namespace OsWrapper
     public:
       inline CriticalSection()
       {
-        wEnterCriticalSection() ;
+        RtosWrapper::wEnterCriticalSection() ;
       } 
       
       inline ~CriticalSection()
       {
-        wLeaveCriticalSection() ;
+        RtosWrapper::wLeaveCriticalSection() ;
       } 
   } ;
 } ;

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<userOverrides>
+    <override>
+        <path>C:\GitHub\RtosWrapper\Rtos\wrapper\thread.hpp</path>
+        <encoding>Win-1251</encoding>
+    </override>
+</userOverrides>

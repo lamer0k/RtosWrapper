@@ -1,0 +1,441 @@
+###############################################################################
+#
+# IAR ELF Linker V8.40.2.214/W32 for ARM                  21/Mar/2020  13:38:56
+# Copyright 2007-2019 IAR Systems AB.
+#
+#    Output file  =  C:\GitHub\KursovoyKarkas\Debug\Exe\iarproject.out
+#    Map file     =  C:\GitHub\KursovoyKarkas\Debug\List\iarproject.map
+#    Command line =
+#        -f C:\Users\Serge\AppData\Local\Temp\EW7360.tmp
+#        (C:\GitHub\KursovoyKarkas\Debug\Obj\croutine.o
+#        C:\GitHub\KursovoyKarkas\Debug\Obj\event_groups.o
+#        C:\GitHub\KursovoyKarkas\Debug\Obj\list.o
+#        C:\GitHub\KursovoyKarkas\Debug\Obj\main.o
+#        C:\GitHub\KursovoyKarkas\Debug\Obj\port.o
+#        C:\GitHub\KursovoyKarkas\Debug\Obj\portasm.o
+#        C:\GitHub\KursovoyKarkas\Debug\Obj\queue.o
+#        C:\GitHub\KursovoyKarkas\Debug\Obj\startupF411RE.o
+#        C:\GitHub\KursovoyKarkas\Debug\Obj\tasks.o
+#        C:\GitHub\KursovoyKarkas\Debug\Obj\timers.o --no_out_extension -o
+#        C:\GitHub\KursovoyKarkas\Debug\Exe\iarproject.out --map
+#        C:\GitHub\KursovoyKarkas\Debug\List\iarproject.map --log
+#        libraries,initialization,modules,redirects,sections,veneers,unused_fragments,call_graph
+#        --log_file C:\GitHub\KursovoyKarkas\Debug\List\iarproject.log --config
+#        C:\GitHub\KursovoyKarkas\stm32f411xE.icf --semihosting --entry
+#        __iar_program_start --vfe --text_out locale)
+#
+###############################################################################
+
+*******************************************************************************
+*** RUNTIME MODEL ATTRIBUTES
+***
+
+CppFlavor        = *
+__CPP_Exceptions = Disabled
+__CPP_Language   = C++14
+__Heap_Handler   = Basic
+__SystemLibrary  = DLib
+__dlib_version   = 6
+
+
+*******************************************************************************
+*** HEAP SELECTION
+***
+
+The basic heap was selected because no calls to memory allocation
+functions were found in the application outside of system library
+functions, and there are calls to deallocation functions in the
+application.
+
+
+*******************************************************************************
+*** PLACEMENT SUMMARY
+***
+
+"A0":  place at address 0x800'0000 { ro section .intvec };
+"P1":  place in [from 0x800'0000 to 0x807'ffff] { ro };
+define block CSTACK with size = 256, alignment = 8 { };
+define block HEAP with size = 0, alignment = 8 { };
+"P2":  place in [from 0x2000'0000 to 0x2001'ffff] {
+          rw, block CSTACK, block HEAP };
+initialize by copy { rw };
+
+  Section            Kind         Address    Size  Object
+  -------            ----         -------    ----  ------
+"A0":                                       0x198
+  .intvec            const     0x800'0000   0x198  startupF411RE.o [1]
+                             - 0x800'0198   0x198
+
+"P1":                                      0x1714
+  .text              ro code   0x800'0198   0x7ec  tasks.o [1]
+  .text              ro code   0x800'0984    0x98  list.o [1]
+  .text              ro code   0x800'0a1c   0x184  port.o [1]
+  .text              ro code   0x800'0ba0   0x394  timers.o [1]
+  CODE               ro code   0x800'0f34    0xa8  portasm.o [1]
+  .text              ro code   0x800'0fdc   0x60e  queue.o [1]
+  .text              ro code   0x800'15ea    0x3a  zero_init3.o [5]
+  .text              ro code   0x800'1624    0xa6  ABImemcpy.o [5]
+  .text              ro code   0x800'16ca    0x2e  copy_init3.o [5]
+  .text              ro code   0x800'16f8    0x2c  main.o [1]
+  .text              ro code   0x800'1724    0x14  main.o [1]
+  .text              ro code   0x800'1738    0x18  main.o [1]
+  .text              ro code   0x800'1750    0x10  main.o [1]
+  .text              ro code   0x800'1760    0x18  main.o [1]
+  .text              ro code   0x800'1778    0x14  main.o [1]
+  .text              ro code   0x800'178c     0x8  main.o [1]
+  .text              ro code   0x800'1794     0x8  main.o [1]
+  .text              ro code   0x800'179c    0x28  data_init.o [5]
+  .text              ro code   0x800'17c4    0x22  fpinit_M.o [4]
+  .iar.init_table    const     0x800'17e8    0x24  - Linker created -
+  .rodata            const     0x800'180c     0x1  unwind_debug.o [6]
+  .text              ro code   0x800'1810    0x1e  cmain.o [5]
+  .text              ro code   0x800'182e     0x4  exit.o [2]
+  .text              ro code   0x800'1834     0xa  cexit.o [5]
+  .text              ro code   0x800'1840    0x14  exit.o [6]
+  .text              ro code   0x800'1854    0x12  startupF411RE.o [1]
+  .rodata            const     0x800'1868     0x8  tasks.o [1]
+  .rodata            const     0x800'1870     0x8  timers.o [1]
+  .rodata            const     0x800'1878     0x8  timers.o [1]
+  .text              ro code   0x800'1880     0x8  startupF411RE.o [1]
+  .text              ro code   0x800'1888     0x8  startupF411RE.o [1]
+  .text              ro code   0x800'1890     0x8  startupF411RE.o [1]
+  .text              ro code   0x800'1898     0x8  startupF411RE.o [1]
+  Initializer bytes  const     0x800'18a0     0x8  <for P2-1>
+  .rodata            const     0x800'18a8     0x4  port.o [1]
+  .rodata            const     0x800'18ac     0x0  zero_init3.o [5]
+  .rodata            const     0x800'18ac     0x0  copy_init3.o [5]
+                             - 0x800'18ac  0x1714
+
+"P2", part 1 of 3:                            0x8
+  P2-1                        0x2000'0000     0x8  <Init block>
+    .data            inited   0x2000'0000     0x4  main.o [1]
+    .data            inited   0x2000'0004     0x4  port.o [1]
+                            - 0x2000'0008     0x8
+
+"P2", part 2 of 3:                          0x8f8
+  .bss               zero     0x2000'0008   0x400  tasks.o [1]
+  .bss               zero     0x2000'0408   0x200  tasks.o [1]
+  .bss               zero     0x2000'0608    0xa0  timers.o [1]
+  .bss               zero     0x2000'06a8    0x64  tasks.o [1]
+  .bss               zero     0x2000'070c    0x50  tasks.o [1]
+  .bss               zero     0x2000'075c    0x50  tasks.o [1]
+  .bss               zero     0x2000'07ac    0x48  timers.o [1]
+  .bss               zero     0x2000'07f4    0x40  queue.o [1]
+  .bss               zero     0x2000'0834    0x14  tasks.o [1]
+  .bss               zero     0x2000'0848    0x14  tasks.o [1]
+  .bss               zero     0x2000'085c    0x14  tasks.o [1]
+  .bss               zero     0x2000'0870    0x14  tasks.o [1]
+  .bss               zero     0x2000'0884    0x14  timers.o [1]
+  .bss               zero     0x2000'0898    0x14  timers.o [1]
+  .bss               zero     0x2000'08ac     0x4  port.o [1]
+  .bss               zero     0x2000'08b0     0x4  tasks.o [1]
+  .bss               zero     0x2000'08b4     0x4  tasks.o [1]
+  .bss               zero     0x2000'08b8     0x4  tasks.o [1]
+  .bss               zero     0x2000'08bc     0x4  tasks.o [1]
+  .bss               zero     0x2000'08c0     0x4  tasks.o [1]
+  .bss               zero     0x2000'08c4     0x4  tasks.o [1]
+  .bss               zero     0x2000'08c8     0x4  tasks.o [1]
+  .bss               zero     0x2000'08cc     0x4  tasks.o [1]
+  .bss               zero     0x2000'08d0     0x4  tasks.o [1]
+  .bss               zero     0x2000'08d4     0x4  tasks.o [1]
+  .bss               zero     0x2000'08d8     0x4  tasks.o [1]
+  .bss               zero     0x2000'08dc     0x4  tasks.o [1]
+  .bss               zero     0x2000'08e0     0x4  tasks.o [1]
+  .bss               zero     0x2000'08e4     0x4  tasks.o [1]
+  .bss               zero     0x2000'08e8     0x4  timers.o [1]
+  .bss               zero     0x2000'08ec     0x4  timers.o [1]
+  .bss               zero     0x2000'08f0     0x4  timers.o [1]
+  .bss               zero     0x2000'08f4     0x4  timers.o [1]
+  .bss               zero     0x2000'08f8     0x4  timers.o [1]
+  .bss               zero     0x2000'08fc     0x1  port.o [1]
+                            - 0x2000'08fd   0x8f5
+
+"P2", part 3 of 3:                          0x100
+  CSTACK                      0x2000'0900   0x100  <Block>
+    CSTACK           uninit   0x2000'0900   0x100  <Block tail>
+                            - 0x2000'0a00   0x100
+
+Unused ranges:
+
+         From           To      Size
+         ----           --      ----
+   0x800'18ac   0x807'ffff  0x7'e754
+  0x2000'0a00  0x2001'ffff  0x1'f600
+
+
+*******************************************************************************
+*** INIT TABLE
+***
+
+          Address      Size
+          -------      ----
+Zero (__iar_zero_init3)
+    1 destination range, total size 0x8f5:
+          0x2000'0008  0x8f5
+
+Copy (__iar_copy_init3)
+    1 source range, total size 0x8:
+           0x800'18a0    0x8
+    1 destination range, total size 0x8:
+          0x2000'0000    0x8
+
+
+
+*******************************************************************************
+*** MODULE SUMMARY
+***
+
+    Module           ro code  ro data  rw data
+    ------           -------  -------  -------
+command line/config:
+    ------------------------------------------
+    Total:
+
+C:\GitHub\KursovoyKarkas\Debug\Obj: [1]
+    list.o               152
+    main.o               164        4        4
+    port.o               388        8        9
+    portasm.o            168
+    queue.o            1'550                64
+    startupF411RE.o       50      408
+    tasks.o            2'028        8    1'932
+    timers.o             916       16      292
+    ------------------------------------------
+    Total:             5'416      444    2'301
+
+dl7M_tln.a: [2]
+    exit.o                 4
+    ------------------------------------------
+    Total:                 4
+
+dlpp7M_tl_nc.a: [3]
+    ------------------------------------------
+    Total:
+
+m7M_tls.a: [4]
+    fpinit_M.o            34
+    ------------------------------------------
+    Total:                34
+
+rt7M_tl.a: [5]
+    ABImemcpy.o          166
+    cexit.o               10
+    cmain.o               30
+    copy_init3.o          46
+    data_init.o           40
+    zero_init3.o          58
+    ------------------------------------------
+    Total:               350
+
+shb_l.a: [6]
+    exit.o                20
+    unwind_debug.o                  1
+    ------------------------------------------
+    Total:                20        1
+
+    Gaps                   7        4
+    Linker created                 36      256
+----------------------------------------------
+    Grand Total:       5'831      485    2'557
+
+
+*******************************************************************************
+*** ENTRY LIST
+***
+
+Entry                       Address   Size  Type      Object
+-----                       -------   ----  ----      ------
+.iar.init_table$$Base    0x800'17e8          --   Gb  - Linker created -
+.iar.init_table$$Limit   0x800'180c          --   Gb  - Linker created -
+?main                    0x800'1811         Code  Gb  cmain.o [5]
+CSTACK$$Base            0x2000'0900          --   Gb  - Linker created -
+CSTACK$$Limit           0x2000'0a00          --   Gb  - Linker created -
+DummyModule::handler()   0x800'1855    0x2  Code  Gb  startupF411RE.o [1]
+OsWrapper::Rtos::HandleSvcInterrupt()
+                         0x800'1891    0x8  Code  Gb  startupF411RE.o [1]
+OsWrapper::Rtos::HandleSysTickInterrupt()
+                         0x800'1899    0x8  Code  Gb  startupF411RE.o [1]
+OsWrapper::Rtos::Start()
+                         0x800'178d    0x8  Code  Gb  main.o [1]
+OsWrapper::RtosWrapper::wHandleSvcInterrupt()
+                         0x800'1881    0x8  Code  Gb  startupF411RE.o [1]
+OsWrapper::RtosWrapper::wHandleSysTickInterrupt()
+                         0x800'1889    0x8  Code  Gb  startupF411RE.o [1]
+OsWrapper::RtosWrapper::wStart()
+                         0x800'1795    0x8  Code  Gb  main.o [1]
+Region$$Table$$Base      0x800'17e8          --   Gb  - Linker created -
+Region$$Table$$Limit     0x800'180c          --   Gb  - Linker created -
+SystemCoreClock         0x2000'0000    0x4  Data  Gb  main.o [1]
+__aeabi_memcpy           0x800'1625         Code  Gb  ABImemcpy.o [5]
+__aeabi_memcpy4          0x800'1645         Code  Gb  ABImemcpy.o [5]
+__aeabi_memcpy8          0x800'1645         Code  Gb  ABImemcpy.o [5]
+__cmain                  0x800'1811         Code  Gb  cmain.o [5]
+__exit                   0x800'1841   0x14  Code  Gb  exit.o [6]
+__iar_copy_init3         0x800'16cb   0x2e  Code  Gb  copy_init3.o [5]
+__iar_data_init3         0x800'179d   0x28  Code  Gb  data_init.o [5]
+__iar_debug_exceptions   0x800'180c    0x1  Data  Gb  unwind_debug.o [6]
+__iar_init_vfp           0x800'17c5         Code  Gb  fpinit_M.o [4]
+__iar_program_start      0x800'1857   0x10  Code  Gb  startupF411RE.o [1]
+__iar_zero_init3         0x800'15eb   0x3a  Code  Gb  zero_init3.o [5]
+__low_level_init         0x800'16f9   0x22  Code  Gb  main.o [1]
+__vector_table           0x800'0000  0x198  Data  Gb  startupF411RE.o [1]
+_call_main               0x800'181d         Code  Gb  cmain.o [5]
+_exit                    0x800'1835         Code  Gb  cexit.o [5]
+_main                    0x800'182b         Code  Gb  cmain.o [5]
+bool FieldValueBase<RCC_CFGR_SWS_Values<RCC::CFGR, (unsigned int)2, (unsigned int)2, ReadMode, RCC::RCCCFGRBase>, RCC::RCCCFGRBase, (unsigned int)0>::IsSet<ReadMode, void>()
+                         0x800'1761   0x18  Code  Gb  main.o [1]
+bool FieldValueBase<RCC_CR_HSIRDY_Values<RCC::CR, (unsigned int)1, (unsigned int)1, ReadMode, RCC::RCCCRBase>, RCC::RCCCRBase, (unsigned int)0>::IsSet<ReadMode, void>()
+                         0x800'1739   0x18  Code  Gb  main.o [1]
+exit                     0x800'182f    0x4  Code  Gb  exit.o [2]
+main                     0x800'171b    0xa  Code  Gb  main.o [1]
+pcInterruptPriorityRegisters
+                         0x800'18a8    0x4  Data  Lc  port.o [1]
+prvAddCurrentTaskToDelayedList
+                         0x800'08ad   0x6e  Code  Lc  tasks.o [1]
+prvAddNewTaskToReadyList
+                         0x800'0261   0x9a  Code  Lc  tasks.o [1]
+prvCheckForValidListAndQueue
+                         0x800'0eb7   0x4c  Code  Lc  timers.o [1]
+prvCheckForValidListAndQueue{1}{2}{3}{4}::ucStaticTimerQueueStorage
+                        0x2000'0608   0xa0  Data  Lc  timers.o [1]
+prvCheckForValidListAndQueue{1}{2}{3}{4}::xStaticTimerQueue
+                        0x2000'07ac   0x48  Data  Lc  timers.o [1]
+prvCheckTasksWaitingTermination
+                         0x800'0717    0x2  Code  Lc  tasks.o [1]
+prvCopyDataFromQueue     0x800'14a3   0x2a  Code  Lc  queue.o [1]
+prvCopyDataToQueue       0x800'141d   0x86  Code  Lc  queue.o [1]
+prvGetNextExpireTime     0x800'0d15   0x26  Code  Lc  timers.o [1]
+prvIdleTask              0x800'06c1    0x8  Code  Lc  tasks.o [1]
+prvInitialiseNewQueue    0x800'1093   0x1c  Code  Lc  queue.o [1]
+prvInitialiseNewTask     0x800'01cf   0x92  Code  Lc  tasks.o [1]
+prvInitialiseTaskLists   0x800'06c9   0x4e  Code  Lc  tasks.o [1]
+prvInsertTimerInActiveList
+                         0x800'0d61   0x3e  Code  Lc  timers.o [1]
+prvIsQueueEmpty          0x800'153b   0x1c  Code  Lc  queue.o [1]
+prvIsQueueFull           0x800'1557   0x1e  Code  Lc  queue.o [1]
+prvProcessExpiredTimer   0x800'0c47   0x46  Code  Lc  timers.o [1]
+prvProcessReceivedCommands
+                         0x800'0d9f   0xba  Code  Lc  timers.o [1]
+prvProcessTimerOrBlockTask
+                         0x800'0ca5   0x70  Code  Lc  timers.o [1]
+prvResetNextTaskUnblockTime
+                         0x800'0719   0x28  Code  Lc  tasks.o [1]
+prvSampleTimeNow         0x800'0d3b   0x26  Code  Lc  timers.o [1]
+prvSampleTimeNow::xLastTime
+                        0x2000'08f8    0x4  Data  Lc  timers.o [1]
+prvSwitchTimerLists      0x800'0e59   0x5e  Code  Lc  timers.o [1]
+prvTaskExitError         0x800'0a45   0x10  Code  Lc  port.o [1]
+prvTimerTask             0x800'0c91   0x14  Code  Lc  timers.o [1]
+prvUnlockQueue           0x800'14cd   0x6e  Code  Lc  queue.o [1]
+pvTaskIncrementMutexHeldCount
+                         0x800'0867   0x16  Code  Gb  tasks.o [1]
+pxCurrentTCB            0x2000'08b0    0x4  Data  Gb  tasks.o [1]
+pxCurrentTimerList      0x2000'08e8    0x4  Data  Lc  timers.o [1]
+pxDelayedTaskList       0x2000'08b4    0x4  Data  Lc  tasks.o [1]
+pxOverflowDelayedTaskList
+                        0x2000'08b8    0x4  Data  Lc  tasks.o [1]
+pxOverflowTimerList     0x2000'08ec    0x4  Data  Lc  timers.o [1]
+pxPortInitialiseStack    0x800'0a1d   0x28  Code  Gb  port.o [1]
+pxReadyTasksLists       0x2000'06a8   0x64  Data  Lc  tasks.o [1]
+ucMaxSysCallPriority    0x2000'08fc    0x1  Data  Lc  port.o [1]
+ulMaxPRIGROUPValue      0x2000'08ac    0x4  Data  Lc  port.o [1]
+uxCriticalNesting       0x2000'0004    0x4  Data  Lc  port.o [1]
+uxCurrentNumberOfTasks  0x2000'08bc    0x4  Data  Lc  tasks.o [1]
+uxListRemove             0x800'09f7   0x26  Code  Gb  list.o [1]
+uxPendedTicks           0x2000'08cc    0x4  Data  Lc  tasks.o [1]
+uxSchedulerSuspended    0x2000'08e4    0x4  Data  Lc  tasks.o [1]
+uxTaskNumber            0x2000'08d8    0x4  Data  Lc  tasks.o [1]
+uxTopReadyPriority      0x2000'08c4    0x4  Data  Lc  tasks.o [1]
+vApplicationGetIdleTaskMemory
+                         0x800'091b    0xe  Code  Gb  tasks.o [1]
+vApplicationGetIdleTaskMemory::uxIdleTaskStack
+                        0x2000'0408  0x200  Data  Lc  tasks.o [1]
+vApplicationGetIdleTaskMemory::xIdleTaskTCB
+                        0x2000'070c   0x50  Data  Lc  tasks.o [1]
+vApplicationGetTimerTaskMemory
+                         0x800'0929   0x10  Code  Gb  tasks.o [1]
+vApplicationGetTimerTaskMemory::uxTimerTaskStack
+                        0x2000'0008  0x400  Data  Lc  tasks.o [1]
+vApplicationGetTimerTaskMemory::xTimerTaskTCB
+                        0x2000'075c   0x50  Data  Lc  tasks.o [1]
+vListInitialise          0x800'0985   0x1e  Code  Gb  list.o [1]
+vListInitialiseItem      0x800'09a3    0x6  Code  Gb  list.o [1]
+vListInsert              0x800'09c1   0x36  Code  Gb  list.o [1]
+vListInsertEnd           0x800'09a9   0x18  Code  Gb  list.o [1]
+vPortEnableVFP           0x800'0fc1         Code  Gb  portasm.o [1]
+vPortEnterCritical       0x800'0add   0x22  Code  Gb  port.o [1]
+vPortExitCritical        0x800'0aff   0x16  Code  Gb  port.o [1]
+vPortSVCHandler          0x800'0f8d         Code  Gb  portasm.o [1]
+vPortStartFirstTask      0x800'0fa9         Code  Gb  portasm.o [1]
+vPortValidateInterruptPriority
+                         0x800'0b41   0x14  Code  Gb  port.o [1]
+vQueueAddToRegistry      0x800'1575   0x24  Code  Gb  queue.o [1]
+vQueueWaitForMessageRestricted
+                         0x800'15a1   0x4a  Code  Gb  queue.o [1]
+vTaskMissedYield         0x800'06b7    0xa  Code  Gb  tasks.o [1]
+vTaskPlaceOnEventList    0x800'059f   0x1a  Code  Gb  tasks.o [1]
+vTaskPlaceOnEventListRestricted
+                         0x800'05b9   0x24  Code  Gb  tasks.o [1]
+vTaskPriorityInherit     0x800'075f   0x8a  Code  Gb  tasks.o [1]
+vTaskSetTimeOutState     0x800'064b   0x12  Code  Gb  tasks.o [1]
+vTaskStartScheduler      0x800'02fb   0x82  Code  Gb  tasks.o [1]
+vTaskSuspendAll          0x800'037d    0xc  Code  Gb  tasks.o [1]
+vTaskSwitchContext       0x800'0547   0x58  Code  Gb  tasks.o [1]
+void FieldValueBase<RCC_AHB1ENR_DMA2EN_Values<RCC::APB2ENR, (unsigned int)14, (unsigned int)1, ReadWriteMode, RCC::RCCAPB2ENRBase>, RCC::RCCAPB2ENRBase, (unsigned int)1>::Set<ReadWriteMode, void>()
+                         0x800'1779   0x14  Code  Gb  main.o [1]
+void FieldValueBase<RCC_CFGR_SW_Values<RCC::CFGR, (unsigned int)0, (unsigned int)2, ReadWriteMode, RCC::RCCCFGRBase>, RCC::RCCCFGRBase, (unsigned int)0>::Set<ReadWriteMode, void>()
+                         0x800'1751   0x10  Code  Gb  main.o [1]
+void FieldValueBase<RCC_CR_HSION_Values<RCC::CR, (unsigned int)0, (unsigned int)1, ReadWriteMode, RCC::RCCCRBase>, RCC::RCCCRBase, (unsigned int)1>::Set<ReadWriteMode, void>()
+                         0x800'1725   0x14  Code  Gb  main.o [1]
+xActiveTimerList1       0x2000'0884   0x14  Data  Lc  timers.o [1]
+xActiveTimerList2       0x2000'0898   0x14  Data  Lc  timers.o [1]
+xDelayedTaskList1       0x2000'0834   0x14  Data  Lc  tasks.o [1]
+xDelayedTaskList2       0x2000'0848   0x14  Data  Lc  tasks.o [1]
+xIdleTaskHandle         0x2000'08e0    0x4  Data  Lc  tasks.o [1]
+xNextTaskUnblockTime    0x2000'08dc    0x4  Data  Lc  tasks.o [1]
+xNumOfOverflows         0x2000'08d4    0x4  Data  Lc  tasks.o [1]
+xPendingReadyList       0x2000'085c   0x14  Data  Lc  tasks.o [1]
+xPortPendSVHandler       0x800'0f35         Code  Gb  portasm.o [1]
+xPortStartScheduler      0x800'0a55   0x88  Code  Gb  port.o [1]
+xPortSysTickHandler      0x800'0b15   0x28  Code  Gb  port.o [1]
+xQueueGenericCreateStatic
+                         0x800'105b   0x38  Code  Gb  queue.o [1]
+xQueueGenericReceive     0x800'128f  0x18e  Code  Gb  queue.o [1]
+xQueueGenericReset       0x800'0fdd   0x7e  Code  Gb  queue.o [1]
+xQueueGenericSend        0x800'10af  0x142  Code  Gb  queue.o [1]
+xQueueGenericSendFromISR
+                         0x800'11f1   0x9e  Code  Gb  queue.o [1]
+xQueueRegistry          0x2000'07f4   0x40  Data  Gb  queue.o [1]
+xSchedulerRunning       0x2000'08c8    0x4  Data  Lc  tasks.o [1]
+xSuspendedTaskList      0x2000'0870   0x14  Data  Lc  tasks.o [1]
+xTaskCheckForTimeOut     0x800'065d   0x5a  Code  Gb  tasks.o [1]
+xTaskCreateStatic        0x800'0199   0x36  Code  Gb  tasks.o [1]
+xTaskGetSchedulerState   0x800'0741   0x1e  Code  Gb  tasks.o [1]
+xTaskGetTickCount        0x800'0459    0x8  Code  Gb  tasks.o [1]
+xTaskIncrementTick       0x800'0461   0xe6  Code  Gb  tasks.o [1]
+xTaskPriorityDisinherit
+                         0x800'07e9   0x7e  Code  Gb  tasks.o [1]
+xTaskRemoveFromEventList
+                         0x800'05dd   0x6e  Code  Gb  tasks.o [1]
+xTaskResumeAll           0x800'0389   0xd0  Code  Gb  tasks.o [1]
+xTickCount              0x2000'08c0    0x4  Data  Lc  tasks.o [1]
+xTimerCreateTimerTask    0x800'0ba1   0x56  Code  Gb  timers.o [1]
+xTimerGenericCommand     0x800'0bf7   0x50  Code  Gb  timers.o [1]
+xTimerQueue             0x2000'08f0    0x4  Data  Lc  timers.o [1]
+xTimerTaskHandle        0x2000'08f4    0x4  Data  Lc  timers.o [1]
+xYieldPending           0x2000'08d0    0x4  Data  Lc  tasks.o [1]
+
+
+[1] = C:\GitHub\KursovoyKarkas\Debug\Obj
+[2] = dl7M_tln.a
+[3] = dlpp7M_tl_nc.a
+[4] = m7M_tls.a
+[5] = rt7M_tl.a
+[6] = shb_l.a
+
+  5'831 bytes of readonly  code memory
+    485 bytes of readonly  data memory
+  2'557 bytes of readwrite data memory
+
+Errors: none
+Warnings: none
