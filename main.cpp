@@ -60,6 +60,7 @@ int main()
   using namespace OsWrapper;
   Rtos::CreateThread(myTask, "myTask", ThreadPriority::lowest);
   Rtos::CreateThread(led1Task, "Led1Task");
+
   Rtos::Start();
 
   return 0;

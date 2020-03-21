@@ -132,7 +132,7 @@ CMakeFiles/untitled.dir/MyTasks/Led1Task.cpp.obj: ../Application/ledsmode.hpp
 CMakeFiles/untitled.dir/MyTasks/Led1Task.cpp.obj: ../Application/ledsmodes.hpp
 CMakeFiles/untitled.dir/MyTasks/Led1Task.cpp.obj: ../Application/userbutton.hpp
 CMakeFiles/untitled.dir/MyTasks/Led1Task.cpp.obj: ../Rtos/FreeRtos/FreeRTOSConfig.h
-CMakeFiles/untitled.dir/MyTasks/Led1Task.cpp.obj: ../Rtos/FreeRtos/include/FreeRTOS.h
+CMakeFiles/untitled.dir/MyTasks/Led1Task.cpp.obj: ../Rtos/FreeRtos/include/FreeRtos.h
 CMakeFiles/untitled.dir/MyTasks/Led1Task.cpp.obj: ../Rtos/FreeRtos/include/deprecated_definitions.h
 CMakeFiles/untitled.dir/MyTasks/Led1Task.cpp.obj: ../Rtos/FreeRtos/include/event_groups.h
 CMakeFiles/untitled.dir/MyTasks/Led1Task.cpp.obj: ../Rtos/FreeRtos/include/list.h
@@ -169,7 +169,7 @@ CMakeFiles/untitled.dir/MyTasks/mytask.cpp.obj: ../../CortexLib/Common/Singleton
 CMakeFiles/untitled.dir/MyTasks/mytask.cpp.obj: ../../CortexLib/Common/susudefs.hpp
 CMakeFiles/untitled.dir/MyTasks/mytask.cpp.obj: ../Application/userbutton.hpp
 CMakeFiles/untitled.dir/MyTasks/mytask.cpp.obj: ../Rtos/FreeRtos/FreeRTOSConfig.h
-CMakeFiles/untitled.dir/MyTasks/mytask.cpp.obj: ../Rtos/FreeRtos/include/FreeRTOS.h
+CMakeFiles/untitled.dir/MyTasks/mytask.cpp.obj: ../Rtos/FreeRtos/include/FreeRtos.h
 CMakeFiles/untitled.dir/MyTasks/mytask.cpp.obj: ../Rtos/FreeRtos/include/deprecated_definitions.h
 CMakeFiles/untitled.dir/MyTasks/mytask.cpp.obj: ../Rtos/FreeRtos/include/event_groups.h
 CMakeFiles/untitled.dir/MyTasks/mytask.cpp.obj: ../Rtos/FreeRtos/include/list.h
@@ -217,7 +217,7 @@ CMakeFiles/untitled.dir/main.cpp.obj: ../Application/userbutton.hpp
 CMakeFiles/untitled.dir/main.cpp.obj: ../MyTasks/led1task.hpp
 CMakeFiles/untitled.dir/main.cpp.obj: ../MyTasks/mytask.hpp
 CMakeFiles/untitled.dir/main.cpp.obj: ../Rtos/FreeRtos/FreeRTOSConfig.h
-CMakeFiles/untitled.dir/main.cpp.obj: ../Rtos/FreeRtos/include/FreeRTOS.h
+CMakeFiles/untitled.dir/main.cpp.obj: ../Rtos/FreeRtos/include/FreeRtos.h
 CMakeFiles/untitled.dir/main.cpp.obj: ../Rtos/FreeRtos/include/deprecated_definitions.h
 CMakeFiles/untitled.dir/main.cpp.obj: ../Rtos/FreeRtos/include/event_groups.h
 CMakeFiles/untitled.dir/main.cpp.obj: ../Rtos/FreeRtos/include/list.h
@@ -246,7 +246,7 @@ CMakeFiles/untitled.dir/main.cpp.obj: ../main.cpp
 
 CMakeFiles/untitled.dir/startupF411RE.cpp.obj: ../../CortexLib/Common/susudefs.hpp
 CMakeFiles/untitled.dir/startupF411RE.cpp.obj: ../Rtos/FreeRtos/FreeRTOSConfig.h
-CMakeFiles/untitled.dir/startupF411RE.cpp.obj: ../Rtos/FreeRtos/include/FreeRTOS.h
+CMakeFiles/untitled.dir/startupF411RE.cpp.obj: ../Rtos/FreeRtos/include/FreeRtos.h
 CMakeFiles/untitled.dir/startupF411RE.cpp.obj: ../Rtos/FreeRtos/include/deprecated_definitions.h
 CMakeFiles/untitled.dir/startupF411RE.cpp.obj: ../Rtos/FreeRtos/include/event_groups.h
 CMakeFiles/untitled.dir/startupF411RE.cpp.obj: ../Rtos/FreeRtos/include/list.h

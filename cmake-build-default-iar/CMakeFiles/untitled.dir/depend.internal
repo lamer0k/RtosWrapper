@@ -133,7 +133,7 @@ CMakeFiles/untitled.dir/MyTasks/Led1Task.cpp.obj
  ../Application/ledsmodes.hpp
  ../Application/userbutton.hpp
  ../Rtos/FreeRtos/FreeRTOSConfig.h
- ../Rtos/FreeRtos/include/FreeRTOS.h
+ ../Rtos/FreeRtos/include/FreeRtos.h
  ../Rtos/FreeRtos/include/deprecated_definitions.h
  ../Rtos/FreeRtos/include/event_groups.h
  ../Rtos/FreeRtos/include/list.h
@@ -170,7 +170,7 @@ CMakeFiles/untitled.dir/MyTasks/mytask.cpp.obj
  ../../CortexLib/Common/susudefs.hpp
  ../Application/userbutton.hpp
  ../Rtos/FreeRtos/FreeRTOSConfig.h
- ../Rtos/FreeRtos/include/FreeRTOS.h
+ ../Rtos/FreeRtos/include/FreeRtos.h
  ../Rtos/FreeRtos/include/deprecated_definitions.h
  ../Rtos/FreeRtos/include/event_groups.h
  ../Rtos/FreeRtos/include/list.h
@@ -218,7 +218,7 @@ CMakeFiles/untitled.dir/main.cpp.obj
  ../MyTasks/led1task.hpp
  ../MyTasks/mytask.hpp
  ../Rtos/FreeRtos/FreeRTOSConfig.h
- ../Rtos/FreeRtos/include/FreeRTOS.h
+ ../Rtos/FreeRtos/include/FreeRtos.h
  ../Rtos/FreeRtos/include/deprecated_definitions.h
  ../Rtos/FreeRtos/include/event_groups.h
  ../Rtos/FreeRtos/include/list.h
@@ -247,7 +247,7 @@ CMakeFiles/untitled.dir/main.cpp.obj
 CMakeFiles/untitled.dir/startupF411RE.cpp.obj
  ../../CortexLib/Common/susudefs.hpp
  ../Rtos/FreeRtos/FreeRTOSConfig.h
- ../Rtos/FreeRtos/include/FreeRTOS.h
+ ../Rtos/FreeRtos/include/FreeRtos.h
  ../Rtos/FreeRtos/include/deprecated_definitions.h
  ../Rtos/FreeRtos/include/event_groups.h
  ../Rtos/FreeRtos/include/list.h
