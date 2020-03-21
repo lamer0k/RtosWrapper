@@ -123945,7 +123945,7 @@
     "display": "int main(void)",
     "location": {
       "column": "5",
-      "line": "35",
+      "line": "32",
       "path": "C:\\GitHub\\KursovoyKarkas\\main.cpp"
     },
     "name": "main",

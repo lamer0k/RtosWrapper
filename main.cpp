@@ -11,13 +11,11 @@ int __low_level_init(void)
   RCC::CR::HSION::On::Set();
   while (RCC::CR::HSIRDY::NotReady::IsSet())
   {
-
   }
   //Switch system clock on external oscillator
   RCC::CFGR::SW::Hsi::Set();
   while (!RCC::CFGR::SWS::Hsi::IsSet())
   {
-
   }
   
   RCC::APB2ENR::SYSCFGEN::Enable::Set(); 
@@ -28,7 +26,6 @@ int __low_level_init(void)
 }
 
 //OsWrapper::Event event{500ms, 1}; //FIXME Чисто для примера
-
 //MyTask myTask(event, UserButton::GetInstance()); //FIXME Чисто для примера
 
 
