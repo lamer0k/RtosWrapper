@@ -6,17 +6,23 @@
 #define UNTITLED_EXH002ACTION_HPP
 
 #include "Action.hpp"
-#include "singleton.hpp"
+#include "singleton.hpp" // for Singleton
+#include "memoryobject.hpp" // for RomObject
 
-class Exh002Action : public Action, public Singleton<Exh002Action>
+class Exh002ActionBase : public Action, RomObject
 {
-  friend class Singleton<Exh002Action>;
+  friend class Singleton<Exh002ActionBase>;
   public:
     void Do() override
     {
 
     }
   private:
-    Exh002Action() = default;
+    constexpr Exh002ActionBase() = default;
 } ;
+
+class Exh002Action: Exh002ActionBase, public Singleton<Exh002ActionBase>
+{
+
+};
 #endif //UNTITLED_EXH002ACTION_HPP

@@ -1,0 +1,42 @@
+#Generating source browse information for project iarproject
+
+
+#Abbreviations
+cc = C$:\Program$ Files$ (x86)\IAR$ Systems\Embedded$ Workbench$ 8.3\common\bin\SourceIndexer.exe
+ll = C$:\Program$ Files$ (x86)\IAR$ Systems\Embedded$ Workbench$ 8.3\common\bin\PbdLink.exe
+bd = C$:\Program$ Files$ (x86)\IAR$ Systems\Embedded$ Workbench$ 8.3\common\bin\makeBrowseData.exe
+
+
+
+#Rules
+rule index
+  depfile = $out.dep
+  command = $cc -out=$out -f $in
+rule link
+  command = $ll -M $out $in
+rule browsedata
+  command = $bd $in -output  $out
+
+
+
+#Build steps
+build irqcontroller.pbi : index irqcontroller.xcl
+build Led1Task.pbi : index Led1Task.xcl
+build mytask.pbi : index mytask.xcl
+build port.pbi : index port.xcl
+build croutine.pbi : index croutine.xcl
+build event_groups.pbi : index event_groups.xcl
+build list.pbi : index list.xcl
+build queue.pbi : index queue.xcl
+build tasks.pbi : index tasks.xcl
+build timers.pbi : index timers.xcl
+build main.pbi : index main.xcl
+build startupF411RE.pbi : index startupF411RE.xcl
+build iarproject_part0.pbi : link irqcontroller.pbi Led1Task.pbi mytask.pbi
+build iarproject_part1.pbi : link port.pbi croutine.pbi event_groups.pbi
+build iarproject_part2.pbi : link list.pbi queue.pbi tasks.pbi
+build iarproject_part3.pbi : link timers.pbi main.pbi startupF411RE.pbi
+build iarproject.pbd : link iarproject_part0.pbi iarproject_part1.pbi iarproject_part2.pbi iarproject_part3.pbi
+build iarproject.pbw : browsedata iarproject.pbd
+
+

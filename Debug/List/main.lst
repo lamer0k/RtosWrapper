@@ -1,0 +1,2262 @@
+###############################################################################
+#
+# IAR ANSI C/C++ Compiler V8.40.2.214/W32 for ARM         21/Mar/2020  14:05:07
+# Copyright 1999-2019 IAR Systems AB.
+#
+#    Cpu mode     =  
+#    Endian       =  little
+#    Source file  =  C:\GitHub\RtosWrapper\main.cpp
+#    Command line =
+#        -f C:\Users\Serge\AppData\Local\Temp\EW670A.tmp
+#        (C:\GitHub\RtosWrapper\main.cpp -lC C:\GitHub\RtosWrapper\Debug\List
+#        -lA C:\GitHub\RtosWrapper\Debug\List -o
+#        C:\GitHub\RtosWrapper\Debug\Obj --no_cse --no_unroll --no_inline
+#        --no_code_motion --no_tbaa --no_clustering --no_scheduling --debug
+#        --endian=little --cpu=Cortex-M4 -e --fpu=VFPv4_sp --dlib_config
+#        "C:\Program Files (x86)\IAR Systems\Embedded Workbench
+#        8.3\arm\inc\c\DLib_Config_Normal.h" -I C:\GitHub\RtosWrapper\Rtos\ -I
+#        C:\GitHub\RtosWrapper\Rtos\wrapper\ -I
+#        C:\GitHub\RtosWrapper\Rtos\wrapper\FreeRtos\ -I
+#        C:\GitHub\RtosWrapper\Rtos\FreeRtos\ -I
+#        C:\GitHub\RtosWrapper\Rtos\FreeRtos\include\ -I
+#        C:\GitHub\RtosWrapper\Rtos\FreeRtos\portable\ -I
+#        C:\GitHub\RtosWrapper\Rtos\FreeRtos\portable\Common\ -I
+#        C:\GitHub\RtosWrapper\Rtos\FreeRtos\portable\IAR\ -I
+#        C:\GitHub\RtosWrapper\Rtos\FreeRtos\portable\IAR\ARM_CM4F\ -I
+#        C:\GitHub\RtosWrapper\Rtos\FreeRtos\portable\MemMang\ -I
+#        C:\GitHub\RtosWrapper\MyTasks\ -I C:\GitHub\RtosWrapper\Common\ -I
+#        C:\GitHub\RtosWrapper\CMSIS\ -I C:\GitHub\RtosWrapper\Application\ -I
+#        C:\GitHub\RtosWrapper\Application\Diagnostic\ -I
+#        C:\GitHub\RtosWrapper\AHardware\ -I
+#        C:\GitHub\RtosWrapper\AHardware\GpioPort\ -I
+#        C:\GitHub\RtosWrapper\AHardware\IrqController\ -I
+#        C:\GitHub\RtosWrapper\..\CortexLib\AbstractHardware\Pin\ -I
+#        C:\GitHub\RtosWrapper\..\CortexLib\AbstractHardware\Registers\STM32F411\FieldValues\
+#        -I
+#        C:\GitHub\RtosWrapper\..\CortexLib\AbstractHardware\Registers\STM32F411\
+#        -I C:\GitHub\RtosWrapper\..\CortexLib\AbstractHardware\Registers\ -I
+#        C:\GitHub\RtosWrapper\..\CortexLib\AbstractHardware\Port\ -I
+#        C:\GitHub\RtosWrapper\..\CortexLib\AbstractHardware\Atomic\ -I
+#        C:\GitHub\RtosWrapper\..\CortexLib\Common\ -I
+#        C:\GitHub\RtosWrapper\..\CortexLib\Common\Singleton\ -I
+#        C:\GitHub\RtosWrapper\..\CortexLib\Common\RomObject\ -Ol --c++
+#        --no_exceptions --no_rtti)
+#    Locale       =  C
+#    List file    =  C:\GitHub\RtosWrapper\Debug\List\main.lst
+#    Object file  =  C:\GitHub\RtosWrapper\Debug\Obj\main.o
+#
+###############################################################################
+
+C:\GitHub\RtosWrapper\main.cpp
+      1          #include "rtos.hpp"         // for Rtos
+
+   \                                 In section .text, align 2
+   \   __interwork __vfp ILed *std::_Addressof<ILed>(ILed &, std::false_type)
+   \                     _ZSt10_AddressofI4ILedEPT_RS1_St17integral_constantIbLb0EE: (+1)
+   \        0x0   0x4770             BX       LR               ;; return
+
+   \                                 In section .text, align 2
+   \   __interwork __vfp std::reference_wrapper<ILed> *std::_Addressof<std::reference_wrapper<ILed>>(std::reference_wrapper<ILed> &, std::false_type)
+   \                     _ZSt10_AddressofISt17reference_wrapperI4ILedEEPT_RS3_St17integral_constantIbLb0EE: (+1)
+   \        0x0   0x4770             BX       LR               ;; return
+
+   \                                 In section .text, align 2
+   \   __interwork __vfp LedsMode *std::_Addressof<LedsMode>(LedsMode &, std::false_type)
+   \                     _ZSt10_AddressofI8LedsModeEPT_RS1_St17integral_constantIbLb0EE: (+1)
+   \        0x0   0x4770             BX       LR               ;; return
+
+   \                                 In section .text, align 2
+   \   __interwork __vfp ILed *std::addressof<ILed>(ILed &)
+   \                     _ZSt9addressofI4ILedEPT_RS1_: (+1)
+   \        0x0   0xB580             PUSH     {R7,LR}
+   \        0x2   0x....'....        BL       _ZSt10_AddressofI4ILedEPT_RS1_St17integral_constantIbLb0EE
+   \        0x6   0xBD02             POP      {R1,PC}          ;; return
+
+   \                                 In section .text, align 2
+   \   __interwork __vfp std::reference_wrapper<ILed> *std::addressof<std::reference_wrapper<ILed>>(std::reference_wrapper<ILed> &)
+   \                     _ZSt9addressofISt17reference_wrapperI4ILedEEPT_RS3_: (+1)
+   \        0x0   0xB580             PUSH     {R7,LR}
+   \        0x2   0x....'....        BL       _ZSt10_AddressofISt17reference_wrapperI4ILedEEPT_RS3_St17integral_constantIbLb0EE
+   \        0x6   0xBD02             POP      {R1,PC}          ;; return
+
+   \                                 In section .text, align 2
+   \   __interwork __vfp LedsMode *std::addressof<LedsMode>(LedsMode &)
+   \                     _ZSt9addressofI8LedsModeEPT_RS1_: (+1)
+   \        0x0   0xB580             PUSH     {R7,LR}
+   \        0x2   0x....'....        BL       _ZSt10_AddressofI8LedsModeEPT_RS1_St17integral_constantIbLb0EE
+   \        0x6   0xBD02             POP      {R1,PC}          ;; return
+
+   \                                 In section .text, align 2
+   \   __code __interwork __vfp std::reference_wrapper<ILed>::reference_wrapper(ILed &)
+   \                     _ZNSt17reference_wrapperI4ILedEC1ERS0_: (+1)
+   \        0x0   0xB510             PUSH     {R4,LR}
+   \        0x2   0x0004             MOVS     R4,R0
+   \        0x4   0x0008             MOVS     R0,R1
+   \        0x6   0x....'....        BL       _ZSt9addressofI4ILedEPT_RS1_
+   \        0xA   0x6020             STR      R0,[R4, #+0]
+   \        0xC   0x0020             MOVS     R0,R4
+   \        0xE   0xBD10             POP      {R4,PC}          ;; return
+
+   \                                 In section .text, align 2
+   \   __code __interwork __vfp std::reference_wrapper<LedsMode>::reference_wrapper(LedsMode &)
+   \                     _ZNSt17reference_wrapperI8LedsModeEC1ERS0_: (+1)
+   \        0x0   0xB510             PUSH     {R4,LR}
+   \        0x2   0x0004             MOVS     R4,R0
+   \        0x4   0x0008             MOVS     R0,R1
+   \        0x6   0x....'....        BL       _ZSt9addressofI8LedsModeEPT_RS1_
+   \        0xA   0x6020             STR      R0,[R4, #+0]
+   \        0xC   0x0020             MOVS     R0,R4
+   \        0xE   0xBD10             POP      {R4,PC}          ;; return
+
+   \                                 In section .text, align 2
+   \   __code __interwork __vfp std::reference_wrapper<ILed>::operator ILed &() const
+   \                     _ZNKSt17reference_wrapperI4ILedEcvRS0_Ev: (+1)
+   \        0x0   0x6800             LDR      R0,[R0, #+0]
+   \        0x2   0x4770             BX       LR               ;; return
+
+   \                                 In section .text, align 2
+   \   __interwork __vfp ILed &std::reference_wrapper<ILed>::get() const
+   \                     _ZNKSt17reference_wrapperI4ILedE3getEv: (+1)
+   \        0x0   0x6800             LDR      R0,[R0, #+0]
+   \        0x2   0x4770             BX       LR               ;; return
+
+   \                                 In section .text, align 2
+   \   __code __interwork __vfp std::_Array_const_iterator<std::reference_wrapper<ILed>, 4U>::_Array_const_iterator(std::reference_wrapper<ILed> const *, size_t)
+   \                     _ZNSt21_Array_const_iteratorISt17reference_wrapperI4ILedELj4EEC1EPKS2_j: (+1)
+   \        0x0   0xEB01 0x0182      ADD      R1,R1,R2, LSL #+2
+   \        0x4   0x6001             STR      R1,[R0, #+0]
+   \        0x6   0x4770             BX       LR               ;; return
+
+   \                                 In section .text, align 2
+   \   __code __interwork __vfp std::_Array_const_iterator<std::reference_wrapper<ILed>, 4U>::subobject _Array_const_iterator(std::reference_wrapper<ILed> const *, size_t)
+   \                     _ZNSt21_Array_const_iteratorISt17reference_wrapperI4ILedELj4EEC2EPKS2_j: (+1)
+   \        0x0   0xB580             PUSH     {R7,LR}
+   \        0x2   0x....'....        BL       _ZNSt21_Array_const_iteratorISt17reference_wrapperI4ILedELj4EEC1EPKS2_j
+   \        0x6   0xBD02             POP      {R1,PC}          ;; return
+
+   \                                 In section .text, align 2
+   \   __interwork __vfp std::reference_wrapper<ILed> const & std::_Array_const_iterator<std::reference_wrapper<ILed>, 4U>::operator*() const
+   \                     _ZNKSt21_Array_const_iteratorISt17reference_wrapperI4ILedELj4EEdeEv: (+1)
+   \        0x0   0x6800             LDR      R0,[R0, #+0]
+   \        0x2   0x4770             BX       LR               ;; return
+
+   \                                 In section .text, align 2
+   \   __interwork __vfp std::_Array_const_iterator<std::reference_wrapper<ILed>, 4U> &std::_Array_const_iterator<std::reference_wrapper<ILed>, 4U>::operator++()
+   \                     _ZNSt21_Array_const_iteratorISt17reference_wrapperI4ILedELj4EEppEv: (+1)
+   \        0x0   0x6801             LDR      R1,[R0, #+0]
+   \        0x2   0x1D09             ADDS     R1,R1,#+4
+   \        0x4   0x6001             STR      R1,[R0, #+0]
+   \        0x6   0x4770             BX       LR               ;; return
+
+   \                                 In section .text, align 2
+   \   __interwork __vfp bool std::_Array_const_iterator<std::reference_wrapper<ILed>, 4U>::operator==(std::_Array_const_iterator<std::reference_wrapper<ILed>, 4U> const &) const
+   \                     _ZNKSt21_Array_const_iteratorISt17reference_wrapperI4ILedELj4EEeqERKS3_: (+1)
+   \        0x0   0x6800             LDR      R0,[R0, #+0]
+   \        0x2   0x6809             LDR      R1,[R1, #+0]
+   \        0x4   0x4288             CMP      R0,R1
+   \        0x6   0xD101             BNE.N    `??operator==_0`
+   \        0x8   0x2001             MOVS     R0,#+1
+   \        0xA   0xE000             B.N      `??operator==_1`
+   \                     `??operator==_0`: (+1)
+   \        0xC   0x2000             MOVS     R0,#+0
+   \                     `??operator==_1`: (+1)
+   \        0xE   0xB2C0             UXTB     R0,R0            ;; ZeroExt  R0,R0,#+24,#+24
+   \       0x10   0x4770             BX       LR               ;; return
+
+   \                                 In section .text, align 2
+   \   __interwork __vfp bool std::_Array_const_iterator<std::reference_wrapper<ILed>, 4U>::operator!=(std::_Array_const_iterator<std::reference_wrapper<ILed>, 4U> const &) const
+   \                     _ZNKSt21_Array_const_iteratorISt17reference_wrapperI4ILedELj4EEneERKS3_: (+1)
+   \        0x0   0xB580             PUSH     {R7,LR}
+   \        0x2   0x....'....        BL       _ZNKSt21_Array_const_iteratorISt17reference_wrapperI4ILedELj4EEeqERKS3_
+   \        0x6   0x2800             CMP      R0,#+0
+   \        0x8   0xD101             BNE.N    `??operator!=_0`
+   \        0xA   0x2001             MOVS     R0,#+1
+   \        0xC   0xE000             B.N      `??operator!=_1`
+   \                     `??operator!=_0`: (+1)
+   \        0xE   0x2000             MOVS     R0,#+0
+   \                     `??operator!=_1`: (+1)
+   \       0x10   0xB2C0             UXTB     R0,R0            ;; ZeroExt  R0,R0,#+24,#+24
+   \       0x12   0xBD02             POP      {R1,PC}          ;; return
+
+   \                                 In section .text, align 2
+   \   __code __interwork __vfp std::_Array_iterator<std::reference_wrapper<ILed>, 4U>::_Array_iterator(std::reference_wrapper<ILed> *, size_t)
+   \                     _ZNSt15_Array_iteratorISt17reference_wrapperI4ILedELj4EEC1EPS2_j: (+1)
+   \        0x0   0xB510             PUSH     {R4,LR}
+   \        0x2   0x0004             MOVS     R4,R0
+   \        0x4   0x0020             MOVS     R0,R4
+   \        0x6   0x....'....        BL       _ZNSt21_Array_const_iteratorISt17reference_wrapperI4ILedELj4EEC2EPKS2_j
+   \        0xA   0x0020             MOVS     R0,R4
+   \        0xC   0xBD10             POP      {R4,PC}          ;; return
+
+   \                                 In section .text, align 2
+   \   __interwork __vfp std::reference_wrapper<ILed> & std::_Array_iterator<std::reference_wrapper<ILed>, 4U>::operator*() const
+   \                     _ZNKSt15_Array_iteratorISt17reference_wrapperI4ILedELj4EEdeEv: (+1)
+   \        0x0   0xB580             PUSH     {R7,LR}
+   \        0x2   0x....'....        BL       _ZNKSt21_Array_const_iteratorISt17reference_wrapperI4ILedELj4EEdeEv
+   \        0x6   0xBD02             POP      {R1,PC}          ;; return
+
+   \                                 In section .text, align 2
+   \   __interwork __vfp std::_Array_iterator<std::reference_wrapper<ILed>, 4U> &std::_Array_iterator<std::reference_wrapper<ILed>, 4U>::operator++()
+   \                     _ZNSt15_Array_iteratorISt17reference_wrapperI4ILedELj4EEppEv: (+1)
+   \        0x0   0xB510             PUSH     {R4,LR}
+   \        0x2   0x0004             MOVS     R4,R0
+   \        0x4   0x0020             MOVS     R0,R4
+   \        0x6   0x....'....        BL       _ZNSt21_Array_const_iteratorISt17reference_wrapperI4ILedELj4EEppEv
+   \        0xA   0x0020             MOVS     R0,R4
+   \        0xC   0xBD10             POP      {R4,PC}          ;; return
+
+   \                                 In section .text, align 2
+   \   __interwork __vfp std::array<std::reference_wrapper<ILed>, 4U>::iterator std::array<std::reference_wrapper<ILed>, 4U>::begin()
+   \                     _ZNSt5arrayISt17reference_wrapperI4ILedELj4EE5beginEv: (+1)
+   \        0x0   0xB580             PUSH     {R7,LR}
+   \        0x2   0x....'....        BL       _ZSt9addressofISt17reference_wrapperI4ILedEEPT_RS3_
+   \        0x6   0x2200             MOVS     R2,#+0
+   \        0x8   0x0001             MOVS     R1,R0
+   \        0xA   0x4668             MOV      R0,SP
+   \        0xC   0x....'....        BL       _ZNSt15_Array_iteratorISt17reference_wrapperI4ILedELj4EEC1EPS2_j
+   \       0x10   0x6800             LDR      R0,[R0, #+0]
+   \       0x12   0xBD02             POP      {R1,PC}          ;; return
+
+   \                                 In section .text, align 2
+   \   __interwork __vfp std::array<std::reference_wrapper<ILed>, 4U>::iterator std::array<std::reference_wrapper<ILed>, 4U>::end()
+   \                     _ZNSt5arrayISt17reference_wrapperI4ILedELj4EE3endEv: (+1)
+   \        0x0   0xB580             PUSH     {R7,LR}
+   \        0x2   0x....'....        BL       _ZSt9addressofISt17reference_wrapperI4ILedEEPT_RS3_
+   \        0x6   0x2204             MOVS     R2,#+4
+   \        0x8   0x0001             MOVS     R1,R0
+   \        0xA   0x4668             MOV      R0,SP
+   \        0xC   0x....'....        BL       _ZNSt15_Array_iteratorISt17reference_wrapperI4ILedELj4EEC1EPS2_j
+   \       0x10   0x6800             LDR      R0,[R0, #+0]
+   \       0x12   0xBD02             POP      {R1,PC}          ;; return
+
+   \                                 In section .text, align 2
+   \   __interwork __vfp size_t std::array<std::reference_wrapper<ILed>, 4U>::size() const
+   \                     _ZNKSt5arrayISt17reference_wrapperI4ILedELj4EE4sizeEv: (+1)
+   \        0x0   0x2004             MOVS     R0,#+4
+   \        0x2   0x4770             BX       LR               ;; return
+
+   \                                 In section .text, align 2
+   \   __interwork __vfp std::reference_wrapper<ILed> & std::array<std::reference_wrapper<ILed>, 4U>::operator[](size_t)
+   \                     _ZNSt5arrayISt17reference_wrapperI4ILedELj4EEixEj: (+1)
+   \        0x0   0xEB00 0x0081      ADD      R0,R0,R1, LSL #+2
+   \        0x4   0x4770             BX       LR               ;; return
+
+   \                                 In section .text, align 2
+   \   __interwork __vfp uint32_t *std::array<uint32_t, 128U>::data()
+   \                     _ZNSt5arrayIjLj128EE4dataEv: (+1)
+   \        0x0   0x4770             BX       LR               ;; return
+
+   \                                 In section .text, align 2
+   \   __interwork __vfp OsWrapper::TicksPerSecond std::chrono::duration_cast<OsWrapper::TicksPerSecond, __int64_t, std::milli>(std::chrono::duration<__int64_t, std::milli> const &)
+   \                     _ZNSt6chrono13duration_castINS_8durationIjSt5ratioILx10ELx1000EEEExS2_ILx1ELx1000EEEENSt9enable_ifIXsr3std6chrono12_Is_durationIT_EE5valueES7_E4typeERKNS1_IT0_T1_EE: (+1)
+   \        0x0   0xB5E0             PUSH     {R5-R7,LR}
+   \        0x2   0x....'....        BL       _ZNKSt6chrono8durationIxSt5ratioILx1ELx1000EEE5countEv
+   \        0x6   0x220A             MOVS     R2,#+10
+   \        0x8   0x2300             MOVS     R3,#+0
+   \        0xA   0x....'....        BL       __aeabi_ldivmod
+   \        0xE   0x9001             STR      R0,[SP, #+4]
+   \       0x10   0xA901             ADD      R1,SP,#+4
+   \       0x12   0x4668             MOV      R0,SP
+   \       0x14   0x....'....        BL       _ZNSt6chrono8durationIjSt5ratioILx10ELx1000EEEC1IjvEERKT_
+   \       0x18   0x9800             LDR      R0,[SP, #+0]
+   \       0x1A   0xBD0E             POP      {R1-R3,PC}       ;; return
+
+   \                                 In section .text, align 2
+   \   __code __interwork __vfp std::chrono::duration<uint32_t, std::ratio<10LL, 1000LL>>::duration<uint32_t, void>(uint32_t const &)
+   \                     _ZNSt6chrono8durationIjSt5ratioILx10ELx1000EEEC1IjvEERKT_: (+1)
+   \        0x0   0x6809             LDR      R1,[R1, #+0]
+   \        0x2   0x6001             STR      R1,[R0, #+0]
+   \        0x4   0x4770             BX       LR               ;; return
+
+   \                                 In section .text, align 2
+   \   __interwork __vfp __int64_t std::chrono::duration<__int64_t, std::milli>::count() const
+   \                     _ZNKSt6chrono8durationIxSt5ratioILx1ELx1000EEE5countEv: (+1)
+   \        0x0   0xE9D0 0x0100      LDRD     R0,R1,[R0, #+0]
+   \        0x4   0x4770             BX       LR               ;; return
+
+   \                                 In section .text, align 2
+   \   __interwork __vfp uint32_t std::chrono::duration<uint32_t, std::ratio<10LL, 1000LL>>::count() const
+   \                     _ZNKSt6chrono8durationIjSt5ratioILx10ELx1000EEE5countEv: (+1)
+   \        0x0   0x6800             LDR      R0,[R0, #+0]
+   \        0x2   0x4770             BX       LR               ;; return
+
+   \                                 In section .rodata, align 1
+   \   __absolute bool const std::chrono::system_clock::is_steady
+   \                     _ZNSt6chrono12system_clock9is_steadyE:
+   \        0x0   0x00               DC8 0
+
+   \                                 In section .rodata, align 1
+   \   __absolute bool const std::chrono::system_clock::is_monotonic
+   \                     _ZNSt6chrono12system_clock12is_monotonicE:
+   \        0x0   0x00               DC8 0
+
+   \                                 In section .rodata, align 1
+   \   __absolute bool const std::chrono::steady_clock::is_steady
+   \                     _ZNSt6chrono12steady_clock9is_steadyE:
+   \        0x0   0x01               DC8 1
+
+   \                                 In section .text, align 4
+   \   __interwork __vfp void OsWrapper::RtosWrapper::wCreateThread<OsWrapper::Rtos, MyTask>(MyTask &, char const *, OsWrapper::ThreadPriority, uint16_t, uint32_t *)
+   \                     _ZN9OsWrapper11RtosWrapper13wCreateThreadINS_4RtosE6MyTaskEEvRT0_PKcNS_14ThreadPriorityEtPj: (+1)
+   \        0x0   0xB53E             PUSH     {R1-R5,LR}
+   \        0x2   0x0005             MOVS     R5,R0
+   \        0x4   0x001C             MOVS     R4,R3
+   \        0x6   0x9806             LDR      R0,[SP, #+24]
+   \        0x8   0x2800             CMP      R0,#+0
+   \        0xA   0xD00B             BEQ.N    ??wCreateThread_2
+   \        0xC   0x1D2B             ADDS     R3,R5,#+4
+   \        0xE   0x9302             STR      R3,[SP, #+8]
+   \       0x10   0x9001             STR      R0,[SP, #+4]
+   \       0x12   0xB2D2             UXTB     R2,R2            ;; ZeroExt  R2,R2,#+24,#+24
+   \       0x14   0x9200             STR      R2,[SP, #+0]
+   \       0x16   0x002B             MOVS     R3,R5
+   \       0x18   0xB2A4             UXTH     R4,R4            ;; ZeroExt  R4,R4,#+16,#+16
+   \       0x1A   0x0022             MOVS     R2,R4
+   \       0x1C   0x4802             LDR.N    R0,??wCreateThread_0
+   \       0x1E   0x....'....        BL       xTaskCreateStatic
+   \       0x22   0x6568             STR      R0,[R5, #+84]
+   \                     ??wCreateThread_2: (+1)
+   \       0x24   0xBD37             POP      {R0-R2,R4,R5,PC}  ;; return
+   \       0x26   0xBF00             Nop      
+   \                     ??wCreateThread_0:
+   \       0x28   0x....'....        DC32     _ZN9OsWrapper4Rtos3RunEPv
+
+   \                                 In section .text, align 4
+   \   __interwork __vfp void OsWrapper::RtosWrapper::wCreateThread<OsWrapper::Rtos, Led1Task>(Led1Task &, char const *, OsWrapper::ThreadPriority, uint16_t, uint32_t *)
+   \                     _ZN9OsWrapper11RtosWrapper13wCreateThreadINS_4RtosE8Led1TaskEEvRT0_PKcNS_14ThreadPriorityEtPj: (+1)
+   \        0x0   0xB53E             PUSH     {R1-R5,LR}
+   \        0x2   0x0005             MOVS     R5,R0
+   \        0x4   0x001C             MOVS     R4,R3
+   \        0x6   0x9806             LDR      R0,[SP, #+24]
+   \        0x8   0x2800             CMP      R0,#+0
+   \        0xA   0xD00B             BEQ.N    ??wCreateThread_3
+   \        0xC   0x1D2B             ADDS     R3,R5,#+4
+   \        0xE   0x9302             STR      R3,[SP, #+8]
+   \       0x10   0x9001             STR      R0,[SP, #+4]
+   \       0x12   0xB2D2             UXTB     R2,R2            ;; ZeroExt  R2,R2,#+24,#+24
+   \       0x14   0x9200             STR      R2,[SP, #+0]
+   \       0x16   0x002B             MOVS     R3,R5
+   \       0x18   0xB2A4             UXTH     R4,R4            ;; ZeroExt  R4,R4,#+16,#+16
+   \       0x1A   0x0022             MOVS     R2,R4
+   \       0x1C   0x4802             LDR.N    R0,??wCreateThread_1
+   \       0x1E   0x....'....        BL       xTaskCreateStatic
+   \       0x22   0x6568             STR      R0,[R5, #+84]
+   \                     ??wCreateThread_3: (+1)
+   \       0x24   0xBD37             POP      {R0-R2,R4,R5,PC}  ;; return
+   \       0x26   0xBF00             Nop      
+   \                     ??wCreateThread_1:
+   \       0x28   0x....'....        DC32     _ZN9OsWrapper4Rtos3RunEPv
+
+   \                                 In section .text, align 2
+   \   __interwork __vfp void OsWrapper::RtosWrapper::wStart()
+   \                     _ZN9OsWrapper11RtosWrapper6wStartEv: (+1)
+   \        0x0   0xB580             PUSH     {R7,LR}
+   \        0x2   0x....'....        BL       vTaskStartScheduler
+   \        0x6   0xBD01             POP      {R0,PC}          ;; return
+
+   \                                 In section .text, align 2
+   \   __interwork __vfp void * OsWrapper::RtosWrapper::wCreateEvent(OsWrapper::tEvent &)
+   \                     _ZN9OsWrapper11RtosWrapper12wCreateEventER19xSTATIC_EVENT_GROUP: (+1)
+   \        0x0   0xB580             PUSH     {R7,LR}
+   \        0x2   0x....'....        BL       xEventGroupCreateStatic
+   \        0x6   0xBD02             POP      {R1,PC}          ;; return
+
+   \                                 In section .text, align 2
+   \   __interwork __vfp void OsWrapper::RtosWrapper::wDeleteEvent(void * &)
+   \                     _ZN9OsWrapper11RtosWrapper12wDeleteEventERPv: (+1)
+   \        0x0   0xB580             PUSH     {R7,LR}
+   \        0x2   0x6800             LDR      R0,[R0, #+0]
+   \        0x4   0x....'....        BL       vEventGroupDelete
+   \        0x8   0xBD01             POP      {R0,PC}          ;; return
+
+   \                                 In section .text, align 2
+   \   __interwork __vfp uint32_t OsWrapper::RtosWrapper::wGetTicks()
+   \                     _ZN9OsWrapper11RtosWrapper9wGetTicksEv: (+1)
+   \        0x0   0xB580             PUSH     {R7,LR}
+   \        0x2   0x....'....        BL       xTaskGetTickCount
+   \        0x6   0xBD02             POP      {R1,PC}          ;; return
+
+   \                                 In section .text, align 2
+   \   __code __interwork __vfp OsWrapper::IThread::subobject IThread()
+   \                     _ZN9OsWrapper7IThreadC2Ev: (+1)
+   \        0x0   0xB580             PUSH     {R7,LR}
+   \        0x2   0x....'....        BL       _ZN9OsWrapper7IThreadC1Ev
+   \        0x6   0xBD02             POP      {R1,PC}          ;; return
+
+   \                                 In section .text, align 2
+   \   __code __interwork __vfp OsWrapper::IThread::IThread()
+   \                     _ZN9OsWrapper7IThreadC1Ev: (+1)
+   \        0x0   0x2100             MOVS     R1,#+0
+   \        0x2   0x6541             STR      R1,[R0, #+84]
+   \        0x4   0x2100             MOVS     R1,#+0
+   \        0x6   0x6581             STR      R1,[R0, #+88]
+   \        0x8   0x4770             BX       LR               ;; return
+
+   \                                 In section .text, align 2
+   \   __interwork __vfp void OsWrapper::IThread::Run()
+   \                     _ZN9OsWrapper7IThread3RunEv: (+1)
+   \        0x0   0xB510             PUSH     {R4,LR}
+   \        0x2   0x0004             MOVS     R4,R0
+   \        0x4   0x....'....        BL       _ZN9OsWrapper11RtosWrapper9wGetTicksEv
+   \        0x8   0x65A0             STR      R0,[R4, #+88]
+   \        0xA   0x0020             MOVS     R0,R4
+   \        0xC   0x6821             LDR      R1,[R4, #+0]
+   \        0xE   0x6809             LDR      R1,[R1, #+0]
+   \       0x10   0x4788             BLX      R1
+   \       0x12   0xBD10             POP      {R4,PC}          ;; return
+
+   \                                 In section .text, align 2
+   \   __code __interwork __vfp OsWrapper::Thread<128U>::subobject Thread()
+   \                     _ZN9OsWrapper6ThreadILj128EEC2Ev: (+1)
+   \        0x0   0xB580             PUSH     {R7,LR}
+   \        0x2   0x....'....        BL       _ZN9OsWrapper6ThreadILj128EEC1Ev
+   \        0x6   0xBD02             POP      {R1,PC}          ;; return
+
+   \                                 In section .text, align 2
+   \   __code __interwork __vfp OsWrapper::Thread<128U>::Thread()
+   \                     _ZN9OsWrapper6ThreadILj128EEC1Ev: (+1)
+   \        0x0   0xB510             PUSH     {R4,LR}
+   \        0x2   0x0004             MOVS     R4,R0
+   \        0x4   0x0020             MOVS     R0,R4
+   \        0x6   0x....'....        BL       _ZN9OsWrapper7IThreadC2Ev
+   \        0xA   0x0020             MOVS     R0,R4
+   \        0xC   0xBD10             POP      {R4,PC}          ;; return
+
+   \                                 In section .text, align 2
+   \   __interwork __vfp void OsWrapper::Rtos::CreateThread<MyTask>(MyTask &, char const *, OsWrapper::ThreadPriority)
+   \                     _ZN9OsWrapper4Rtos12CreateThreadI6MyTaskEEvRT_PKcNS_14ThreadPriorityE: (+1)
+   \        0x0   0xB57C             PUSH     {R2-R6,LR}
+   \        0x2   0x0004             MOVS     R4,R0
+   \        0x4   0x000D             MOVS     R5,R1
+   \        0x6   0x0016             MOVS     R6,R2
+   \        0x8   0xF114 0x005C      ADDS     R0,R4,#+92
+   \        0xC   0x....'....        BL       _ZNSt5arrayIjLj128EE4dataEv
+   \       0x10   0x9000             STR      R0,[SP, #+0]
+   \       0x12   0x2380             MOVS     R3,#+128
+   \       0x14   0x0032             MOVS     R2,R6
+   \       0x16   0xB2D2             UXTB     R2,R2            ;; ZeroExt  R2,R2,#+24,#+24
+   \       0x18   0x0029             MOVS     R1,R5
+   \       0x1A   0x0020             MOVS     R0,R4
+   \       0x1C   0x....'....        BL       _ZN9OsWrapper11RtosWrapper13wCreateThreadINS_4RtosE6MyTaskEEvRT0_PKcNS_14ThreadPriorityEtPj
+   \       0x20   0xBD73             POP      {R0,R1,R4-R6,PC}  ;; return
+
+   \                                 In section .text, align 2
+   \   __interwork __vfp void OsWrapper::Rtos::CreateThread<Led1Task>(Led1Task &, char const *, OsWrapper::ThreadPriority)
+   \                     _ZN9OsWrapper4Rtos12CreateThreadI8Led1TaskEEvRT_PKcNS_14ThreadPriorityE: (+1)
+   \        0x0   0xB57C             PUSH     {R2-R6,LR}
+   \        0x2   0x0004             MOVS     R4,R0
+   \        0x4   0x000D             MOVS     R5,R1
+   \        0x6   0x0016             MOVS     R6,R2
+   \        0x8   0xF114 0x005C      ADDS     R0,R4,#+92
+   \        0xC   0x....'....        BL       _ZNSt5arrayIjLj128EE4dataEv
+   \       0x10   0x9000             STR      R0,[SP, #+0]
+   \       0x12   0x2380             MOVS     R3,#+128
+   \       0x14   0x0032             MOVS     R2,R6
+   \       0x16   0xB2D2             UXTB     R2,R2            ;; ZeroExt  R2,R2,#+24,#+24
+   \       0x18   0x0029             MOVS     R1,R5
+   \       0x1A   0x0020             MOVS     R0,R4
+   \       0x1C   0x....'....        BL       _ZN9OsWrapper11RtosWrapper13wCreateThreadINS_4RtosE8Led1TaskEEvRT0_PKcNS_14ThreadPriorityEtPj
+   \       0x20   0xBD73             POP      {R0,R1,R4-R6,PC}  ;; return
+
+   \                                 In section .text, align 2
+   \   __interwork __vfp void OsWrapper::Rtos::Start()
+   \                     _ZN9OsWrapper4Rtos5StartEv: (+1)
+   \        0x0   0xB580             PUSH     {R7,LR}
+   \        0x2   0x....'....        BL       _ZN9OsWrapper11RtosWrapper6wStartEv
+   \        0x6   0xBD01             POP      {R0,PC}          ;; return
+
+   \                                 In section .text, align 2
+   \   __interwork __vfp void OsWrapper::Rtos::Run(void *)
+   \                     _ZN9OsWrapper4Rtos3RunEPv: (+1)
+   \        0x0   0xB580             PUSH     {R7,LR}
+   \        0x2   0x....'....        BL       _ZN9OsWrapper7IThread3RunEv
+   \        0x6   0xBD01             POP      {R0,PC}          ;; return
+      2          #include "mailbox.hpp"      // for Mailbox
+      3          #include "event.hpp"        // for Event
+
+   \                                 In section .text, align 2
+   \   __code __interwork __vfp OsWrapper::Event::Event(std::chrono::milliseconds, uint32_t)
+   \                     _ZN9OsWrapper5EventC1ENSt6chrono8durationIxSt5ratioILx1ELx1000EEEEj: (+1)
+   \        0x0   0xB538             PUSH     {R3-R5,LR}
+   \        0x2   0xB40F             PUSH     {R0-R3}
+   \        0x4   0x0004             MOVS     R4,R0
+   \        0x6   0x9D08             LDR      R5,[SP, #+32]
+   \        0x8   0x2000             MOVS     R0,#+0
+   \        0xA   0x6020             STR      R0,[R4, #+0]
+   \        0xC   0xA802             ADD      R0,SP,#+8
+   \        0xE   0x....'....        BL       _ZNSt6chrono13duration_castINS_8durationIjSt5ratioILx10ELx1000EEEExS2_ILx1ELx1000EEEENSt9enable_ifIXsr3std6chrono12_Is_durationIT_EE5valueES7_E4typeERKNS1_IT0_T1_EE
+   \       0x12   0x9000             STR      R0,[SP, #+0]
+   \       0x14   0x4668             MOV      R0,SP
+   \       0x16   0x....'....        BL       _ZNKSt6chrono8durationIjSt5ratioILx10ELx1000EEE5countEv
+   \       0x1A   0x61E0             STR      R0,[R4, #+28]
+   \       0x1C   0x6225             STR      R5,[R4, #+32]
+   \       0x1E   0x1D20             ADDS     R0,R4,#+4
+   \       0x20   0x....'....        BL       _ZN9OsWrapper11RtosWrapper12wCreateEventER19xSTATIC_EVENT_GROUP
+   \       0x24   0x6020             STR      R0,[R4, #+0]
+   \       0x26   0x0020             MOVS     R0,R4
+   \       0x28   0xB005             ADD      SP,SP,#+20
+   \       0x2A   0xBD30             POP      {R4,R5,PC}       ;; return
+
+   \                                 In section .text, align 2
+   \   __code __interwork __vfp OsWrapper::Event::~Event()
+   \                     _ZN9OsWrapper5EventD1Ev: (+1)
+   \        0x0   0xB510             PUSH     {R4,LR}
+   \        0x2   0x0004             MOVS     R4,R0
+   \        0x4   0x0020             MOVS     R0,R4
+   \        0x6   0x....'....        BL       _ZN9OsWrapper11RtosWrapper12wDeleteEventERPv
+   \        0xA   0x0020             MOVS     R0,R4
+   \        0xC   0xBD10             POP      {R4,PC}          ;; return
+      4          
+      5          #include "mytask.hpp"       // for MyTask
+
+   \                                 In section .bss, align 4
+   \   __absolute LedsDriver Singleton<LedsDriver>::instance
+   \                     _ZN9SingletonI10LedsDrivervJEE8instanceE:
+   \        0x0                      DS8 16
+
+   \                                 In section .bss, align 4
+   \   __absolute Led<Pin<Port<GPIOA>, (uint8_t)'\005', PinWriteable>> Singleton<Led<Pin<Port<GPIOA>, (uint8_t)'\005', PinWriteable>>>::instance
+   \                     _ZN9SingletonI3LedI3PinI4PortI5GPIOAELh5E12PinWriteableEEvJEE8instanceE:
+   \        0x0                      DS8 4
+
+   \                                 In section .bss, align 4
+   \   __absolute Led<Pin<Port<GPIOC>, (uint8_t)'\t', PinWriteable>> Singleton<Led<Pin<Port<GPIOC>, (uint8_t)'\t', PinWriteable>>>::instance
+   \                     _ZN9SingletonI3LedI3PinI4PortI5GPIOCELh9E12PinWriteableEEvJEE8instanceE:
+   \        0x0                      DS8 4
+
+   \                                 In section .bss, align 4
+   \   __absolute Led<Pin<Port<GPIOC>, (uint8_t)'\b', PinWriteable>> Singleton<Led<Pin<Port<GPIOC>, (uint8_t)'\b', PinWriteable>>>::instance
+   \                     _ZN9SingletonI3LedI3PinI4PortI5GPIOCELh8E12PinWriteableEEvJEE8instanceE:
+   \        0x0                      DS8 4
+
+   \                                 In section .bss, align 4
+   \   __absolute Led<Pin<Port<GPIOC>, (uint8_t)'\005', PinWriteable>> Singleton<Led<Pin<Port<GPIOC>, (uint8_t)'\005', PinWriteable>>>::instance
+   \                     _ZN9SingletonI3LedI3PinI4PortI5GPIOCELh5E12PinWriteableEEvJEE8instanceE:
+   \        0x0                      DS8 4
+
+   \                                 In section .bss, align 4
+   \   __absolute LedsController Singleton<LedsController>::instance
+   \                     _ZN9SingletonI14LedsControllervJEE8instanceE:
+   \        0x0                      DS8 28
+
+   \                                 In section .bss, align 1
+   \   __absolute Button<PinButton> Singleton<Button<PinButton>>::instance
+   \                     _ZN9SingletonI6ButtonI3PinI4PortI5GPIOCELh13E11PinReadableEEvJEE8instanceE:
+   \        0x0                      DS8 1
+
+   \                                 In section .data, align 4
+   \   __absolute LedsModeTree Singleton<LedsModeTree>::instance
+   \                     _ZN9SingletonI12LedsModeTreevJEE8instanceE:
+   \        0x0   0x....'....        DC32 _ZTV12LedsModeTree + 0x8, 0
+   \              0x0000'0000  
+
+   \                                 In section .data, align 4
+   \   __absolute LedsModeChess Singleton<LedsModeChess>::instance
+   \                     _ZN9SingletonI13LedsModeChessvJEE8instanceE:
+   \        0x0   0x....'....        DC32 _ZTV13LedsModeChess + 0x8, 0
+   \              0x0000'0000  
+
+   \                                 In section .data, align 4
+   \   __absolute LedsModeAll Singleton<LedsModeAll>::instance
+   \                     _ZN9SingletonI11LedsModeAllvJEE8instanceE:
+   \        0x0   0x....'....        DC32 _ZTV11LedsModeAll + 0x8, 0
+   \              0x0000'0000  
+
+   \                                 In section .data, align 4
+   \   __absolute LedsModeFirstPair Singleton<LedsModeFirstPair>::instance
+   \                     _ZN9SingletonI17LedsModeFirstPairvJEE8instanceE:
+   \        0x0   0x....'....        DC32 _ZTV17LedsModeFirstPair + 0x8, 0
+   \              0x0000'0000  
+
+   \                                 In section .data, align 4
+   \   __absolute LedsModeInsideOutside Singleton<LedsModeInsideOutside>::instance
+   \                     _ZN9SingletonI21LedsModeInsideOutsidevJEE8instanceE:
+   \        0x0   0x....'....        DC32 _ZTV21LedsModeInsideOutside + 0x8, 0
+   \              0x0000'0000  
+
+   \                                 In section .data, align 4
+   \   __absolute LedsModeAdc Singleton<LedsModeAdc>::instance
+   \                     _ZN9SingletonI11LedsModeAdcvJEE8instanceE:
+   \        0x0   0x....'....        DC32 _ZTV11LedsModeAdc + 0x8, 0
+   \              0x0000'0000  
+
+   \                                 In section .data, align 4
+   \   __absolute Exh001ActionBase Singleton<Exh001ActionBase>::instance
+   \                     _ZN9SingletonI16Exh001ActionBasevJEE8instanceE:
+   \        0x0   0x....'....        DC32 _ZTV16Exh001ActionBase + 0x8
+
+   \                                 In section .text, align 2, keep-with-next
+   \   static __intrinsic __interwork __vfp void __sti__routine()
+   \                     __sti__routine: (+1)
+   \        0x0   0xB57C             PUSH     {R2-R6,LR}
+   \        0x2   0x....             LDR.N    R5,??DataTable1
+   \        0x4   0x2001             MOVS     R0,#+1
+   \        0x6   0x9000             STR      R0,[SP, #+0]
+   \        0x8   0x....             LDR.N    R0,??DataTable1_1
+   \        0xA   0xE9D0 0x2300      LDRD     R2,R3,[R0, #+0]
+   \        0xE   0x0028             MOVS     R0,R5
+   \       0x10   0x....'....        BL       _ZN9OsWrapper5EventC1ENSt6chrono8durationIxSt5ratioILx1ELx1000EEEEj
+   \       0x14   0x....             LDR.N    R2,??DataTable1_2
+   \       0x16   0x....             LDR.N    R1,??DataTable1_3
+   \       0x18   0x....'....        BL       __aeabi_atexit
+   \       0x1C   0x....             LDR.N    R2,??DataTable1_4
+   \       0x1E   0x0029             MOVS     R1,R5
+   \       0x20   0x....             LDR.N    R0,??DataTable1_5
+   \       0x22   0x....'....        BL       _ZN6MyTaskC1ERN9OsWrapper5EventER6ButtonI3PinI4PortI5GPIOCELh13E11PinReadableEE
+   \       0x26   0x....             LDR.N    R4,??DataTable1_6
+   \       0x28   0x0022             MOVS     R2,R4
+   \       0x2A   0x0029             MOVS     R1,R5
+   \       0x2C   0x....             LDR.N    R0,??DataTable1_7
+   \       0x2E   0x....'....        BL       _ZN8Led1TaskC1ERN9OsWrapper5EventER14LedsController
+   \       0x32   0x....             LDR.N    R1,??DataTable1_8
+   \       0x34   0x7808             LDRB     R0,[R1, #+0]
+   \       0x36   0x2800             CMP      R0,#+0
+   \       0x38   0xD10B             BNE.N    ??__sti__routine_0
+   \       0x3A   0x2001             MOVS     R0,#+1
+   \       0x3C   0x7008             STRB     R0,[R1, #+0]
+   \       0x3E   0x2110             MOVS     R1,#+16
+   \       0x40   0x2200             MOVS     R2,#+0
+   \       0x42   0x....             LDR.N    R5,??DataTable1_9
+   \       0x44   0x002E             MOVS     R6,R5
+   \       0x46   0x0030             MOVS     R0,R6
+   \       0x48   0x....'....        BL       __aeabi_memset
+   \       0x4C   0x0028             MOVS     R0,R5
+   \       0x4E   0x....'....        BL       _ZN10LedsDriverC1Ev
+   \                     ??__sti__routine_0: (+1)
+   \       0x52   0x....             LDR.N    R1,??DataTable1_10
+   \       0x54   0x7808             LDRB     R0,[R1, #+0]
+   \       0x56   0x2800             CMP      R0,#+0
+   \       0x58   0xD104             BNE.N    ??__sti__routine_1
+   \       0x5A   0x2001             MOVS     R0,#+1
+   \       0x5C   0x7008             STRB     R0,[R1, #+0]
+   \       0x5E   0x....             LDR.N    R0,??DataTable1_11
+   \       0x60   0x....'....        BL       _ZN3LedI3PinI4PortI5GPIOAELh5E12PinWriteableEEC1Ev
+   \                     ??__sti__routine_1: (+1)
+   \       0x64   0x....             LDR.N    R1,??DataTable1_12
+   \       0x66   0x7808             LDRB     R0,[R1, #+0]
+   \       0x68   0x2800             CMP      R0,#+0
+   \       0x6A   0xD104             BNE.N    ??__sti__routine_2
+   \       0x6C   0x2001             MOVS     R0,#+1
+   \       0x6E   0x7008             STRB     R0,[R1, #+0]
+   \       0x70   0x....             LDR.N    R0,??DataTable1_13
+   \       0x72   0x....'....        BL       _ZN3LedI3PinI4PortI5GPIOCELh9E12PinWriteableEEC1Ev
+   \                     ??__sti__routine_2: (+1)
+   \       0x76   0x....             LDR.N    R1,??DataTable1_14
+   \       0x78   0x7808             LDRB     R0,[R1, #+0]
+   \       0x7A   0x2800             CMP      R0,#+0
+   \       0x7C   0xD104             BNE.N    ??__sti__routine_3
+   \       0x7E   0x2001             MOVS     R0,#+1
+   \       0x80   0x7008             STRB     R0,[R1, #+0]
+   \       0x82   0x....             LDR.N    R0,??DataTable1_15
+   \       0x84   0x....'....        BL       _ZN3LedI3PinI4PortI5GPIOCELh8E12PinWriteableEEC1Ev
+   \                     ??__sti__routine_3: (+1)
+   \       0x88   0x....             LDR.N    R1,??DataTable1_16
+   \       0x8A   0x7808             LDRB     R0,[R1, #+0]
+   \       0x8C   0x2800             CMP      R0,#+0
+   \       0x8E   0xD104             BNE.N    ??__sti__routine_4
+   \       0x90   0x2001             MOVS     R0,#+1
+   \       0x92   0x7008             STRB     R0,[R1, #+0]
+   \       0x94   0x....             LDR.N    R0,??DataTable1_17
+   \       0x96   0x....'....        BL       _ZN3LedI3PinI4PortI5GPIOCELh5E12PinWriteableEEC1Ev
+   \                     ??__sti__routine_4: (+1)
+   \       0x9A   0x....             LDR.N    R1,??DataTable1_18
+   \       0x9C   0x7808             LDRB     R0,[R1, #+0]
+   \       0x9E   0x2800             CMP      R0,#+0
+   \       0xA0   0xD10A             BNE.N    ??__sti__routine_5
+   \       0xA2   0x2001             MOVS     R0,#+1
+   \       0xA4   0x7008             STRB     R0,[R1, #+0]
+   \       0xA6   0x211C             MOVS     R1,#+28
+   \       0xA8   0x2200             MOVS     R2,#+0
+   \       0xAA   0x0025             MOVS     R5,R4
+   \       0xAC   0x0028             MOVS     R0,R5
+   \       0xAE   0x....'....        BL       __aeabi_memset
+   \       0xB2   0x0020             MOVS     R0,R4
+   \       0xB4   0x....'....        BL       _ZN14LedsControllerC1Ev
+   \                     ??__sti__routine_5: (+1)
+   \       0xB8   0x....             LDR.N    R1,??DataTable1_19
+   \       0xBA   0x7808             LDRB     R0,[R1, #+0]
+   \       0xBC   0x2800             CMP      R0,#+0
+   \       0xBE   0xD101             BNE.N    ??__sti__routine_6
+   \       0xC0   0x2001             MOVS     R0,#+1
+   \       0xC2   0x7008             STRB     R0,[R1, #+0]
+   \                     ??__sti__routine_6: (+1)
+   \       0xC4   0xBD73             POP      {R0,R1,R4-R6,PC}  ;; return
+
+   \                                 In section .text, align 4
+   \   __interwork __vfp void FieldValueBase<RCC_CR_HSION_Values<RCC::CR, 0U, 1U, ReadWriteMode, RCC::RCCCRBase>, RCC::RCCCRBase, 1U>::Set<ReadWriteMode, void>()
+   \                     _ZN14FieldValueBaseI19RCC_CR_HSION_ValuesIN3RCC2CRELj0ELj1E13ReadWriteModeNS1_9RCCCRBaseEES4_Lj1EE3SetIS3_vEEvv: (+1)
+   \        0x0   0x4903             LDR.N    R1,??Set_0       ;; 0x40023800
+   \        0x2   0x6808             LDR      R0,[R1, #+0]
+   \        0x4   0x0840             LSRS     R0,R0,#+1
+   \        0x6   0x0040             LSLS     R0,R0,#+1
+   \        0x8   0xF050 0x0001      ORRS     R0,R0,#0x1
+   \        0xC   0x6008             STR      R0,[R1, #+0]
+   \        0xE   0x4770             BX       LR               ;; return
+   \                     ??Set_0:
+   \       0x10   0x4002'3800        DC32     0x40023800
+
+   \                                 In section .text, align 4
+   \   __interwork __vfp void FieldValueBase<RCC_CFGR_SW_Values<RCC::CFGR, 0U, 2U, ReadWriteMode, RCC::RCCCFGRBase>, RCC::RCCCFGRBase, 0U>::Set<ReadWriteMode, void>()
+   \                     _ZN14FieldValueBaseI18RCC_CFGR_SW_ValuesIN3RCC4CFGRELj0ELj2E13ReadWriteModeNS1_11RCCCFGRBaseEES4_Lj0EE3SetIS3_vEEvv: (+1)
+   \        0x0   0x4902             LDR.N    R1,??Set_1       ;; 0x40023808
+   \        0x2   0x6808             LDR      R0,[R1, #+0]
+   \        0x4   0x0880             LSRS     R0,R0,#+2
+   \        0x6   0x0080             LSLS     R0,R0,#+2
+   \        0x8   0x6008             STR      R0,[R1, #+0]
+   \        0xA   0x4770             BX       LR               ;; return
+   \                     ??Set_1:
+   \        0xC   0x4002'3808        DC32     0x40023808
+
+   \                                 In section .text, align 4
+   \   __interwork __vfp void FieldValueBase<RCC_AHB1ENR_DMA2EN_Values<RCC::APB2ENR, 14U, 1U, ReadWriteMode, RCC::RCCAPB2ENRBase>, RCC::RCCAPB2ENRBase, 1U>::Set<ReadWriteMode, void>()
+   \                     _ZN14FieldValueBaseI25RCC_AHB1ENR_DMA2EN_ValuesIN3RCC7APB2ENRELj14ELj1E13ReadWriteModeNS1_14RCCAPB2ENRBaseEES4_Lj1EE3SetIS3_vEEvv: (+1)
+   \        0x0   0x4903             LDR.N    R1,??Set_2       ;; 0x40023844
+   \        0x2   0x6808             LDR      R0,[R1, #+0]
+   \        0x4   0xF430 0x4080      BICS     R0,R0,#0x4000
+   \        0x8   0xF450 0x4080      ORRS     R0,R0,#0x4000
+   \        0xC   0x6008             STR      R0,[R1, #+0]
+   \        0xE   0x4770             BX       LR               ;; return
+   \                     ??Set_2:
+   \       0x10   0x4002'3844        DC32     0x40023844
+
+   \                                 In section .text, align 4
+   \   __interwork __vfp void FieldValueBase<GPIOA_MODER_MODER15_Values<GPIOA::MODER, 10U, 2U, ReadWriteMode, GPIOA::GPIOAMODERBase>, GPIOA::GPIOAMODERBase, 1U>::Set<ReadWriteMode, void>()
+   \                     _ZN14FieldValueBaseI26GPIOA_MODER_MODER15_ValuesIN5GPIOA5MODERELj10ELj2E13ReadWriteModeNS1_14GPIOAMODERBaseEES4_Lj1EE3SetIS3_vEEvv: (+1)
+   \        0x0   0x4903             LDR.N    R1,??Set_3       ;; 0x40020000
+   \        0x2   0x6808             LDR      R0,[R1, #+0]
+   \        0x4   0xF430 0x6040      BICS     R0,R0,#0xC00
+   \        0x8   0xF450 0x6080      ORRS     R0,R0,#0x400
+   \        0xC   0x6008             STR      R0,[R1, #+0]
+   \        0xE   0x4770             BX       LR               ;; return
+   \                     ??Set_3:
+   \       0x10   0x4002'0000        DC32     0x40020000
+
+   \                                 In section .text, align 4
+   \   __interwork __vfp bool FieldValueBase<RCC_CR_HSIRDY_Values<RCC::CR, 1U, 1U, ReadMode, RCC::RCCCRBase>, RCC::RCCCRBase, 0U>::IsSet<ReadMode, void>()
+   \                     _ZN14FieldValueBaseI20RCC_CR_HSIRDY_ValuesIN3RCC2CRELj1ELj1E8ReadModeNS1_9RCCCRBaseEES4_Lj0EE5IsSetIS3_vEEbv: (+1)
+   \        0x0   0x4804             LDR.N    R0,??IsSet_0     ;; 0x40023800
+   \        0x2   0x6800             LDR      R0,[R0, #+0]
+   \        0x4   0x0840             LSRS     R0,R0,#+1
+   \        0x6   0xF010 0x0001      ANDS     R0,R0,#0x1
+   \        0xA   0xF090 0x0001      EORS     R0,R0,#0x1
+   \        0xE   0xB2C0             UXTB     R0,R0            ;; ZeroExt  R0,R0,#+24,#+24
+   \       0x10   0x4770             BX       LR               ;; return
+   \       0x12   0xBF00             Nop      
+   \                     ??IsSet_0:
+   \       0x14   0x4002'3800        DC32     0x40023800
+
+   \                                 In section .text, align 4
+   \   __interwork __vfp bool FieldValueBase<RCC_CFGR_SWS_Values<RCC::CFGR, 2U, 2U, ReadMode, RCC::RCCCFGRBase>, RCC::RCCCFGRBase, 0U>::IsSet<ReadMode, void>()
+   \                     _ZN14FieldValueBaseI19RCC_CFGR_SWS_ValuesIN3RCC4CFGRELj2ELj2E8ReadModeNS1_11RCCCFGRBaseEES4_Lj0EE5IsSetIS3_vEEbv: (+1)
+   \        0x0   0x4804             LDR.N    R0,??IsSet_1     ;; 0x40023808
+   \        0x2   0x6800             LDR      R0,[R0, #+0]
+   \        0x4   0xF010 0x0F0C      TST      R0,#0xC
+   \        0x8   0xD101             BNE.N    ??IsSet_2
+   \        0xA   0x2001             MOVS     R0,#+1
+   \        0xC   0xE000             B.N      ??IsSet_3
+   \                     ??IsSet_2: (+1)
+   \        0xE   0x2000             MOVS     R0,#+0
+   \                     ??IsSet_3: (+1)
+   \       0x10   0xB2C0             UXTB     R0,R0            ;; ZeroExt  R0,R0,#+24,#+24
+   \       0x12   0x4770             BX       LR               ;; return
+   \                     ??IsSet_1:
+   \       0x14   0x4002'3808        DC32     0x40023808
+
+   \                                 In section .text, align 4
+   \   __interwork __vfp void RegisterBase<1073874968U, 32U, WriteMode>::Write<WriteMode, void>(uint32_t)
+   \                     _ZN12RegisterBaseILj1073874968ELj32E9WriteModeE5WriteIS0_vEEvj: (+1)
+   \        0x0   0x4901             LDR.N    R1,??Write_0     ;; 0x40020818
+   \        0x2   0x6008             STR      R0,[R1, #+0]
+   \        0x4   0x4770             BX       LR               ;; return
+   \        0x6   0xBF00             Nop      
+   \                     ??Write_0:
+   \        0x8   0x4002'0818        DC32     0x40020818
+
+   \                                 In section .text, align 4
+   \   __interwork __vfp void RegisterBase<1073872920U, 32U, WriteMode>::Write<WriteMode, void>(uint32_t)
+   \                     _ZN12RegisterBaseILj1073872920ELj32E9WriteModeE5WriteIS0_vEEvj: (+1)
+   \        0x0   0x4901             LDR.N    R1,??Write_1     ;; 0x40020018
+   \        0x2   0x6008             STR      R0,[R1, #+0]
+   \        0x4   0x4770             BX       LR               ;; return
+   \        0x6   0xBF00             Nop      
+   \                     ??Write_1:
+   \        0x8   0x4002'0018        DC32     0x40020018
+
+   \                                 In section .text, align 4
+   \   __interwork __vfp void RegisterBase<1073874964U, 32U, ReadWriteMode>::Toggle<ReadWriteMode, void>(uint32_t)
+   \                     _ZN12RegisterBaseILj1073874964ELj32E13ReadWriteModeE6ToggleIS0_vEEvj: (+1)
+   \        0x0   0x4902             LDR.N    R1,??Toggle_0    ;; 0x40020814
+   \        0x2   0x680A             LDR      R2,[R1, #+0]
+   \        0x4   0x4050             EORS     R0,R0,R2
+   \        0x6   0x6008             STR      R0,[R1, #+0]
+   \        0x8   0x4770             BX       LR               ;; return
+   \        0xA   0xBF00             Nop      
+   \                     ??Toggle_0:
+   \        0xC   0x4002'0814        DC32     0x40020814
+
+   \                                 In section .text, align 4
+   \   __interwork __vfp void RegisterBase<1073872916U, 32U, ReadWriteMode>::Toggle<ReadWriteMode, void>(uint32_t)
+   \                     _ZN12RegisterBaseILj1073872916ELj32E13ReadWriteModeE6ToggleIS0_vEEvj: (+1)
+   \        0x0   0x4902             LDR.N    R1,??Toggle_1    ;; 0x40020014
+   \        0x2   0x680A             LDR      R2,[R1, #+0]
+   \        0x4   0x4050             EORS     R0,R0,R2
+   \        0x6   0x6008             STR      R0,[R1, #+0]
+   \        0x8   0x4770             BX       LR               ;; return
+   \        0xA   0xBF00             Nop      
+   \                     ??Toggle_1:
+   \        0xC   0x4002'0014        DC32     0x40020014
+
+   \                                 In section .text, align 4
+   \   __interwork __vfp void Register<1073887280U, 32U, ReadWriteMode, RCC::RCCAHB1ENRBase, RCC_AHB1ENR_DMA2EN_Values<RCC::AHB1ENR, 2U, 1U, ReadWriteMode, RCC::RCCAHB1ENRBase>::Enable, RCC_AHB1ENR_DMA2EN_Values<RCC::AHB1ENR, 0U, 1U, ReadWriteMode, RCC::RCCAHB1ENRBase>::Enable>::Set<ReadWriteMode, void>()
+   \                     _ZN8RegisterILj1073887280ELj32E13ReadWriteModeN3RCC14RCCAHB1ENRBaseEJ10FieldValueI25RCC_AHB1ENR_DMA2EN_ValuesINS1_7AHB1ENRELj2ELj1ES0_S2_ES2_Lj1EES3_IS4_IS5_Lj0ELj1ES0_S2_ES2_Lj1EEEE3SetIS0_vEEvv: (+1)
+   \        0x0   0x4903             LDR.N    R1,??Set_4       ;; 0x40023830
+   \        0x2   0x6808             LDR      R0,[R1, #+0]
+   \        0x4   0xF030 0x0005      BICS     R0,R0,#0x5
+   \        0x8   0xF050 0x0005      ORRS     R0,R0,#0x5
+   \        0xC   0x6008             STR      R0,[R1, #+0]
+   \        0xE   0x4770             BX       LR               ;; return
+   \                     ??Set_4:
+   \       0x10   0x4002'3830        DC32     0x40023830
+
+   \                                 In section .text, align 4
+   \   __interwork __vfp void Register<1073874944U, 32U, ReadWriteMode, GPIOC::GPIOCMODERBase, GPIOC_MODER_MODER15_Values<GPIOC::MODER, 10U, 2U, ReadWriteMode, GPIOC::GPIOCMODERBase>::Output, GPIOC_MODER_MODER15_Values<GPIOC::MODER, 16U, 2U, ReadWriteMode, GPIOC::GPIOCMODERBase>::Output, GPIOC_MODER_MODER15_Values<GPIOC::MODER, 18U, 2U, ReadWriteMode, GPIOC::GPIOCMODERBase>::Output>::Set<ReadWriteMode, void>()
+   \                     _ZN8RegisterILj1073874944ELj32E13ReadWriteModeN5GPIOC14GPIOCMODERBaseEJ10FieldValueI26GPIOC_MODER_MODER15_ValuesINS1_5MODERELj10ELj2ES0_S2_ES2_Lj1EES3_IS4_IS5_Lj16ELj2ES0_S2_ES2_Lj1EES3_IS4_IS5_Lj18ELj2ES0_S2_ES2_Lj1EEEE3SetIS0_vEEvv: (+1)
+   \        0x0   0x4A04             LDR.N    R2,??Set_5       ;; 0x40020800
+   \        0x2   0x6811             LDR      R1,[R2, #+0]
+   \        0x4   0x4804             LDR.N    R0,??Set_5+0x4   ;; 0xfff0f3ff
+   \        0x6   0x4001             ANDS     R1,R0,R1
+   \        0x8   0xF441 0x2180      ORR      R1,R1,#0x40000
+   \        0xC   0xF451 0x3182      ORRS     R1,R1,#0x10400
+   \       0x10   0x6011             STR      R1,[R2, #+0]
+   \       0x12   0x4770             BX       LR               ;; return
+   \                     ??Set_5:
+   \       0x14   0x4002'0800        DC32     0x40020800
+   \       0x18   0xFFF0'F3FF        DC32     0xfff0f3ff
+
+   \                                 In section .rodata, align 4
+   \   __absolute unsigned int const mask
+   \                     _ZZN8RegisterILj1073887280ELj32E13ReadWriteModeN3RCC14RCCAHB1ENRBaseEJ10FieldValueI25RCC_AHB1ENR_DMA2EN_ValuesINS1_7AHB1ENRELj2ELj1ES0_S2_ES2_Lj1EES3_IS4_IS5_Lj0ELj1ES0_S2_ES2_Lj1EEEE3SetIS0_vEEvvE4mask:
+   \        0x0   0x0000'0005        DC32 5
+
+   \                                 In section .rodata, align 4
+   \   __absolute unsigned int const mask
+   \                     _ZZN8RegisterILj1073874944ELj32E13ReadWriteModeN5GPIOC14GPIOCMODERBaseEJ10FieldValueI26GPIOC_MODER_MODER15_ValuesINS1_5MODERELj10ELj2ES0_S2_ES2_Lj1EES3_IS4_IS5_Lj16ELj2ES0_S2_ES2_Lj1EES3_IS4_IS5_Lj18ELj2ES0_S2_ES2_Lj1EEEE3SetIS0_vEEvvE4mask:
+   \        0x0   0x000F'0C00        DC32 986'112
+
+   \                                 In section .rodata, align 4
+   \   __absolute unsigned int const value
+   \                     _ZZN8RegisterILj1073887280ELj32E13ReadWriteModeN3RCC14RCCAHB1ENRBaseEJ10FieldValueI25RCC_AHB1ENR_DMA2EN_ValuesINS1_7AHB1ENRELj2ELj1ES0_S2_ES2_Lj1EES3_IS4_IS5_Lj0ELj1ES0_S2_ES2_Lj1EEEE3SetIS0_vEEvvE5value:
+   \        0x0   0x0000'0005        DC32 5
+
+   \                                 In section .rodata, align 4
+   \   __absolute unsigned int const value
+   \                     _ZZN8RegisterILj1073874944ELj32E13ReadWriteModeN5GPIOC14GPIOCMODERBaseEJ10FieldValueI26GPIOC_MODER_MODER15_ValuesINS1_5MODERELj10ELj2ES0_S2_ES2_Lj1EES3_IS4_IS5_Lj16ELj2ES0_S2_ES2_Lj1EES3_IS4_IS5_Lj18ELj2ES0_S2_ES2_Lj1EEEE3SetIS0_vEEvvE5value:
+   \        0x0   0x0005'0400        DC32 328'704
+
+   \                                 In section .text, align 2
+   \   __interwork __vfp void Pin<Port<GPIOA>, (uint8_t)'\005', PinWriteable>::Set<PinWriteable, void>()
+   \                     _ZN3PinI4PortI5GPIOAELh5E12PinWriteableE3SetIS3_vEEvv: (+1)
+   \        0x0   0xB580             PUSH     {R7,LR}
+   \        0x2   0x2020             MOVS     R0,#+32
+   \        0x4   0x....'....        BL       _ZN4PortI5GPIOAE3SetEj
+   \        0x8   0xBD01             POP      {R0,PC}          ;; return
+
+   \                                 In section .text, align 2
+   \   __interwork __vfp void Pin<Port<GPIOC>, (uint8_t)'\t', PinWriteable>::Set<PinWriteable, void>()
+   \                     _ZN3PinI4PortI5GPIOCELh9E12PinWriteableE3SetIS3_vEEvv: (+1)
+   \        0x0   0xB580             PUSH     {R7,LR}
+   \        0x2   0xF44F 0x7000      MOV      R0,#+512
+   \        0x6   0x....'....        BL       _ZN4PortI5GPIOCE3SetEj
+   \        0xA   0xBD01             POP      {R0,PC}          ;; return
+
+   \                                 In section .text, align 2
+   \   __interwork __vfp void Pin<Port<GPIOC>, (uint8_t)'\b', PinWriteable>::Set<PinWriteable, void>()
+   \                     _ZN3PinI4PortI5GPIOCELh8E12PinWriteableE3SetIS3_vEEvv: (+1)
+   \        0x0   0xB580             PUSH     {R7,LR}
+   \        0x2   0xF44F 0x7080      MOV      R0,#+256
+   \        0x6   0x....'....        BL       _ZN4PortI5GPIOCE3SetEj
+   \        0xA   0xBD01             POP      {R0,PC}          ;; return
+
+   \                                 In section .text, align 2
+   \   __interwork __vfp void Pin<Port<GPIOC>, (uint8_t)'\005', PinWriteable>::Set<PinWriteable, void>()
+   \                     _ZN3PinI4PortI5GPIOCELh5E12PinWriteableE3SetIS3_vEEvv: (+1)
+   \        0x0   0xB580             PUSH     {R7,LR}
+   \        0x2   0x2020             MOVS     R0,#+32
+   \        0x4   0x....'....        BL       _ZN4PortI5GPIOCE3SetEj
+   \        0x8   0xBD01             POP      {R0,PC}          ;; return
+
+   \                                 In section .text, align 2
+   \   __interwork __vfp void Pin<Port<GPIOA>, (uint8_t)'\005', PinWriteable>::Reset<PinWriteable, void>()
+   \                     _ZN3PinI4PortI5GPIOAELh5E12PinWriteableE5ResetIS3_vEEvv: (+1)
+   \        0x0   0xB580             PUSH     {R7,LR}
+   \        0x2   0x2020             MOVS     R0,#+32
+   \        0x4   0x....'....        BL       _ZN4PortI5GPIOAE5ResetEj
+   \        0x8   0xBD01             POP      {R0,PC}          ;; return
+
+   \                                 In section .text, align 2
+   \   __interwork __vfp void Pin<Port<GPIOC>, (uint8_t)'\t', PinWriteable>::Reset<PinWriteable, void>()
+   \                     _ZN3PinI4PortI5GPIOCELh9E12PinWriteableE5ResetIS3_vEEvv: (+1)
+   \        0x0   0xB580             PUSH     {R7,LR}
+   \        0x2   0xF44F 0x7000      MOV      R0,#+512
+   \        0x6   0x....'....        BL       _ZN4PortI5GPIOCE5ResetEj
+   \        0xA   0xBD01             POP      {R0,PC}          ;; return
+
+   \                                 In section .text, align 2
+   \   __interwork __vfp void Pin<Port<GPIOC>, (uint8_t)'\b', PinWriteable>::Reset<PinWriteable, void>()
+   \                     _ZN3PinI4PortI5GPIOCELh8E12PinWriteableE5ResetIS3_vEEvv: (+1)
+   \        0x0   0xB580             PUSH     {R7,LR}
+   \        0x2   0xF44F 0x7080      MOV      R0,#+256
+   \        0x6   0x....'....        BL       _ZN4PortI5GPIOCE5ResetEj
+   \        0xA   0xBD01             POP      {R0,PC}          ;; return
+
+   \                                 In section .text, align 2
+   \   __interwork __vfp void Pin<Port<GPIOC>, (uint8_t)'\005', PinWriteable>::Reset<PinWriteable, void>()
+   \                     _ZN3PinI4PortI5GPIOCELh5E12PinWriteableE5ResetIS3_vEEvv: (+1)
+   \        0x0   0xB580             PUSH     {R7,LR}
+   \        0x2   0x2020             MOVS     R0,#+32
+   \        0x4   0x....'....        BL       _ZN4PortI5GPIOCE5ResetEj
+   \        0x8   0xBD01             POP      {R0,PC}          ;; return
+
+   \                                 In section .text, align 2
+   \   __interwork __vfp void Pin<Port<GPIOA>, (uint8_t)'\005', PinWriteable>::Toggle<PinWriteable, void>()
+   \                     _ZN3PinI4PortI5GPIOAELh5E12PinWriteableE6ToggleIS3_vEEvv: (+1)
+   \        0x0   0xB580             PUSH     {R7,LR}
+   \        0x2   0x2020             MOVS     R0,#+32
+   \        0x4   0x....'....        BL       _ZN4PortI5GPIOAE6ToggleEj
+   \        0x8   0xBD01             POP      {R0,PC}          ;; return
+
+   \                                 In section .text, align 2
+   \   __interwork __vfp void Pin<Port<GPIOC>, (uint8_t)'\t', PinWriteable>::Toggle<PinWriteable, void>()
+   \                     _ZN3PinI4PortI5GPIOCELh9E12PinWriteableE6ToggleIS3_vEEvv: (+1)
+   \        0x0   0xB580             PUSH     {R7,LR}
+   \        0x2   0xF44F 0x7000      MOV      R0,#+512
+   \        0x6   0x....'....        BL       _ZN4PortI5GPIOCE6ToggleEj
+   \        0xA   0xBD01             POP      {R0,PC}          ;; return
+
+   \                                 In section .text, align 2
+   \   __interwork __vfp void Pin<Port<GPIOC>, (uint8_t)'\b', PinWriteable>::Toggle<PinWriteable, void>()
+   \                     _ZN3PinI4PortI5GPIOCELh8E12PinWriteableE6ToggleIS3_vEEvv: (+1)
+   \        0x0   0xB580             PUSH     {R7,LR}
+   \        0x2   0xF44F 0x7080      MOV      R0,#+256
+   \        0x6   0x....'....        BL       _ZN4PortI5GPIOCE6ToggleEj
+   \        0xA   0xBD01             POP      {R0,PC}          ;; return
+
+   \                                 In section .text, align 2
+   \   __interwork __vfp void Pin<Port<GPIOC>, (uint8_t)'\005', PinWriteable>::Toggle<PinWriteable, void>()
+   \                     _ZN3PinI4PortI5GPIOCELh5E12PinWriteableE6ToggleIS3_vEEvv: (+1)
+   \        0x0   0xB580             PUSH     {R7,LR}
+   \        0x2   0x2020             MOVS     R0,#+32
+   \        0x4   0x....'....        BL       _ZN4PortI5GPIOCE6ToggleEj
+   \        0x8   0xBD01             POP      {R0,PC}          ;; return
+
+   \                                 In section .text, align 4
+   \   __interwork __vfp void Port<GPIOA>::Set(uint32_t)
+   \                     _ZN4PortI5GPIOAE3SetEj: (+1)
+   \        0x0   0xB510             PUSH     {R4,LR}
+   \        0x2   0x0004             MOVS     R4,R0
+   \        0x4   0xF1B4 0x1F01      CMP      R4,#+65537
+   \        0x8   0xD306             BCC.N    ??Set_8
+   \        0xA   0x2213             MOVS     R2,#+19
+   \        0xC   0x4904             LDR.N    R1,??Set_6
+   \        0xE   0x4805             LDR.N    R0,??Set_6+0x4
+   \       0x10   0x....'....        BL       __aeabi_assert
+   \       0x14   0x....'....        BL       __iar_EmptyStepPoint
+   \                     ??Set_8: (+1)
+   \       0x18   0x0020             MOVS     R0,R4
+   \       0x1A   0x....'....        BL       _ZN12RegisterBaseILj1073872920ELj32E9WriteModeE5WriteIS0_vEEvj
+   \       0x1E   0xBD10             POP      {R4,PC}          ;; return
+   \                     ??Set_6:
+   \       0x20   0x....'....        DC32     _ZZN4PortI5GPIOAE3SetEjEs_0
+   \       0x24   0x....'....        DC32     _ZZN4PortI5GPIOAE3SetEjEs
+
+   \                                 In section .text, align 4
+   \   __interwork __vfp void Port<GPIOC>::Set(uint32_t)
+   \                     _ZN4PortI5GPIOCE3SetEj: (+1)
+   \        0x0   0xB510             PUSH     {R4,LR}
+   \        0x2   0x0004             MOVS     R4,R0
+   \        0x4   0xF1B4 0x1F01      CMP      R4,#+65537
+   \        0x8   0xD306             BCC.N    ??Set_9
+   \        0xA   0x2213             MOVS     R2,#+19
+   \        0xC   0x4904             LDR.N    R1,??Set_7
+   \        0xE   0x4805             LDR.N    R0,??Set_7+0x4
+   \       0x10   0x....'....        BL       __aeabi_assert
+   \       0x14   0x....'....        BL       __iar_EmptyStepPoint
+   \                     ??Set_9: (+1)
+   \       0x18   0x0020             MOVS     R0,R4
+   \       0x1A   0x....'....        BL       _ZN12RegisterBaseILj1073874968ELj32E9WriteModeE5WriteIS0_vEEvj
+   \       0x1E   0xBD10             POP      {R4,PC}          ;; return
+   \                     ??Set_7:
+   \       0x20   0x....'....        DC32     _ZZN4PortI5GPIOCE3SetEjEs_0
+   \       0x24   0x....'....        DC32     _ZZN4PortI5GPIOCE3SetEjEs
+
+   \                                 In section .text, align 4
+   \   __interwork __vfp void Port<GPIOA>::Reset(uint32_t)
+   \                     _ZN4PortI5GPIOAE5ResetEj: (+1)
+   \        0x0   0xB510             PUSH     {R4,LR}
+   \        0x2   0x0004             MOVS     R4,R0
+   \        0x4   0xF1B4 0x1F01      CMP      R4,#+65537
+   \        0x8   0xD306             BCC.N    ??Reset_6
+   \        0xA   0x2219             MOVS     R2,#+25
+   \        0xC   0x4905             LDR.N    R1,??Reset_0
+   \        0xE   0x4806             LDR.N    R0,??Reset_0+0x4
+   \       0x10   0x....'....        BL       __aeabi_assert
+   \       0x14   0x....'....        BL       __iar_EmptyStepPoint
+   \                     ??Reset_6: (+1)
+   \       0x18   0x0424             LSLS     R4,R4,#+16
+   \       0x1A   0x0020             MOVS     R0,R4
+   \       0x1C   0x....'....        BL       _ZN12RegisterBaseILj1073872920ELj32E9WriteModeE5WriteIS0_vEEvj
+   \       0x20   0xBD10             POP      {R4,PC}          ;; return
+   \       0x22   0xBF00             Nop      
+   \                     ??Reset_0:
+   \       0x24   0x....'....        DC32     _ZZN4PortI5GPIOAE5ResetEjEs_0
+   \       0x28   0x....'....        DC32     _ZZN4PortI5GPIOAE5ResetEjEs
+
+   \                                 In section .text, align 4
+   \   __interwork __vfp void Port<GPIOC>::Reset(uint32_t)
+   \                     _ZN4PortI5GPIOCE5ResetEj: (+1)
+   \        0x0   0xB510             PUSH     {R4,LR}
+   \        0x2   0x0004             MOVS     R4,R0
+   \        0x4   0xF1B4 0x1F01      CMP      R4,#+65537
+   \        0x8   0xD306             BCC.N    ??Reset_7
+   \        0xA   0x2219             MOVS     R2,#+25
+   \        0xC   0x4905             LDR.N    R1,??Reset_1
+   \        0xE   0x4806             LDR.N    R0,??Reset_1+0x4
+   \       0x10   0x....'....        BL       __aeabi_assert
+   \       0x14   0x....'....        BL       __iar_EmptyStepPoint
+   \                     ??Reset_7: (+1)
+   \       0x18   0x0424             LSLS     R4,R4,#+16
+   \       0x1A   0x0020             MOVS     R0,R4
+   \       0x1C   0x....'....        BL       _ZN12RegisterBaseILj1073874968ELj32E9WriteModeE5WriteIS0_vEEvj
+   \       0x20   0xBD10             POP      {R4,PC}          ;; return
+   \       0x22   0xBF00             Nop      
+   \                     ??Reset_1:
+   \       0x24   0x....'....        DC32     _ZZN4PortI5GPIOCE5ResetEjEs_0
+   \       0x28   0x....'....        DC32     _ZZN4PortI5GPIOCE5ResetEjEs
+
+   \                                 In section .text, align 4
+   \   __interwork __vfp void Port<GPIOA>::Toggle(uint32_t)
+   \                     _ZN4PortI5GPIOAE6ToggleEj: (+1)
+   \        0x0   0xB510             PUSH     {R4,LR}
+   \        0x2   0x0004             MOVS     R4,R0
+   \        0x4   0xF1B4 0x1F01      CMP      R4,#+65537
+   \        0x8   0xD306             BCC.N    ??Toggle_4
+   \        0xA   0x221F             MOVS     R2,#+31
+   \        0xC   0x4904             LDR.N    R1,??Toggle_2
+   \        0xE   0x4805             LDR.N    R0,??Toggle_2+0x4
+   \       0x10   0x....'....        BL       __aeabi_assert
+   \       0x14   0x....'....        BL       __iar_EmptyStepPoint
+   \                     ??Toggle_4: (+1)
+   \       0x18   0x0020             MOVS     R0,R4
+   \       0x1A   0x....'....        BL       _ZN12RegisterBaseILj1073872916ELj32E13ReadWriteModeE6ToggleIS0_vEEvj
+   \       0x1E   0xBD10             POP      {R4,PC}          ;; return
+   \                     ??Toggle_2:
+   \       0x20   0x....'....        DC32     _ZZN4PortI5GPIOAE6ToggleEjEs_0
+   \       0x24   0x....'....        DC32     _ZZN4PortI5GPIOAE6ToggleEjEs
+
+   \                                 In section .text, align 4
+   \   __interwork __vfp void Port<GPIOC>::Toggle(uint32_t)
+   \                     _ZN4PortI5GPIOCE6ToggleEj: (+1)
+   \        0x0   0xB510             PUSH     {R4,LR}
+   \        0x2   0x0004             MOVS     R4,R0
+   \        0x4   0xF1B4 0x1F01      CMP      R4,#+65537
+   \        0x8   0xD306             BCC.N    ??Toggle_5
+   \        0xA   0x221F             MOVS     R2,#+31
+   \        0xC   0x4904             LDR.N    R1,??Toggle_3
+   \        0xE   0x4805             LDR.N    R0,??Toggle_3+0x4
+   \       0x10   0x....'....        BL       __aeabi_assert
+   \       0x14   0x....'....        BL       __iar_EmptyStepPoint
+   \                     ??Toggle_5: (+1)
+   \       0x18   0x0020             MOVS     R0,R4
+   \       0x1A   0x....'....        BL       _ZN12RegisterBaseILj1073874964ELj32E13ReadWriteModeE6ToggleIS0_vEEvj
+   \       0x1E   0xBD10             POP      {R4,PC}          ;; return
+   \                     ??Toggle_3:
+   \       0x20   0x....'....        DC32     _ZZN4PortI5GPIOCE6ToggleEjEs_0
+   \       0x24   0x....'....        DC32     _ZZN4PortI5GPIOCE6ToggleEjEs
+
+   \                                 In section .text, align 4
+   \   __code __interwork __vfp MyTask::MyTask(OsWrapper::Event &, UserButton &)
+   \                     _ZN6MyTaskC1ERN9OsWrapper5EventER6ButtonI3PinI4PortI5GPIOCELh13E11PinReadableEE: (+1)
+   \        0x0   0xB570             PUSH     {R4-R6,LR}
+   \        0x2   0x0004             MOVS     R4,R0
+   \        0x4   0x000D             MOVS     R5,R1
+   \        0x6   0x0016             MOVS     R6,R2
+   \        0x8   0x0020             MOVS     R0,R4
+   \        0xA   0x....'....        BL       _ZN9OsWrapper6ThreadILj128EEC2Ev
+   \        0xE   0x4804             LDR.N    R0,??MyTask_0
+   \       0x10   0x6020             STR      R0,[R4, #+0]
+   \       0x12   0xF8C4 0x525C      STR      R5,[R4, #+604]
+   \       0x16   0xF8C4 0x6260      STR      R6,[R4, #+608]
+   \       0x1A   0x0020             MOVS     R0,R4
+   \       0x1C   0xBD70             POP      {R4-R6,PC}       ;; return
+   \       0x1E   0xBF00             Nop      
+   \                     ??MyTask_0:
+   \       0x20   0x....'....        DC32     _ZTV6MyTask+0x8
+      6          #include "led1task.hpp"     // for Led1Task
+
+   \                                 In section .text, align 2
+   \   __code __interwork __vfp ILed::subobject ILed()
+   \                     _ZN4ILedC2Ev: (+1)
+   \        0x0   0xB580             PUSH     {R7,LR}
+   \        0x2   0x....'....        BL       _ZN4ILedC1Ev
+   \        0x6   0xBD02             POP      {R1,PC}          ;; return
+
+   \                                 In section .text, align 2
+   \   __code __interwork __vfp ILed::ILed()
+   \                     _ZN4ILedC1Ev: (+1)
+   \        0x0   0x4770             BX       LR               ;; return
+
+   \                                 In section .text, align 2
+   \   __interwork __vfp void Led<Pin<Port<GPIOA>, (uint8_t)'\005', PinWriteable>>::SwitchOn()
+   \                     _ZN3LedI3PinI4PortI5GPIOAELh5E12PinWriteableEE8SwitchOnEv: (+1)
+   \        0x0   0xB580             PUSH     {R7,LR}
+   \        0x2   0x....'....        BL       _ZN3PinI4PortI5GPIOAELh5E12PinWriteableE3SetIS3_vEEvv
+   \        0x6   0xBD01             POP      {R0,PC}          ;; return
+
+   \                                 In section .text, align 2
+   \   __interwork __vfp void Led<Pin<Port<GPIOC>, (uint8_t)'\t', PinWriteable>>::SwitchOn()
+   \                     _ZN3LedI3PinI4PortI5GPIOCELh9E12PinWriteableEE8SwitchOnEv: (+1)
+   \        0x0   0xB580             PUSH     {R7,LR}
+   \        0x2   0x....'....        BL       _ZN3PinI4PortI5GPIOCELh9E12PinWriteableE3SetIS3_vEEvv
+   \        0x6   0xBD01             POP      {R0,PC}          ;; return
+
+   \                                 In section .text, align 2
+   \   __interwork __vfp void Led<Pin<Port<GPIOC>, (uint8_t)'\b', PinWriteable>>::SwitchOn()
+   \                     _ZN3LedI3PinI4PortI5GPIOCELh8E12PinWriteableEE8SwitchOnEv: (+1)
+   \        0x0   0xB580             PUSH     {R7,LR}
+   \        0x2   0x....'....        BL       _ZN3PinI4PortI5GPIOCELh8E12PinWriteableE3SetIS3_vEEvv
+   \        0x6   0xBD01             POP      {R0,PC}          ;; return
+
+   \                                 In section .text, align 2
+   \   __interwork __vfp void Led<Pin<Port<GPIOC>, (uint8_t)'\005', PinWriteable>>::SwitchOn()
+   \                     _ZN3LedI3PinI4PortI5GPIOCELh5E12PinWriteableEE8SwitchOnEv: (+1)
+   \        0x0   0xB580             PUSH     {R7,LR}
+   \        0x2   0x....'....        BL       _ZN3PinI4PortI5GPIOCELh5E12PinWriteableE3SetIS3_vEEvv
+   \        0x6   0xBD01             POP      {R0,PC}          ;; return
+
+   \                                 In section .text, align 2
+   \   __interwork __vfp void Led<Pin<Port<GPIOA>, (uint8_t)'\005', PinWriteable>>::SwitchOff()
+   \                     _ZN3LedI3PinI4PortI5GPIOAELh5E12PinWriteableEE9SwitchOffEv: (+1)
+   \        0x0   0xB580             PUSH     {R7,LR}
+   \        0x2   0x....'....        BL       _ZN3PinI4PortI5GPIOAELh5E12PinWriteableE5ResetIS3_vEEvv
+   \        0x6   0xBD01             POP      {R0,PC}          ;; return
+
+   \                                 In section .text, align 2
+   \   __interwork __vfp void Led<Pin<Port<GPIOC>, (uint8_t)'\t', PinWriteable>>::SwitchOff()
+   \                     _ZN3LedI3PinI4PortI5GPIOCELh9E12PinWriteableEE9SwitchOffEv: (+1)
+   \        0x0   0xB580             PUSH     {R7,LR}
+   \        0x2   0x....'....        BL       _ZN3PinI4PortI5GPIOCELh9E12PinWriteableE5ResetIS3_vEEvv
+   \        0x6   0xBD01             POP      {R0,PC}          ;; return
+
+   \                                 In section .text, align 2
+   \   __interwork __vfp void Led<Pin<Port<GPIOC>, (uint8_t)'\b', PinWriteable>>::SwitchOff()
+   \                     _ZN3LedI3PinI4PortI5GPIOCELh8E12PinWriteableEE9SwitchOffEv: (+1)
+   \        0x0   0xB580             PUSH     {R7,LR}
+   \        0x2   0x....'....        BL       _ZN3PinI4PortI5GPIOCELh8E12PinWriteableE5ResetIS3_vEEvv
+   \        0x6   0xBD01             POP      {R0,PC}          ;; return
+
+   \                                 In section .text, align 2
+   \   __interwork __vfp void Led<Pin<Port<GPIOC>, (uint8_t)'\005', PinWriteable>>::SwitchOff()
+   \                     _ZN3LedI3PinI4PortI5GPIOCELh5E12PinWriteableEE9SwitchOffEv: (+1)
+   \        0x0   0xB580             PUSH     {R7,LR}
+   \        0x2   0x....'....        BL       _ZN3PinI4PortI5GPIOCELh5E12PinWriteableE5ResetIS3_vEEvv
+   \        0x6   0xBD01             POP      {R0,PC}          ;; return
+
+   \                                 In section .text, align 2
+   \   __interwork __vfp void Led<Pin<Port<GPIOA>, (uint8_t)'\005', PinWriteable>>::Toggle()
+   \                     _ZN3LedI3PinI4PortI5GPIOAELh5E12PinWriteableEE6ToggleEv: (+1)
+   \        0x0   0xB580             PUSH     {R7,LR}
+   \        0x2   0x....'....        BL       _ZN3PinI4PortI5GPIOAELh5E12PinWriteableE6ToggleIS3_vEEvv
+   \        0x6   0xBD01             POP      {R0,PC}          ;; return
+
+   \                                 In section .text, align 2
+   \   __interwork __vfp void Led<Pin<Port<GPIOC>, (uint8_t)'\t', PinWriteable>>::Toggle()
+   \                     _ZN3LedI3PinI4PortI5GPIOCELh9E12PinWriteableEE6ToggleEv: (+1)
+   \        0x0   0xB580             PUSH     {R7,LR}
+   \        0x2   0x....'....        BL       _ZN3PinI4PortI5GPIOCELh9E12PinWriteableE6ToggleIS3_vEEvv
+   \        0x6   0xBD01             POP      {R0,PC}          ;; return
+
+   \                                 In section .text, align 2
+   \   __interwork __vfp void Led<Pin<Port<GPIOC>, (uint8_t)'\b', PinWriteable>>::Toggle()
+   \                     _ZN3LedI3PinI4PortI5GPIOCELh8E12PinWriteableEE6ToggleEv: (+1)
+   \        0x0   0xB580             PUSH     {R7,LR}
+   \        0x2   0x....'....        BL       _ZN3PinI4PortI5GPIOCELh8E12PinWriteableE6ToggleIS3_vEEvv
+   \        0x6   0xBD01             POP      {R0,PC}          ;; return
+
+   \                                 In section .text, align 2
+   \   __interwork __vfp void Led<Pin<Port<GPIOC>, (uint8_t)'\005', PinWriteable>>::Toggle()
+   \                     _ZN3LedI3PinI4PortI5GPIOCELh5E12PinWriteableEE6ToggleEv: (+1)
+   \        0x0   0xB580             PUSH     {R7,LR}
+   \        0x2   0x....'....        BL       _ZN3PinI4PortI5GPIOCELh5E12PinWriteableE6ToggleIS3_vEEvv
+   \        0x6   0xBD01             POP      {R0,PC}          ;; return
+
+   \                                 In section .text, align 4
+   \   __code __interwork __vfp Led<Pin<Port<GPIOA>, (uint8_t)'\005', PinWriteable>>::Led()
+   \                     _ZN3LedI3PinI4PortI5GPIOAELh5E12PinWriteableEEC1Ev: (+1)
+   \        0x0   0xB510             PUSH     {R4,LR}
+   \        0x2   0x0004             MOVS     R4,R0
+   \        0x4   0x0020             MOVS     R0,R4
+   \        0x6   0x....'....        BL       _ZN4ILedC2Ev
+   \        0xA   0x4802             LDR.N    R0,??Led_0
+   \        0xC   0x6020             STR      R0,[R4, #+0]
+   \        0xE   0x0020             MOVS     R0,R4
+   \       0x10   0xBD10             POP      {R4,PC}          ;; return
+   \       0x12   0xBF00             Nop      
+   \                     ??Led_0:
+   \       0x14   0x....'....        DC32     _ZTV3LedI3PinI4PortI5GPIOAELh5E12PinWriteableEE+0x8
+
+   \                                 In section .text, align 4
+   \   __code __interwork __vfp Led<Pin<Port<GPIOC>, (uint8_t)'\t', PinWriteable>>::Led()
+   \                     _ZN3LedI3PinI4PortI5GPIOCELh9E12PinWriteableEEC1Ev: (+1)
+   \        0x0   0xB510             PUSH     {R4,LR}
+   \        0x2   0x0004             MOVS     R4,R0
+   \        0x4   0x0020             MOVS     R0,R4
+   \        0x6   0x....'....        BL       _ZN4ILedC2Ev
+   \        0xA   0x4802             LDR.N    R0,??Led_1
+   \        0xC   0x6020             STR      R0,[R4, #+0]
+   \        0xE   0x0020             MOVS     R0,R4
+   \       0x10   0xBD10             POP      {R4,PC}          ;; return
+   \       0x12   0xBF00             Nop      
+   \                     ??Led_1:
+   \       0x14   0x....'....        DC32     _ZTV3LedI3PinI4PortI5GPIOCELh9E12PinWriteableEE+0x8
+
+   \                                 In section .text, align 4
+   \   __code __interwork __vfp Led<Pin<Port<GPIOC>, (uint8_t)'\b', PinWriteable>>::Led()
+   \                     _ZN3LedI3PinI4PortI5GPIOCELh8E12PinWriteableEEC1Ev: (+1)
+   \        0x0   0xB510             PUSH     {R4,LR}
+   \        0x2   0x0004             MOVS     R4,R0
+   \        0x4   0x0020             MOVS     R0,R4
+   \        0x6   0x....'....        BL       _ZN4ILedC2Ev
+   \        0xA   0x4802             LDR.N    R0,??Led_2
+   \        0xC   0x6020             STR      R0,[R4, #+0]
+   \        0xE   0x0020             MOVS     R0,R4
+   \       0x10   0xBD10             POP      {R4,PC}          ;; return
+   \       0x12   0xBF00             Nop      
+   \                     ??Led_2:
+   \       0x14   0x....'....        DC32     _ZTV3LedI3PinI4PortI5GPIOCELh8E12PinWriteableEE+0x8
+
+   \                                 In section .text, align 4
+   \   __code __interwork __vfp Led<Pin<Port<GPIOC>, (uint8_t)'\005', PinWriteable>>::Led()
+   \                     _ZN3LedI3PinI4PortI5GPIOCELh5E12PinWriteableEEC1Ev: (+1)
+   \        0x0   0xB510             PUSH     {R4,LR}
+   \        0x2   0x0004             MOVS     R4,R0
+   \        0x4   0x0020             MOVS     R0,R4
+   \        0x6   0x....'....        BL       _ZN4ILedC2Ev
+   \        0xA   0x4802             LDR.N    R0,??Led_3
+   \        0xC   0x6020             STR      R0,[R4, #+0]
+   \        0xE   0x0020             MOVS     R0,R4
+   \       0x10   0xBD10             POP      {R4,PC}          ;; return
+   \       0x12   0xBF00             Nop      
+   \                     ??Led_3:
+   \       0x14   0x....'....        DC32     _ZTV3LedI3PinI4PortI5GPIOCELh5E12PinWriteableEE+0x8
+
+   \                                 In section .text, align 2
+   \   __interwork __vfp void LedsDriver::SwitchOffAll()
+   \                     _ZN10LedsDriver12SwitchOffAllEv: (+1)
+   \        0x0   0xB51F             PUSH     {R0-R4,LR}
+   \        0x2   0x0004             MOVS     R4,R0
+   \        0x4   0x0020             MOVS     R0,R4
+   \        0x6   0x....'....        BL       _ZNSt5arrayISt17reference_wrapperI4ILedELj4EE5beginEv
+   \        0xA   0x9000             STR      R0,[SP, #+0]
+   \        0xC   0x0020             MOVS     R0,R4
+   \        0xE   0x....'....        BL       _ZNSt5arrayISt17reference_wrapperI4ILedELj4EE3endEv
+   \       0x12   0x9002             STR      R0,[SP, #+8]
+   \       0x14   0xE00D             B.N      ??SwitchOffAll_0
+   \                     ??SwitchOffAll_1: (+1)
+   \       0x16   0x4668             MOV      R0,SP
+   \       0x18   0x....'....        BL       _ZNKSt15_Array_iteratorISt17reference_wrapperI4ILedELj4EEdeEv
+   \       0x1C   0x6800             LDR      R0,[R0, #+0]
+   \       0x1E   0x9001             STR      R0,[SP, #+4]
+   \       0x20   0xA801             ADD      R0,SP,#+4
+   \       0x22   0x....'....        BL       _ZNKSt17reference_wrapperI4ILedE3getEv
+   \       0x26   0x6801             LDR      R1,[R0, #+0]
+   \       0x28   0x6849             LDR      R1,[R1, #+4]
+   \       0x2A   0x4788             BLX      R1
+   \       0x2C   0x4668             MOV      R0,SP
+   \       0x2E   0x....'....        BL       _ZNSt15_Array_iteratorISt17reference_wrapperI4ILedELj4EEppEv
+   \                     ??SwitchOffAll_0: (+1)
+   \       0x32   0xA902             ADD      R1,SP,#+8
+   \       0x34   0x4668             MOV      R0,SP
+   \       0x36   0x....'....        BL       _ZNKSt21_Array_const_iteratorISt17reference_wrapperI4ILedELj4EEneERKS3_
+   \       0x3A   0x2800             CMP      R0,#+0
+   \       0x3C   0xD1EB             BNE.N    ??SwitchOffAll_1
+   \       0x3E   0xBD1F             POP      {R0-R4,PC}       ;; return
+
+   \                                 In section .text, align 2
+   \   __interwork __vfp void LedsDriver::ToggleAll()
+   \                     _ZN10LedsDriver9ToggleAllEv: (+1)
+   \        0x0   0xB51F             PUSH     {R0-R4,LR}
+   \        0x2   0x0004             MOVS     R4,R0
+   \        0x4   0x0020             MOVS     R0,R4
+   \        0x6   0x....'....        BL       _ZNSt5arrayISt17reference_wrapperI4ILedELj4EE5beginEv
+   \        0xA   0x9000             STR      R0,[SP, #+0]
+   \        0xC   0x0020             MOVS     R0,R4
+   \        0xE   0x....'....        BL       _ZNSt5arrayISt17reference_wrapperI4ILedELj4EE3endEv
+   \       0x12   0x9002             STR      R0,[SP, #+8]
+   \       0x14   0xE00D             B.N      ??ToggleAll_0
+   \                     ??ToggleAll_1: (+1)
+   \       0x16   0x4668             MOV      R0,SP
+   \       0x18   0x....'....        BL       _ZNKSt15_Array_iteratorISt17reference_wrapperI4ILedELj4EEdeEv
+   \       0x1C   0x6800             LDR      R0,[R0, #+0]
+   \       0x1E   0x9001             STR      R0,[SP, #+4]
+   \       0x20   0xA801             ADD      R0,SP,#+4
+   \       0x22   0x....'....        BL       _ZNKSt17reference_wrapperI4ILedE3getEv
+   \       0x26   0x6801             LDR      R1,[R0, #+0]
+   \       0x28   0x6889             LDR      R1,[R1, #+8]
+   \       0x2A   0x4788             BLX      R1
+   \       0x2C   0x4668             MOV      R0,SP
+   \       0x2E   0x....'....        BL       _ZNSt15_Array_iteratorISt17reference_wrapperI4ILedELj4EEppEv
+   \                     ??ToggleAll_0: (+1)
+   \       0x32   0xA902             ADD      R1,SP,#+8
+   \       0x34   0x4668             MOV      R0,SP
+   \       0x36   0x....'....        BL       _ZNKSt21_Array_const_iteratorISt17reference_wrapperI4ILedELj4EEneERKS3_
+   \       0x3A   0x2800             CMP      R0,#+0
+   \       0x3C   0xD1EB             BNE.N    ??ToggleAll_1
+   \       0x3E   0xBD1F             POP      {R0-R4,PC}       ;; return
+
+   \                                 In section .text, align 2
+   \   __interwork __vfp size_t LedsDriver::GetLedsCount()
+   \                     _ZN10LedsDriver12GetLedsCountEv: (+1)
+   \        0x0   0xB580             PUSH     {R7,LR}
+   \        0x2   0x....'....        BL       _ZNKSt5arrayISt17reference_wrapperI4ILedELj4EE4sizeEv
+   \        0x6   0xBD02             POP      {R1,PC}          ;; return
+
+   \                                 In section .text, align 2
+   \   __interwork __vfp ILed &LedsDriver::GetLed(LedNum)
+   \                     _ZN10LedsDriver6GetLedE6LedNum: (+1)
+   \        0x0   0xB580             PUSH     {R7,LR}
+   \        0x2   0x....'....        BL       _ZNSt5arrayISt17reference_wrapperI4ILedELj4EEixEj
+   \        0x6   0x....'....        BL       _ZNKSt17reference_wrapperI4ILedEcvRS0_Ev
+   \        0xA   0xBD02             POP      {R1,PC}          ;; return
+
+   \                                 In section .text, align 4
+   \   __code __interwork __vfp LedsDriver::LedsDriver()
+   \                     _ZN10LedsDriverC1Ev: (+1)
+   \        0x0   0xB510             PUSH     {R4,LR}
+   \        0x2   0x0004             MOVS     R4,R0
+   \        0x4   0x4909             LDR.N    R1,??LedsDriver_0
+   \        0x6   0x0020             MOVS     R0,R4
+   \        0x8   0x....'....        BL       _ZNSt17reference_wrapperI4ILedEC1ERS0_
+   \        0xC   0x4908             LDR.N    R1,??LedsDriver_0+0x4
+   \        0xE   0x1D20             ADDS     R0,R4,#+4
+   \       0x10   0x....'....        BL       _ZNSt17reference_wrapperI4ILedEC1ERS0_
+   \       0x14   0x4907             LDR.N    R1,??LedsDriver_0+0x8
+   \       0x16   0xF114 0x0008      ADDS     R0,R4,#+8
+   \       0x1A   0x....'....        BL       _ZNSt17reference_wrapperI4ILedEC1ERS0_
+   \       0x1E   0x4906             LDR.N    R1,??LedsDriver_0+0xC
+   \       0x20   0xF114 0x000C      ADDS     R0,R4,#+12
+   \       0x24   0x....'....        BL       _ZNSt17reference_wrapperI4ILedEC1ERS0_
+   \       0x28   0x0020             MOVS     R0,R4
+   \       0x2A   0xBD10             POP      {R4,PC}          ;; return
+   \                     ??LedsDriver_0:
+   \       0x2C   0x....'....        DC32     _ZN9SingletonI3LedI3PinI4PortI5GPIOAELh5E12PinWriteableEEvJEE8instanceE
+   \       0x30   0x....'....        DC32     _ZN9SingletonI3LedI3PinI4PortI5GPIOCELh9E12PinWriteableEEvJEE8instanceE
+   \       0x34   0x....'....        DC32     _ZN9SingletonI3LedI3PinI4PortI5GPIOCELh8E12PinWriteableEEvJEE8instanceE
+   \       0x38   0x....'....        DC32     _ZN9SingletonI3LedI3PinI4PortI5GPIOCELh5E12PinWriteableEEvJEE8instanceE
+
+   \                                 In section .text, align 4
+   \   __interwork __vfp void LedsMode::Do(uint8_t)
+   \                     _ZN8LedsMode2DoEh: (+1)
+   \        0x0   0xB580             PUSH     {R7,LR}
+   \        0x2   0x4802             LDR.N    R0,??Do_0
+   \        0x4   0x....'....        BL       _ZN10LedsDriver9ToggleAllEv
+   \        0x8   0xBD01             POP      {R0,PC}          ;; return
+   \        0xA   0xBF00             Nop      
+   \                     ??Do_0:
+   \        0xC   0x....'....        DC32     _ZN9SingletonI10LedsDrivervJEE8instanceE
+
+   \                                 In section .text, align 4
+   \   __interwork __vfp void LedsMode::Reset()
+   \                     _ZN8LedsMode5ResetEv: (+1)
+   \        0x0   0xB510             PUSH     {R4,LR}
+   \        0x2   0x0004             MOVS     R4,R0
+   \        0x4   0x4802             LDR.N    R0,??Reset_2
+   \        0x6   0x....'....        BL       _ZN10LedsDriver12SwitchOffAllEv
+   \        0xA   0x2000             MOVS     R0,#+0
+   \        0xC   0x6060             STR      R0,[R4, #+4]
+   \        0xE   0xBD10             POP      {R4,PC}          ;; return
+   \                     ??Reset_2:
+   \       0x10   0x....'....        DC32     _ZN9SingletonI10LedsDrivervJEE8instanceE
+
+   \                                 In section .text, align 4
+   \   __interwork __vfp void LedsModeTree::Do(uint8_t)
+   \                     _ZN12LedsModeTree2DoEh: (+1)
+   \        0x0   0xB538             PUSH     {R3-R5,LR}
+   \        0x2   0x0004             MOVS     R4,R0
+   \        0x4   0x4D09             LDR.N    R5,??Do_1
+   \        0x6   0x0028             MOVS     R0,R5
+   \        0x8   0x....'....        BL       _ZN10LedsDriver12GetLedsCountEv
+   \        0xC   0x6861             LDR      R1,[R4, #+4]
+   \        0xE   0x4281             CMP      R1,R0
+   \       0x10   0xD301             BCC.N    ??Do_3
+   \       0x12   0x2000             MOVS     R0,#+0
+   \       0x14   0x6060             STR      R0,[R4, #+4]
+   \                     ??Do_3: (+1)
+   \       0x16   0x6861             LDR      R1,[R4, #+4]
+   \       0x18   0x0028             MOVS     R0,R5
+   \       0x1A   0x....'....        BL       _ZN10LedsDriver6GetLedE6LedNum
+   \       0x1E   0x6801             LDR      R1,[R0, #+0]
+   \       0x20   0x6889             LDR      R1,[R1, #+8]
+   \       0x22   0x4788             BLX      R1
+   \       0x24   0x6860             LDR      R0,[R4, #+4]
+   \       0x26   0x1C40             ADDS     R0,R0,#+1
+   \       0x28   0x6060             STR      R0,[R4, #+4]
+   \       0x2A   0xBD31             POP      {R0,R4,R5,PC}    ;; return
+   \                     ??Do_1:
+   \       0x2C   0x....'....        DC32     _ZN9SingletonI10LedsDrivervJEE8instanceE
+
+   \                                 In section .text, align 4
+   \   __interwork __vfp void LedsModeChess::Reset()
+   \                     _ZN13LedsModeChess5ResetEv: (+1)
+   \        0x0   0xB538             PUSH     {R3-R5,LR}
+   \        0x2   0x0004             MOVS     R4,R0
+   \        0x4   0x4D0A             LDR.N    R5,??Reset_3
+   \        0x6   0x0028             MOVS     R0,R5
+   \        0x8   0x....'....        BL       _ZN10LedsDriver12SwitchOffAllEv
+   \        0xC   0x2100             MOVS     R1,#+0
+   \        0xE   0x0028             MOVS     R0,R5
+   \       0x10   0x....'....        BL       _ZN10LedsDriver6GetLedE6LedNum
+   \       0x14   0x6801             LDR      R1,[R0, #+0]
+   \       0x16   0x6809             LDR      R1,[R1, #+0]
+   \       0x18   0x4788             BLX      R1
+   \       0x1A   0x2102             MOVS     R1,#+2
+   \       0x1C   0x0028             MOVS     R0,R5
+   \       0x1E   0x....'....        BL       _ZN10LedsDriver6GetLedE6LedNum
+   \       0x22   0x6801             LDR      R1,[R0, #+0]
+   \       0x24   0x6809             LDR      R1,[R1, #+0]
+   \       0x26   0x4788             BLX      R1
+   \       0x28   0x2000             MOVS     R0,#+0
+   \       0x2A   0x6060             STR      R0,[R4, #+4]
+   \       0x2C   0xBD31             POP      {R0,R4,R5,PC}    ;; return
+   \       0x2E   0xBF00             Nop      
+   \                     ??Reset_3:
+   \       0x30   0x....'....        DC32     _ZN9SingletonI10LedsDrivervJEE8instanceE
+
+   \                                 In section .text, align 4
+   \   __interwork __vfp void LedsModeFirstPair::Reset()
+   \                     _ZN17LedsModeFirstPair5ResetEv: (+1)
+   \        0x0   0xB538             PUSH     {R3-R5,LR}
+   \        0x2   0x0004             MOVS     R4,R0
+   \        0x4   0x4D0A             LDR.N    R5,??Reset_4
+   \        0x6   0x0028             MOVS     R0,R5
+   \        0x8   0x....'....        BL       _ZN10LedsDriver12SwitchOffAllEv
+   \        0xC   0x2100             MOVS     R1,#+0
+   \        0xE   0x0028             MOVS     R0,R5
+   \       0x10   0x....'....        BL       _ZN10LedsDriver6GetLedE6LedNum
+   \       0x14   0x6801             LDR      R1,[R0, #+0]
+   \       0x16   0x6809             LDR      R1,[R1, #+0]
+   \       0x18   0x4788             BLX      R1
+   \       0x1A   0x2101             MOVS     R1,#+1
+   \       0x1C   0x0028             MOVS     R0,R5
+   \       0x1E   0x....'....        BL       _ZN10LedsDriver6GetLedE6LedNum
+   \       0x22   0x6801             LDR      R1,[R0, #+0]
+   \       0x24   0x6809             LDR      R1,[R1, #+0]
+   \       0x26   0x4788             BLX      R1
+   \       0x28   0x2000             MOVS     R0,#+0
+   \       0x2A   0x6060             STR      R0,[R4, #+4]
+   \       0x2C   0xBD31             POP      {R0,R4,R5,PC}    ;; return
+   \       0x2E   0xBF00             Nop      
+   \                     ??Reset_4:
+   \       0x30   0x....'....        DC32     _ZN9SingletonI10LedsDrivervJEE8instanceE
+
+   \                                 In section .text, align 4
+   \   __interwork __vfp void LedsModeInsideOutside::Reset()
+   \                     _ZN21LedsModeInsideOutside5ResetEv: (+1)
+   \        0x0   0xB538             PUSH     {R3-R5,LR}
+   \        0x2   0x0004             MOVS     R4,R0
+   \        0x4   0x4D0A             LDR.N    R5,??Reset_5
+   \        0x6   0x0028             MOVS     R0,R5
+   \        0x8   0x....'....        BL       _ZN10LedsDriver12SwitchOffAllEv
+   \        0xC   0x2102             MOVS     R1,#+2
+   \        0xE   0x0028             MOVS     R0,R5
+   \       0x10   0x....'....        BL       _ZN10LedsDriver6GetLedE6LedNum
+   \       0x14   0x6801             LDR      R1,[R0, #+0]
+   \       0x16   0x6809             LDR      R1,[R1, #+0]
+   \       0x18   0x4788             BLX      R1
+   \       0x1A   0x2101             MOVS     R1,#+1
+   \       0x1C   0x0028             MOVS     R0,R5
+   \       0x1E   0x....'....        BL       _ZN10LedsDriver6GetLedE6LedNum
+   \       0x22   0x6801             LDR      R1,[R0, #+0]
+   \       0x24   0x6809             LDR      R1,[R1, #+0]
+   \       0x26   0x4788             BLX      R1
+   \       0x28   0x2000             MOVS     R0,#+0
+   \       0x2A   0x6060             STR      R0,[R4, #+4]
+   \       0x2C   0xBD31             POP      {R0,R4,R5,PC}    ;; return
+   \       0x2E   0xBF00             Nop      
+   \                     ??Reset_5:
+   \       0x30   0x....'....        DC32     _ZN9SingletonI10LedsDrivervJEE8instanceE
+
+   \                                 In section .text, align 4
+   \   __interwork __vfp void LedsModeAdc::Do(uint8_t)
+   \                     _ZN11LedsModeAdc2DoEh: (+1)
+   \        0x0   0xB570             PUSH     {R4-R6,LR}
+   \        0x2   0x000C             MOVS     R4,R1
+   \        0x4   0x4D0E             LDR.N    R5,??Do_2
+   \        0x6   0x2600             MOVS     R6,#+0
+   \        0x8   0xE013             B.N      ??Do_4
+   \                     ??Do_5: (+1)
+   \        0xA   0x0031             MOVS     R1,R6
+   \        0xC   0x0028             MOVS     R0,R5
+   \        0xE   0x....'....        BL       _ZN10LedsDriver6GetLedE6LedNum
+   \       0x12   0x6801             LDR      R1,[R0, #+0]
+   \       0x14   0x6849             LDR      R1,[R1, #+4]
+   \       0x16   0x4788             BLX      R1
+   \       0x18   0xE00A             B.N      ??Do_6
+   \                     ??Do_7: (+1)
+   \       0x1A   0x0020             MOVS     R0,R4
+   \       0x1C   0xB2C0             UXTB     R0,R0            ;; ZeroExt  R0,R0,#+24,#+24
+   \       0x1E   0x4286             CMP      R6,R0
+   \       0x20   0xD2F3             BCS.N    ??Do_5
+   \       0x22   0x0031             MOVS     R1,R6
+   \       0x24   0x0028             MOVS     R0,R5
+   \       0x26   0x....'....        BL       _ZN10LedsDriver6GetLedE6LedNum
+   \       0x2A   0x6801             LDR      R1,[R0, #+0]
+   \       0x2C   0x6809             LDR      R1,[R1, #+0]
+   \       0x2E   0x4788             BLX      R1
+   \                     ??Do_6: (+1)
+   \       0x30   0x1C76             ADDS     R6,R6,#+1
+   \                     ??Do_4: (+1)
+   \       0x32   0x0028             MOVS     R0,R5
+   \       0x34   0x....'....        BL       _ZN10LedsDriver12GetLedsCountEv
+   \       0x38   0x4286             CMP      R6,R0
+   \       0x3A   0xD3EE             BCC.N    ??Do_7
+   \                     ??Do_8: (+1)
+   \       0x3C   0xBD70             POP      {R4-R6,PC}       ;; return
+   \       0x3E   0xBF00             Nop      
+   \                     ??Do_2:
+   \       0x40   0x....'....        DC32     _ZN9SingletonI10LedsDrivervJEE8instanceE
+
+   \                                 In section .text, align 4
+   \   __code __interwork __vfp LedsController::LedsController()
+   \                     _ZN14LedsControllerC1Ev: (+1)
+   \        0x0   0xB510             PUSH     {R4,LR}
+   \        0x2   0x0004             MOVS     R4,R0
+   \        0x4   0x2000             MOVS     R0,#+0
+   \        0x6   0x6020             STR      R0,[R4, #+0]
+   \        0x8   0x490F             LDR.N    R1,??LedsController_0
+   \        0xA   0x1D20             ADDS     R0,R4,#+4
+   \        0xC   0x....'....        BL       _ZNSt17reference_wrapperI8LedsModeEC1ERS0_
+   \       0x10   0x490E             LDR.N    R1,??LedsController_0+0x4
+   \       0x12   0xF114 0x0008      ADDS     R0,R4,#+8
+   \       0x16   0x....'....        BL       _ZNSt17reference_wrapperI8LedsModeEC1ERS0_
+   \       0x1A   0x490D             LDR.N    R1,??LedsController_0+0x8
+   \       0x1C   0xF114 0x000C      ADDS     R0,R4,#+12
+   \       0x20   0x....'....        BL       _ZNSt17reference_wrapperI8LedsModeEC1ERS0_
+   \       0x24   0x490B             LDR.N    R1,??LedsController_0+0xC
+   \       0x26   0xF114 0x0010      ADDS     R0,R4,#+16
+   \       0x2A   0x....'....        BL       _ZNSt17reference_wrapperI8LedsModeEC1ERS0_
+   \       0x2E   0x490A             LDR.N    R1,??LedsController_0+0x10
+   \       0x30   0xF114 0x0014      ADDS     R0,R4,#+20
+   \       0x34   0x....'....        BL       _ZNSt17reference_wrapperI8LedsModeEC1ERS0_
+   \       0x38   0x4908             LDR.N    R1,??LedsController_0+0x14
+   \       0x3A   0xF114 0x0018      ADDS     R0,R4,#+24
+   \       0x3E   0x....'....        BL       _ZNSt17reference_wrapperI8LedsModeEC1ERS0_
+   \       0x42   0x0020             MOVS     R0,R4
+   \       0x44   0xBD10             POP      {R4,PC}          ;; return
+   \       0x46   0xBF00             Nop      
+   \                     ??LedsController_0:
+   \       0x48   0x....'....        DC32     _ZN9SingletonI12LedsModeTreevJEE8instanceE
+   \       0x4C   0x....'....        DC32     _ZN9SingletonI13LedsModeChessvJEE8instanceE
+   \       0x50   0x....'....        DC32     _ZN9SingletonI11LedsModeAllvJEE8instanceE
+   \       0x54   0x....'....        DC32     _ZN9SingletonI17LedsModeFirstPairvJEE8instanceE
+   \       0x58   0x....'....        DC32     _ZN9SingletonI21LedsModeInsideOutsidevJEE8instanceE
+   \       0x5C   0x....'....        DC32     _ZN9SingletonI11LedsModeAdcvJEE8instanceE
+
+   \                                 In section .text, align 4
+   \   __code __interwork __vfp Led1Task::Led1Task(OsWrapper::Event &, LedsController &)
+   \                     _ZN8Led1TaskC1ERN9OsWrapper5EventER14LedsController: (+1)
+   \        0x0   0xB570             PUSH     {R4-R6,LR}
+   \        0x2   0x0004             MOVS     R4,R0
+   \        0x4   0x000D             MOVS     R5,R1
+   \        0x6   0x0016             MOVS     R6,R2
+   \        0x8   0x0020             MOVS     R0,R4
+   \        0xA   0x....'....        BL       _ZN9OsWrapper6ThreadILj128EEC2Ev
+   \        0xE   0x4804             LDR.N    R0,??Led1Task_0
+   \       0x10   0x6020             STR      R0,[R4, #+0]
+   \       0x12   0xF8C4 0x525C      STR      R5,[R4, #+604]
+   \       0x16   0xF8C4 0x6260      STR      R6,[R4, #+608]
+   \       0x1A   0x0020             MOVS     R0,R4
+   \       0x1C   0xBD70             POP      {R4-R6,PC}       ;; return
+   \       0x1E   0xBF00             Nop      
+   \                     ??Led1Task_0:
+   \       0x20   0x....'....        DC32     _ZTV8Led1Task+0x8
+      7          #include "rccregisters.hpp" // for RCC
+      8          
+      9          #include "Application/Diagnostic/GlobalStatus.hpp"
+
+   \                                 In section .text, align 2
+   \   __interwork __vfp void Exh001ActionBase::Do()
+   \                     _ZN16Exh001ActionBase2DoEv: (+1)
+   \        0x0   0x4770             BX       LR               ;; return
+
+   \                                 In section .rodata, align 8
+   \   __absolute GlobalStatus::tActionArray const GlobalStatus::actions
+   \                     _ZN12GlobalStatus7actionsE:
+   \        0x0   0x....'....        DC32 _ZN9SingletonI16Exh001ActionBasevJEE8instanceE
+   \        0x4   0x00 0x00          DC8 0, 0, 0, 0
+   \              0x00 0x00    
+   \        0x8   0x0000'0000'0      DC64 1
+   \              000'0001     
+   \       0x10   0x....'....        DC32 _ZN9SingletonI16Exh001ActionBasevJEE8instanceE
+   \       0x14   0x00 0x00          DC8 0, 0, 0, 0
+   \              0x00 0x00    
+   \       0x18   0x0000'0000'0      DC64 1
+   \              000'0001     
+     10          #include <gpioaregisters.hpp>  // for GPIOA
+     11          #include <gpiocregisters.hpp>  // for GPIOC
+     12          
+
+   \                                 In section .data, align 4
+     13          std::uint32_t SystemCoreClock = 16'000'000U;
+   \                     SystemCoreClock:
+   \        0x0   0x00F4'2400        DC32 16'000'000
+     14          
+     15          
+     16          extern "C" {
+
+   \                                 In section .text, align 2, keep-with-next
+     17          int __low_level_init(void)
+     18          {
+   \                     __low_level_init: (+1)
+   \        0x0   0xB580             PUSH     {R7,LR}
+     19            //Switch on external 16 MHz oscillator
+     20            RCC::CR::HSION::On::Set();
+   \        0x2   0x....'....        BL       _ZN14FieldValueBaseI19RCC_CR_HSION_ValuesIN3RCC2CRELj0ELj1E13ReadWriteModeNS1_9RCCCRBaseEES4_Lj1EE3SetIS3_vEEvv
+     21            while (RCC::CR::HSIRDY::NotReady::IsSet())
+   \                     ??__low_level_init_0: (+1)
+   \        0x6   0x....'....        BL       _ZN14FieldValueBaseI20RCC_CR_HSIRDY_ValuesIN3RCC2CRELj1ELj1E8ReadModeNS1_9RCCCRBaseEES4_Lj0EE5IsSetIS3_vEEbv
+   \        0xA   0x2800             CMP      R0,#+0
+   \        0xC   0xD1FB             BNE.N    ??__low_level_init_0
+     22            {
+     23          
+     24            }
+     25            //Switch system clock on external oscillator
+     26            RCC::CFGR::SW::Hsi::Set();
+   \        0xE   0x....'....        BL       _ZN14FieldValueBaseI18RCC_CFGR_SW_ValuesIN3RCC4CFGRELj0ELj2E13ReadWriteModeNS1_11RCCCFGRBaseEES4_Lj0EE3SetIS3_vEEvv
+     27            while (!RCC::CFGR::SWS::Hsi::IsSet())
+   \                     ??__low_level_init_1: (+1)
+   \       0x12   0x....'....        BL       _ZN14FieldValueBaseI19RCC_CFGR_SWS_ValuesIN3RCC4CFGRELj2ELj2E8ReadModeNS1_11RCCCFGRBaseEES4_Lj0EE5IsSetIS3_vEEbv
+   \       0x16   0x2800             CMP      R0,#+0
+   \       0x18   0xD0FB             BEQ.N    ??__low_level_init_1
+     28           {
+     29          
+     30            }
+     31            //Switch on clock on PortA and PortC
+     32            RCC::AHB1ENRPack<
+     33                RCC::AHB1ENR::GPIOCEN::Enable,
+     34                RCC::AHB1ENR::GPIOAEN::Enable
+     35            >::Set();
+   \       0x1A   0x....'....        BL       _ZN8RegisterILj1073887280ELj32E13ReadWriteModeN3RCC14RCCAHB1ENRBaseEJ10FieldValueI25RCC_AHB1ENR_DMA2EN_ValuesINS1_7AHB1ENRELj2ELj1ES0_S2_ES2_Lj1EES3_IS4_IS5_Lj0ELj1ES0_S2_ES2_Lj1EEEE3SetIS0_vEEvv
+     36          
+     37            RCC::APB2ENR::SYSCFGEN::Enable::Set();
+   \       0x1E   0x....'....        BL       _ZN14FieldValueBaseI25RCC_AHB1ENR_DMA2EN_ValuesIN3RCC7APB2ENRELj14ELj1E13ReadWriteModeNS1_14RCCAPB2ENRBaseEES4_Lj1EE3SetIS3_vEEvv
+     38          
+     39            //LED1 on PortA.5, set PortA.5 as output
+     40            GPIOA::MODER::MODER5::Output::Set();
+   \       0x22   0x....'....        BL       _ZN14FieldValueBaseI26GPIOA_MODER_MODER15_ValuesIN5GPIOA5MODERELj10ELj2E13ReadWriteModeNS1_14GPIOAMODERBaseEES4_Lj1EE3SetIS3_vEEvv
+     41          
+     42            /* LED2 on PortC.9, LED3 on PortC.8, LED4 on PortC.5 so set PortC.5,8,9 as output */
+     43            GPIOC::MODERPack<
+     44                GPIOC::MODER::MODER5::Output,
+     45                GPIOC::MODER::MODER8::Output,
+     46                GPIOC::MODER::MODER9::Output
+     47            >::Set();
+   \       0x26   0x....'....        BL       _ZN8RegisterILj1073874944ELj32E13ReadWriteModeN5GPIOC14GPIOCMODERBaseEJ10FieldValueI26GPIOC_MODER_MODER15_ValuesINS1_5MODERELj10ELj2ES0_S2_ES2_Lj1EES3_IS4_IS5_Lj16ELj2ES0_S2_ES2_Lj1EES3_IS4_IS5_Lj18ELj2ES0_S2_ES2_Lj1EEEE3SetIS0_vEEvv
+     48          
+     49            return 1;
+   \       0x2A   0x2001             MOVS     R0,#+1
+   \       0x2C   0xBD02             POP      {R1,PC}          ;; return
+     50          }
+     51          }
+     52          
+
+   \                                 In section .bss, align 4
+     53          OsWrapper::Event event{500ms, 1};
+   \                     event:
+   \        0x0                      DS8 36
+     54          
+
+   \                                 In section .bss, align 4
+     55          MyTask myTask(event, UserButton::GetInstance());
+   \                     myTask:
+   \        0x0                      DS8 612
+
+   \                                 In section .bss, align 4
+     56          Led1Task led1Task(event, LedsController::GetInstance());
+   \                     led1Task:
+   \        0x0                      DS8 612
+     57          
+
+   \                                 In section .text, align 2, keep-with-next
+     58          int main()
+     59          {
+   \                     main: (+1)
+   \        0x0   0xB580             PUSH     {R7,LR}
+     60            using namespace OsWrapper;
+     61            Rtos::CreateThread(myTask, "myTask", ThreadPriority::lowest);
+   \        0x2   0x220A             MOVS     R2,#+10
+   \        0x4   0x....             LDR.N    R1,??DataTable1_20
+   \        0x6   0x....             LDR.N    R0,??DataTable1_5
+   \        0x8   0x....'....        BL       _ZN9OsWrapper4Rtos12CreateThreadI6MyTaskEEvRT_PKcNS_14ThreadPriorityE
+     62            Rtos::CreateThread(led1Task, "Led1Task");
+   \        0xC   0x221E             MOVS     R2,#+30
+   \        0xE   0x....             LDR.N    R1,??DataTable1_21
+   \       0x10   0x....             LDR.N    R0,??DataTable1_7
+   \       0x12   0x....'....        BL       _ZN9OsWrapper4Rtos12CreateThreadI8Led1TaskEEvRT_PKcNS_14ThreadPriorityE
+     63            Rtos::Start();
+   \       0x16   0x....'....        BL       _ZN9OsWrapper4Rtos5StartEv
+     64          
+     65            return 0;
+   \       0x1A   0x2000             MOVS     R0,#+0
+   \       0x1C   0xBD02             POP      {R1,PC}          ;; return
+     66          }
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable1:
+   \        0x0   0x....'....        DC32     event
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable1_1:
+   \        0x0   0x....'....        DC32     ?_2
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable1_2:
+   \        0x0   0x....'....        DC32     __dso_handle
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable1_3:
+   \        0x0   0x....'....        DC32     _ZN9OsWrapper5EventD1Ev
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable1_4:
+   \        0x0   0x....'....        DC32     _ZN9SingletonI6ButtonI3PinI4PortI5GPIOCELh13E11PinReadableEEvJEE8instanceE
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable1_5:
+   \        0x0   0x....'....        DC32     myTask
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable1_6:
+   \        0x0   0x....'....        DC32     _ZN9SingletonI14LedsControllervJEE8instanceE
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable1_7:
+   \        0x0   0x....'....        DC32     led1Task
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable1_8:
+   \        0x0   0x....'....        DC32     _ZGVN9SingletonI10LedsDrivervJEE8instanceE
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable1_9:
+   \        0x0   0x....'....        DC32     _ZN9SingletonI10LedsDrivervJEE8instanceE
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable1_10:
+   \        0x0   0x....'....        DC32     _ZGVN9SingletonI3LedI3PinI4PortI5GPIOAELh5E12PinWriteableEEvJEE8instanceE
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable1_11:
+   \        0x0   0x....'....        DC32     _ZN9SingletonI3LedI3PinI4PortI5GPIOAELh5E12PinWriteableEEvJEE8instanceE
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable1_12:
+   \        0x0   0x....'....        DC32     _ZGVN9SingletonI3LedI3PinI4PortI5GPIOCELh9E12PinWriteableEEvJEE8instanceE
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable1_13:
+   \        0x0   0x....'....        DC32     _ZN9SingletonI3LedI3PinI4PortI5GPIOCELh9E12PinWriteableEEvJEE8instanceE
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable1_14:
+   \        0x0   0x....'....        DC32     _ZGVN9SingletonI3LedI3PinI4PortI5GPIOCELh8E12PinWriteableEEvJEE8instanceE
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable1_15:
+   \        0x0   0x....'....        DC32     _ZN9SingletonI3LedI3PinI4PortI5GPIOCELh8E12PinWriteableEEvJEE8instanceE
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable1_16:
+   \        0x0   0x....'....        DC32     _ZGVN9SingletonI3LedI3PinI4PortI5GPIOCELh5E12PinWriteableEEvJEE8instanceE
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable1_17:
+   \        0x0   0x....'....        DC32     _ZN9SingletonI3LedI3PinI4PortI5GPIOCELh5E12PinWriteableEEvJEE8instanceE
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable1_18:
+   \        0x0   0x....'....        DC32     _ZGVN9SingletonI14LedsControllervJEE8instanceE
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable1_19:
+   \        0x0   0x....'....        DC32     _ZGVN9SingletonI6ButtonI3PinI4PortI5GPIOCELh13E11PinReadableEEvJEE8instanceE
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable1_20:
+   \        0x0   0x....'....        DC32     ?_0
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable1_21:
+   \        0x0   0x....'....        DC32     ?_1
+
+   \                                 In section .rodata, align 4
+   \                     ?_0:
+   \        0x0   0x6D 0x79          DC8 "myTask"
+   \              0x54 0x61    
+   \              0x73 0x6B    
+   \              0x00         
+   \        0x7   0x00               DC8 0
+
+   \                                 In section .rodata, align 4
+   \                     ?_1:
+   \        0x0   0x4C 0x65          DC8 "Led1Task"
+   \              0x64 0x31    
+   \              0x54 0x61    
+   \              0x73 0x6B    
+   \              0x00         
+   \        0x9   0x00 0x00          DC8 0, 0, 0
+   \              0x00         
+
+   Maximum stack usage in bytes:
+
+   .cstack Function
+   ------- --------
+       0   Exh001ActionBase::Do()
+       0   FieldValueBase<GPIOA_MODER_MODER15_Values<GPIOA::MODER, 10U, 2U, ReadWriteMode, GPIOA::GPIOAMODERBase>, GPIOA::GPIOAMODERBase, 1U>::Set<ReadWriteMode, void>()
+       0   FieldValueBase<RCC_AHB1ENR_DMA2EN_Values<RCC::APB2ENR, 14U, 1U, ReadWriteMode, RCC::RCCAPB2ENRBase>, RCC::RCCAPB2ENRBase, 1U>::Set<ReadWriteMode, void>()
+       0   FieldValueBase<RCC_CFGR_SWS_Values<RCC::CFGR, 2U, 2U, ReadMode, RCC::RCCCFGRBase>, RCC::RCCCFGRBase, 0U>::IsSet<ReadMode, void>()
+       0   FieldValueBase<RCC_CFGR_SW_Values<RCC::CFGR, 0U, 2U, ReadWriteMode, RCC::RCCCFGRBase>, RCC::RCCCFGRBase, 0U>::Set<ReadWriteMode, void>()
+       0   FieldValueBase<RCC_CR_HSION_Values<RCC::CR, 0U, 1U, ReadWriteMode, RCC::RCCCRBase>, RCC::RCCCRBase, 1U>::Set<ReadWriteMode, void>()
+       0   FieldValueBase<RCC_CR_HSIRDY_Values<RCC::CR, 1U, 1U, ReadMode, RCC::RCCCRBase>, RCC::RCCCRBase, 0U>::IsSet<ReadMode, void>()
+       0   ILed::ILed()
+       8   ILed::subobject ILed()
+         8   -> ILed::ILed()
+      16   Led1Task::Led1Task(OsWrapper::Event &, LedsController &)
+        16   -> OsWrapper::Thread<128U>::subobject Thread()
+       8   Led<Pin<Port<GPIOA>, (uint8_t)'\005', PinWriteable>>::Led()
+         8   -> ILed::subobject ILed()
+       8   Led<Pin<Port<GPIOA>, (uint8_t)'\005', PinWriteable>>::SwitchOff()
+         8   -> Pin<Port<GPIOA>, (uint8_t)'\005', PinWriteable>::Reset<PinWriteable, void>()
+       8   Led<Pin<Port<GPIOA>, (uint8_t)'\005', PinWriteable>>::SwitchOn()
+         8   -> Pin<Port<GPIOA>, (uint8_t)'\005', PinWriteable>::Set<PinWriteable, void>()
+       8   Led<Pin<Port<GPIOA>, (uint8_t)'\005', PinWriteable>>::Toggle()
+         8   -> Pin<Port<GPIOA>, (uint8_t)'\005', PinWriteable>::Toggle<PinWriteable, void>()
+       8   Led<Pin<Port<GPIOC>, (uint8_t)'\005', PinWriteable>>::Led()
+         8   -> ILed::subobject ILed()
+       8   Led<Pin<Port<GPIOC>, (uint8_t)'\005', PinWriteable>>::SwitchOff()
+         8   -> Pin<Port<GPIOC>, (uint8_t)'\005', PinWriteable>::Reset<PinWriteable, void>()
+       8   Led<Pin<Port<GPIOC>, (uint8_t)'\005', PinWriteable>>::SwitchOn()
+         8   -> Pin<Port<GPIOC>, (uint8_t)'\005', PinWriteable>::Set<PinWriteable, void>()
+       8   Led<Pin<Port<GPIOC>, (uint8_t)'\005', PinWriteable>>::Toggle()
+         8   -> Pin<Port<GPIOC>, (uint8_t)'\005', PinWriteable>::Toggle<PinWriteable, void>()
+       8   Led<Pin<Port<GPIOC>, (uint8_t)'\b', PinWriteable>>::Led()
+         8   -> ILed::subobject ILed()
+       8   Led<Pin<Port<GPIOC>, (uint8_t)'\b', PinWriteable>>::SwitchOff()
+         8   -> Pin<Port<GPIOC>, (uint8_t)'\b', PinWriteable>::Reset<PinWriteable, void>()
+       8   Led<Pin<Port<GPIOC>, (uint8_t)'\b', PinWriteable>>::SwitchOn()
+         8   -> Pin<Port<GPIOC>, (uint8_t)'\b', PinWriteable>::Set<PinWriteable, void>()
+       8   Led<Pin<Port<GPIOC>, (uint8_t)'\b', PinWriteable>>::Toggle()
+         8   -> Pin<Port<GPIOC>, (uint8_t)'\b', PinWriteable>::Toggle<PinWriteable, void>()
+       8   Led<Pin<Port<GPIOC>, (uint8_t)'\t', PinWriteable>>::Led()
+         8   -> ILed::subobject ILed()
+       8   Led<Pin<Port<GPIOC>, (uint8_t)'\t', PinWriteable>>::SwitchOff()
+         8   -> Pin<Port<GPIOC>, (uint8_t)'\t', PinWriteable>::Reset<PinWriteable, void>()
+       8   Led<Pin<Port<GPIOC>, (uint8_t)'\t', PinWriteable>>::SwitchOn()
+         8   -> Pin<Port<GPIOC>, (uint8_t)'\t', PinWriteable>::Set<PinWriteable, void>()
+       8   Led<Pin<Port<GPIOC>, (uint8_t)'\t', PinWriteable>>::Toggle()
+         8   -> Pin<Port<GPIOC>, (uint8_t)'\t', PinWriteable>::Toggle<PinWriteable, void>()
+       8   LedsController::LedsController()
+         8   -> std::reference_wrapper<LedsMode>::reference_wrapper(LedsMode &)
+       8   LedsDriver::GetLed(LedNum)
+         8   -> std::array<std::reference_wrapper<ILed>, 4U>::operator[](size_t)
+         8   -> std::reference_wrapper<ILed>::operator ILed &() const
+       8   LedsDriver::GetLedsCount()
+         8   -> std::array<std::reference_wrapper<ILed>, 4U>::size() const
+       8   LedsDriver::LedsDriver()
+         8   -> std::reference_wrapper<ILed>::reference_wrapper(ILed &)
+      24   LedsDriver::SwitchOffAll()
+        24   -- Indirect call
+        24   -> std::_Array_const_iterator<std::reference_wrapper<ILed>, 4U>::operator!=(std::_Array_const_iterator<std::reference_wrapper<ILed>, 4U> const &) const
+        24   -> std::_Array_iterator<std::reference_wrapper<ILed>, 4U>::operator*() const
+        24   -> std::_Array_iterator<std::reference_wrapper<ILed>, 4U>::operator++()
+        24   -> std::array<std::reference_wrapper<ILed>, 4U>::begin()
+        24   -> std::array<std::reference_wrapper<ILed>, 4U>::end()
+        24   -> std::reference_wrapper<ILed>::get() const
+      24   LedsDriver::ToggleAll()
+        24   -- Indirect call
+        24   -> std::_Array_const_iterator<std::reference_wrapper<ILed>, 4U>::operator!=(std::_Array_const_iterator<std::reference_wrapper<ILed>, 4U> const &) const
+        24   -> std::_Array_iterator<std::reference_wrapper<ILed>, 4U>::operator*() const
+        24   -> std::_Array_iterator<std::reference_wrapper<ILed>, 4U>::operator++()
+        24   -> std::array<std::reference_wrapper<ILed>, 4U>::begin()
+        24   -> std::array<std::reference_wrapper<ILed>, 4U>::end()
+        24   -> std::reference_wrapper<ILed>::get() const
+       8   LedsMode::Do(uint8_t)
+         8   -> LedsDriver::ToggleAll()
+       8   LedsMode::Reset()
+         8   -> LedsDriver::SwitchOffAll()
+      16   LedsModeAdc::Do(uint8_t)
+        16   -- Indirect call
+        16   -> LedsDriver::GetLed(LedNum)
+        16   -> LedsDriver::GetLedsCount()
+      16   LedsModeChess::Reset()
+        16   -- Indirect call
+        16   -> LedsDriver::GetLed(LedNum)
+        16   -> LedsDriver::SwitchOffAll()
+      16   LedsModeFirstPair::Reset()
+        16   -- Indirect call
+        16   -> LedsDriver::GetLed(LedNum)
+        16   -> LedsDriver::SwitchOffAll()
+      16   LedsModeInsideOutside::Reset()
+        16   -- Indirect call
+        16   -> LedsDriver::GetLed(LedNum)
+        16   -> LedsDriver::SwitchOffAll()
+      16   LedsModeTree::Do(uint8_t)
+        16   -- Indirect call
+        16   -> LedsDriver::GetLed(LedNum)
+        16   -> LedsDriver::GetLedsCount()
+      16   MyTask::MyTask(OsWrapper::Event &, UserButton &)
+        16   -> OsWrapper::Thread<128U>::subobject Thread()
+      32   OsWrapper::Event::Event(std::chrono::milliseconds, uint32_t)
+        32   -> OsWrapper::RtosWrapper::wCreateEvent(OsWrapper::tEvent &)
+        32   -> std::chrono::duration<uint32_t, std::ratio<10LL, 1000LL>>::count() const
+        32   -> std::chrono::duration_cast<OsWrapper::TicksPerSecond, __int64_t, std::milli>(std::chrono::duration<__int64_t, std::milli> const &)
+       8   OsWrapper::Event::~Event()
+         8   -> OsWrapper::RtosWrapper::wDeleteEvent(void * &)
+       0   OsWrapper::IThread::IThread()
+       8   OsWrapper::IThread::Run()
+         8   -- Indirect call
+         8   -> OsWrapper::RtosWrapper::wGetTicks()
+       8   OsWrapper::IThread::subobject IThread()
+         8   -> OsWrapper::IThread::IThread()
+      24   OsWrapper::Rtos::CreateThread<Led1Task>(Led1Task &, char const *, OsWrapper::ThreadPriority)
+        24   -> OsWrapper::RtosWrapper::wCreateThread<OsWrapper::Rtos, Led1Task>(Led1Task &, char const *, OsWrapper::ThreadPriority, uint16_t, uint32_t *)
+        24   -> std::array<uint32_t, 128U>::data()
+      24   OsWrapper::Rtos::CreateThread<MyTask>(MyTask &, char const *, OsWrapper::ThreadPriority)
+        24   -> OsWrapper::RtosWrapper::wCreateThread<OsWrapper::Rtos, MyTask>(MyTask &, char const *, OsWrapper::ThreadPriority, uint16_t, uint32_t *)
+        24   -> std::array<uint32_t, 128U>::data()
+       8   OsWrapper::Rtos::Run(void *)
+         8   -> OsWrapper::IThread::Run()
+       8   OsWrapper::Rtos::Start()
+         8   -> OsWrapper::RtosWrapper::wStart()
+       8   OsWrapper::RtosWrapper::wCreateEvent(OsWrapper::tEvent &)
+         8   -> xEventGroupCreateStatic
+      24   OsWrapper::RtosWrapper::wCreateThread<OsWrapper::Rtos, Led1Task>(Led1Task &, char const *, OsWrapper::ThreadPriority, uint16_t, uint32_t *)
+        24   -> xTaskCreateStatic
+      24   OsWrapper::RtosWrapper::wCreateThread<OsWrapper::Rtos, MyTask>(MyTask &, char const *, OsWrapper::ThreadPriority, uint16_t, uint32_t *)
+        24   -> xTaskCreateStatic
+       8   OsWrapper::RtosWrapper::wDeleteEvent(void * &)
+         8   -> vEventGroupDelete
+       8   OsWrapper::RtosWrapper::wGetTicks()
+         8   -> xTaskGetTickCount
+       8   OsWrapper::RtosWrapper::wStart()
+         8   -> vTaskStartScheduler
+       8   OsWrapper::Thread<128U>::Thread()
+         8   -> OsWrapper::IThread::subobject IThread()
+       8   OsWrapper::Thread<128U>::subobject Thread()
+         8   -> OsWrapper::Thread<128U>::Thread()
+       8   Pin<Port<GPIOA>, (uint8_t)'\005', PinWriteable>::Reset<PinWriteable, void>()
+         8   -> Port<GPIOA>::Reset(uint32_t)
+       8   Pin<Port<GPIOA>, (uint8_t)'\005', PinWriteable>::Set<PinWriteable, void>()
+         8   -> Port<GPIOA>::Set(uint32_t)
+       8   Pin<Port<GPIOA>, (uint8_t)'\005', PinWriteable>::Toggle<PinWriteable, void>()
+         8   -> Port<GPIOA>::Toggle(uint32_t)
+       8   Pin<Port<GPIOC>, (uint8_t)'\005', PinWriteable>::Reset<PinWriteable, void>()
+         8   -> Port<GPIOC>::Reset(uint32_t)
+       8   Pin<Port<GPIOC>, (uint8_t)'\005', PinWriteable>::Set<PinWriteable, void>()
+         8   -> Port<GPIOC>::Set(uint32_t)
+       8   Pin<Port<GPIOC>, (uint8_t)'\005', PinWriteable>::Toggle<PinWriteable, void>()
+         8   -> Port<GPIOC>::Toggle(uint32_t)
+       8   Pin<Port<GPIOC>, (uint8_t)'\b', PinWriteable>::Reset<PinWriteable, void>()
+         8   -> Port<GPIOC>::Reset(uint32_t)
+       8   Pin<Port<GPIOC>, (uint8_t)'\b', PinWriteable>::Set<PinWriteable, void>()
+         8   -> Port<GPIOC>::Set(uint32_t)
+       8   Pin<Port<GPIOC>, (uint8_t)'\b', PinWriteable>::Toggle<PinWriteable, void>()
+         8   -> Port<GPIOC>::Toggle(uint32_t)
+       8   Pin<Port<GPIOC>, (uint8_t)'\t', PinWriteable>::Reset<PinWriteable, void>()
+         8   -> Port<GPIOC>::Reset(uint32_t)
+       8   Pin<Port<GPIOC>, (uint8_t)'\t', PinWriteable>::Set<PinWriteable, void>()
+         8   -> Port<GPIOC>::Set(uint32_t)
+       8   Pin<Port<GPIOC>, (uint8_t)'\t', PinWriteable>::Toggle<PinWriteable, void>()
+         8   -> Port<GPIOC>::Toggle(uint32_t)
+       8   Port<GPIOA>::Reset(uint32_t)
+         8   -> RegisterBase<1073872920U, 32U, WriteMode>::Write<WriteMode, void>(uint32_t)
+         8   -> __aeabi_assert
+         8   -> __iar_EmptyStepPoint
+       8   Port<GPIOA>::Set(uint32_t)
+         8   -> RegisterBase<1073872920U, 32U, WriteMode>::Write<WriteMode, void>(uint32_t)
+         8   -> __aeabi_assert
+         8   -> __iar_EmptyStepPoint
+       8   Port<GPIOA>::Toggle(uint32_t)
+         8   -> RegisterBase<1073872916U, 32U, ReadWriteMode>::Toggle<ReadWriteMode, void>(uint32_t)
+         8   -> __aeabi_assert
+         8   -> __iar_EmptyStepPoint
+       8   Port<GPIOC>::Reset(uint32_t)
+         8   -> RegisterBase<1073874968U, 32U, WriteMode>::Write<WriteMode, void>(uint32_t)
+         8   -> __aeabi_assert
+         8   -> __iar_EmptyStepPoint
+       8   Port<GPIOC>::Set(uint32_t)
+         8   -> RegisterBase<1073874968U, 32U, WriteMode>::Write<WriteMode, void>(uint32_t)
+         8   -> __aeabi_assert
+         8   -> __iar_EmptyStepPoint
+       8   Port<GPIOC>::Toggle(uint32_t)
+         8   -> RegisterBase<1073874964U, 32U, ReadWriteMode>::Toggle<ReadWriteMode, void>(uint32_t)
+         8   -> __aeabi_assert
+         8   -> __iar_EmptyStepPoint
+       0   Register<1073874944U, 32U, ReadWriteMode, GPIOC::GPIOCMODERBase, GPIOC_MODER_MODER15_Values<GPIOC::MODER, 10U, 2U, ReadWriteMode, GPIOC::GPIOCMODERBase>::Output, GPIOC_MODER_MODER15_Values<GPIOC::MODER, 16U, 2U, ReadWriteMode, GPIOC::GPIOCMODERBase>::Output, GPIOC_MODER_MODER15_Values<GPIOC::MODER, 18U, 2U, ReadWriteMode, GPIOC::GPIOCMODERBase>::Output>::Set<ReadWriteMode, void>()
+       0   Register<1073887280U, 32U, ReadWriteMode, RCC::RCCAHB1ENRBase, RCC_AHB1ENR_DMA2EN_Values<RCC::AHB1ENR, 2U, 1U, ReadWriteMode, RCC::RCCAHB1ENRBase>::Enable, RCC_AHB1ENR_DMA2EN_Values<RCC::AHB1ENR, 0U, 1U, ReadWriteMode, RCC::RCCAHB1ENRBase>::Enable>::Set<ReadWriteMode, void>()
+       0   RegisterBase<1073872916U, 32U, ReadWriteMode>::Toggle<ReadWriteMode, void>(uint32_t)
+       0   RegisterBase<1073872920U, 32U, WriteMode>::Write<WriteMode, void>(uint32_t)
+       0   RegisterBase<1073874964U, 32U, ReadWriteMode>::Toggle<ReadWriteMode, void>(uint32_t)
+       0   RegisterBase<1073874968U, 32U, WriteMode>::Write<WriteMode, void>(uint32_t)
+       8   __low_level_init
+         8   -> FieldValueBase<GPIOA_MODER_MODER15_Values<GPIOA::MODER, 10U, 2U, ReadWriteMode, GPIOA::GPIOAMODERBase>, GPIOA::GPIOAMODERBase, 1U>::Set<ReadWriteMode, void>()
+         8   -> FieldValueBase<RCC_AHB1ENR_DMA2EN_Values<RCC::APB2ENR, 14U, 1U, ReadWriteMode, RCC::RCCAPB2ENRBase>, RCC::RCCAPB2ENRBase, 1U>::Set<ReadWriteMode, void>()
+         8   -> FieldValueBase<RCC_CFGR_SWS_Values<RCC::CFGR, 2U, 2U, ReadMode, RCC::RCCCFGRBase>, RCC::RCCCFGRBase, 0U>::IsSet<ReadMode, void>()
+         8   -> FieldValueBase<RCC_CFGR_SW_Values<RCC::CFGR, 0U, 2U, ReadWriteMode, RCC::RCCCFGRBase>, RCC::RCCCFGRBase, 0U>::Set<ReadWriteMode, void>()
+         8   -> FieldValueBase<RCC_CR_HSION_Values<RCC::CR, 0U, 1U, ReadWriteMode, RCC::RCCCRBase>, RCC::RCCCRBase, 1U>::Set<ReadWriteMode, void>()
+         8   -> FieldValueBase<RCC_CR_HSIRDY_Values<RCC::CR, 1U, 1U, ReadMode, RCC::RCCCRBase>, RCC::RCCCRBase, 0U>::IsSet<ReadMode, void>()
+         8   -> Register<1073874944U, 32U, ReadWriteMode, GPIOC::GPIOCMODERBase, GPIOC_MODER_MODER15_Values<GPIOC::MODER, 10U, 2U, ReadWriteMode, GPIOC::GPIOCMODERBase>::Output, GPIOC_MODER_MODER15_Values<GPIOC::MODER, 16U, 2U, ReadWriteMode, GPIOC::GPIOCMODERBase>::Output, GPIOC_MODER_MODER15_Values<GPIOC::MODER, 18U, 2U, ReadWriteMode, GPIOC::GPIOCMODERBase>::Output>::Set<ReadWriteMode, void>()
+         8   -> Register<1073887280U, 32U, ReadWriteMode, RCC::RCCAHB1ENRBase, RCC_AHB1ENR_DMA2EN_Values<RCC::AHB1ENR, 2U, 1U, ReadWriteMode, RCC::RCCAHB1ENRBase>::Enable, RCC_AHB1ENR_DMA2EN_Values<RCC::AHB1ENR, 0U, 1U, ReadWriteMode, RCC::RCCAHB1ENRBase>::Enable>::Set<ReadWriteMode, void>()
+      24   __sti__routine()
+        24   -> Led1Task::Led1Task(OsWrapper::Event &, LedsController &)
+        24   -> Led<Pin<Port<GPIOA>, (uint8_t)'\005', PinWriteable>>::Led()
+        24   -> Led<Pin<Port<GPIOC>, (uint8_t)'\005', PinWriteable>>::Led()
+        24   -> Led<Pin<Port<GPIOC>, (uint8_t)'\b', PinWriteable>>::Led()
+        24   -> Led<Pin<Port<GPIOC>, (uint8_t)'\t', PinWriteable>>::Led()
+        24   -> LedsController::LedsController()
+        24   -> LedsDriver::LedsDriver()
+        24   -> MyTask::MyTask(OsWrapper::Event &, UserButton &)
+        24   -> OsWrapper::Event::Event(std::chrono::milliseconds, uint32_t)
+        24   -> __aeabi_atexit
+        24   -> __aeabi_memset
+       8   main
+         8   -> OsWrapper::Rtos::CreateThread<Led1Task>(Led1Task &, char const *, OsWrapper::ThreadPriority)
+         8   -> OsWrapper::Rtos::CreateThread<MyTask>(MyTask &, char const *, OsWrapper::ThreadPriority)
+         8   -> OsWrapper::Rtos::Start()
+       0   std::_Addressof<ILed>(ILed &, std::false_type)
+       0   std::_Addressof<LedsMode>(LedsMode &, std::false_type)
+       0   std::_Addressof<std::reference_wrapper<ILed>>(std::reference_wrapper<ILed> &, std::false_type)
+       0   std::_Array_const_iterator<std::reference_wrapper<ILed>, 4U>::_Array_const_iterator(std::reference_wrapper<ILed> const *, size_t)
+       8   std::_Array_const_iterator<std::reference_wrapper<ILed>, 4U>::operator!=(std::_Array_const_iterator<std::reference_wrapper<ILed>, 4U> const &) const
+         8   -> std::_Array_const_iterator<std::reference_wrapper<ILed>, 4U>::operator==(std::_Array_const_iterator<std::reference_wrapper<ILed>, 4U> const &) const
+       0   std::_Array_const_iterator<std::reference_wrapper<ILed>, 4U>::operator*() const
+       0   std::_Array_const_iterator<std::reference_wrapper<ILed>, 4U>::operator++()
+       0   std::_Array_const_iterator<std::reference_wrapper<ILed>, 4U>::operator==(std::_Array_const_iterator<std::reference_wrapper<ILed>, 4U> const &) const
+       8   std::_Array_const_iterator<std::reference_wrapper<ILed>, 4U>::subobject _Array_const_iterator(std::reference_wrapper<ILed> const *, size_t)
+         8   -> std::_Array_const_iterator<std::reference_wrapper<ILed>, 4U>::_Array_const_iterator(std::reference_wrapper<ILed> const *, size_t)
+       8   std::_Array_iterator<std::reference_wrapper<ILed>, 4U>::_Array_iterator(std::reference_wrapper<ILed> *, size_t)
+         8   -> std::_Array_const_iterator<std::reference_wrapper<ILed>, 4U>::subobject _Array_const_iterator(std::reference_wrapper<ILed> const *, size_t)
+       8   std::_Array_iterator<std::reference_wrapper<ILed>, 4U>::operator*() const
+         8   -> std::_Array_const_iterator<std::reference_wrapper<ILed>, 4U>::operator*() const
+       8   std::_Array_iterator<std::reference_wrapper<ILed>, 4U>::operator++()
+         8   -> std::_Array_const_iterator<std::reference_wrapper<ILed>, 4U>::operator++()
+       8   std::addressof<ILed>(ILed &)
+         8   -> std::_Addressof<ILed>(ILed &, std::false_type)
+       8   std::addressof<LedsMode>(LedsMode &)
+         8   -> std::_Addressof<LedsMode>(LedsMode &, std::false_type)
+       8   std::addressof<std::reference_wrapper<ILed>>(std::reference_wrapper<ILed> &)
+         8   -> std::_Addressof<std::reference_wrapper<ILed>>(std::reference_wrapper<ILed> &, std::false_type)
+       8   std::array<std::reference_wrapper<ILed>, 4U>::begin()
+         8   -> std::_Array_iterator<std::reference_wrapper<ILed>, 4U>::_Array_iterator(std::reference_wrapper<ILed> *, size_t)
+         8   -> std::addressof<std::reference_wrapper<ILed>>(std::reference_wrapper<ILed> &)
+       8   std::array<std::reference_wrapper<ILed>, 4U>::end()
+         8   -> std::_Array_iterator<std::reference_wrapper<ILed>, 4U>::_Array_iterator(std::reference_wrapper<ILed> *, size_t)
+         8   -> std::addressof<std::reference_wrapper<ILed>>(std::reference_wrapper<ILed> &)
+       0   std::array<std::reference_wrapper<ILed>, 4U>::operator[](size_t)
+       0   std::array<std::reference_wrapper<ILed>, 4U>::size() const
+       0   std::array<uint32_t, 128U>::data()
+       0   std::chrono::duration<__int64_t, std::milli>::count() const
+       0   std::chrono::duration<uint32_t, std::ratio<10LL, 1000LL>>::count() const
+       0   std::chrono::duration<uint32_t, std::ratio<10LL, 1000LL>>::duration<uint32_t, void>(uint32_t const &)
+      16   std::chrono::duration_cast<OsWrapper::TicksPerSecond, __int64_t, std::milli>(std::chrono::duration<__int64_t, std::milli> const &)
+        16   -> std::chrono::duration<__int64_t, std::milli>::count() const
+        16   -> std::chrono::duration<uint32_t, std::ratio<10LL, 1000LL>>::duration<uint32_t, void>(uint32_t const &)
+        16 __aeabi_ldivmod
+       0   std::reference_wrapper<ILed>::get() const
+       0   std::reference_wrapper<ILed>::operator ILed &() const
+       8   std::reference_wrapper<ILed>::reference_wrapper(ILed &)
+         8   -> std::addressof<ILed>(ILed &)
+       8   std::reference_wrapper<LedsMode>::reference_wrapper(LedsMode &)
+         8   -> std::addressof<LedsMode>(LedsMode &)
+
+
+   Section sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+       4  ??DataTable1
+       4  ??DataTable1_1
+       4  ??DataTable1_10
+       4  ??DataTable1_11
+       4  ??DataTable1_12
+       4  ??DataTable1_13
+       4  ??DataTable1_14
+       4  ??DataTable1_15
+       4  ??DataTable1_16
+       4  ??DataTable1_17
+       4  ??DataTable1_18
+       4  ??DataTable1_19
+       4  ??DataTable1_2
+       4  ??DataTable1_20
+       4  ??DataTable1_21
+       4  ??DataTable1_3
+       4  ??DataTable1_4
+       4  ??DataTable1_5
+       4  ??DataTable1_6
+       4  ??DataTable1_7
+       4  ??DataTable1_8
+       4  ??DataTable1_9
+       8  ?_0
+      12  ?_1
+       2  Exh001ActionBase::Do()
+      20  FieldValueBase<GPIOA_MODER_MODER15_Values<GPIOA::MODER, 10U, 2U, ReadWriteMode, GPIOA::GPIOAMODERBase>, GPIOA::GPIOAMODERBase, 1U>::Set<ReadWriteMode, void>()
+      20  FieldValueBase<RCC_AHB1ENR_DMA2EN_Values<RCC::APB2ENR, 14U, 1U, ReadWriteMode, RCC::RCCAPB2ENRBase>, RCC::RCCAPB2ENRBase, 1U>::Set<ReadWriteMode, void>()
+      24  FieldValueBase<RCC_CFGR_SWS_Values<RCC::CFGR, 2U, 2U, ReadMode, RCC::RCCCFGRBase>, RCC::RCCCFGRBase, 0U>::IsSet<ReadMode, void>()
+      16  FieldValueBase<RCC_CFGR_SW_Values<RCC::CFGR, 0U, 2U, ReadWriteMode, RCC::RCCCFGRBase>, RCC::RCCCFGRBase, 0U>::Set<ReadWriteMode, void>()
+      20  FieldValueBase<RCC_CR_HSION_Values<RCC::CR, 0U, 1U, ReadWriteMode, RCC::RCCCRBase>, RCC::RCCCRBase, 1U>::Set<ReadWriteMode, void>()
+      24  FieldValueBase<RCC_CR_HSIRDY_Values<RCC::CR, 1U, 1U, ReadMode, RCC::RCCCRBase>, RCC::RCCCRBase, 0U>::IsSet<ReadMode, void>()
+      32  GlobalStatus::actions
+       2  ILed::ILed()
+       8  ILed::subobject ILed()
+      36  Led1Task::Led1Task(OsWrapper::Event &, LedsController &)
+      24  Led<Pin<Port<GPIOA>, (uint8_t)'\005', PinWriteable>>::Led()
+       8  Led<Pin<Port<GPIOA>, (uint8_t)'\005', PinWriteable>>::SwitchOff()
+       8  Led<Pin<Port<GPIOA>, (uint8_t)'\005', PinWriteable>>::SwitchOn()
+       8  Led<Pin<Port<GPIOA>, (uint8_t)'\005', PinWriteable>>::Toggle()
+      24  Led<Pin<Port<GPIOC>, (uint8_t)'\005', PinWriteable>>::Led()
+       8  Led<Pin<Port<GPIOC>, (uint8_t)'\005', PinWriteable>>::SwitchOff()
+       8  Led<Pin<Port<GPIOC>, (uint8_t)'\005', PinWriteable>>::SwitchOn()
+       8  Led<Pin<Port<GPIOC>, (uint8_t)'\005', PinWriteable>>::Toggle()
+      24  Led<Pin<Port<GPIOC>, (uint8_t)'\b', PinWriteable>>::Led()
+       8  Led<Pin<Port<GPIOC>, (uint8_t)'\b', PinWriteable>>::SwitchOff()
+       8  Led<Pin<Port<GPIOC>, (uint8_t)'\b', PinWriteable>>::SwitchOn()
+       8  Led<Pin<Port<GPIOC>, (uint8_t)'\b', PinWriteable>>::Toggle()
+      24  Led<Pin<Port<GPIOC>, (uint8_t)'\t', PinWriteable>>::Led()
+       8  Led<Pin<Port<GPIOC>, (uint8_t)'\t', PinWriteable>>::SwitchOff()
+       8  Led<Pin<Port<GPIOC>, (uint8_t)'\t', PinWriteable>>::SwitchOn()
+       8  Led<Pin<Port<GPIOC>, (uint8_t)'\t', PinWriteable>>::Toggle()
+      96  LedsController::LedsController()
+      12  LedsDriver::GetLed(LedNum)
+       8  LedsDriver::GetLedsCount()
+      60  LedsDriver::LedsDriver()
+      64  LedsDriver::SwitchOffAll()
+      64  LedsDriver::ToggleAll()
+      16  LedsMode::Do(uint8_t)
+      20  LedsMode::Reset()
+      68  LedsModeAdc::Do(uint8_t)
+      52  LedsModeChess::Reset()
+      52  LedsModeFirstPair::Reset()
+      52  LedsModeInsideOutside::Reset()
+      48  LedsModeTree::Do(uint8_t)
+      36  MyTask::MyTask(OsWrapper::Event &, UserButton &)
+      44  OsWrapper::Event::Event(std::chrono::milliseconds, uint32_t)
+      14  OsWrapper::Event::~Event()
+      10  OsWrapper::IThread::IThread()
+      20  OsWrapper::IThread::Run()
+       8  OsWrapper::IThread::subobject IThread()
+      34  OsWrapper::Rtos::CreateThread<Led1Task>(Led1Task &, char const *, OsWrapper::ThreadPriority)
+      34  OsWrapper::Rtos::CreateThread<MyTask>(MyTask &, char const *, OsWrapper::ThreadPriority)
+       8  OsWrapper::Rtos::Run(void *)
+       8  OsWrapper::Rtos::Start()
+       8  OsWrapper::RtosWrapper::wCreateEvent(OsWrapper::tEvent &)
+      44  OsWrapper::RtosWrapper::wCreateThread<OsWrapper::Rtos, Led1Task>(Led1Task &, char const *, OsWrapper::ThreadPriority, uint16_t, uint32_t *)
+      44  OsWrapper::RtosWrapper::wCreateThread<OsWrapper::Rtos, MyTask>(MyTask &, char const *, OsWrapper::ThreadPriority, uint16_t, uint32_t *)
+      10  OsWrapper::RtosWrapper::wDeleteEvent(void * &)
+       8  OsWrapper::RtosWrapper::wGetTicks()
+       8  OsWrapper::RtosWrapper::wStart()
+      14  OsWrapper::Thread<128U>::Thread()
+       8  OsWrapper::Thread<128U>::subobject Thread()
+      10  Pin<Port<GPIOA>, (uint8_t)'\005', PinWriteable>::Reset<PinWriteable, void>()
+      10  Pin<Port<GPIOA>, (uint8_t)'\005', PinWriteable>::Set<PinWriteable, void>()
+      10  Pin<Port<GPIOA>, (uint8_t)'\005', PinWriteable>::Toggle<PinWriteable, void>()
+      10  Pin<Port<GPIOC>, (uint8_t)'\005', PinWriteable>::Reset<PinWriteable, void>()
+      10  Pin<Port<GPIOC>, (uint8_t)'\005', PinWriteable>::Set<PinWriteable, void>()
+      10  Pin<Port<GPIOC>, (uint8_t)'\005', PinWriteable>::Toggle<PinWriteable, void>()
+      12  Pin<Port<GPIOC>, (uint8_t)'\b', PinWriteable>::Reset<PinWriteable, void>()
+      12  Pin<Port<GPIOC>, (uint8_t)'\b', PinWriteable>::Set<PinWriteable, void>()
+      12  Pin<Port<GPIOC>, (uint8_t)'\b', PinWriteable>::Toggle<PinWriteable, void>()
+      12  Pin<Port<GPIOC>, (uint8_t)'\t', PinWriteable>::Reset<PinWriteable, void>()
+      12  Pin<Port<GPIOC>, (uint8_t)'\t', PinWriteable>::Set<PinWriteable, void>()
+      12  Pin<Port<GPIOC>, (uint8_t)'\t', PinWriteable>::Toggle<PinWriteable, void>()
+      44  Port<GPIOA>::Reset(uint32_t)
+      40  Port<GPIOA>::Set(uint32_t)
+      40  Port<GPIOA>::Toggle(uint32_t)
+      44  Port<GPIOC>::Reset(uint32_t)
+      40  Port<GPIOC>::Set(uint32_t)
+      40  Port<GPIOC>::Toggle(uint32_t)
+      28  Register<1073874944U, 32U, ReadWriteMode, GPIOC::GPIOCMODERBase, GPIOC_MODER_MODER15_Values<GPIOC::MODER, 10U, 2U, ReadWriteMode, GPIOC::GPIOCMODERBase>::Output, GPIOC_MODER_MODER15_Values<GPIOC::MODER, 16U, 2U, ReadWriteMode, GPIOC::GPIOCMODERBase>::Output, GPIOC_MODER_MODER15_Values<GPIOC::MODER, 18U, 2U, ReadWriteMode, GPIOC::GPIOCMODERBase>::Output>::Set<ReadWriteMode, void>()
+      20  Register<1073887280U, 32U, ReadWriteMode, RCC::RCCAHB1ENRBase, RCC_AHB1ENR_DMA2EN_Values<RCC::AHB1ENR, 2U, 1U, ReadWriteMode, RCC::RCCAHB1ENRBase>::Enable, RCC_AHB1ENR_DMA2EN_Values<RCC::AHB1ENR, 0U, 1U, ReadWriteMode, RCC::RCCAHB1ENRBase>::Enable>::Set<ReadWriteMode, void>()
+      16  RegisterBase<1073872916U, 32U, ReadWriteMode>::Toggle<ReadWriteMode, void>(uint32_t)
+      12  RegisterBase<1073872920U, 32U, WriteMode>::Write<WriteMode, void>(uint32_t)
+      16  RegisterBase<1073874964U, 32U, ReadWriteMode>::Toggle<ReadWriteMode, void>(uint32_t)
+      12  RegisterBase<1073874968U, 32U, WriteMode>::Write<WriteMode, void>(uint32_t)
+       1  Singleton<Button<PinButton>>::instance
+       4  Singleton<Exh001ActionBase>::instance
+       4  Singleton<Led<Pin<Port<GPIOA>, (uint8_t)'\005', PinWriteable>>>::instance
+       4  Singleton<Led<Pin<Port<GPIOC>, (uint8_t)'\005', PinWriteable>>>::instance
+       4  Singleton<Led<Pin<Port<GPIOC>, (uint8_t)'\b', PinWriteable>>>::instance
+       4  Singleton<Led<Pin<Port<GPIOC>, (uint8_t)'\t', PinWriteable>>>::instance
+      28  Singleton<LedsController>::instance
+      16  Singleton<LedsDriver>::instance
+       8  Singleton<LedsModeAdc>::instance
+       8  Singleton<LedsModeAll>::instance
+       8  Singleton<LedsModeChess>::instance
+       8  Singleton<LedsModeFirstPair>::instance
+       8  Singleton<LedsModeInsideOutside>::instance
+       8  Singleton<LedsModeTree>::instance
+       4  SystemCoreClock
+      46  __low_level_init
+     198  __sti__routine()
+      36  event
+     612  led1Task
+      30  main
+       4  mask
+       4  mask
+     612  myTask
+       2  std::_Addressof<ILed>(ILed &, std::false_type)
+       2  std::_Addressof<LedsMode>(LedsMode &, std::false_type)
+       2  std::_Addressof<std::reference_wrapper<ILed>>(std::reference_wrapper<ILed> &, std::false_type)
+       8  std::_Array_const_iterator<std::reference_wrapper<ILed>, 4U>::_Array_const_iterator(std::reference_wrapper<ILed> const *, size_t)
+      20  std::_Array_const_iterator<std::reference_wrapper<ILed>, 4U>::operator!=(std::_Array_const_iterator<std::reference_wrapper<ILed>, 4U> const &) const
+       4  std::_Array_const_iterator<std::reference_wrapper<ILed>, 4U>::operator*() const
+       8  std::_Array_const_iterator<std::reference_wrapper<ILed>, 4U>::operator++()
+      18  std::_Array_const_iterator<std::reference_wrapper<ILed>, 4U>::operator==(std::_Array_const_iterator<std::reference_wrapper<ILed>, 4U> const &) const
+       8  std::_Array_const_iterator<std::reference_wrapper<ILed>, 4U>::subobject _Array_const_iterator(std::reference_wrapper<ILed> const *, size_t)
+      14  std::_Array_iterator<std::reference_wrapper<ILed>, 4U>::_Array_iterator(std::reference_wrapper<ILed> *, size_t)
+       8  std::_Array_iterator<std::reference_wrapper<ILed>, 4U>::operator*() const
+      14  std::_Array_iterator<std::reference_wrapper<ILed>, 4U>::operator++()
+       8  std::addressof<ILed>(ILed &)
+       8  std::addressof<LedsMode>(LedsMode &)
+       8  std::addressof<std::reference_wrapper<ILed>>(std::reference_wrapper<ILed> &)
+      20  std::array<std::reference_wrapper<ILed>, 4U>::begin()
+      20  std::array<std::reference_wrapper<ILed>, 4U>::end()
+       6  std::array<std::reference_wrapper<ILed>, 4U>::operator[](size_t)
+       4  std::array<std::reference_wrapper<ILed>, 4U>::size() const
+       2  std::array<uint32_t, 128U>::data()
+       6  std::chrono::duration<__int64_t, std::milli>::count() const
+       4  std::chrono::duration<uint32_t, std::ratio<10LL, 1000LL>>::count() const
+       6  std::chrono::duration<uint32_t, std::ratio<10LL, 1000LL>>::duration<uint32_t, void>(uint32_t const &)
+      28  std::chrono::duration_cast<OsWrapper::TicksPerSecond, __int64_t, std::milli>(std::chrono::duration<__int64_t, std::milli> const &)
+       1  std::chrono::steady_clock::is_steady
+       1  std::chrono::system_clock::is_monotonic
+       1  std::chrono::system_clock::is_steady
+       4  std::reference_wrapper<ILed>::get() const
+       4  std::reference_wrapper<ILed>::operator ILed &() const
+      16  std::reference_wrapper<ILed>::reference_wrapper(ILed &)
+      16  std::reference_wrapper<LedsMode>::reference_wrapper(LedsMode &)
+       4  value
+       4  value
+    2135  -- Other
+
+ 
+ 1'328 bytes in section .bss
+    56 bytes in section .data
+     4 bytes in section .init_array
+ 2'195 bytes in section .rodata
+ 2'450 bytes in section .text
+ 
+   366 bytes of CODE  memory (+ 2'088 bytes shared)
+    28 bytes of CONST memory (+ 2'167 bytes shared)
+ 1'264 bytes of DATA  memory (+   120 bytes shared)
+
+Errors: none
+Warnings: none

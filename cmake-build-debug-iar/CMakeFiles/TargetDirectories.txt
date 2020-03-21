@@ -1,0 +1,5 @@
+C:/GitHub/RtosWrapper/cmake-build-debug-iar/CMakeFiles/untitled_srec.dir
+C:/GitHub/RtosWrapper/cmake-build-debug-iar/CMakeFiles/flash.dir
+C:/GitHub/RtosWrapper/cmake-build-debug-iar/CMakeFiles/edit_cache.dir
+C:/GitHub/RtosWrapper/cmake-build-debug-iar/CMakeFiles/untitled.dir
+C:/GitHub/RtosWrapper/cmake-build-debug-iar/CMakeFiles/rebuild_cache.dir

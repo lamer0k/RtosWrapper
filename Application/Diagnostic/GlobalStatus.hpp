@@ -16,7 +16,7 @@ using tComprehensiveStatus = std::uint64_t ;
 
 struct ActionSubscriber
 {
-  Action* act;
+  Action& act;
   tComprehensiveStatus  mask ;
 } ;
 
@@ -44,17 +44,17 @@ class GlobalStatus
 
   private:
     tComprehensiveStatus comprehensiveStatus;
-    //using tActionArray = std::array<ActionSubscriber, 2U>;
-    ActionSubscriber actions[] =
+    using tActionArray = std::array<ActionSubscriber, 2U>;
+    static constexpr tActionArray actions =
     {
-      {
-        &Exh001Action::GetInstance(),
+        ActionSubscriber{
+        Exh001Action::GetInstance(),
         Exh001Mask
       },
-      {
-        &Exh001Action::GetInstance(),
+        ActionSubscriber{
+        Exh001Action::GetInstance(),
         Exh001Mask
-      } ,
+      }
     } ;
 
 } ;
