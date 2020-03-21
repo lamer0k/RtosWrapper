@@ -371,6 +371,7 @@
                     <state>$PROJ_DIR$\..\CortexLib\AbstractHardware\Atomic</state>
                     <state>$PROJ_DIR$\..\CortexLib\Common</state>
                     <state>$PROJ_DIR$\..\CortexLib\Common\Singleton</state>
+                    <state>$PROJ_DIR$\..\CortexLib\Common\RomObject</state>
                 </option>
                 <option>
                     <name>CCStdIncCheck</name>

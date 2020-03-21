@@ -84,12 +84,14 @@ include_directories(
         ${CMAKE_SOURCE_DIR}/Rtos/wrapper
         ${CMAKE_SOURCE_DIR}/../CortexLib/Common
         ${CMAKE_SOURCE_DIR}/../CortexLib/Common/Singleton
+        ${CMAKE_SOURCE_DIR}/../CortexLib/Common/RomObject
         ${CMAKE_SOURCE_DIR}/../CortexLib/AbstractHardware/Registers
         ${CMAKE_SOURCE_DIR}/../CortexLib/AbstractHardware/Registers/STM32F411/
         ${CMAKE_SOURCE_DIR}/../CortexLib/AbstractHardware/Registers/STM32F411/FieldValues
         ${CMAKE_SOURCE_DIR}/../CortexLib/AbstractHardware/Pin
         ${CMAKE_SOURCE_DIR}/../CortexLib/AbstractHardware/Port
         ${CMAKE_SOURCE_DIR}/../CortexLib/AbstractHardware/Atomic
+
         #${CMAKE_SOURCE_DIR}/../CortexLib/AbstractHardware/Atomic
 )
 include_directories($CMAKE_CXX_COMPILER_EXTERNAL_TOOLCHAIN)

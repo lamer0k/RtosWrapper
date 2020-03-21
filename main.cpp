@@ -6,7 +6,7 @@
 #include "led1task.hpp"     // for Led1Task
 #include "rccregisters.hpp" // for RCC
 
-//#include "Application/Diagnostic/GlobalStatus.hpp"
+#include "Application/Diagnostic/GlobalStatus.hpp"
 #include <gpioaregisters.hpp>  // for GPIOA
 #include <gpiocregisters.hpp>  // for GPIOC
 
@@ -25,7 +25,7 @@ int __low_level_init(void)
   //Switch system clock on external oscillator
   RCC::CFGR::SW::Hsi::Set();
   while (!RCC::CFGR::SWS::Hsi::IsSet())
-  {
+ {
 
   }
   //Switch on clock on PortA and PortC
@@ -54,9 +54,6 @@ OsWrapper::Event event{500ms, 1};
 
 MyTask myTask(event, UserButton::GetInstance());
 Led1Task led1Task(event, LedsController::GetInstance());
-//OsWrapper::MailBox<int, 10> queue;
-//GlobalStatus status;
-
 
 int main()
 {
