@@ -14,7 +14,8 @@
 #define MAILBOX_HPP
 
 #include "rtosdefs.hpp"
-#include <array>
+#include <array>  ///for std::array
+#include <chrono> // for 'ms' literal
 #include "rtoswrapper.hpp" // for RtosWrapper
 
 namespace OsWrapper
@@ -39,9 +40,9 @@ namespace OsWrapper
         return RtosWrapper::wMailBoxPut(handle, &item);
       }
 
-    __forceinline bool Get(T &item, tTime timeOut)
+    __forceinline bool Get(T &item, std::chrono::milliseconds timeOut)
       {
-        return RtosWrapper::wMailBoxGet(handle, &item, timeOut);
+        return RtosWrapper::wMailBoxGet(handle, &item, std::chrono::duration_cast<TicksPerSecond>(timeOut).count());
       }
 
     private:

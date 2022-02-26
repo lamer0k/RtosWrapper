@@ -4,11 +4,13 @@
 
 #include "mytask.hpp"       // for MyTask
 #include "led1task.hpp"     // for Led1Task
+#include "myfirsttask.h"    // for MyFirstTask
+#include "buttontask.h"   //for ButtonTask
 #include "rccregisters.hpp" // for RCC
 
 #include "Application/Diagnostic/GlobalStatus.hpp"
-#include <gpioaregisters.hpp>  // for GPIOA
-#include <gpiocregisters.hpp>  // for GPIOC
+#include "gpioaregisters.hpp"  // for GPIOA
+#include "gpiocregisters.hpp"  // for GPIOC
 
 std::uint32_t SystemCoreClock = 16'000'000U;
 
@@ -18,13 +20,13 @@ int __low_level_init(void)
 {
   //Switch on external 16 MHz oscillator
   RCC::CR::HSION::On::Set();
-  while (RCC::CR::HSIRDY::NotReady::IsSet())
+ // while (RCC::CR::HSIRDY::NotReady::IsSet())
   {
 
   }
   //Switch system clock on external oscillator
   RCC::CFGR::SW::Hsi::Set();
-  while (!RCC::CFGR::SWS::Hsi::IsSet())
+//  while (!RCC::CFGR::SWS::Hsi::IsSet())
  {
 
   }
@@ -50,17 +52,23 @@ int __low_level_init(void)
 }
 }
 
-OsWrapper::Event event{500ms, 1};
+//OsWrapper::Event event{500ms, 1};
 
-MyTask myTask(event, UserButton::GetInstance());
-Led1Task led1Task(event, LedsController::GetInstance());
+//MyTask myTask(event, UserButton::GetInstance());
+//Led1Task led1Task(event, LedsController::GetInstance());
+
+OsWrapper::Event buttonEvent(500ms, 1);
+OsWrapper::MailBox<int, 1> buttonMailBox;
+ButtonTask buttonTask(buttonMailBox);
+MyFirstTask myFirstTask;
 
 int main()
 {
   using namespace OsWrapper;
-  Rtos::CreateThread(myTask, "myTask", ThreadPriority::lowest);
-  Rtos::CreateThread(led1Task, "Led1Task");
-
+  //Rtos::CreateThread(myTask, "myTask", ThreadPriority::lowest);
+  //Rtos::CreateThread(led1Task, "Led1Task");
+  Rtos::CreateThread(myFirstTask, "MyFirstTask", ThreadPriority::highest);
+  Rtos::CreateThread(buttonTask, "ButtonTask", ThreadPriority::normal);
   Rtos::Start();
 
   return 0;

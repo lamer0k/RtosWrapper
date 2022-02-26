@@ -89,3 +89,4 @@ namespace OsWrapper
   };
 };
 #endif // THREAD_HPP
+

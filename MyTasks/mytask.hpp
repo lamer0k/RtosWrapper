@@ -8,7 +8,7 @@
 #include<array>
 
 
-class MyTask : public OsWrapper::Thread<static_cast<std::size_t>(OsWrapper::StackDepth::minimal)>
+class MyTask : public OsWrapper::Thread<200>
 {
 
 public:

@@ -5,6 +5,14 @@
         <encoding>Win-1251</encoding>
     </override>
     <override>
+        <path>C:\GitHub\RtosWrapper\MyTasks\buttontask.cpp</path>
+        <encoding>Win-1251</encoding>
+    </override>
+    <override>
+        <path>C:\GitHub\RtosWrapper\MyTasks\myfirsttask.cpp</path>
+        <encoding>Win-1251</encoding>
+    </override>
+    <override>
         <path>C:\GitHub\RtosWrapper\Rtos\wrapper\thread.hpp</path>
         <encoding>Win-1251</encoding>
     </override>
