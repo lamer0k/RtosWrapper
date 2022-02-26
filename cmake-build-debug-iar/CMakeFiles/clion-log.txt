@@ -1,7 +1,0 @@
-"C:\Program Files\JetBrains\CLion201607320\bin\cmake\win\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug "-DCMAKE_C_COMPILER=C:/Program Files (x86)/IAR Systems/Embedded Workbench 8.3/arm/bin/iccarm.exe" "-DCMAKE_CXX_COMPILER=C:/Program Files (x86)/IAR Systems/Embedded Workbench 8.3/arm/bin/iccarm.exe" -G "CodeBlocks - MinGW Makefiles" C:\GitHub\RtosWrapper
--- The ASM compiler identification is unknown
--- Found assembler: C:/Program Files (x86)/IAR Systems/Embedded Workbench 8.3/arm/bin/iccarm.exe
--- Warning: Did not find file Compiler/-ASM
--- Configuring done
--- Generating done
--- Build files have been written to: C:/GitHub/RtosWrapper/cmake-build-debug-iar
