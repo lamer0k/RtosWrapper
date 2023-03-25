@@ -5,7 +5,16 @@
     <option name="SCOPE_TYPE" value="8" />
     <option name="CUSTOM_SCOPE_NAME" value="Unnamed" />
   </component>
-  <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="CMakePresetLoader"><![CDATA[{
+  "useNewFormat": true
+}]]></component>
+  <component name="CMakeReloadState">
+    <option name="reloaded" value="true" />
+  </component>
+  <component name="CMakeRunConfigurationManager">
     <generated>
       <config projectName="untitled" targetName="untitled_srec" />
       <config projectName="untitled" targetName="untitled" />
@@ -14,197 +23,16 @@
   </component>
   <component name="CMakeSettings" AUTO_RELOAD="true">
     <configurations>
-      <configuration PROFILE_NAME="Default-IAR" ENABLED="true" TOOLCHAIN_NAME="IAR" />
-      <configuration PROFILE_NAME="Debug-IAR" ENABLED="true" CONFIG_NAME="Debug" TOOLCHAIN_NAME="IAR" />
-      <configuration PROFILE_NAME="Release-IAR" ENABLED="true" CONFIG_NAME="Release" TOOLCHAIN_NAME="IAR" />
+      <configuration PROFILE_NAME="Default-MinGWIAR" ENABLED="true" TOOLCHAIN_NAME="MinGWIAR" />
+      <configuration PROFILE_NAME="Debug-MinGWIAR" ENABLED="true" CONFIG_NAME="Debug" TOOLCHAIN_NAME="MinGWIAR" />
+      <configuration PROFILE_NAME="Release-MinGWIAR" ENABLED="true" CONFIG_NAME="Release" TOOLCHAIN_NAME="MinGWIAR" />
     </configurations>
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5335a5d7-2ea1-4d0d-bfd4-dd1a3e5c554b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Debug/Exe/iarproject.out" beforeDir="false" afterPath="$PROJECT_DIR$/Debug/Exe/iarproject.out" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Debug/List/Led1Task.lst" beforeDir="false" afterPath="$PROJECT_DIR$/Debug/List/Led1Task.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Debug/List/Led1Task.s" beforeDir="false" afterPath="$PROJECT_DIR$/Debug/List/Led1Task.s" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Debug/List/croutine.lst" beforeDir="false" afterPath="$PROJECT_DIR$/Debug/List/croutine.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Debug/List/croutine.s" beforeDir="false" afterPath="$PROJECT_DIR$/Debug/List/croutine.s" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Debug/List/event_groups.lst" beforeDir="false" afterPath="$PROJECT_DIR$/Debug/List/event_groups.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Debug/List/event_groups.s" beforeDir="false" afterPath="$PROJECT_DIR$/Debug/List/event_groups.s" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Debug/List/iarproject.log" beforeDir="false" afterPath="$PROJECT_DIR$/Debug/List/iarproject.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Debug/List/iarproject.map" beforeDir="false" afterPath="$PROJECT_DIR$/Debug/List/iarproject.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Debug/List/irqcontroller.lst" beforeDir="false" afterPath="$PROJECT_DIR$/Debug/List/irqcontroller.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Debug/List/irqcontroller.s" beforeDir="false" afterPath="$PROJECT_DIR$/Debug/List/irqcontroller.s" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Debug/List/list.lst" beforeDir="false" afterPath="$PROJECT_DIR$/Debug/List/list.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Debug/List/list.s" beforeDir="false" afterPath="$PROJECT_DIR$/Debug/List/list.s" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Debug/List/main.lst" beforeDir="false" afterPath="$PROJECT_DIR$/Debug/List/main.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Debug/List/main.s" beforeDir="false" afterPath="$PROJECT_DIR$/Debug/List/main.s" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Debug/List/mytask.lst" beforeDir="false" afterPath="$PROJECT_DIR$/Debug/List/mytask.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Debug/List/mytask.s" beforeDir="false" afterPath="$PROJECT_DIR$/Debug/List/mytask.s" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Debug/List/port.lst" beforeDir="false" afterPath="$PROJECT_DIR$/Debug/List/port.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Debug/List/port.s" beforeDir="false" afterPath="$PROJECT_DIR$/Debug/List/port.s" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Debug/List/queue.lst" beforeDir="false" afterPath="$PROJECT_DIR$/Debug/List/queue.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Debug/List/queue.s" beforeDir="false" afterPath="$PROJECT_DIR$/Debug/List/queue.s" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Debug/List/startupF411RE.lst" beforeDir="false" afterPath="$PROJECT_DIR$/Debug/List/startupF411RE.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Debug/List/startupF411RE.s" beforeDir="false" afterPath="$PROJECT_DIR$/Debug/List/startupF411RE.s" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Debug/List/tasks.lst" beforeDir="false" afterPath="$PROJECT_DIR$/Debug/List/tasks.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Debug/List/tasks.s" beforeDir="false" afterPath="$PROJECT_DIR$/Debug/List/tasks.s" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Debug/List/timers.lst" beforeDir="false" afterPath="$PROJECT_DIR$/Debug/List/timers.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Debug/List/timers.s" beforeDir="false" afterPath="$PROJECT_DIR$/Debug/List/timers.s" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Debug/Obj/.ninja_log" beforeDir="false" afterPath="$PROJECT_DIR$/Debug/Obj/.ninja_log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Debug/Obj/Led1Task.o" beforeDir="false" afterPath="$PROJECT_DIR$/Debug/Obj/Led1Task.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Debug/Obj/Led1Task.pbi" beforeDir="false" afterPath="$PROJECT_DIR$/Debug/Obj/Led1Task.pbi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Debug/Obj/Led1Task.pbi.dep" beforeDir="false" afterPath="$PROJECT_DIR$/Debug/Obj/Led1Task.pbi.dep" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Debug/Obj/croutine.o" beforeDir="false" afterPath="$PROJECT_DIR$/Debug/Obj/croutine.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Debug/Obj/event_groups.o" beforeDir="false" afterPath="$PROJECT_DIR$/Debug/Obj/event_groups.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Debug/Obj/iarproject.pbd" beforeDir="false" afterPath="$PROJECT_DIR$/Debug/Obj/iarproject.pbd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Debug/Obj/iarproject.pbd.browse" beforeDir="false" afterPath="$PROJECT_DIR$/Debug/Obj/iarproject.pbd.browse" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Debug/Obj/iarproject.pbw" beforeDir="false" afterPath="$PROJECT_DIR$/Debug/Obj/iarproject.pbw" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Debug/Obj/iarproject_part0.pbi" beforeDir="false" afterPath="$PROJECT_DIR$/Debug/Obj/iarproject_part0.pbi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Debug/Obj/iarproject_part3.pbi" beforeDir="false" afterPath="$PROJECT_DIR$/Debug/Obj/iarproject_part3.pbi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Debug/Obj/irqcontroller.o" beforeDir="false" afterPath="$PROJECT_DIR$/Debug/Obj/irqcontroller.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Debug/Obj/irqcontroller.pbi" beforeDir="false" afterPath="$PROJECT_DIR$/Debug/Obj/irqcontroller.pbi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Debug/Obj/irqcontroller.pbi.dep" beforeDir="false" afterPath="$PROJECT_DIR$/Debug/Obj/irqcontroller.pbi.dep" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Debug/Obj/list.o" beforeDir="false" afterPath="$PROJECT_DIR$/Debug/Obj/list.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Debug/Obj/main.o" beforeDir="false" afterPath="$PROJECT_DIR$/Debug/Obj/main.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Debug/Obj/main.pbi" beforeDir="false" afterPath="$PROJECT_DIR$/Debug/Obj/main.pbi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Debug/Obj/main.pbi.dep" beforeDir="false" afterPath="$PROJECT_DIR$/Debug/Obj/main.pbi.dep" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Debug/Obj/mytask.o" beforeDir="false" afterPath="$PROJECT_DIR$/Debug/Obj/mytask.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Debug/Obj/mytask.pbi" beforeDir="false" afterPath="$PROJECT_DIR$/Debug/Obj/mytask.pbi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Debug/Obj/mytask.pbi.dep" beforeDir="false" afterPath="$PROJECT_DIR$/Debug/Obj/mytask.pbi.dep" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Debug/Obj/port.o" beforeDir="false" afterPath="$PROJECT_DIR$/Debug/Obj/port.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Debug/Obj/portasm.o" beforeDir="false" afterPath="$PROJECT_DIR$/Debug/Obj/portasm.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Debug/Obj/queue.o" beforeDir="false" afterPath="$PROJECT_DIR$/Debug/Obj/queue.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Debug/Obj/startupF411RE.o" beforeDir="false" afterPath="$PROJECT_DIR$/Debug/Obj/startupF411RE.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Debug/Obj/startupF411RE.pbi" beforeDir="false" afterPath="$PROJECT_DIR$/Debug/Obj/startupF411RE.pbi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Debug/Obj/startupF411RE.pbi.dep" beforeDir="false" afterPath="$PROJECT_DIR$/Debug/Obj/startupF411RE.pbi.dep" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Debug/Obj/tasks.o" beforeDir="false" afterPath="$PROJECT_DIR$/Debug/Obj/tasks.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Debug/Obj/timers.o" beforeDir="false" afterPath="$PROJECT_DIR$/Debug/Obj/timers.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug-iar/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug-iar/CMakeCache.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug-iar/CMakeFiles/3.16.0/CMakeCCompiler.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug-iar/CMakeFiles/3.16.0/CMakeCXXCompiler.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug-iar/CMakeFiles/3.16.0/CMakeDetermineCompilerABI_C.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug-iar/CMakeFiles/3.16.0/CMakeDetermineCompilerABI_CXX.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug-iar/CMakeFiles/3.16.0/CMakeSystem.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug-iar/CMakeFiles/3.16.0/CompilerIdC/CMakeCCompilerId.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug-iar/CMakeFiles/3.16.0/CompilerIdC/CMakeCCompilerId.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug-iar/CMakeFiles/3.16.0/CompilerIdCXX/CMakeCXXCompilerId.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug-iar/CMakeFiles/3.16.0/CompilerIdCXX/CMakeCXXCompilerId.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug-iar/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug-iar/CMakeFiles/CMakeDirectoryInformation.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug-iar/CMakeFiles/CMakeError.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug-iar/CMakeFiles/CMakeError.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug-iar/CMakeFiles/CMakeOutput.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug-iar/CMakeFiles/CMakeOutput.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug-iar/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug-iar/CMakeFiles/Makefile.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug-iar/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug-iar/CMakeFiles/Makefile2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug-iar/CMakeFiles/clion-environment.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug-iar/CMakeFiles/clion-environment.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug-iar/CMakeFiles/clion-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug-iar/CMakeFiles/clion-log.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug-iar/CMakeFiles/feature_tests.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug-iar/CMakeFiles/flash.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug-iar/CMakeFiles/flash.dir/DependInfo.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug-iar/CMakeFiles/flash.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug-iar/CMakeFiles/flash.dir/build.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug-iar/CMakeFiles/untitled.dir/AHardware/IrqController/irqcontroller.cpp.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug-iar/CMakeFiles/untitled.dir/ASM.includecache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug-iar/CMakeFiles/untitled.dir/C.includecache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug-iar/CMakeFiles/untitled.dir/CXX.includecache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug-iar/CMakeFiles/untitled.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug-iar/CMakeFiles/untitled.dir/DependInfo.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug-iar/CMakeFiles/untitled.dir/MyTasks/Led1Task.cpp.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug-iar/CMakeFiles/untitled.dir/MyTasks/mytask.cpp.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug-iar/CMakeFiles/untitled.dir/Rtos/FreeRtos/croutine.c.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug-iar/CMakeFiles/untitled.dir/Rtos/FreeRtos/event_groups.c.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug-iar/CMakeFiles/untitled.dir/Rtos/FreeRtos/list.c.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug-iar/CMakeFiles/untitled.dir/Rtos/FreeRtos/portable/IAR/ARM_CM4F/port.c.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug-iar/CMakeFiles/untitled.dir/Rtos/FreeRtos/portable/IAR/ARM_CM4F/portasm.s.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug-iar/CMakeFiles/untitled.dir/Rtos/FreeRtos/queue.c.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug-iar/CMakeFiles/untitled.dir/Rtos/FreeRtos/tasks.c.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug-iar/CMakeFiles/untitled.dir/Rtos/FreeRtos/timers.c.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug-iar/CMakeFiles/untitled.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug-iar/CMakeFiles/untitled.dir/build.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug-iar/CMakeFiles/untitled.dir/cmake_clean.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug-iar/CMakeFiles/untitled.dir/cmake_clean.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug-iar/CMakeFiles/untitled.dir/depend.internal" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug-iar/CMakeFiles/untitled.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug-iar/CMakeFiles/untitled.dir/depend.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug-iar/CMakeFiles/untitled.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug-iar/CMakeFiles/untitled.dir/flags.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug-iar/CMakeFiles/untitled.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug-iar/CMakeFiles/untitled.dir/link.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug-iar/CMakeFiles/untitled.dir/main.cpp.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug-iar/CMakeFiles/untitled.dir/startupF411RE.cpp.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug-iar/CMakeFiles/untitled_srec.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug-iar/CMakeFiles/untitled_srec.dir/DependInfo.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug-iar/CMakeFiles/untitled_srec.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug-iar/CMakeFiles/untitled_srec.dir/build.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug-iar/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug-iar/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug-iar/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug-iar/cmake_install.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug-iar/untitled.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug-iar/untitled.cbp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-default-iar/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-default-iar/CMakeCache.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-default-iar/CMakeFiles/3.16.0/CMakeCCompiler.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-default-iar/CMakeFiles/3.16.0/CMakeCXXCompiler.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-default-iar/CMakeFiles/3.16.0/CMakeDetermineCompilerABI_C.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-default-iar/CMakeFiles/3.16.0/CMakeDetermineCompilerABI_CXX.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-default-iar/CMakeFiles/3.16.0/CMakeSystem.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-default-iar/CMakeFiles/3.16.0/CompilerIdC/CMakeCCompilerId.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-default-iar/CMakeFiles/3.16.0/CompilerIdC/CMakeCCompilerId.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-default-iar/CMakeFiles/3.16.0/CompilerIdCXX/CMakeCXXCompilerId.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-default-iar/CMakeFiles/3.16.0/CompilerIdCXX/CMakeCXXCompilerId.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-default-iar/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-default-iar/CMakeFiles/CMakeDirectoryInformation.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-default-iar/CMakeFiles/CMakeError.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-default-iar/CMakeFiles/CMakeError.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-default-iar/CMakeFiles/CMakeOutput.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-default-iar/CMakeFiles/CMakeOutput.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-default-iar/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-default-iar/CMakeFiles/Makefile.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-default-iar/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-default-iar/CMakeFiles/Makefile2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-default-iar/CMakeFiles/clion-environment.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-default-iar/CMakeFiles/clion-environment.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-default-iar/CMakeFiles/clion-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-default-iar/CMakeFiles/clion-log.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-default-iar/CMakeFiles/feature_tests.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-default-iar/CMakeFiles/flash.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-default-iar/CMakeFiles/flash.dir/DependInfo.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-default-iar/CMakeFiles/flash.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-default-iar/CMakeFiles/flash.dir/build.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-default-iar/CMakeFiles/untitled.dir/AHardware/IrqController/irqcontroller.cpp.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-default-iar/CMakeFiles/untitled.dir/ASM.includecache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-default-iar/CMakeFiles/untitled.dir/C.includecache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-default-iar/CMakeFiles/untitled.dir/CXX.includecache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-default-iar/CMakeFiles/untitled.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-default-iar/CMakeFiles/untitled.dir/DependInfo.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-default-iar/CMakeFiles/untitled.dir/MyTasks/Led1Task.cpp.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-default-iar/CMakeFiles/untitled.dir/MyTasks/mytask.cpp.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-default-iar/CMakeFiles/untitled.dir/Rtos/FreeRtos/croutine.c.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-default-iar/CMakeFiles/untitled.dir/Rtos/FreeRtos/event_groups.c.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-default-iar/CMakeFiles/untitled.dir/Rtos/FreeRtos/list.c.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-default-iar/CMakeFiles/untitled.dir/Rtos/FreeRtos/portable/IAR/ARM_CM4F/port.c.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-default-iar/CMakeFiles/untitled.dir/Rtos/FreeRtos/portable/IAR/ARM_CM4F/portasm.s.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-default-iar/CMakeFiles/untitled.dir/Rtos/FreeRtos/queue.c.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-default-iar/CMakeFiles/untitled.dir/Rtos/FreeRtos/tasks.c.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-default-iar/CMakeFiles/untitled.dir/Rtos/FreeRtos/timers.c.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-default-iar/CMakeFiles/untitled.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-default-iar/CMakeFiles/untitled.dir/build.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-default-iar/CMakeFiles/untitled.dir/cmake_clean.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-default-iar/CMakeFiles/untitled.dir/cmake_clean.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-default-iar/CMakeFiles/untitled.dir/depend.internal" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-default-iar/CMakeFiles/untitled.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-default-iar/CMakeFiles/untitled.dir/depend.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-default-iar/CMakeFiles/untitled.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-default-iar/CMakeFiles/untitled.dir/flags.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-default-iar/CMakeFiles/untitled.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-default-iar/CMakeFiles/untitled.dir/link.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-default-iar/CMakeFiles/untitled.dir/startupF411RE.cpp.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-default-iar/CMakeFiles/untitled_srec.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-default-iar/CMakeFiles/untitled_srec.dir/DependInfo.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-default-iar/CMakeFiles/untitled_srec.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-default-iar/CMakeFiles/untitled_srec.dir/build.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-default-iar/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-default-iar/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-default-iar/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-default-iar/cmake_install.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-default-iar/untitled.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-default-iar/untitled.cbp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-default-iar/untitled.out" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-default-iar/untitled.out" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-release-iar/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-release-iar/CMakeCache.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-release-iar/CMakeFiles/3.16.0/CMakeCCompiler.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-release-iar/CMakeFiles/3.16.0/CMakeCXXCompiler.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-release-iar/CMakeFiles/3.16.0/CMakeDetermineCompilerABI_C.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-release-iar/CMakeFiles/3.16.0/CMakeDetermineCompilerABI_CXX.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-release-iar/CMakeFiles/3.16.0/CMakeSystem.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-release-iar/CMakeFiles/3.16.0/CompilerIdC/CMakeCCompilerId.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-release-iar/CMakeFiles/3.16.0/CompilerIdC/CMakeCCompilerId.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-release-iar/CMakeFiles/3.16.0/CompilerIdCXX/CMakeCXXCompilerId.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-release-iar/CMakeFiles/3.16.0/CompilerIdCXX/CMakeCXXCompilerId.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-release-iar/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-release-iar/CMakeFiles/CMakeDirectoryInformation.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-release-iar/CMakeFiles/CMakeError.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-release-iar/CMakeFiles/CMakeError.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-release-iar/CMakeFiles/CMakeOutput.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-release-iar/CMakeFiles/CMakeOutput.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-release-iar/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-release-iar/CMakeFiles/Makefile.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-release-iar/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-release-iar/CMakeFiles/Makefile2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-release-iar/CMakeFiles/clion-environment.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-release-iar/CMakeFiles/clion-environment.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-release-iar/CMakeFiles/clion-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-release-iar/CMakeFiles/clion-log.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-release-iar/CMakeFiles/feature_tests.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-release-iar/CMakeFiles/flash.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-release-iar/CMakeFiles/flash.dir/DependInfo.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-release-iar/CMakeFiles/flash.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-release-iar/CMakeFiles/flash.dir/build.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-release-iar/CMakeFiles/untitled.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-release-iar/CMakeFiles/untitled.dir/DependInfo.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-release-iar/CMakeFiles/untitled.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-release-iar/CMakeFiles/untitled.dir/build.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-release-iar/CMakeFiles/untitled.dir/cmake_clean.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-release-iar/CMakeFiles/untitled.dir/cmake_clean.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-release-iar/CMakeFiles/untitled.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-release-iar/CMakeFiles/untitled.dir/flags.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-release-iar/CMakeFiles/untitled.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-release-iar/CMakeFiles/untitled.dir/link.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-release-iar/CMakeFiles/untitled_srec.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-release-iar/CMakeFiles/untitled_srec.dir/DependInfo.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-release-iar/CMakeFiles/untitled_srec.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-release-iar/CMakeFiles/untitled_srec.dir/build.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-release-iar/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-release-iar/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-release-iar/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-release-iar/cmake_install.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-release-iar/untitled.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-release-iar/untitled.cbp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-release-mingw/CMakeFiles/3.16.0/CompilerIdCXX/a.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -213,6 +41,7 @@
   </component>
   <component name="ClangdSettings">
     <option name="formatViaClangd" value="false" />
+    <option name="clangWarnings" value="-Wno-unused-variable,-Wno-infinite-recursion,-Wno-array-bounds,-Werror=implicit-function-declaration,-Wshadow,-Wno-shadow-field-in-constructor-modified,-Wno-shadow-ivar,-Wuninitialized,-Wunused-label,-Wunused-lambda-capture,-std=c++17" />
   </component>
   <component name="EmbeddedSvdWindowState">
     <option name="columnWidths">
@@ -1040,6 +869,7 @@
       </map>
     </option>
   </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Default-MinGWIAR" />
   <component name="Git.Settings">
     <option name="PREVIOUS_COMMIT_AUTHORS">
       <list>
@@ -1059,6 +889,9 @@
       </GitPushTagMode>
     </option>
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/../CortexLib/AbstractHardware/Registers/STM32F411/rccregisters.hpp" root0="SKIP_INSPECTION" />
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -1072,26 +905,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
-    <property name="RunOnceActivity.cidr.known.project.marker" value="true" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="cf.advertisement.text.overridden" value="true" />
-    <property name="cf.first.check.clang-format" value="false" />
-    <property name="cidr.known.project.marker" value="true" />
-    <property name="cmake.loaded.for.project" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="node.js.detected.package.eslint" value="true" />
-    <property name="node.js.detected.package.tslint" value="true" />
-    <property name="node.js.path.for.package.eslint" value="project" />
-    <property name="node.js.path.for.package.tslint" value="project" />
-    <property name="node.js.selected.package.eslint" value="(autodetect)" />
-    <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="settings.editor.selected.configurable" value="CMakeSettings" />
-    <property name="settings.editor.splitter.proportion" value="0.11433172" />
-    <property name="structure.view.defaults.are.configured" value="true" />
-  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "cf.first.check.clang-format": "false",
+    "cidr.known.project.marker": "true",
+    "last_opened_file_path": "C:/Users/Lamerok/Documents/GitHub/RtosWrapper",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "settings.editor.selected.configurable": "language.cpp.clangd",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
   <component name="ReadonlyStatusHandler">
     <option name="SHOW_DIALOG" value="false" />
   </component>
@@ -1107,28 +938,28 @@
         <option name="com.jetbrains.cidr.cpp.gradle.execution.GradleNativeBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
+    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="flash" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="untitled" TARGET_NAME="flash" CONFIG_NAME="Default-MinGWIAR">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="flash" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="untitled" TARGET_NAME="flash" CONFIG_NAME="Default-IAR">
+    <configuration name="untitled" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="untitled" TARGET_NAME="untitled" CONFIG_NAME="Default-MinGWIAR" RUN_TARGET_PROJECT_NAME="untitled" RUN_TARGET_NAME="untitled">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="untitled" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="untitled" TARGET_NAME="untitled" CONFIG_NAME="Default-IAR" RUN_TARGET_PROJECT_NAME="untitled" RUN_TARGET_NAME="untitled">
-      <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="untitled_srec" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="untitled" TARGET_NAME="untitled_srec" CONFIG_NAME="Default-IAR">
+    <configuration name="untitled_srec" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="untitled" TARGET_NAME="untitled_srec" CONFIG_NAME="Default-MinGWIAR">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
     <configuration default="true" type="com.jetbrains.cidr.embedded.customgdbserver.type" factoryName="com.jetbrains.cidr.embedded.customgdbserver.factory" PROGRAM_PARAMS="-f interface/stlink-v2.cfg" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="untitled" TARGET_NAME="untitled" CONFIG_NAME="Default-IAR" version="1" RUN_TARGET_PROJECT_NAME="untitled" RUN_TARGET_NAME="untitled">
-      <custom-gdb-server version="1" gdb-connect="localhost::1111" executable="C:\openocd-0.10.0\bin-x64\openocd.exe" warmup-ms="0" download-type="UPDATED_ONLY" reset-cmd="monitor reset" reset-after-download="true">
+      <custom-gdb-server version="1" gdb-connect="localhost::1111" executable="C:\openocd-0.10.0\bin-x64\openocd.exe" warmup-ms="0" download-type="UPDATED_ONLY" reset-cmd="monitor reset" reset-type="AFTER_DOWNLOAD">
         <debugger kind="GDB" isBundled="true" />
       </custom-gdb-server>
       <method v="2">
@@ -1136,7 +967,7 @@
       </method>
     </configuration>
     <configuration name="untitled" type="com.jetbrains.cidr.embedded.customgdbserver.type" factoryName="com.jetbrains.cidr.embedded.customgdbserver.factory" nameIsGenerated="true" PROGRAM_PARAMS="--file ../share/openocd/scripts/board/st_nucleo_f4.cfg -c &quot;init&quot; -c &quot;reset_config none separate&quot; -c &quot;reset init&quot;" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="untitled" TARGET_NAME="untitled" CONFIG_NAME="Default-IAR" version="1" RUN_TARGET_PROJECT_NAME="untitled" RUN_TARGET_NAME="untitled">
-      <custom-gdb-server version="1" gdb-connect="tcp:127.0.0.1:3333" executable="D:\Projects\Clion\tools\OpenOCD\OpenOCD-20180728\bin\openocd.exe" warmup-ms="500" download-type="ALWAYS" reset-cmd="monitor reset_config none separate" reset-after-download="true">
+      <custom-gdb-server version="1" gdb-connect="tcp:127.0.0.1:3333" executable="D:\Projects\Clion\tools\OpenOCD\OpenOCD-20180728\bin\openocd.exe" warmup-ms="500" download-type="ALWAYS" reset-cmd="monitor reset_config none separate" reset-type="AFTER_DOWNLOAD">
         <debugger kind="GDB" isBundled="true" />
       </custom-gdb-server>
       <method v="2">
@@ -1228,6 +1059,7 @@
       <workItem from="1645775236595" duration="1000" />
       <workItem from="1645851897044" duration="1142000" />
       <workItem from="1645853085295" duration="1000" />
+      <workItem from="1679742671906" duration="1509000" />
     </task>
     <task id="LOCAL-00001" summary="update file">
       <created>1535140998866</created>
@@ -1548,6 +1380,10 @@
         <watch expression="port" />
       </configuration>
     </watches-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="evaluateCodeFragment">

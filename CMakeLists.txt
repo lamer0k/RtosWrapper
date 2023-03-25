@@ -2,8 +2,8 @@ cmake_minimum_required(VERSION 3.12)
 
 project(untitled CXX C ASM)
 
-set(CMAKE_SOURCE_DIR "C:/GitHub/RtosWrapper")
-set(IAR_PATH "C:/Program Files (x86)/IAR Systems/Embedded Workbench 8.3")
+set(CMAKE_SOURCE_DIR "C:/Users/Lamerok/Documents/GitHub/RtosWrapper")
+set(IAR_PATH "C:/Program Files/IAR Systems/Embedded Workbench 9.1")
 set(CMAKE_CXX_STANDARD 17)
 
 #set(CMAKE_CXX_COMPILER "${IAR_PATH}/arm/bin/iccarm.exe")
@@ -11,15 +11,13 @@ set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_ASM_COMPILER "${IAR_PATH}/arm/bin/iasmarm.exe")
 set(CMAKE_CXX_COMPILER_ARG1 "--c++")
 set(CMAKE_CXX_COMPILER_ID "IAR")
-set(CMAKE_CXX_COMPILER_VERSION "8.30.1")
-set(CMAKE_CXX_COMPILER_VERSION_INTERNAL "9")
 set(CMAKE_CXX_COMPILER_WRAPPER "vompwrapper.sh")
 set(CMAKE_CXX_STANDARD_COMPUTED_DEFAULT "14")
-set(CMAKE_CXX_COMPILE_FEATURES "cxx_std_98;cxx_std_11;cxx_std_14")
+set(CMAKE_CXX_COMPILE_FEATURES "cxx_std_98;cxx_std_11;cxx_std_14;cxx_std_17")
 set(CMAKE_CXX98_COMPILE_FEATURES "cxx_std_98")
 set(CMAKE_CXX11_COMPILE_FEATURES "cxx_std_11")
 set(CMAKE_CXX14_COMPILE_FEATURES "cxx_std_14")
-set(CMAKE_CXX17_COMPILE_FEATURES "")
+set(CMAKE_CXX17_COMPILE_FEATURES "cxx_std_17")
 set(CMAKE_CXX20_COMPILE_FEATURES "")
 set(CMAKE_ASM_FLAGS "-s+ -w+ -r --cpu Cortex-M4 --fpu VFPv4_sp -I${CMAKE_SOURCE_DIR}/Rtos/FreeRtos/")
 set(CMAKE_CXX_COMPILER_EXTERNAL_TOOLCHAIN "D:/Program Files (x86)/IAR Systems/Embedded Workbench 8.1/arm/inc/cpp")
@@ -130,9 +128,4 @@ add_executable(untitled
         Application/Diagnostic/Exh001Action.hpp Application/Diagnostic/Exh002Action.hpp Application/Diagnostic/GlobalStatus.hpp
         Rtos/wrapper/FreeRtos/rtoswrapper.hpp Rtos/wrapper/eventmode.hpp Rtos/wrapper/FreeRtos/rtosdefs.hpp
         )
-
-
-
-
-
 

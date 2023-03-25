@@ -4,8 +4,8 @@
 
 #include "mytask.hpp"       // for MyTask
 #include "led1task.hpp"     // for Led1Task
-#include "myfirsttask.h"    // for MyFirstTask
-#include "buttontask.h"   //for ButtonTask
+//#include "myfirsttask.h"    // for MyFirstTask
+//#include "buttontask.h"   //for ButtonTask
 #include "rccregisters.hpp" // for RCC
 
 #include "Application/Diagnostic/GlobalStatus.hpp"
@@ -52,23 +52,23 @@ int __low_level_init(void)
 }
 }
 
-//OsWrapper::Event event{500ms, 1};
+OsWrapper::Event event{500ms, 1};
 
-//MyTask myTask(event, UserButton::GetInstance());
-//Led1Task led1Task(event, LedsController::GetInstance());
+MyTask myTask(event, UserButton::GetInstance());
+Led1Task led1Task(event, LedsController::GetInstance());
 
 OsWrapper::Event buttonEvent(500ms, 1);
 OsWrapper::MailBox<int, 1> buttonMailBox;
-ButtonTask buttonTask(buttonMailBox);
-MyFirstTask myFirstTask;
+//ButtonTask buttonTask(buttonMailBox);
+//MyFirstTask myFirstTask;
 
 int main()
 {
   using namespace OsWrapper;
-  //Rtos::CreateThread(myTask, "myTask", ThreadPriority::lowest);
-  //Rtos::CreateThread(led1Task, "Led1Task");
-  Rtos::CreateThread(myFirstTask, "MyFirstTask", ThreadPriority::highest);
-  Rtos::CreateThread(buttonTask, "ButtonTask", ThreadPriority::normal);
+  Rtos::CreateThread(myTask, "myTask", ThreadPriority::lowest);
+  Rtos::CreateThread(led1Task, "Led1Task");
+//  Rtos::CreateThread(myFirstTask, "MyFirstTask", ThreadPriority::highest);
+//  Rtos::CreateThread(buttonTask, "ButtonTask", ThreadPriority::normal);
   Rtos::Start();
 
   return 0;
